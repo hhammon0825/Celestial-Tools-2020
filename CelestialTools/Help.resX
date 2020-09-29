@@ -1,0 +1,1977 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cmdPrint.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAGhJREFUOE/djtENwCAIBRmJkRiVzajQYEgLih/96SXPKJEDkAIAWMZZCiq2Av/g
+        0zxeiywFGVtBnBTjtSelIKMUIOKc1M3sMcu4MPNx/iRQ9EFE7eh/67NzcLrFN4Js1SovgaLFbm5ELshm
+        0mulWQfvAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="txtHelpCurrents.Text" xml:space="preserve">
+    <value>CURRENTS
+
+a. Purpose:  Determine the set and drift (velocity) of the tidal current at a desired time, using data extracted from a Tidal Current Table, as taught in 
+the USPS Advanced Piloting (AP) 85/86 course or the AP 2011 (or AP 2004) course (see Operation).  (This is not a tidal current prediction program.)  The 
+Current tool uses a form similar to the worksheet of the AP 85/86 course.
+
+b. Operation:  For determining the tidal current at a reference station, required inputs are the desired time and the times of the slack and maximum 
+(flood or ebb) that bracket the desired time, and the velocity and set of the maximum, obtained from Table 1 of the tidal current table.  For determining 
+the tidal current at a substation, additional required inputs are the Table 2 differences for times and velocities of the slack(s) and maximum(s).  When 
+determining the tidal current at a substation, it is often not obvious which slack and maximum bracket the desired time, because of the Table 2 time 
+differences.  In those cases, the other slack and maximum Table 1 and Table 2 data can be entered to help determine the proper slack and maximum to 
+use.  Required times cannot be left blank, even if the required time is 0000.  All other inputs are optional, and can be used when a printed record of a 
+complete tide determination is desired.
+
+Note:  Tidal current tables use standard time.  The user must convert daylight savings times to standard times before extracting data from the Tidal 
+Current Table.
+
+When entering the Table 2 time differences, use the format of the Tidal Current Table, i.e. the sign goes with the hour, even if the hour is zero.  
+However, plus signs and leading zeros can be omitted.
+
+The program will recognize when the selected times of slack and maximum  cross midnight.
+
+Activating the "Calculate" button starts the calculation.  Once the localized times and velocities are calculated, the user must determine which slack and 
+which maximum are the ones that bracket the desired time, and check the appropriate check boxes.  (For technical reasons, this selection is not done 
+automatically.)  Only one slack and one maximum can be selected.  As soon as a second check box is checked, the calculation is completed using the 
+selected option.  If only one slack time and only one maximum time are entered, their boxes will be automatically checked and the calculation completed.
+
+For "normal" locations, i.e. those where there is little or no hydraulic current, there are options to determine the velocity factor by doing the calculation 
+mathematically (the default), where the actual values are used; or by using Table 3A values (as taught in AP 85/86), where the actual entering 
+arguments are rounded to tabular values; or to do the calculation using the "50-90 Rule" (as taught in AP 2011 and AP 2004).  For locations where there 
+is a strong hydraulic current, the Table 3B option should be used.
+
+When switching from one option to another there is no need to activate the "Calculate" button.
+
+Choices that would be circled on a paper worksheet will appear in bold type.
+
+Activating the "Clear" button clears all inputs and outputs.
+
+c. Accuracy/Resolution:  As with tidal current tables, the computation assumes that the increase (flood) and decrease (ebb) of the tidal current velocity 
+conform to simple sine curves.  This is often not true, so the tidal current velocities obtained will be approximate. The most accurate results are obtained 
+using mathematical calculation for the velocity factor.  Using the Table 3A option adds a bit of error to the theoretical (sine) calculation, and the "50-90 
+Rule" can, but will not necessarily, impose a  larger error, but these errors are usually no more than a half a knot, and are probably less relevant than if 
+the flood and ebb do not conform to a sine curve.  
+
+Localized velocities are rounded to hundredths of a knot, except for the "50-90 Rule" where they are rounded to tenths of a knot.  The predicted 
+velocity is rounded to tenths of a knot.
+
+Celestial Tools uses the method of the PREDICTION OF CURRENT AND DIRECTION form of AP 2011 and AP 2004 for the "50-90 Rule".  Note that if the 
+Time Difference converted to minutes (line (4) of the form) is not evenly divisible by three, then Time#3 on line (6) will differ from the later of the 
+bracketed times (line (1)) by one minute.
+</value>
+  </data>
+  <data name="txtHelpTides.Text" xml:space="preserve">
+    <value>TIDES
+
+a. Purpose:  Determine the height of the tide at a desired time, using data extracted from a Tide Table, as taught in the USPS Advanced Piloting (AP) 
+85/86 course or the AP 2004 (or later) course (see Operation).  (This is not a tide prediction program.)  The Tide tool uses a form similar to the 
+worksheet of the AP 85/86 course.
+
+Determine vertical clearance and depth under keel.
+
+b. Operation:  For determining the tide at a reference station, required inputs are the desired time and the times and heights of the high and low tides 
+that bracket the desired time, obtained from Table 1 of the Tide Table.  For determining the tide at a substation, additional required inputs are the Table 
+2 differences for times and heights of the high and low tides.  Times cannot be left blank, even if the required time is 0000.  Heights are shown in feet, 
+but can be entered in feet, meters, centimeters, or any other linear unit, but the same unit must be used throughout, and the resultant heights will be in 
+that unit.  (It is recommended that centimeters be converted to meters.)  All other inputs are optional, and can be used when a printed record of a 
+complete tide determination is desired.
+
+Note:  Tide tables use standard time.  The user must convert daylight savings times to standard times before extracting data from the Tide Table.
+
+When entering the Table 2 time differences, use the format of the tide table, i.e. the sign goes with the hour, even if the hour is zero.  However, plus 
+signs and leading zeros can be omitted.  Table 2 height differences need not be preceded by a plus sign (+) if additive, but must be preceded by a minus 
+sign (-) if subtractive or an asterisk (*) if Table 2 expressed it as a ratio (indicated by an asterisk).  Omitted zeros for height and time difference inputs 
+are added automatically for the sake of a printed record.
+
+The program will recognize when the times that bracket the desired time cross midnight.
+
+Activating the "Calculate" button completes the calculation, using the selected option.
+
+There are options to determine the height of tide correction by doing the calculation mathematically (the default), where the actual values are used; or 
+by using Table 3 values (as taught in AP 85/86), where the actual entering arguments are rounded to tabular values; or to do the calculation using a 
+simplified "Rule of Twelfths" (as taught in AP 2004, a form of what is more commonly known as the "Rule of Tenths", and is not the usual presentation of 
+the Rule of Twelfths), where times are rounded to whole hours and percentages are used for each time increment; or to do the calculation using an 
+alternate form of  the "Rule of Twelfths".  When using the simplified "Rules of Twelfths", if the half cycle duration is significantly different from six hours, 
+the results may not be satisfactory.  If this is true, the alternate version of the "Rules of Twelfths", giving more accurate results, should be used.  A rule 
+of thumb is if the difference is 60 minutes or more the alternate form should be used, but the alternate form can always be used, giving more accurate 
+results, regardless of the difference. 
+
+When switching from one option to another there is no need to activate the "Calculate" button.
+
+Choices that would be circled on a paper worksheet will appear in bold type.
+
+Activating the "Clear" button clears all inputs and outputs.
+
+Activating the "Calculate Vertical Clearances" button, which can be done with or without a previous depth calculation, opens another window which is 
+used to calculate the vertical clearance (defined in the AP course as the clearance between the water and an overhead bridge) and the actual clearance 
+(between the highest point on the boat and the bridge), and the depth clearance (between the boat's keel and the bottom).  Inputs are expected in 
+feet or meters, with the same unit must be used throughout, and the results will be in that unit.  Height of tide at desired time is required for either 
+calculation. All previously entered or calculated values are cleared, except if a height if tide calculation was already made, it will automatically be used 
+for this function, but can be changed if desired. 
+ 
+For Vertical Clearance, additional required inputs are the height of the object to be cleared (from the chart), the mean tidal range (from Table 2), the 
+mean tide level (from Table 2), and, if actual clearance is desired, the height of the highest point on the boat.  For Depth Under Keel, additional required 
+inputs are the depth (from the chart) and the boat's draft.  (Charted heights and depths are given in whole units and must be entered as such.)  Either 
+calculation can be done by itself, or both cacluations can be done simultaneously.  When Vertical Clearance is calculated, the intermediate step of the 
+height of MHW above MLLW is also shown. 
+
+Activating the "Clear" button clears all inputs and outputs.
+
+c. Accuracy/Resolution:  As with tide tables, the computation assumes that the rise and fall of the tides conform to simple cosine curves.  This is often 
+not true, so the heights obtained will be approximate. The most accurate results are obtained using mathematical calculation for the height of tide 
+correction.  Using the Table 3 option adds a bit of error to the theoretical (cosine) calculation; the alternate form of the "Rule of Twelfths" generally 
+imposes a  larger error, but these errors are usually no more than a half a unit (more significant if the unit is meters, less significant if the unit is feet), 
+and are probably less relevant than if the rise and fall do not conform to a cosine curve.  The simplified form of  the "Rule of Twelfths", however, can 
+impose a significant and dangerous error if the half cycle duration is significantly different from six hours
+
+All height results are rounded to the nearest tenth of a unit.
+</value>
+  </data>
+  <data name="txtHelpTwoBearings.Text" xml:space="preserve">
+    <value>DISTANCE BY TWO BEARINGS/FIX BY CROSS BEARINGS/COURSE MADE GOOD BY THREE BEARINGS
+
+a. Purpose:  Calculate the distance to a fixed object by taking two bearings on the object from a moving vessel.  This works in the same manner as 
+"doubling the angle on the bow", but works for any allowed combination of bearings.  It will also calculate the distance from the position of the second 
+bearing to the point where the object is abeam (closest point of approach), and, if the required data is provided, the time required to get to this point 
+and the time of arrival at this point.  (This tool does the calculations of Bowditch 2002 Table 18 - Distance of an Object by Two Bearings.)
+
+It assumes that the vessel maintains its course and speed, and that the vessel is approaching the object, not moving away from it.
+
+Calculate a fix from two cross bearings on charted objects with no (or little) vessel movement between the bearings, or a running fix if there is vessel 
+movement between the bearings.  (Note:  To calculate a fix by range and bearing, see Help&gt;The Sailings&gt;Other applications.)
+
+Calculate the course made good (CMG) using three bearings on the same object at different times and the time or distance intervals between them, as 
+might be done if it is suspected that an unknown current has thrown the vessel off track.
+
+b. Operation:  
+Distance by two bearings:
+Select whether the bearings will be Relative (bow bearings, the default), True, Magnetic, or Compass.  If True, Magnetic, or Compass is selected, enter 
+the vessel's course (whole degrees, from 0 to 359), as the type selected.  If Relative is selected, enter the first and second bow (relative) bearings to 
+the object, limited to whole degrees from 1 to 90.  (0° would be a collision course; over 90° the vessel would already be moving away from the object.)  
+These can be clockwise or counterclockwiese, i.e. with respect to the starboard or port bow, with no sign.  If True, Magnetic, or Compass is selected, 
+enter the first and second bearings as the type selected (whole degrees, 0 to 359).
+
+Enter either the distance traveled between the two bearings (as actual distance or as start and end knotmeter log values, Log1 and Log2, limited to 
+9999.9nm) or the speed and running time (as actual running time or start and end times, Time1 and Time2, in hhmm format).  Log1 and Time1 are 
+associated with the first bearing; Log2 and Time2 are associated with the second bearing.  Distance can be entered with tenth of a nautical mile 
+resolution up to 99.9 nautical miles (a much larger than practical value). Speed can be entered with tenth of a knot resolution up to 99.9 knots.  (The 
+speed value is either a constant speed or average speed based on the actual conditions.)  Run Time can be entered in integer hours and integer 
+minutes, or just integer minutes.  If an hour value is entered, minutes are limited to 59.  If no (or zero) hour value is entered, minutes are limited to 99 
+(1.65 hours).  If a minute value greater than 59 is entered, the hour box is disabled.  If the entered speed and time result in a distance greater than 
+99.9 nautical miles, an error message will be generated.  If Log1 is greater than Log2 an error message will be generated.  If Time1 is later than Time2 
+an error message will be generated.  (The program does not consider this to be a run that crosses midnight.  If this is actually the case, it is best to use 
+Run Time.)  Press the "Calculate Distance" button to get the distance from the position of the second bearing to the object, the distance off that the 
+object will be when abeam, and the distance that would have to be traveled before the object is abeam.  If speed and run time were entered, 
+calculated distance from the position of the second bearing to the point where the object is abeam will also be displayed.  If the times of the bearings 
+rather than the run time are entered, the time that the object will be abeam will also be displayed.  If Time1 and Time2 were entered, calculated run time 
+will also be displayed.
+
+Pressing the "Clear" button clears the input and output data.
+
+Switching from one bearing type to another clears the input and output data unless an illegal input value remains, which must be corrected first.
+
+Fix by cross bearings:
+Enter the latitudes and longitudes of the two observed objects, obtained from a chart.  Enter the true bearings from the vessel to the two objects, or 
+check the "Reciprocal bearings" box and enter the true reciprocal bearings from the two objects to the vessel.  Although bearings will generally be in 
+whole degrees, values up to 359.9° can be entered, with a maximum of five characters including a decimal point.  Press the "Calculate Fix from Cross 
+Bearings" button and the latitude and longitude of the fix will be displayed.
+
+To establish a running fix,  use The Sailings, Destination L and Lo to advance the position of the earlier charted object to the later time, and use this 
+position for L1 and Lo1.  (The earlier and later charted objects could be the same.)
+
+Bearings are best done with a hand bearing compass, but sighting over the vessel's compass can be done.  Magnetic or compass bearings must be 
+converted to true bearings.  Ideally the smaller angle formed by the cross bearings is 90°, giving the least fix error due to bearing error, but keeping the 
+smaller angle from 45° to 135° is recommended.  (Some sources, e.g. AP 85/86, recommend 40° to 140°; other sources, e.g. AP 2004, recommend 30° 
+to 150°.)  If the entered bearings are outside the 45° to 135° range a message will be displayed.
+
+Pressing the "Clear" button clears the input and output data, and unchecks the "Use reciprocal bearings" checkbox if checked.
+
+Course made good by three bearings and intervals between them:
+Enter the three bearings taken on the same object and the intervals between the first and second bearing and the second and third bearing.  Bearings 
+must be in whole degrees, and can be true, magnetic, or compass, with the resulting CMG in the same units.  Intervals can be time between bearings or 
+the distance traveled between bearings.    Time or distance can be used if speed is constant; distance must be used if speed has changed.  Intervals do 
+not have to be the actual values as long as the ratios are correct.  For instance, if the times or distances between bearings are the same, the CMG will 
+be correct as long as the same number is used in both Interval boxes.  (Up to five characters, including a decimal point, are accepted.)  If, for instance, 
+the first interval is 1nm and the second is 2nm, one and two, two and four, etc., can be entered in the two Interval boxes.  (In practice, the intervals 
+are usually made the same to make the determination by chartwork easier.)
+
+Bearings must be monotonically increasing or decreasing.  If they do not appear as such, as would happen if zero degrees was crossed (e.g. 345°, 
+355°, 5°), a message will appear asking for confirmation.
+
+Pressing the "Calculate CMG" button completes the CMG calculation.
+
+Pressing the "Clear" button clears the input and output data.
+
+c. Accuracy/Resolution:  Distances are rounded to the nearest hundredth of a nautical mile.  Times are rounded to the nearest minute.  Courses are 
+rounded to the nearest degree.  Latitudes and longitudes are rounded to the nearest tenth of a minute.
+</value>
+  </data>
+  <data name="txtHelpMoBoard.Text" xml:space="preserve">
+    <value>MANEUVERING BOARD (MoBoard)
+
+a. Purpose:  Perform several of the calculations typically done on a maneuvering board.  Calculate the Closest Point of Approach (CPA) of two vessels, 
+course and speed of a contact (target) vessel, and related information.  Vessel 1 is the reference vessel (you).  Vessel 2 is the contact vessel.  Ranges 
+and bearings are measured from Vessel 1 to Vessel 2.  If the resulting CPA is zero, a collision will occur.  (It is up to the captain to determine what range 
+is "close enough".  Two types of calculations are included, depending on what data is known.  On a recreational vessel, data is typically obtained from a 
+radar without Automatic Radar Plotting Aid (ARPA).
+
+Calculate the speed and direction of the true wind if the speed and course of the vessel and the speed and relative direction of the apparent wind are 
+known.  Calculate the speed and relative direction of the apparent wind if the speed and course of the vessel and the speed and  direction of the true 
+wind are known.
+
+b. Operation:  In the first (default) CPA type of calculation, required inputs are the range and bearing from Vessel 1 to Vessel 2 at two times, and, 
+optionally, the course and speed of Vessel 1 (only needed to calculate Vessel 2 course and speed, not needed for CPA).  (In practice, a minimum of 
+three sets of measurements are taken, in order verify that Vessel 2 is maintaining its course and speed.  Once verified, any two of the sets of 
+measurements, preferably the earliest and latest, can be used for the calculation.)  Times are in whole minutes, ranges to hundredths of a nautical mile 
+(limited to 99.99), bearings to tenths of a degree (limited to 359.9), course to tenths of a degree (limited to 359.9), and speed to tenths of a knot 
+(limited to (99.9).  Press the "Calculate" button.  Outputs are the range of the CPA; the time to the CPA (measured from the later time); the bearing 
+from Vessel 1 to Vessel 2 at the CPA; the time of CPA;  the direction of relative movement (DRM, also called direction of relative motion) and the speed 
+of relative movement (SRM, also called speed of relative motion) of Vessel 2 with respect to Vessel 1; and the course and speed of Vessel 2.  (SRM and 
+DRM are the speed and course of Vessel 2 with respect to Vessel 1, and can be thought of as the speed and course of Vessel 2 if Vessel 1 were 
+stationary.)  Vessel 2 can be a fixed object.  If no values are entered for  Vessel 1 speed, Vessel 1 is considered stationary.  If the time to the CPA is 
+negative, CPA occurred before the later time, and the vessels are already moving apart.
+
+If the second time appears to be earlier than the first time, verification that the second time is on the following day, i.e. after midnight, will be 
+requested, to confirm that it is not just an input error.
+
+In the second type of CPA calculation, required inputs the speeds and courses of Vessel 1 and Vessel 2, and the bearing and range from Vessel 1 to 
+Vessel 2 at any available time.  (Actual time is not required.)  Speeds are to tenths of a knot (limited to 99.9), courses and bearings are to tenths of a 
+degree, and ranges are to hundredths of a nautical mile (limited to 99.99).   Press the "Calculate" button.  Outputs are the range of the CPA; the time 
+to the CPA (from the time of the data); the bearing from Vessel 1 to Vessel 2 at the CPA; and the DRM  and SRM.
+
+For the CPA calculations. course and bearing inputs can be true (recommended) or magnetic or compass (with respect to Vessel 1's compass), but must 
+be consistent throughout, with resulting outputs of the same type.
+
+For the True Wind calculation, required inputs are the true course and speed of the vessel and the speed and relative "from" direction of the apparent 
+wind.  Courses and directions are to tenths of a degree (limited to 359.9).  Speeds are to tenths of a knot (limited to 99.9).  The relative direction of the 
+apparent wind can be entered as a negative number.  For instance, if the apparent wind is coming from 50° off the port bow, this can be entered as 
+310° (360 - 50) or -50° (relative).  The calculated direction of the true wind is displayed in degrees true.  However, if the Vessel Course is omitted or set
+to zero, the calculated direction of the true wind is effectively in degrees relative.
+
+For the Apparent Wind calculation, required inputs are the true course and speed of the vessel and the speed and true (referred to true north) "from" 
+direction of the true wind.  Courses and directions are to tenths of a degree (limited to 359.9).  Speeds are to tenths of a knot (limited to 99.9).    The 
+calculated direction of the apparent wind is displayed in degrees relative (to the course of the vessel).  However, if the Vessel Course is omitted or set
+to zero, the calculated direction of the apparent wind is effectively in degrees true.
+
+Pressing the "Clear" button clears the input data of the displayed type of calculation, unless an illegal value remains, which must be corrected first.  
+Inputs of the types that are not displayed are not cleared.
+
+Switching from one type to the other clears the output data but does not clear the input data.
+
+Calculations assume that both vessels have maintained course and speed.
+
+c. Accuracy/Resolution:  As with a maneuvering board, these are two-dimensional approximate solutions to a three-dimensional problem, but should be 
+reasonably accurate for values for which a maneuvering board would be used.  
+
+Ranges are displayed to hundredths of a nautical mile, elapsed times to tenths of minutes, clock times to whole minutes, speeds to tenths of a knot, and 
+courses and bearings to tenths of a degree.
+</value>
+  </data>
+  <data name="txtHelpYellow.Text" xml:space="preserve">
+    <value>YELLOW PAGES (INCREMENTS AND CORRECTIONS)
+
+a. Purpose:  Reproduces the values of the Nautical Almanac Increments and Corrections table, traditionally known as the "yellow pages" because of their 
+color in the government edition.  Can be entered "forwards" or "backwards".  When entering "forwards", calculates GHA Increment for Sun/Planets, Aries, 
+and Moon, given UT minutes and seconds; calculates v or d correction given UT minutes and v or d value.  When entering "backwards", calculates time 
+given a GHA Increment for Sun/Planets, Aries, and Moon.
+
+The sole intent of this tool is to help the student avoid making errors, or to help find errors already made, in using the Nautical Almanac Increments and 
+Corrections table, for instance the common "right page, wrong column" problem.  It does this by presenting output data for a single set of input values, 
+instead of the full-page format of the Nautical Almanac.
+
+b. Operation: Select whether to enter the table "forwards" (default) or "backwards".
+
+"Forwards" mode is typically used when extracting data from the Nautical Almanac for a sight reduction.  To calculate the GHA Increment, enter the UT 
+minutes and seconds, and select whether to obtain the increment for Sun/Planets, Aries, or Moon.  To calculate the v or d correction, enter the UT minutes 
+and the v or d value from the daily pages of the nautical Almanac, without a sign.  The GHA Increment and v or d correction will be displayed and will be 
+automatically updated for whatever data is currently entered.
+
+"Backwards" mode can be used as part of the GHA method of finding the time of meridian transit.  Select whether to use Sun/Planets, Aries, or Moon.  
+(Most common would be Sun, in determining the time of Local Apparent Noon.)  Enter the degrees and minutes of the GHA Increment (limited to 15°0.00' 
+for Sun/Planets, 15°02.5' for Aries, 14°19.0' for Moon).  The corresponding time will be displayed, and will be automatically updated for whatever data is 
+currently entered.
+
+Both "Forwards" and "Backwards" have no default object (i.e.  Sun/Planets, Aries, or Moon).  In order to avoid a chance of error, an object must be 
+selected.
+
+c. Accuracy/Resolution:  Although all 21960 possible values of Increments and Corrections in the "forwards" mode have not been compared to those in the 
+Nautical Almanac, it is believed that they all match.  Since the formulas for the values are published, but the method of rounding in the Nautical Almanac is 
+unknown, the accuracy of the Yellow Pages Increment and Correction values will be specified as 0.1'.  In the "backwards" mode, times are rounded to the 
+nearest second  (rounded up if the GHA Increment is exactly between two tabulated values) and should match well.
+
+Contrary to common belief, not all Increments and Corrections tables are identical.  In 2001, four of the 10800 correction values changed, and are 
+expected to remain with their new values in the future.  Specifically these are:
+	minute	v or d	Corr (pre-2001)	Corr (2001 and later)
+	   22            2.8                1.1                              1.0
+	   22           16.4               6.2                              6.1
+   	   52            9.2                8.1                              8.0
+	   52           16.4             14.4                            14.3
+Celestial Tools will show both values for these four cases.
+</value>
+  </data>
+  <data name="txtHelpLength.Text" xml:space="preserve">
+    <value>LENGTH OF DEGREE
+
+a. Purpose:  Calculates the length of a degree of latitude and longitude in various linear units for both a spherical Earth (where 1° of latitude, or 1° along 
+any great circle, is defined as 60 nautical miles) and the WGS84 spheroid (the most commonly used default datum for GPS units), for a specified latitude, 
+north or south.  The WGS84 Spheroid output duplicates Bowditch 2002 Table 7.
+
+b. Operation:  Enter the latitude of interest.  Press the "Calculate" button.  The lengths will be displayed in feet, meters, statute miles, and nautical miles, 
+to two decimal places (although for feet and meters the accuracy probably does not warrant that resolution), and will be automatically updated for 
+whatever data is currently entered.  The length of a degree of latitude is calculated for a degree spanning 1/2° north to 1/2° south of the specified latitude.
+
+c. Accuracy/Resolution:   Lengths are displayed to three decimal places for nautical miles and statute miles, and to whole feet and meters, to duplicate 
+Bowditch 2002 Table 7.
+</value>
+  </data>
+  <data name="txtHelpTVMDC.Text" xml:space="preserve">
+    <value>TVMDC
+
+a. Purpose:  Update the values of the compass variables True (T), Variation (V), Magnetic (M), Deviation (D), and Compass (C) when any one is changed.  
+(T, M, and C can be courses, bearings, or headings, consistent within the tool.)  Calculate the value of variation for a selected year based on the data 
+provided on a chart.
+
+b. Operation: The window is divided into two sections.  The section on the left does the TVMDC calculation.  The section on the right calculates variation 
+based on chart data.
+
+TVMDC (left section):
+As any value is entered or changed, all other appropriate values change on the fly.  Values of V and D do not change automatically; they only change by 
+manually entering or changing their values.  If T, M,  or C is changed,the other two are updated.  If V or D are changed, the values below or above them 
+are updated, depending on whether True to Compass (down arrow) or Compass to True (up arrow) is selected.
+
+Values must be entered in whole degrees.  Leading zeros are not needed.  To change a value, the existing value must be deleted or backspaced over.  
+Highlighting then typing the new value will not work.
+
+Press the "Clear" button to clear all numerical values.
+
+Variation (right section):
+Enter the charted variation (limited to 99°59'), year, and annual change.   Enter the year of interest (default is the system year).  As any of these values is 
+entered or changed, the value of Corrected Variation is updated automatically.  This value can then be used in the TVMDC section if desired.
+
+There are no limits imposed on the years except they are limited to a maximum of four digits.  Because of this and the fact that Corrected Variation is 
+calculated automatically, as a year is changed the difference in years can be very large, possibly resulting in an unreasonably large value of Corrected 
+Variation.  Corrected Variations greater than 99° are flagged with a yellow background to warn of this possibility.
+
+c. Accuracy/Resolution:  For TVMDC, outputs are displayed to three figures, with leading zeros added where appropriate.  For Variation, Corrected 
+Variation is  rounded to whole degrees.
+</value>
+  </data>
+  <data name="txtHelp60DST.Text" xml:space="preserve">
+    <value>60D=ST
+
+a. Purpose:  Calculate speed, time, or distance, given two of the three quantities.  This tool is similar to Bowditch 2002 Table 11 (Speed, time, and 
+Distance), with the exceptions noted below.
+
+b. Operation:  Enter the values for the at least two of the quantities.  Press the button for the quantity to be calculated.  If there is already a value 
+present it will be updated based on the other two values.  If the unknown value is time, it will be displayed as minutes and days/hours/minutes.
+
+Inputs and outputs have upper limits, perhaps unreasonable high, that allow for a long ocean voyage:  99.9 knots, 59999 minutes or 99 days 999 hours 59 
+minutes, 9999.9 nautical miles.  If a calculated output value exceeds its limit the value is replaced by dashes and a message is displayed.
+
+Time can be entered as whole minutes or whole days/whole hours/whole minutes.   (If the desired time is of another format, e.g. 125.6 hours, use the Time 
+Addition/Subtraction/Conversion tool in Navig. Math to convert to days/hours/minutes.)  Once a value is entered in any of the four time boxes the 
+inappropriate ones are disabled.
+
+Pressing the Clear button clears all values.
+
+c. Accuracy/Resolution:  Outputs are rounded:  speed to tenths of a knot, time to whole minutes, and distance to tenths of a nautical mile.  Note that 
+Bowditch 2002 Table 11 does not use the USPS standard for rounding.  For instance, with a speed of 4.5 knots and a time of 30 minutes, a distance of 2.25 
+nautical miles is calculated, which is rounded to 2.2 nm by Table 11, but 2.3 nm by Celestial Tools.
+</value>
+  </data>
+  <data name="txtHelpInterpolate.Text" xml:space="preserve">
+    <value>NAVIGATION MATHEMATICS
+
+a. Purpose:  Single or double linear interpolation, generally used with a table of values.  Single interpolation is used if either a row or a column table 
+entering value is the desired value.  Double interpolation is used if neither a row nor a column table entering value is the desired value.
+
+Convert angles in degrees and minutes and time in hours, minutes, and seconds to decimal degrees and decimal hours.  This is particularly useful for 
+determining values for use in the Interpolation tool.
+
+Add or subtract two angles in degrees and minutes format.
+
+Add or subtract mixed values of time.  Convert a mixed time to days/hours/minutes/seconds.
+
+Solve time of day problems, like time to call, time of arrival, time of departure, etc.
+
+Calculate Zone Description from longitude.
+
+b. Operation:
+Interpolation:
+R1, R3, C1, and C3 are tabulated row and column table entering values.  R2 and C2 are the desired (untabulated) row and column table entering 
+values.  K1, K2, K3, and K4 are values extracted from the table (K for "known").  (Negative K values are permitted; negative R and C values are not 
+permitted.  Negative K values allow interpolation where the K values might have different signs, as in the case of a deviation table.)  Shaded, unlabeled 
+boxes are calculated output values.
+
+For double interpolation, enter values in the C1, C2, C3, R1, R2, R3, K1, K2, K3, and K4 boxes.  Press the "Interpolate" button.  Output values will 
+appear in the darker boxes.
+
+For single interpolation, enter values in the C1, C2, C3, K1, and K3 boxes, or in the R1, R2, R3, K1, and K2 boxes.  Unused K boxes must be left blank 
+for Celestial Tools to recognize it as a single interpolation calculation.  Press the "Interpolate" button.  Output values will appear in the darker boxes.
+
+Input values must not be entered as mixed units.  For example, longitudes must be in decimal degrees or decimal minutes, not in degrees and minutes; 
+times must be in decimal hours or minutes or seconds, not in hours, minutes, and seconds.  If convenient, a constant can be subtracted from each 
+value.  For example, 1h 00m, 1h 03m, and 1h 10m can be most conveniently entered as 60, 63, and 70, or as 0, 3, and 10.  (Be sure to write the full 
+values on your worksheet and to extract data from the correct rows and columns of the table.)  A sexagesimal-to-decimal converter for angles and 
+times is included for the convenience of the user.  Angles can be entered in either degrees and decimal minutes (DM.m) or degrees, minutes, and 
+seconds (DMS).  Converted time is expressed both as  decimal hours and as whole hours and decimal minutes.
+
+The program will check if the entered values make sense (C2 must be between C1 and C3, R2 must be between R1 and R3, etc.).  If not, a message is 
+generated.
+
+Trailing zeros to the right of a decimal point need not be entered and will not be displayed.  For example, 26.0 may be entered as 26 and will be 
+displayed as 26. (Be sure to use the required precision on your worksheet.)
+
+The "Clear" buttons clear all input and output values.
+
+Sexagesimal-to-Decimal Converter:
+Select the angle format to be used (degrees and decimal minutes or degrees, minutes, and seconds.  Enter the angle to convert (range 0° to 999°59.9') 
+and/or time to convert (range 0 to 99h59m59s).  Press the "Convert" button to complete the conversion.
+
+The "Clear" buttons clear all input and output values.
+
+Angle Addition and Subtraction:
+Enter the two angles and select the operation to be performed (+ or -).  The result is updated whenever anything is changed.
+
+The "Clear" buttons clear all input and output values. 
+
+Time Addition/Subtraction/Conversion:
+For addition or subtraction. enter any combination of days (d), hours (h), minutes (m), and seconds (s) for the two values to be combined, and select 
+the operation to be performed (+ or -).  Acceptable input characters are the digits 0 through 9 and one decimal point.  There is essentially no limit on the 
+number of characters that can be entered, but keep in mind that all characters might not be able to be seen at once.  Input values can be mixed.   For 
+example, 126.5 hours can be entered as 126.5h, 5d 6h 30m, 5d 6.5h, etc.    Press the "Calculate" button.  The calculated time will be displayed as days, 
+hours, minutes, and seconds.  Negative results will have a minus sign before the days value.  Whenever any input value or operation is changed, the 
+calculated value will be cleared.
+
+To convert a mixed time to days, hours, minutes, and seconds, simply enter the mixed time as the upper time, leave the lower time blank, and press the 
+"Calculate" button.
+
+The "Clear" buttons clear all input and output values.
+
+Time of Day Calculator:
+Enter the zone time (ZT, based on the civil time zone) at Location A in the format hhmm, from 0000 to 2359.  Enter the zone description (ZD) of Location 
+A.  If Daylight Savings Time is in effect at Location A and it has not been included in the zone description, check the DST box.  Enter the Interval (travel 
+time), if any, as any combination of days (d), minutes (m), and hours (h).  Acceptable input characters are the digits 0 through 9 and one decimal point.  
+There is essentially no limit on the number of characters that can be entered, but keep in mind that all characters might not be able to be seen at once.  
+Any convenient values can be used.  For example, 126.5 hours can be entered as 126.5h, 5d 6h 30m, 5d 6.5h, etc.   If there is an Interval, and the 
+time at Location B is expected to be later than the time at Location A, as when calculating an arrival time, select the + operator.  If the time at Location 
+B is expected to be earlier than the time at Location A, as when calculating a departure time, select the - operator.  Enter the zone description (ZD) of 
+Location B.  If Daylight Savings Time is in effect at Location B and it has not been included in the zone description, check the DST box.  Press the 
+"Calculate" button.  The calculated ZT (civil) will be displayed as a time of day (0000 to 2359) with the number of whole days, before (-) or after (+), if 
+any, also displayed.  Whenever any input value or operation is changed, the calculated value will be cleared.
+
+The "Clear" buttons clear all input and output values.  
+
+Time Zone Calculator:
+Enter the longitude.  The Zone Description (ZD) updates automatically as values are changed.
+
+The "Clear" buttons clear all input and output values. 
+
+c. Accuracy/Resolution:  Both older and newer courses state that only final answers should be rounded; any values along the way should not be 
+rounded.  However, older courses have a special rule for interpolation.  For example, N93 states "For intermediate interpolation numbers, work to one 
+decimal place greater than the tabular precision.  The final interpolated number is then rounded to the same precision as the table."  A consequence of 
+this rule is that a slightly different final result could be obtained depending on whether the first interpolation is done horizontally or vertically. The 
+Interpolation tool does not use this special rule.  All outputs are rounded to a maximum of five decimal places, and rounded intermediate values are used 
+for subsequent calculations.  As such, the order of interpolation has no effect, and all four intermediate values, in addition to the final value, will be 
+displayed.  It is left to the user to round appropriately.
+
+In the sexagesimal-to-decimal converter , converted values are rounded to a maximum of five decimal places.
+
+The Angle Addition and Subtraction tool should give accurate results, constrained to 0° to 359°59.9'.
+
+In the Time Addition and Subtraction tool, results are rounded to whole seconds.
+
+In the Time of Day Calculator tool, results are constrained to 0000 to 2359, rounded to whole minutes.
+
+The Time Zone Calculator should give accurate Zone Descriptions based on longitude alone.
+</value>
+  </data>
+  <data name="txtHelpDistances.Text" xml:space="preserve">
+    <value>DISTANCES
+
+a. Purpose:  Calculate the distance to the natural horizon (Bowditch 2002 Table 12).  Calculate the geographical range of visibility (the maximum 
+distance an object can be seen) (Bowditch 2002 Table 13).  These values are a function of height of eye, the height of the object, and the curvature of 
+the earth, and not the clarity of the atmosphere, quality of illumination, etc.
+
+Calculate the distance to an object based on a measured vertical angle by three methods:
+1) Distance by Vertical Angle Measured Between Waterline at Object and Top of Object (Bowditch 2002 Table 16):  Calulates the distance to an object 
+of known height above sea level lying within the observer's visible horizon.
+2) Distance by Vertical Angle Measured Between Waterline at Object and Sea Horizon Beyond Object (Bowditch 2002 Table 17):  Calculates the distance 
+to an object lying within or short of the horizon when the height of eye of the observer is known.
+3) Distance by Vertical Angle Measured Between Sea Horizon and Top of Object Beyond Sea Horizon (Bowditch 2002 Table 15):  Calculates the distance 
+to an object of known height above sea level when the object lies beyond the horizon.
+
+Vertical angles are typically measured with a sextant.
+
+b. Operation:  Select the desired function.  Boxes for only the required inputs will appear.
+
+For all calculators, Height of Eye (HE) can be entered in feet, meters, inches, or centimeters.  Height of Object can be entered in feet or meters. 
+Heights are limited to four characters, including a decimal point.  (The maximum value of Height of Object in the tables is 984 feet or 300 meters in Table 
+13.  The maximum value of Height of Eye in the tables is 820 feet or about 250 meters in Table 12.  Table 15 allows up to 2000 feet for the difference 
+between the Height of Object and Height of Eye.  Older editions of Bowditch had heights of eye up to 10000 feet.)  All heights of eye and heights of 
+objects are above the waterline.  Note that most published lists show heights referred to mean high water.  
+
+Distance of the Horizon:  Enter the HE value and unit.  Press the "Calculate" button, and the distance to the natural horizon will be displayed in nautical 
+miles (nm) and statute miles (mi).  (One application of the distance to the natural horizon would be to determine whether an island obscures the natural 
+horizon when checking the available azimuth range of a new "Favorite Place" on a chart.)
+
+Geographical Range of Visibility:  Enter the HE value and unit and the height of object value and unit.  Press the "Calculate" button, and the 
+geographical range of visibility will be displayed in nautical miles (nm) and a statute miles (mi).
+
+For all Distance by Vertical Angle calculators, the uncorrected vertical angle, hs, is the vertical angle measured with a sextant before correcting for 
+index error and dip.  hs and index error (IE) can be entered in either degrees and decimal minutes (DM.m) or degrees, minutes, and seconds (DMS).  hs 
+is limited to 89º59.9' or 89º59'59".  (These values far exceed practical use, but are allowed for academic reasons.)  Corrected altitude is limited to 90º.  
+(The maximum value in the tables is 30º in Table 15.)  Off the arc index error can be entered as either the actual reading from the sextant ("off the arc 
+(rdg.)") or the calculated value ("off the arc (val.)"); the program makes the appropriate adjustment when calculating index correction.  (Take, for 
+example, an arc reading between 1 and 2 degrees and a micrometer drum reading of 22.3 minutes.  This can be entered as either 2°22.3' off the arc 
+(rdg.) or as 1°37.7' off the arc (val.).  Either will give an index correction of +1°37.7.) 
+
+Distance by Vertical Angle Measured Between Waterline at Object and Top of Object:  Enter the HE value and unit.  Enter hs and IE.  Press the 
+"Calculate" button, and the distance to object will be displayed in nautical miles (nm) and statute miles (mi).
+
+Distance by Vertical Angle Measured Between Waterline at Object and Sea Horizon Beyond Object:  Enter the HE value and unit.  Enter hs and IE.  
+Press the "Calculate" button, and the distance to object will be displayed in yards, nautical miles (nm), and statute miles (mi).  
+
+Distance by Vertical Angle Measured Between Sea Horizon and Top of Object Beyond Sea Horizon:  Enter the HE value and unit and the height of object 
+value and unit.  Enter hs and IE.  Press the "Calculate" button, and the distance to object will be displayed in nautical miles (nm) and a statute miles (mi).
+
+For all Distance by Vertical Angle calculators, the Corrected Altitude (measured sextant altitude, hs, corrected for index error and dip, where 
+appropriate) will also be shown, for use as an entering argument in comparing results with the Bowditch tables.
+
+c. Accuracy/Resolution:  Distance to natural horizon and geographical range of visibility are rounded to tenths of a mile (nautical or statute).
+
+Distance by Vertical Angle Measured Between Waterline at Object and Top of Object:  This calculator provides the solution of a plane right triangle 
+having its right angle at the base of the observed object and its altitude coincident with the vertical dimension of the observed object.  It is based on 
+the following simplifying assumptions:  (1) height of eye is zero; (2) the sea surface between the observer and the object is flat; (3) atmospheric 
+refraction is negligible; (4) the waterline at the object is vertically below the peak of the object.  The error due to the height of eye of the observer 
+does not exceed 3% of the distance off for sextant angles less than 20º and heights of eye less than 1/3 of the object height.  The error due to the 
+waterline not being below the peak of the object does not exceed 3% of the distance off when the height of eye is less than 1/3 of the object height
+and the offset of the waterline from the base of the object is less than 1/10 of the distance off.  Errors due to the earth's curvature and atmospheric 
+refraction are negligible for cases of practical interest.  Distance is rounded to hundredths of a mile (nautical or statute).
+
+Distance by Vertical Angle Measured Between Waterline at Object and Sea Horizon Beyond Object:  This calculator corrects the measured angle (hs) for 
+index error.  An average value of terrestrial refraction and the mean radius of the earth are used.  Distance is rounded to whole yards and hundredths 
+of a mile (nautical or statute).
+
+Distance by Vertical Angle Measured Between Sea Horizon and Top of Object Beyond Sea Horizon:  This calculator corrects the measured angle (hs) for 
+index error and dip.  It uses the standard value refraction.  An error may be introduced if standard refraction does not apply due to non-standard 
+temperature and atmospheric pressure.  Distance is rounded to tenths of a mile (nautical or statute).
+
+Because of the vagaries of rounding, the output of Celestial Tools may not precisely match the Bowditch tables.
+</value>
+  </data>
+  <data name="txtHelpCTS_SOA.Text" xml:space="preserve">
+    <value>WIND &amp; CURRENT
+
+a. Purpose:  Calculate Course to Steer (CTS), Speed of Advance (SOA, over ground), and speed (through water) required to achieve planned cruising 
+speed (over ground) given the desired course to the destination, the planned cruising speed (over ground), the set and average drift of the current, and 
+the leeway drift angle and wind direction.  Calculated Course Made Good (CMG, expected path over the bottom, more accurately referred to as Track) and 
+Speed Made Good (SMG, the resultant speed) given vessel's heading (the direction the vessel is pointing, not necessarily the actual course) and speed,  the 
+set and average drift of the current, and the leeway drift angle and wind direction.
+
+b.  Operation:  For CTS and SOA, enter the Intended Course (whole degrees), planned Cruising Speed (over ground, knots, limited to 99.9), current Set 
+(whole degrees), average current Drift (knots, limited to 99.9), leeway Drift Angle (if any, whole degrees), and wind direction (if any).  For TR and SOA, 
+Heading is used instead of Intended Course.  Wind direction, where the wind is coming from, is only enabled if there is a non-zero value of Drift Angle.  It 
+can be selected as one of the eight cardinal or intercardinal compass points, or as from port or starboard, of particular use if the wind is nearly on the bow 
+or stern.  Press the "Calculate" button. For CTS and SOA, the CTS (with and without leeway), SOA (over ground), and speed (through water) required to 
+achieve planned cruising speed (over ground) are displayed.  (If the desired course could not be achieved under the entered conditions without adjusting 
+the speed through the water, e.g. engine RPM, the SOA will be shown as zero or a negaive number.)  For CMG and SMG,  the CMG (with and without 
+leeway) and SMG (over ground) are displayed.
+
+In most cases, either current or leeway but not both will be used.  The option to use both exists to allow for current to be extracted from a current table or 
+previous experience and leeway estimated from the wind being experienced.  If drift angle due to current is known from previous current measurements, 
+and course, speed, and weather and sea conditions have not changed, it, and its direction, can be used (under Leeway) in place of set and drift.  In this 
+case, the supplement (+/- 180°) of the current set is used to select the "Wind from" direction.
+
+Pressing "Clear" removes all the input and output data.
+
+Course and Set inputs can be true or magnetic or compass, but must be consistent throughout, with resulting outputs of the same type.
+
+The term current is used to mean not only the flow of the water surface but also the sum of all factors causing the course made good to differ from the 
+course steered.  Leeway is the angular difference due to wind between the true course steered and the true course over ground, but can be used to 
+represent the set and drift due to current as explained above..
+
+Current set and drift can be determined using The Sailings.
+
+c. Accuracy/Resolution:  CTS is rounded to whole degrees.  SOA and speed required to achieve planned cruising speed are rounded to tenths of a knot.
+</value>
+  </data>
+  <data name="txtHelpSailings.Text" xml:space="preserve">
+    <value>THE SAILINGS
+
+a. Purpose:  For Mid-Latitude Sailing, Mercator Sailing, and "Accurate Rhumb Line" Sailing:  Calculate course and distance given initial position and final 
+position.  Calculate final position given initial position, course, and distance.  Calculate set and drift given DR position, fix position, and elapsed time from 
+previous fix; if previous fix is known, calculate drift angle, distance between fixes, course made good (more properly called track made good), speed 
+made good.  For Great Circle Sailing:  Calculate initial course and distance, maximum latitude (vertex), and final course, given initial position and final 
+position.  Calculate final position, maximum latitude, and final course, given initial position, initial course, and distance.  Calculate the points on a great 
+circle route, rhumb line course and distance from point to point, and total rhumb line distance.  For all Sailings:  Calculate position given range and 
+bearing to known object.
+
+This tool includes three types of rhumb line sailings, Mid-Latitude, Mercator, and "Accurate Rhumb Line", and Great Circle sailing.
+
+Mid-Latitude Sailing is a form of plane sailing, where the surface of the Earth is considered flat and the curvature of the Earth is not taken into account.  
+It is an approximation that is considered sufficiently accurate for shorter distances.  This value varies from source to source, with some sources 
+suggesting no more than 600 nm, and others, e.g. Bowditch, having examples over 1000 nm.  Earlier versions of Celestial Tools limited this distance to 
+600 nm, but this limitation was increased to 9999.9 nm with V2.2.0, allowing a comparison of this method to the other methods provided for longer 
+distances.  (This limitation only applies to input values; calculated distances can exceed this.)  However, mid-latitude sailing has its issues near the poles, 
+so the maximum latitude is limited  to 84°59.9', and a message will be generated if any part of the course exceeds this.  (Note that this will also generate 
+the message for a course of 0° or 180° which exceeds this latitude, for which mid-latitude sailing is accurate, but for which there is no need to use a 
+sailing of any kind.
+
+Mercator sailing considers the curvature of the earth, and is considered the most accurate form of rhumb line sailing developed for tabular use, but is 
+less popular than mid-latitude sailing because its manual calculation is more difficult and requires an additional table (meridional parts).  USPS considers it 
+the preferred tabular rhumb line method for distances over 600 nm.  As with mid-latitude, input distance is limited to 9999.9 nm, but calculated distances 
+can exceed this.  When using tables, Mercator sailing is unreliable when the course lies within 5° of due east or west.  This is not a problem when using 
+a calculator or computer except when calculating final position when the course is directly east or west, where conventional mid-latitude sailing is used.
+
+"Accurate Rhumb Line" sailing is the method used in Visual Passage Planner 2, and was never a tabular method.  It is the most accurate form of rhumb 
+line sailing, and can be used for short or long distances.
+
+For Mercator sailing and Accurate Rhumb Line sailing, for courses of 0° or 180° where the course crosses a pole, the calculation will not be completed, 
+but a message will be generated.
+
+Although most similar to Mid-Latitude Sailing, the Destination L and Lo function of any of the rhumb line sailings can be used in place of the "Simplified 
+Traverse Table", with more accurate results.  However, starting with V5.0.0, the Simplified Traverse Table computation of arrival position knowing 
+departure point and distance traveled has been included.
+
+Any of the rhumb line sailings can be used to calculate the drift angle between two fixes by calculating the course from the earlier fix to the later fix and 
+the course between the earlier fix and the DR position at the time of the later fix, and taking the difference between them.  Alternatively, the drift 
+angle can be found in one step by using the set and drift tool.
+
+Great circle sailing provides the shortest distance between two points, but since it is more difficult to follow a great circle route than a rhumb line, it is 
+most practical when traveling long distances at high latitudes.  A frequently used rule of thumb is that for latitudes less than 40° and distances less than 
+1000 nautical miles, the distance saving in a great circle route is usually not significant.
+
+A great circle route can reach latitudes higher than that of the point of departure or destination.  To avoid high latitudes where ice or gales might be 
+encountered, a modification of great circle sailing called "composite sailing" may be used.  There are two methods used to accomplish this.  In Method 1, 
+a great circle route is plotted from the point of departure to the destination and is followed from the point of departure until it crosses the limiting 
+latitude, then the parallel of the limiting latitude is followed until the great circle again crosses it, then the great circle route is followed to the 
+destination.  In Method 2, one great circle is plotted from the point of departure tangent to the limiting parallel, and a second from the destination 
+tangent to the limiting parallel.  The first is followed from the point of departure to the limiting latitude, then the parallel of the limiting latitude is followed 
+until the second great circle reaches it, then the second great circle is sailed to the destination.  Method 1 is easier to plot, but Method 2 results in a 
+shorter course.  (In both methods, plotting is done on a gnomonic projection.)
+
+b. Operation:
+
+For all cases, press "Calculate" to complete the calculation.  (See below regarding the "Simplified Traverse Table" method.)
+
+Mid-Latitude, Mercator, and "Accurate Rhumb Line" Sailing:  Select whether you want to calculate course and distance, final position (destination L and 
+Lo), or set and drift.  L1 and Lo1 are the latitude and longitude of the initial (point of departure) position.  L2 and Lo2 are the latitude and longitude of 
+the final (destination) position.  L1 and L2 are limited to 84°59.9' for Mid-Latitude,and  89°59.9' for Mercator and "Accurate Rhumb Line".
+
+When calculating final position, enter L1, Lo1, true course (with 0.1° resolution), and either the distance (as actual distance or as start and end 
+knotmeter log values, Log1 and Log2, limited to 9999.9nm) or the speed and running time (as actual running time or start and end times, Time1 and 
+Time2, in hhmm format).  Distance can be entered with tenth of a nautical mile resolution up to 9999.9 nautical miles. Speed can be entered with tenth 
+of a knot resolution up to 99.9 knots.  (The speed value is either a constant speed or average speed based on the actual conditions.)  Run Time can be 
+entered in integer hours and integer minutes, or just integer minutes.  If an hour value is entered, minutes are limited to 59.  If no (or zero) hour value 
+is entered, minutes are limited to 999 (almost 17 hours).  If a minute value greater than 59 is entered, the hour box is disabled.  If Log1 is greater than 
+Log2 an error message will be generated.  If Time1 is later than Time2 an error message will be generated.  (The program does not consider this to be a 
+run that crosses midnight.  If this is actually the case, it is best to use Run Time.)  Press the "Calculate" button to get the latitude and longitude of the 
+final position.  If speed and time were entered, calculated distance will also be displayed.  If Time1 and Time2 were entered, calculated run time will also 
+be displayed.
+
+If Mid-Latitude and Destination L and Lo are both selected, there is the option of calculation the arrival (destination) position using the "Simplified 
+Traverse Table" method taught in recent N courses, rather than the more accurate mid-latitude calculation.  If this is chosen, outputs consist of the 
+eight lines of intermediate values, the Arrival Position answer, and any other calculation that is normally displayed if distance is not input directly.  Only 
+the final result of the intermediate values is shown - how they are derived is not, as that can be seen on the worksheet.  "Use this mid-latitude for CLS 
+SAPS plot", described below, is ignored even if checked.  As with Mid-Latitude sailing, L1 is limited to 84°59.9'.
+
+When calculating course and distance, enter L1, Lo1, L2, and Lo2, then press the "Calculate" button.
+
+When calculating set, drift, and drift angle, enter the Fix L and Fix Lo and the DR L and DR Lo at the time of the fix.  For drift determination, enter the 
+elapsed time from the previous fix in integer hours and integer minutes, or just integer minutes, or the times of the earlier and later fixes, Time1 and 
+Time2, in hhmm format.  (The same rules as when calculating final position apply.)  (Time is not required for set or drift angle determination.)  If the 
+latitude and longitude of the prior fix are available, check the "Prior fix available for drift angle, CMG, SMG calculation" and enter the values (latitude 
+limited to 89°59.9').  Press "Calculate" to get the set, total drift (the distance between the DR and the fix), drift, and, if the prior fix location was 
+entered, the drift angle and whether it is to port or to starboard, the distance beween fixes, the course made good (CMG), and the speed made good 
+(SMG).  If Time1 and Time2 were entered, calculated run time will also be displayed.
+
+(Set and drift can also be determined between two fixes by first determining the Destination L and Lo from the first fix knowing course and speed.  Then 
+use this position as the DR L and DR Lo, along with the L and Lo of the second fix, in the Set and Drift calculation.  Including the first fix as the "prior fix" 
+will also provide drift angle.  The need to do this, however, was eliminated in V5.4.0, as these values have been included in the calculation.)
+
+If Mercator Sailing is being used, the meridional parts for the starting latitude (M1), the destination latitude (M2), and the meridional difference (m) will 
+also be displayed, unless calculating final position with a course directly east or west, where conventional mid-latitude sailing is used.  Two options are 
+available:  "WGS 1972 ellipsoid" or "Clarke 1866 spheroid".  With "WGS 1972 ellipsoid" selected, the values of the meridional parts should agree with the 
+Meridional Parts tables of editions of Bowditch (American Pratical Navigator) starting in the late 1900s.  If "Clarke 1866 spheroid" is selected, the values 
+of the meridional parts should agree with the Meridional Parts tables of editions of Bowditch of the mid-1900s.  The values in the Meridional Parts tables 
+of editions of Bowditch can be produced by just entering a latitude and pressing "Calculate".
+
+When calculating final position or set and drift, as any value is entered, values that are no longer appropriate are disabled.  For example, when 
+calculating final position, if Time1 is entered, Run Time, Log1, Log2, and Distance will be disabled.
+
+Normally mid-latitude sailing uses the algebraic average of the initial latitude and the final latitude (whether an input or calculated) (south latitude is 
+negative).  However, when using a Constant Latitude Scale (CLS) Small Area Plotting Sheet (SAPS), it is often desirable to use a convenient value of 
+mid-latitude in order to keep the plot near the center of the sheet.  If a specific mid-latitude is to be used, check the "Use this mid-latitude for CLS SAPS 
+plot" checkbox and enter the desired value in degrees and tens of minutes (0, 10, 20, 30, 40, or 50), with a maximum value of  55°00', the largest 
+value shown on the CLS SAPS. This will result in an output that more closely matches the plot, but causes a slight error in longitude, zero at the equator 
+and increasing to about 0.8' at a latitude of 55°.  Since a CLS SAPS has latitude and longitude ranges of one degree, an error message will appear if 
+either is exceeded.  If the selected mid-latitude causes the latitude range of the CLS SAPS to exceed one degree an error message will appear.  (The 
+Universal Plotting Sheet is also a CLS chart, bit its small scale does not warrant the use of this feature.)
+
+When switching from one sailing to another, outputs are cleared but inputs are retained for ease in making comparisons.  When switching from one 
+function to another, all inputs and outputs are cleared.  Pressing "Clear All" removes all the input and output data.  Pressing "Clear But Use L2, Lo2 For 
+New L1, Lo1" removes all the input and output data but makes the entered or calculated final position into a new initial position, and, if a specific 
+mid-latitude was entered and the box checked, the entered value will be retained and the box will remain checked.
+
+Keep in mind that, because of rounding, the Destination L and Lo and the Course and Distance calculations might give slghtly inconsistent results.  For 
+instance, if you enter the latitudes and longitudes of a departure point and a destination point and calculate the course and distance, and then use the 
+calculated values in a Destination L and Lo calculation with the same departure point, you will probably not end up with exactly the same destination 
+point.
+
+Great Circle Sailing:
+Select whether you want to calculate initial course and distance or final position (destination L and Lo).  L1 and Lo1 are the latitude and longitude of the 
+initial (point of departure) position.  L2 and Lo2 are the latitude and longitude of the final (destination) position.
+
+When calculating initial course and distance, enter L1, Lo1, L2, and Lo2.  Press the "Calculate" button and the initial course, distance, maximum latitude, 
+and final course will be displayed.  If the initial and final points are antipodes (i.e. on diametrically opposite sides of the earth) but not the poles, a 
+message will be displayed.  (If  L1 and/or L2 are poles, the values of Lo1 and Lo2 do not matter.)
+
+When calculating final position, enter L1, Lo1, true course (with 0.1° resolution), and  distance.  Distance can be entered with tenth of a nautical mile 
+resolution up to 9999.9 nautical miles.  Press the "Calculate" button to get the latitude and longitude of the final position, maximum latitude, and final 
+course.
+
+Note that the initial course for the reversed course (L2, Lo2 to L1, Lo1) equals the final course of the original course +/-180°.
+
+After the "Calculate" button is pressed, and if the entered or calculated course is not 0° or 180°, another button, "Points on Great Circle Route", 
+becomes enabled.  When it is pressed, another window, "Points on Great Circle Route",  opens, listing the latitudes for the initial and final longitudes for 
+the great circle course, the latitudes for each whole 5° longitude between them, the rhumb line course and distance from point to point, and the total 
+rhumb line distance.  (The program uses "Accurate Rhumb Line" sailing to calculate the courses and distances, but any rhumb line tool  can now be used 
+to calculate a rhumb line course between individual points.  The "Points on Great Circle Route" window also allows the calculation of the latitude for any 
+longitude on that great circle, not just longitudes on the route.  Enter the longitude of the point, press the "Point Latitude" button, and the 
+corresponding latitude will be displayed.
+
+Once any data, input or output, is displayed on the "Points on Great Circle Route" window, it is cleared whenever the "Calculate" button is pressed 
+again.
+
+Composite Sailing:
+When Great Circle, Initial Course and Distance is selected, and it is desired to use composite sailing, check the "Use Composite Sailing" check box.  Enter 
+the latitude limit (range 1° to 89°59.9'); in practice, typically 38° to 50°).  Select Method 1 or Method 2.  Activate the "Calculate" button to complete the 
+calculation.  Outputs include initial course, longitudes of the limiting parallel crossings, the distance of each segment, the total distance, and the final 
+course.
+
+Pressing the "Points on Composite Route" button performs a function similar to the "Points on Great Circle Route" button for the particular composite 
+sailing method selected., except the portion along the limiting parallel is shown as one segment rather than being broken at whole 5° longitude 
+increments.   If Method 1 is selected, the "Points on Composite Route" window also allows the calculation of the latitude for any longitude on the great 
+circle portion of the route (including the portion beyond the limiting parallel), not just longitudes on the route.  Enter the longitude of the point, press the 
+"Point Latitude" button, and the corresponding latitude will be displayed.  (Because there are two great circles onvolved in Method 2, this feature is only 
+enabled for Method 1.)
+
+Pressing "Clear All" removes all the input and output data.  Pressing "Clear But Use L2, Lo2 For New L1, Lo1" removes all the input and outpur data but 
+makes the entered or calculated final position into a new initial position.  This allows the final postiion of a vessel that has traveled a series of rhumb 
+lines to be determined mathematically, a convenient, step-by-step version of the Bowditch 2002 Table 4 Traverse Table method.
+
+Other applications:
+The LoC/NASR tool will calculate an EP for a Law of Cosines reduction and an AP/EP (as defined in the LoC/NASR Help) for a NASR reduction, but this 
+can also be done with the Mid-Latitude and Mercator sailings, using the "Calculate Destination L and Lo" function.  Enter the DR L and Lo (LoC) or AP L 
+and Lo (NASR) as L1 and L2, intercept length as Distance, and azimuth (be sure to add or subtract 180º if intercept was Away) as True Course.  The 
+resulting L2 and Lo2 correspond to the EP (LoC) or AP/EP (NASR).
+
+Any of the Sailings can be used to calculate position given the range and bearing to an object with a known latitude and longitude.  Use the "Calculate 
+Destination L and Lo" function, with the latitude and longitude of the object as L1 and Lo1, and the reciprocal true bearing for True Course.  After the 
+distance is entered, press the Calculate button to get your latitude and longitude.  Since visual bearings are generally at distances no more than 10 nm, 
+any of the Sailings should give the same position.
+
+Taking this a step further, consider the situation of a multi-body fix using the NASR method from a moving vessel, where an earlier LOP must be 
+advanced to the last LOP.  Enter the AP L and Lo (as L1 and Lo1), speed, and elapsed time from the earlier sight to the last sight.  The resulting L2 and 
+Lo2 effectively advance the AP to the time of the last sight.  Use the "Clear But Use L2, Lo2 for New L1, Lo1" button.  Then enter intercept length as 
+Distance and azimuth (be sure to add or subtract 180º if intercept was Away) as True Course.  The resulting L2 and Lo2 correspond to the advanced 
+AP/EP.
+
+The Sailings can also be used to find the set and drift of current using two fixes and the course, speed, and run time between them  (or the time of each 
+fix).  Use the "Calculate Destination L and Lo" function with the first fix, course, speed, and elapsed time.   (Be sure to record the Destination L and Lo, 
+as they are not saved when switching functions.)  Enter the calculated position as the DR position in the "Calculate Set and Drift" function, the second 
+fix as the Fix position, and the run time between them (or the time of each fix).
+
+c. Accuracy/Resolution:  Calculated courses are displayed to both the nearest hundredth of a degree and rounded to whole degrees (just to whole 
+degrees for the rhumb line courses in "Points on Great Circle Route").  Calculated distances and total drift are displayed to the nearest tenth of a 
+nautical mile.  Calculated set and drift angle are displayed to the nearest degree.  Calculated drift is displayed to the nearest tenth of a knot.  
+Calculated latitudes and longitudes are displayed to the nearest tenth of a minute.
+
+Rhumb line distances in "Points on Great Circle Route" may differ by 0.1 nm from that shown using "Accurate Rhumb Line" on an individual pair of points 
+because "Points on Great Circle Route" uses the unrounded calculated values of latitude.
+
+For Mercator sailing, values of meridional parts for latitudes with whole minutes (the latitudes tabulated in the Meridional Parts tables) are expected to 
+agree with the Meridional Parts tables of editions of Bowditch (American Practial Navigator) from at least 1981 through 2002 when "WGS 1972 ellipsoid" 
+is selected.  These tables are based on the World Geodetic Survey of 1972 ellipsoid.  (This is the table that was used in the USPS JN course in the 
+1990s.)  When "Clarke 1866 spheroid" is selected, values of meridional parts are expected to agree with the Meridional Parts tables of editions of the 
+mid-20th century, which are based on the Clarke spheroid of 1866, the standard reference spheroid used for charting North America at the time.  
+(Editions of the early 20th century and earlier used yet another basis.)  When a latitude of interest contains tenths of minutes, manual calculation is 
+done by linear interpolation between the whole minute latitudes immediately above and below the latitude of interest.  Celestial Tools calculates the 
+meridional parts for latitudes with tenths of minutes using the same formulas that are used to calculate the values for latitudes with whole minutes.  This 
+is more accurate than interpolation, but could result in a differences compared to interpolated values.  The differene between calculated and 
+interpolated values increases with increasing latitude, being nor more than 0.1 at low to middle latitudes, no more than 0.2 up to about 89°, and as 
+much as 0.7% (over 200) near 90°
+
+For composite sailing Method 1, because of the rounding of the rhumb line distances, it is possible that the total rhumb line distance could be slightly less 
+than the total composite sailing distance.
+
+Remember that for all sailings, calculations are done to the full precision of the computer, followed by rounding.  In most cases this results in an answer 
+that is different, and probably more accurate, than a calculation done by hand with tables.  As with tables, the computations assume the Earth is a 
+sphere, not an oblate spheroid.  For this reason, results may be slightly different than those of sources that consider the oblateness.
+</value>
+  </data>
+  <data name="txtHelpArcTime.Text" xml:space="preserve">
+    <value>ARCS AND TIMES CONVERTERS
+
+a. Purpose:  Convert expressions in arc to their equivalents in time and expressions in time to their equivalents in arc.  Convert Local Mean Time (LMT) to 
+Zone Time (ZT) and ZT to LMT.
+
+b. Operation:  Select the desired conversions.  Enter the values to be converted.  For LMT and ZT conversions also enter the longitude.  Press the 
+"Convert" button and the equivalent/converted values are displayed.  For LMT and ZD conversions, the Zone Meridian (ZM) is also displayed.
+
+If all inputs for a conversion are left blank, that conversion is not displayed.  The inputs are not treated as zeros.
+
+Switching conversion from LMT to ZT to ZT to LMT rf vice versa retains the input data.
+
+Arc input is limited to 359°59.9'.  Time input is limited to 23h59m59s.
+
+c. Accuracy/Resolution:  Arc output is rounded to the nearest 0.1'.  Time outputs are rounded to the nearest second.
+</value>
+  </data>
+  <data name="txtHelpAveraging.Text" xml:space="preserve">
+    <value>SIGHT AVERAGING
+
+a. Purpose:  To analyze and obtain the average watch times and sextant altitudes for a run of sights.
+
+b. Operation:  Input up to ten pairs of watch times (WT) and sextant altitudes (hs).  Sextant altitudes can be entered in either degrees and decimal 
+minutes (DM.m) or degrees, minutes, and seconds (DMS).  Watch times must be entered in chronological order.  Subsequent data entry lines do not 
+become active until an acceptable time is entered on the current line.  (This allows all the watch times to be entered as a group, all the sextant altitude 
+degrees to be entered as a group, etc.)
+
+(Once data is entered on a line, it can be changed, but a line of data should never be completely deleted.  This will result in error messages.  If, for 
+instance, you wish to eliminate a sight from averaging, use the Analyze function described below.)
+
+At this point either the "Analyze" button or the "Calculate Averages" button can be activated.
+
+If you are happy with the data as entered, activate the "Calculate Averages" button and the average watch time and average sextant altitude will be 
+displayed.
+
+However, if you want to examine the data to look for bad sights or erroneous entries, activate the "Analyze" button.  Unless the body is near the 
+observer's meridian, a number of observations taken in quick succession and plotted versus time should result in nearly a straight line.  When the 
+"Analyze" button is activated, the values of the "residuals" for each sight are then displayed.  The residuals are the differences, in arc-minutes, 
+between the measured altitude entered and the altitude calculated by a least-squares linear regression fit determined from using all the entered times 
+and altitudes.  (In versions of Celestial Tools previous to V5.1.1, the differences (from sight to sight) of watch time and sextant altitude are displayed, 
+plus the rate of change of sextant altitude per unit time.  It was often difficult to determine which sight was an outlier.)  If a sight seems bad, having a 
+particularly high residual (ignoring the sign), and you do not want to include it in the averaging, clear its check box. If data was entered incorrectly, it 
+can be fixed now.   (Whenever the "Analyze" button is pressed, all the check boxes will be checked, even if previously cleared, and the displayed 
+averages will disappear.  It is presumed that a subsequent press of the "Analyze" button was done because of a change in the data, perhaps from an 
+erroneous value, so the old averages are no longer valid.)  Then press the "Calculate Averages" button and the averages for the checked sights will be 
+displayed.  If, for any reason, a sight that is intended to be used for the average does not have a check box, simply press the "Analyze" button again.  
+(Note that this method of analysis results in a line through the data points that should resemble a line drawn by eye on a plot, but can result in a good 
+sight being rejected and a bad sight being retained.  See the article "How to Average Celestial Sights for Optimum Accuracy", by David Burch, for an 
+improved method.)
+
+Note that although the watch times have to be entered in chronological order, if you do not intend to analyze the sights the sextant altitudes do not 
+have to be entered on the same line as the corresponding time.  However, it is recommended that the watch times and sextant altitudes be entered as 
+pairs.  If you intend to analyze the sights, it is mandatory that they be entered as pairs.  In any case, an error message is generated if the number of 
+watch times does not equal the number of sextant altitudes.
+
+If a run of sights crosses midnight, which could occur when using an artificial horizon, the watch times after midnight must be entered with an hour value 
+of 24 instead of 00.  (Note that only this tool allows times of up to 245959 to be entered.)  If necessary, subtract 24 hours from the resulting average 
+watch time and add one day.
+
+c. Accuracy/Resolution:  Average watch time is displayed to the nearest second.  Average sextant altitude is displayed to the nearest tenth of a 
+minute.  "Scatter" values are displayed to the nearest tenth of an arc-minute.
+</value>
+  </data>
+  <data name="txtHelpLoCNASR.Text" xml:space="preserve">
+    <value>SIGHT REDUCTION METHODS &amp; FIX
+
+a. Purpose:  Allows data extracted from the Nautical Almanac (rather than from the built-in medium-precision almanac) to be entered for sight 
+reductions using various methods.  (In keeping with the spirit of Celestial Tools as being an instructional aid rather than doing the work for the student, 
+this module is  intended, for most methods, to be only a little more than Windows executable versions of DOS programs and spreadsheets already 
+available on the USPS web site.)  The methods included are the Law of Cosines (LoC) calculator method, the Nautical Almanac Concise method (NASR), 
+Pub. 249 (formerly H.O. 249, Sight Reduction Tables for Air Navigation, A.P. 3270 in the United Kingdom), Pub. 229 (formerly H.O. 229, Sight Reduction 
+Tables for Marine Navigation, H.D. 486 in the United Kingdom), H.O. 214 (Tables of Computed Altitude and Azimuth), H.O. 211 (Dead Reckoning 
+Altitude and Azimuth Table, Third Edition, known as Ageton, and the Modified H.O. 211 Compact Sight Reduction Table, known as Ageton-Bayless), 
+H.O. 208 (Navigation Tables for Mariners and Aviators, Sixth Edition, known as Dreisonstok), two versions of the S-Table, and the Weems Line of 
+Position Book.
+
+(Over the years the USPS SR forms for the same sight reduction method have changed in their layout, operation, and Zn resolution.  Celestial Tools SR 
+"forms" are patterned after the following USPS SR forms:  Law of Cosines - SR 96a; NASR - SR 96a; Pub. 249 - SR Pub. 249 Vol II &amp; III; Pub. 229 - SR 
+96b; H.O. 211 - SR 87, with the exception regarding Zn noted in Accuracy/Resolution.  The form for H.O. 214 is patterned as a combination of the H.O. 
+214 form of SR 712 and the Pub. 229 form of SR 96b.  The form for H.O. 208 is patterned after the examples in the sixth edition of the H.O. 208 book.)
+
+Calculates an Estimated Position (EP) for all methods. Calculates an AP/EP and a DR-LOP distance for all methods that use an Assumed Position (AP) 
+rather than a Dead Reckoning (DR) position.  (See below for how EP and AP/EP are defined.)  Use two more sights reduced by the Law of Cosines 
+method to establish a fix.
+
+b. Operation:  Required inputs are GHA or LHA (Tot GHA or LHA from SR form), declination (Dec from SR form), observed altitude (Ho from SR form), 
+and DR latitude and longitude (if GHA is being used).  To use LHA instead of GHA, enter LHA in place of GHA and set DR Lo to zero or leave blank.  (Be 
+aware that doing this will give an EP, and an AP/EP if applicable, referred to 0° longitude.)  Time is only required if it is intended to establish a fix from a 
+moving vessel.  (The time value need not be accurate.  It is only used to determine which is the latest of the selected sights so the earlier sights can be 
+advanced to its DR position.)  Select one of the eight sight reduction method buttons and the corresponding sight reduction will be displayed in the 
+format required by the SR form (where the format of the form is known).
+
+GHA has an upper limit of 719°59.9' in case Tot GHA from the SR form exceeds 360° and has not been adjusted.
+
+The NASR method is not suitable for values of Ho exceeding 75°.  The Law of Cosines is not suitable for values of Ho exceeding 88°.  Pub. 229 requires 
+a special interpolation technique for Ho values of 86° or greater that is not included in this program. The corresponding buttons will be disabled if the 
+entered value of Ho exceeds these limits.  
+
+Ho has a lower limit of -59.9', so sights on bodies on the visible horizon (with a negative altitude on the celestial horizon) and heights of eye up to about 
+75 feet can be reduced.  If a negative value of minutes of Ho is entered, any value of degrees of Ho will be cleared and the Ho degrees box will be 
+disabled.
+
+When using the standard procedure for determining Asm Lo and Asm LHA with the NASR method, if the difference between Asm Lo and DR Lo is exactly 
+30', there are two possible correct sets of values that can be derived.  Celestial Tools is configured to give the set with the value of Asm LHA closer to 
+the actual value of LHA.
+
+For the NASR method, after the "NASR" button is activated the user can select whether to use the Auxiliary Table found in the pre-1999/post-2004 
+Nautical Almanacs or that found in the 1999-2004 Nautical Almanacs.  The default is the pre-1999/post-2004 set.  Whenever this option is changed, 
+the calculation is done without having to activate the "NASR" button.
+
+A little explanation is in order.  In the late 1990s, USPS produced its own version of the Auxiliary Table, called the "ALTITUDE CORRECTION TABLE for 
+The Nautical Almanac Sight Reduction Table".  Its purpose was twofold.  It had a revised format which made it easier to determine the signs of the 
+corrections, and it "corrected" the tabulated values of corr1 and corr2 to match what would be derived from using a calculator and applying standard 
+rounding techniques. (The single row that did not conform to this design in the Auxiliary Table was the values for P 30° and Z2 60°.  The Auxiliary Table 
+values for corr1 are one less than the USPS version values when P° is 30 and F' is odd.  The Auxiliary Table values for corr2 are one less than the USPS 
+version values when Z2° is 60 and A' is odd.)  This table was well-received, and replaced the original Auxiliary Table starting with the 1999 Nautical 
+Almanac. However, starting in 2005, the Nautical Almanac maintained the improved format of the USPS version, but went back to the "uncorrected" 
+values of corr1 and corr2.
+
+The NASR method program is capable of producing results outside the range of the tables, generally for objects that have a negative altitude, i.e. 
+below the horizon.  This is not of significant interest to mariners.
+
+For the Law of Cosines, the Estimated Position (EP) is the point at the end of the intercept line through which goes the line of position.  For all methods 
+that use an AP rather than a DR, this point is not the Estimated Position as normally defined, since the intercept starts at an Assumed Position (AP) 
+instead of at a DR position or a Known Position (KP), and is called AP/EP in Celestial Tools to distinguish it from a normal EP.  (It is only valid from a fixed 
+position, not from a moving vessel.  One of the rhumb line methods of The Sailings can be used to advance an AP/EP.)  In either case, this point should 
+be useful in checking the accuracy of a plot.  For NASR, the DR-LOP distance is also shown, which, if the DR position is a known position (KP), is a 
+measurment of the quality of the sight.  From this, the real EP,  the point on the LOP closest to the DR position, is calculated and displayed.  These 
+results will not necessarily match those obtained by the Law of Cosines because of the difference in precision and rounding and the skewing of the LOP 
+if there is sufficient difference in the azimuths derived by the two methods.
+
+For Pub. 249, the program should operate properly even outside the declination range of 29°N to 29°S of the tables.
+
+For Pub. 229, the DSD value and correction are generally only needed for values of Hc greater than 60° and certain conditions of latitude, declination, 
+and LHA.  After the "Pub. 229" button is activated, an "Always use DSD" checkbox will appear in the data display area, next to "Pub 229".   If this box is 
+unchecked (the default), the DSD value and correction will only be included if the DSD correction exceeds 0.25'.  This should correspond to the tabular 
+values of d printed in italic type followed by a small dot.  If it is checked, the DSD value and correction will be included whether it is needed or not.  If 
+the DSD value and correction are needed, the checkbox will be disabled.  (Checking or unchecking this box has the same effect as activating the "Pub. 
+229" button:  the output display area is updated.) 
+
+For H.O. 211, after the "H.O. 211" button is activated the user can select whether to use Original (Ageton) or Compact (Ageton-Bayless) tables.  The 
+default is the Compact tables.  (The original tables included entries for half-minutes of arc, which were deleted from the compact tables.) (Note that 
+changing this option has the same effect as activating the "H.O. 211" button:  the output display area is updated.)  For the Original tables, meridian 
+angle t and declination must be at least 0.3'.  For the  Compact tables, meridian angle t and declination must be at least 0.5'.  
+
+H.O. 211 has a "forbidden zone", generally considered to be where K is between 82° and 98° (though some sources have smaller ranges), where an 
+intercept error of up to 30 miles may result (less if interpolation of the tables is used).  The USPS recommendation is to discard the sight.  However, if K 
+is between 82° and 98°, Celestial Tools will interpolate (actually calculate) for the second B value.  When this occurs, either with the Compact or Original 
+Tables, a message will appear indicating this, and giving the option of using the Sadler Technique, a modified form of H.O. 211 for use in the "forbidden 
+zone", which gives more accurate results.  For the Sadler Technique with the Original tables, meridian angle t must be at least 0.3' away from 90°.  With 
+the  Compact tables, meridian angle t must be at least 0.5' away from 90°.
+
+For H.O. 214, after the "H.O. 214" button is activated the user can select one of three possible solutions:
+1) Solution for line of position, using delta d correction.  This is the primary method for which the tables were originally designed, and is the default.  The 
+solution is short and simple, essentially being plotted from an assumed (AP) latitude and longitude.  (The AP/EP is referenced to Asm L and Asm Lo.)
+2) Solution for line of position, using both delta d and delta t corrections.  This is used if it is desired to plot from an AP latitude and a DR longitude.  (The 
+AP/EP is referenced to Asm L and DR Lo.)
+3) Solution for position line from the DR position using delta d, delta t, and delta L.  (No AP/EP or DR-LOP distance will be shown.)
+(Note that changing this option has the same effect as activating the "H.O. 214" button:  the output display area is updated.)  H.A. is the equivalent of 
+meridian angle t.  The use of delta t is not in general recommended when the altitude of the observed body is greater than 80°, but it will be included in 
+the solution nevertheless.  The azimuth obtained from the tables is correct for the values with which the tables were entered, and for plotting lines of 
+position generally need no correction.  If more accuracy is desired, the azimuth may be interpolated, but this will not be done by Celestial Tools.
+
+For H.O. 208, the assumed LHA (the LHA to the nearest whole degree) cannot be 0° or 180°.  When high altitudes are observed near mereidian transit, 
+selecting an assumed position to fit the tables may produce an appreciable error in azimuth.  Under these circumstances, interpolation to minutes of 
+latitude is recommended, but will not be done by Celestial Tools.  Note that for H.O. 208, for a latitude of zero, the name of the latitude in the data 
+entry section is automatically changed to the name of the declination regardless of how it was originally set.
+
+Two versions of the S-Table are provided:  the original (the default), by Mike Pepperday, which was included in the Nautical Almanac for a few years in 
+the early '90s, and is still available as a booklet; and a modified version, by Rodger E. Farley, available in his book "Celestial Navigation in a Teacup" 
+(formerly "The Armchair Celestial Navigator").  Both versions are derivatives of H.O. 211, and, as such, also have a "forbidden zone"  where K is 
+between 82° and 98°, which is handled in the same manner as in H.O. 211 .  The worksheeet for the Pepperday version as shown in the Nautical 
+Almanac and the booklet is very similar to the H.O. 211 worksheet.  (Pepperday revised it to an improved version after the publication of the booklet, 
+but it was never published.)  The Farley version uses an original worksheet.  In both cases Celestial Tools uses a worksheet similar to that of H.O. 211, 
+but with the nomenclature changed to agree with the particular version being used.
+
+The Farley version uses + for N and W, and - for S and E.  It also uses an unconventional definition of LHA, similar to meridian angle t.  For example, if 
+LHA is 350°, it will be shown as -10°.  The Farley version also does not mention the interpolation requirement where the value of the derived parameter 
+K is near 90° (as in H.O. 211), but there is an implication in the example in the book that "eyeball interpolation" should always be done for any 
+parameter.  (The Pepperday version specifically says not to bother using anything but the nearest tabulated value except in the case of K near 90°.)  
+Celestial Tools, however, is programmed so that interpolation is only done when the K value is from 82° to 98°.
+
+For the Weems Line of Position Book, after the "Weems LPB" button is activated, an "Interpolate Table B" checkbox will appear in upper left corner of 
+the data display area.   If this box is unchecked (the default), the value of K~d is rounded to the nearest whole minute before calculating the value of 
+B, and Hc is rounded to whole minutes, as was done in examples in the second (and, it is believed, the first) edition of the book.  If it is checked, the 
+value of K~d to tenths of a minute is used for calculating the value of B, and Hc is rounded to tenths of minutes, as was done in examples in the third 
+(and, it is believed, the fourth) edition of the book.  This checkbox is only associated with the calculation of Hc, to the left of the vertical dotted line.  
+(Checking or unchecking this box has the same effect as activating the "Weems LPB" button:  the output display area is updated.)  All editions of the 
+Weems Line of Position Book used Rust's Azimuth Diagram to determine Z and Zn.  The third and fourth editions added a tabular method for that 
+purpose.  Celestial Tools displays Z and Zn, calculated from the formula from which the Rust diagram was constructed, to the left of the vertical dotted 
+line on the display.  The tabular method is shown to the right of the vertical dotted line.  Interpolation of Table B is never used:  the table is entered with 
+angles rounded to whole minutes, and B values are extracted rounded to units.  (Note that in cases where it might not be clear, the table used (A or B) 
+is embedded in the arrow symbols, and whether the table is entered from the top or bottom is indicated.)  It should be noted that this method uses an 
+unconventional definition of azimuth angle (Z).  The prefix is determined by whether the body is north or south of the observer, and the maximum value 
+is 90°, where in most methods the prefix is the elevated pole, and the maximum value is 180°.  (In all methods the suffix is determined by whether the 
+body is east or west of the observer.)
+
+Although examples in some books indicate that this is not required, in all sight reduction methods that use an assumed longitude to calculate a whole 
+degree value of LHA, Celestial Tools will always select an assumed longitude that is within 30' of the DR longitude.  This will result in a whole-degree 
+value of assumed LHA that is closest to the actual LHA.
+
+In all sight reduction methods that plot from an assumed longitude, if the DR longitude is close to 0° or 180°, the assumed longitude might not be in the 
+same hemisphere as the DR longitude.  In those cases, the standard form ofassumed longitude will be displayed, with the appropriate operation.  For 
+example, If the DR longitude is 0°20'W and the GHA is 0°50', Celestial Tools will display the assumed longitude as (-)  0°10'E rather than (+) 359°50'W.
+
+When switching from one sight reduction method to another, or after pressing "Clear All" or "Clear except DR", any options will be left in the state they 
+were last in.
+
+Reductions by the Law of Cosines method can be saved (there is no provision for doing this with any of the other methods), using the "Save for Fix" 
+button, and the last twelve saved are retained.  After a minimum of two sights are reduced by the Law of Cosines method and saved, you have the 
+option of establishing a fix, with the "Establish Fix" button, using sights selected from the list of up to twelve. 
+
+If taking sights from a moving vessel, the  times of the sights must be entered, only accurate enough to establish the chronological order of the sights.  
+(Sights with times and without times cannot be mixed.)  The time of the fix is the time of the latest sight selected.  (At sea, if the time between the 
+earliest and latest sights is more than 20 minutes, the fix should be considered a Running Fix.)  Do not use times that cross midnight.  Adjust times to 
+avoid this; the times only need to correctly represent chronological order.  If sights are taken from a fixed position, e.g. from a Known Position (KP) 
+when taking sights for a sight folder, the times are not required, but all sights selected for the fix must have the same DR position.  Keep in mind that
+you should expect a small difference between the calculated fix and a plotted fix if the plotted fix was established with a sight reduction method that 
+plots from an Assumed Position (AP) (e.g. the Nautical Almanac Sight Reduction method) rather than one that plots from a DR position (Law of Cosines 
+in Celestial Tools).  (Although Celestial Tools has no provision to establish a fix from sights taken by any method other than the Law of Cosines, reducing 
+these sights with the Law of Cosines should result in a fix that is relatively close to what would be established using other reduction methods.  Fixes 
+established from methods that plot from an assumed position, even if from a moving vessel, should be within one nautical mile or so from the fix 
+established by the Law of Cosines.)  In addition to the latitude and longitude of the fix, the distance and bearing from the DR to the fix will be displayed.
+
+To include a Noon Sight as part of the list of sights saved for a fix, use the Ho, Dec, and L from the Noon Sight.  Set LHA equal to zero by setting GHA 
+equal to LoW or 360-LoE.  Reduce the sight with the "Law of Cosines" button, then save it with the "Save for Fix" button.
+
+Caution:  Versions of Celestial Tools prior to V2.3.0 had a bug that prevented some valid sets of sights from establishing a fix.  This bug was removed, 
+with the consequence that almost any set of sights will produce a fix, regardless of cut or length of intercept.  It is left to the user to select appropriate 
+sights.
+
+After each reduction is done a "Meridian Diagram" button becomes available.  Pressing this button opens another window showing the Projection on the 
+Plane of the Celestial Meridian, based on the values in the reduction.  There is the option of representing the hour circles and vertical circles as accurate 
+ellipses (default) or as less accurate arcs of circles.  Vertical circles and hour circles are solid of the body is to the west, dashed if to the east.  
+Construction lines for both the hour circle and vertical circle are shown.  The position of the body is represented by a dot, which is located at the 
+intersection of the parallel of altitude and the parallel of declination, regardless of the hour circle or vertical circle.  If circles are used, the hour circle and 
+vertical circle are forced to pass through the body, and the plotted values of LHA and Zn may not agree with the calculated values.  With good input 
+data, the differences are not expected to exceed 4 degrees.  When ellipses are used, if the input data is good, the hour circle and vertical circle should 
+intersect at (or at least near) the intersection of the parallel of altitude and parallel of declination.  If not, look for an error in the data input, which 
+would probably also have caused an excessively large intercept value.  Since when circles are used the hour circle and vertical circle are forced to pass 
+through the intersection of the parallel of altitude and parallel of declination, the quality of the input data cannot be judged.  The graphics associated 
+with each parameter are color-coded; the color legend appears in the upper left corner of the window.  This tool is shared with the Sight Reduction &amp; 
+Fix tool, and will use the data from the last reduction done with either of the two.  The "Meridian Diagram" button is enabled only once for each 
+reduction.  To enable it again, the "Law of Cosines" or the "NASR" button must be pressed.  However, if the Meridian Diagram windows is already 
+opened, switching between "Ellipses" and "Circles" will create a meridian diagram based on the last reduction done.  To use new values, one of the 
+seven sight reduction method buttons must be pressed again.
+
+Pressing the "Clear All" button clears all inputs and outputs.  Pressing the "Clear except DR" button leaves the DR L and DR Lo as they were.
+
+c. Accuracy/Resolution:  These tools should reproduce the values in the corresponding parts of the USPS SR96 form exactly, with the possible exception 
+for NASR noted above, and for Pub. 249 and Pub. 229 noted below.  In the Law of Cosines, all values of latitude, LHA, and declination are rounded to 
+five decimal places, to conform to the method used in the examples in the JN and N student manuals, and these values are used in subsequent 
+calculations.  The calculated value of Hc is rounded to five decimal places, and this value is used in subsequent calculations.  However, depending on 
+how the student does the calculations, e.g. using unrounded values stored in memory, and even the model of the calculator used, the value of the 
+decimal representation of Hc may differ in the fifth, and possibly fourth, decimal place, and the degrees and minutes representation may differ by 0.1', 
+from the student's values.  A difference of 0.1° in the value of Z is also possible.  In the methods that use an AP, the DR-LOP distance is rounded to 
+tenths of a nautical mile.  The  EP L and EP Lo should agree with a careful plot within 0.1' for LoC and 0.3' for the other methods.  A two-body fix (for 
+Law of Cosines only) should agree fairly well with a plot, generally within 0.2' of latitude and longitude, but a three (or more)-body fix may not agree 
+that well with a plot because of the uncertainty in determining the fix position of the plot.  When comparing a fix plot based on a methods that use an 
+AP with the LoC calculated fix, differences of up to about 1' of latitude and longitude can be expected.  The distance and bearing from the DR to the fix 
+are rounded to tenths of a nautical mile and whole degrees, respectively.
+
+For all methods, the final value of Zn is rounded to whole degrees, the current USPS standard, which may be contrary to some of the old SR forms, 
+which rounded Zn to tenths of a degree.  For the form of the Law of Cosine used, the azimuth of bodies near the zenith will not be accurate.
+
+For Pub. 249, the values of Tab Hc and Tab d may differ from the tables by 1'.
+
+For Pub. 229, all correction interpolations are done mathematically, and will occasionally be at a variance with the interpolation table.  This variance 
+should not exceed 0.1', and is most likely to occur for the value of d2 corr.
+
+H.O. 211 notes:
+1) Both the compact and original versions have most of the tabular data rounded to the nearest whole number.  However, the compact version show 
+values below 166 to once decimal place, and the original version shows values below 239 to one decimal place.  The example in the compact version 
+shows one of these low values rounded to a whole number, but an example in the original version uses the tenths.  However, Celestial Tools will abide 
+by the USPS rules for the compact version:  "Record all decimal values exactly as shown in the Compact Table.  Do not round to the next whole number. 
+Carry all decimal values forward and use for all computations."
+2) If "Compact" is selected, input latitude and declination and the calculated value of K~L will be shown rounded to the nearest minute.  If "Original" is 
+selected, input latitude and declination and the calculated value of K~L will be shown rounded to the nearest half minute.  These are the values actually 
+used to enter the table, which are of more help to the student than the real values.  If latitude and declination do not exactly correspond to a tabulated 
+value, improved accuracy can be obtained with interpolation, but this is generally not done, and is not done by Celestial Tools.
+3) From the "Compact Signt Reduction Table" booklet, first edition:  "Accuracy decreases as K approaches 90° and an error of several miles may result.  
+Consequently, it is good practice to discard any sight in which K is between 82° and 98°.  Interpolation of the table will improve the result somewhat if 
+the salvation of the sight is imperative."  Celestial Tools does not interpolate in these cases, but provides the option of using the Sadler Technique, 
+described in the second edition, in these cases.
+4) When the body is near or on the prime vertical, the last A value (used to determine Z) may be negative.  If so, it will be set to zero and Z will be 90°.
+5) Due to the vagaries of rounding, there will occasionally be a difference of one unit in the least significant figure of the calculated tabular values
+compared to the actual tabular values.
+
+For H.O. 214, there will occasionally be a difference of 1 unit (0.01) in the value of delta t compared to the tabular values.  All corrections are not 
+calculated mathematically, but are done by emulating the multiplication tables at the end of the H.O. 214 book, and should match the tables well.  
+The tables, however, could be off by no more than 0.1' compared to a mathemical calculation.
+
+For H.O. 208, there will occasionally be a difference of 1 unit in the values of A, B, C, and D, compared to the tabular values, and other differences 
+resulting as a consequence of these - no more than 0.2' in intercept and no error in azimuth.
+
+For both versions of the S-Table, the tabular values produced by Celestial Tools should be within 0.001 of the printed values.  When deriving an angle 
+from a tabulated value, if there is a group of the same tabulated value, Celestial Tools will try to use the average value.  Due to the vagaries of 
+rounding, this can result in an angle that differs from the printed values by 1'.  Also, the Farley version example in the book shows a couple of angles to 
+tenths of a minute.  Celestial Tools will round these values to whole minutes.
+
+For the Weems Line of Position Book, the A and B values calculated by Celestial Tools may disagree with the tabular or interpolated B values by one 
+least significant digit, i.e. if the tabular values are to units, the disagreement might be 1; if the tabular values are to tenths, the disagreement might be 
+0.1.  (In the case of interpolated values, the program calculates the values using linear interpolation, the way it would be done manually, which does 
+not necessarily agree with values which would be determined by direct calculation.)  Though examples in the third edition of the book show values of A 
+always rounded to units, Celestial Tools will show them to the resolution displayed in the table, and complete the calculation using this resolution.  The 
+angles calculated by Celestial Tools may disagree with the tabular or interpolated values by 0.1'.  The values of Z and Zn calculated by formula may 
+disagree with examples in the book by 0.1° if the examples are shown to that resolution.
+</value>
+  </data>
+  <data name="txtHelpSRF.Text" xml:space="preserve">
+    <value>SIGHT REDUCTION &amp; FIX
+
+a. Purpose:  Completely reduce a sight to intercept and azimuth; calculate estimated position; use two more reduced sights to establish a fix; calculate 
+latitude from altitude of Polaris (or do a full reduction of a Polaris sight).
+
+b. Operation:  Required inputs are celestial body (default is Sun L.L.), DR latitude (except when determining latitude by altitude of Polaris) and 
+longitude, date, watch time (24-hour format), watch error, zone description, sextant altitude, type of horizon (natural, artificial, or dip short), height of 
+eye, index error, and temperature and pressure (defaults are standard values). 
+
+If the selected celestial body is the Sun, two options are presented.  "NA val. of hourly GHA/d" (the default) calculates the value of the GHA of the Sun 
+as presented on the daily pages of the Nautical Almanac (a value that "is deliberately adjusted by up to 0.15' to reduce the error due to ignoring the 
+v-correction"), and agrees with the Nautical Almanac in almost all cases.  (This is the way Sun reductions would normally be done using the Nautical 
+Almanac.)  It also calculates the d value using an "average" of the three days shown on the Nautical Almanac page.  "Accurate val. of hourly GHA/d" 
+calculates the value of the GHA of the Sun without the Nautical Almanac's adjustment, and applies the v-value and v-correction that would be used if 
+the Nautical Almanac included v-values for the Sun, and the existing Increments and Corrections.  It also calculates the d value based on the date and 
+time of the sight.
+
+If the selected celestial body is a star other than Polaris, two options are presented.  "NA val. of SHA/Dec" (the default) calculates the SHA and 
+declination of the star as presented on the daily pages of the Nautical Almanac, i.e. based on UT 1200 of the middle day of the page.  "Accurate val. of 
+SHA/Dec" calculates the SHA and declination of the star based on the date and time of the sight.
+
+If the selected celestial body is Polaris, two options are presented.  "Latitude by altitude of Polaris" (the default) calculates latitude as with the Polaris 
+(Pole Star) Tables in the Nautical Almanac.  "Full reduction of Polaris sight" reduces the sight as is done with the 57 other stars.
+
+If the selected celestial body is a planet, two options are presented.  "NA val. of v/d" (the default) calculates the v value, v correction, d value, and d 
+correction as presented on the daily pages of the Nautical Almanac, i.e. based on an "average" of the three days on the page.  "Accurate val. of v/d" 
+calculates the v value, v correction, d value, and d correction based on the date and time of the sight.
+
+Sextant altitude and index error can be entered in either degrees and decimal minutes (DM.m) or degrees, minutes, and seconds (DMS).  Off the arc 
+index error can be entered as either the actual reading from the sextant ("off the arc (rdg.)") or the calculated value ("off the arc (val.)"); the program 
+makes the appropriate adjustment when calculating index correction.  (The degree value should always be read to the right of the index mark.  Take, 
+for example, an off the arc reading between 1 and 2 degrees and a micrometer drum reading of 22.3'.  This can be entered as either 2°22.3' off the arc 
+(rdg.) or as 1°37.7' off the arc (val.).  Either will give an index correction of +1°37.7.)  Zone description is automatically calculated based on longitude, 
+but any civil standard time zone can be entered manually to allow for time zones not based on longitude, or for Universal Time.  As a convenience 
+feature, the UT (GMT) option allows Universal Time to be entered directly, with a ZD of 0.  Check the "DST" box if the timepiece is set for Daylight 
+Savings Time.  Any of the entered values can be changed at any time and the calculations redone.  Unnecessary inputs are not requested; e.g. if you 
+are doing an artificial horizon reduction, you will not be asked for height of eye.  Reductions, except for latitude by altitude of Polaris, can be saved, 
+using the "Save for Fix" button, and the last twelve saved are retained. 
+
+There is also a place for an optional Sight Number (0 to 99).
+
+It will work for natural, artificial, and dip short horizons; any reasonable temperature or pressure; and any sextant altitude up to 150°.  Sights with 
+apparent altitudes greater than 90° are automatically treated as back sights.  It will accept height of eye in feet, inches, meters, or centimeters; 
+distance to dip short horizon in feet, yards, meters, statute miles, or nautical miles; temperature in Fahrenheit or Centigrade, and pressure in inches of 
+mercury or millibars.  (When using non-standard temperature or pressure, when the unit is changed the value is set to the standard value for the new 
+unit.  If there is going to be a change in the units of temperature or pressure, it is recommended that the units be changed before a value is entered.)
+
+Note for Artificial Horizons:  Although superimposing the Sun or Moon on itself is not recommended for artificial horizon sights, as of V5.0.0 Celestial 
+Tools permits this.  If either the Sun or Moon, LL or UL, and Artificial Horizon are selected, a checkbox, Use superimposed AH images, appears below the 
+Body selection.  If this is checked, the limb selection is ignored, and the center of the Sun or Moon is used in the calculation.  In the case of the Sun, if 
+Show Ho corrections as SR Form is selected, the altitude correction is done as it would be done using the Nautical Almanac:  the main correction is 
+obtained as if the body were a star or planet, i.e. semi-diameter and parallax are not included.  (Parallax is not zero but is considered small enough to be 
+ignored.)  If Show Ho corrections as Parameters is selected, parallax is included.  In the case of the Moon,  if Show Ho corrections as SR Form is 
+selected, the altitude correction is done as it would be done using the Nautical Almanac:  the main correction is taken from the upper Moon table, the 
+additional correction is calculated from one half the upper plus lower corrections from the lower Moon table, and an additional 15' is subtracted because 
+the Moon tables are based on lower limb values.  (The line of the SR form that normally says "UL ( -30.0'" is replaced by "AH ( superimp.".)  If Show Ho 
+corrections as Parameters is selected, semi-diameter and augmentation are not included.
+
+Note for Dip Short sights:   For a given height of eye there is a dip short distance beyond which only standard dip values (based only on height of eye) 
+are required.  If the dip short distance exceed the distance to the natural horizon for the entered height of eye, the program will automatically switch 
+the Horizon from Dip Short to Natural.   Note that entry of the numerical portion of Ds dist. is limited to five characters, including a decimal point, which 
+should cover all reasonable values.
+
+Once all the data is entered, press the "Reduce Sight" button to perform the sight reduction.
+
+Intercept and azimuth are found using the SR96 version of the USPS "calculator" implementation of the Law of Cosines, and data is displayed on a form 
+similar to, but not exactly like, the USPS Sight Reduction Form SR96b.  In the Altitude box, there is the option of showing the corrections from ha to Ho 
+as they would be shown on the SR Form (Main, Add'l, etc.) or as the parameters they actually are - usually refraction, parallax, and semi-diameter - but 
+shown to three decimal places in order to more easily see what is actually changing as the inputs are changed.  (For the Moon, the semi-diameter shown 
+is the geocentric semi-diameter, as would be measured by an imaginary observer at the center of the Earth, and is independent of the altitude of the 
+Moon.  Augmentation of the semi-diameter of the Moon is the correction that makes the semi-diameter topocentric, as would be measured by an 
+observer on the surface of the Earth, and increases with increasing altitude of the Moon.  Augmentation always makes the semi-diameter of the Moon 
+larger at altitude than it is on the horizon.)  (Parallax is shown for the planets, but it is not included in the calculation of Ho, since planets are treated as 
+point sources when viewed through a sextant telescope.)  (Note that changing this option has the same effect as activating the "Reduce Sight" button:  
+the output display area is updated.)  There is an option to use non-standard temperature and pressure values.  Everything is calculated; there is no 
+need to consult an almanac.  The Law of Cosines is the preferred sight reduction method because it indicates the quality of a sight taken from a known 
+position without plotting.
+
+After a minimum of two sights are reduced and saved, you have the option of establishing a fix, with the "Establish Fix" button, using sights selected 
+from the list of up to twelve.  The time of the fix is the time of the latest sight selected.  (At sea, if the time between the earliest and latest sights is 
+more than 20 minutes, the fix should be considered a Running Fix.)  In addition to the latitude and longitude of the fix, the distance (rounded to tenths 
+of a nautical mile) and bearing (rounded to whole degrees) from the DR to the fix will be displayed.  (Note:  When using Manual ZD (or DST), many 
+combinations of watch time, watch error, and zone description will result in the same UT, the time that is used to calculate the positions of the bodies.  
+The Fix window will always show the zone time resulting from watch time and watch error.  In order to avoid any confusion, the same zone description 
+should be used for all related sights in a group.)
+
+Caution:  Versions of Celestial Tools prior to V2.3.0 had a bug that prevented some valid sets of sights from establishing a fix.  This bug has been 
+removed, with the consequence that almost any set of sights will produce a fix, regardless of cut or length of intercept.  It is left to the user to select 
+appropriate sights.
+
+After each reduction is done, a "Meridian Diagram" button becomes available.  Pressing this button opens another window showing the Projection on 
+the Plane of the Celestial Meridian, based on the values in the reduction.  There is the option of representing the hour circles and vertical circles as 
+accurate ellipses (default) or as less accurate arcs of circles.  Vertical circles and hour circles are solid of the body is to the west, dashed if to the east. 
+
+Construction lines for both the hour circle and vertical circle are shown.  The position of the body is represented by a dot, which is located at the 
+intersection of the parallel of altitude and the parallel of declination, regardless of the hour circle or vertical circle.   If circles are used, the hour circle 
+and vertical circle are forced to pass through the body, and the plotted values of LHA and Zn may not agree with the calculated values.  With good 
+input data, the differences are not expected to exceed 4 degrees.  When ellipses are used, if the input data is good, the hour circle and vertical circle 
+should intersect at (or at least near) the intersection of the parallel of altitude and parallel of declination.  If not, look for an error in the data input, 
+which would probably also have caused an excessively large intercept value.  Since when circles are used the hour circle and vertical circle are forced to 
+pass through the intersection of the parallel of altitude and parallel of declination, the quality of the input data cannot be judged.  The graphics 
+associated with each parameter are color-coded; the color legend appears in the upper left corner of the window.  This tool is shared with the 
+SR Methods &amp; Fix tool, and will use the data from the last reduction done with either of the two.  The "Meridian Diagram" button is enabled only once 
+for each reduction.  To enable it again, the "Reduce Sight" button must be pressed.  However, if the Meridian Diagram windows is already opened, 
+switching between "Ellipses" and "Circles" will create a meridian diagram based on the last reduction done.  To use new values, the "Reduce Sight" 
+button must be pressed again.
+
+The Time Diagram uses the following symbols:  V = Aries; ( = moon; P = planet; O = mean Sun; o = apparent Sun; * = star.  For sun sights, the position 
+of the apparent Sun is shown.  For all other bodies (except Polaris when doing Latitude by Altitude of Polaris), the position of the mean Sun is shown.  
+However, when the EqT (Equation of Time) button, located in the lower right corner of the Time Diagram box (except when doing Latitude by Altitude of 
+Polaris), is pressed and held (mouse only, no keyboard control) the "other" Sun (mean Sun for Sun sights, apparent Sun for sights on all other bodies) 
+will appear on the Time Diagram, and the value of the Equation of Time (to be applied to mean time to get apparent time) will appear in the lower left 
+corner of the Time Diagram box.
+
+The Latitude by Altitude of Polaris calculation requires an approximate latitude (the Nautical Almanac Polaris tables show ten degree increments at low 
+latitudes, five degree increments at middle latitudes, and two degree increments at high latitudes).  The program uses DR latitude as the approximate 
+latitude unless the DR latitude degrees and minutes are both left blank (e.g. no confidence in your DR latitude), in which case the calculated value of Ho 
+is used.  (If your DR latitude is truly on the equator, entering a single zero in either the degrees or minutes box of DR L will suffice.)  If Ho is used and it 
+exceeds 68°59.9', it is considered outside the range of the Polaris Tables, and the calculation will be aborted.  If a DR latitude is entered, the program  
+displays the difference between the computed latitude and the DR latitude.  The Estimated Position is the calculated latitude and the DR longitude.
+
+A "hidden" feature is the ability to determine longitude from the time of meridian transit of any of the included bodies.  Enter the date, the observed 
+time of meridian transit, and the body.  Activate the "Reduce Sight" button.  If the resulting GHA is less than 180°, the GHA equals west longitude.  If 
+the resulting GHA is greater than 180°, subtract it from 360° to get east longitude.  See the Noon Sight Help for other information about this method.
+
+c. Accuracy/Resolution:  See Help&gt;General&gt;"Almanac" Accuracy.
+
+The accuracy of the built-in almanac and formulas makes the program more than adequate for practical offshore navigation (don't forget - never rely on 
+any one navigation method), but it should only be used as a gross check of a JN or N sight reduction form.  If you are using this tool as a quick check of 
+the quality of the sights for a sight folder, these errors should be considered before accepting or rejecting a sight.  If there is any question, fill out the 
+top of the SR form using the Almanac, then use the Law of Cosines part of the SR Methods tool to get intercept and azimuth accurately.  In any case, 
+the program should be very helpful in locating major errors.  But remember, the values calculated by this tool should not be used in a sight folder.
+
+Compared to a manual reduction, the error in intercept is typically 0.2 nm or less, but is a function of the errors in GHA, declination, and Ho, and the 
+azimuth of the body.   For the form of the Law of Cosine used, the azimuth of bodies near the zenith will not be accurate.
+
+Because of the differences in the ways the tabular (SR Form) corrections and the parameters for the Moon are calculated, the results can be slightly 
+different for the SR Form and Parameters options.  This difference generally does not exceed 0.1'.  For the purposes of comparison to a manual 
+reduction, the SR Form option should be used, though the Parameters option may be more accurate.  Note that the parallax is based on the apparent 
+altitude corrected for refraction and semi-diameter, not on computed altitude.  A similar situation exists for Sun sights.  Use the Parameters option only 
+to see how the parameters change as the input values are changed.
+
+The whole hour Moon "paradox":  Regarding v and d values and corrections, the Explanation section of the Nautical Almanac makes no procedural 
+distinction between sights taken on the hour and those with minutes and/or seconds - if the body uses them, they should be applied.  For most bodies 
+this does not matter, but in the case of the Moon, where the v and d values often exceed 5.9', resulting in v and d corrections of 0.1' (possibly 0.2' for 
+a v or d value of 18.0'), this can create a "paradox".  If the non-zero correction is added to the hour value taken from the daily page, the Tot GHA will 
+not be the same as the hour value, even though there are no minutes or seconds.  The 1995 and 2002 editions of the American Practical Navigator 
+("Bowditch") do an example of a whole hour Moon reduction.  In that example, the v and d corrections are applied.  However, according to Catherine 
+Hohenkerk of HM Nautical Almanac Office, although it is not clearly stated in the Explanation, when the hours and minutes are zero there is no need to 
+go into the Increments and Corrections at all.  Sean Urban, Chief of the USNO Nautical Almanac Office, agrees with this, and is also of the opinion that 
+using an example exactly on the hour was a poor choice.  Celestial Tools will not show increment values or v or d values or corrections for sights taken 
+on the hour.
+
+The  EP L and EP Lo should agree with a careful plot within 0.1'.  A two-body fix should agree fairly well with a plot, but a three- (or more) body fix may 
+not agree that well with a plot because of the uncertainty in determining the fix position of the plot.  Keep in mind that you should expect a small 
+difference between the calculated fix and a plotted fix if the plotted fix was established with a sight reduction method that plots from APs (e.g. the 
+Nautical Almanac Sight Reduction method) rather than one that plots from DRs (Law of Cosines in the Sight Reduction tool).
+
+The value of the Equation of Time should be accurate to within two seconds.
+</value>
+  </data>
+  <data name="txtHelpFavorites.Text" xml:space="preserve">
+    <value>FAVORITE PLACES
+
+a. Purpose:  Save the latitudes, longitudes, range of useful azimuths, type of horizon (natural, artificial, or dip short), and dip short distance for 
+locations that will be reused for sight-taking sessions.  Automatically load this data into the Sight Planner, Sight Reduction and Fix, Noon Sight, and 
+LoC/NASR tools, as appropriate. 
+
+b. Operation:  The Favorite Places window has two sections.  The upper section contains a list of locations that have been saved.  The lower section is 
+used for adding locations to the list.
+
+The first time Favorite Places is activated, the list of locations will be empty.  In the lower section of the window enter a descriptive name of a location 
+(up to 35 characters), its latitude and longitude, and a range of azimuths of interest.  The azimuth range is for use with Sight Planner.  As with Sight 
+Planner, if a range other than the default range of 0 to 360 degrees is desired, select a single range of azimuths, going clockwise.  (That is, from 10 to 
+350 would give a 340 degree range, but from 350 to 10 would give a 20 degree range.)  Also select the type of horizon:  natural, artificial, or dip short 
+(represented as NH, AH, and DS, respectively, in the Hor column).  If dip short is selected, also enter the numerical portion of the dip short distance 
+(limited to five characters, including a decimal point) and select the units of the dip short distance.  Then activate the "Add New Location" button and 
+the location will appear in the list in the upper section of the window.
+
+More locations can be added to the list in the same manner.  As each one is added, it will appear in its proper alphabetic position on the list.  (Actually 
+the position is determined by the ANSI code for the characters, so numbers will be before letters.)
+
+To remove a location from the list, click on the location then activate the "Remove Location" button.  After confirmation the location will be removed.
+
+To save the list for future use, activate the "Save Location List" button.  The list will be saved to a file called "Favorite_Places.txt", which is located in 
+the same directory as the Celestial Tools executable.  (This file can be edited with a text editor such as Windows Notepad, but this is not 
+recommended because of font types and column spacings for the various entries.)  If you attempt to close the Favorite Places window after a location 
+has been added or removed from the list without saving the list, you will be asked whether or not you want the list saved.
+
+To use a location, either double-click on the desired location or click on the location and activate the "Use Location" button.  (Use the scroll bar if 
+necessary to get to the desired location.)  The latitude and longitude will be loaded into Sight Planner, Sight Reduction and Fix, Noon Sight, and 
+LoC/NASR; the azimuth range will be loaded into Sight Planner; and the type of horizon, and, if applicable, the dip short distance, will be loaded into 
+Sight Reduction and Fix and Noon Sight.  This will happen whether or not the tool windows are open.  The programs are then used normally.
+
+The ability to save the type of horizon and the dip short distance was new in Celestial Tools V1.1.0.  In order to maintain compatibility with 800x600 
+screens, the data columns had to be moved.  Unfortunately this means that lists of Favorite Places developed with previous versions of Celestial Tools 
+(V1.0.6 or earlier, or betas of V1.1.0 dated before 9/30/2006) can be read by V1.1.1 or later but will not work properly and will have to be re-entered.  
+Possibly the best way to do this is to use your existing Favorite Places, re-enter each location (including the new data), add it to the list, then remove 
+the old location.
+
+Keep in mind that the dip short feature is of limited use.  Often you have to reduce the sight to get azimuth, which you then use on your map to get the 
+dip short distance.  However, if you are lucky enough to use an area where there are one or more ranges of azimuths with a relatively constant dip 
+short distance, this feature should save some keystrokes.
+</value>
+  </data>
+  <data name="txtHelpGeneral.Text" xml:space="preserve">
+    <value>GENERAL
+
+a. Purpose:  Although the data produced by Celestial Tools is fairly accurate, the program should not be used for navigation.  Its primary purpose is 
+instructional:  to aid students in planning sights; to allow students to quickly check the quality of sights; and to help students find errors in their work.  
+It is not intended to do the work for the student.
+
+b.  System requirements
+	i. Operating System:  Windows 95 or later
+	ii. CPU:  Anything as old as a 486-33 should provide reasonable performance
+	iii. Support files:  The Visual Basic 6 runtime files must be on your computer.  These files comes with Windows Me, Windows 2000 	
+	Professional, Windows XP, Windows Vista, Windows 7, Windows 8, and Windows 10, or may have been installed during the installation of 
+	another program.  If they are not present, your computer will let you know when you try to run the program.  The latest version can be 
+	downloaded from www.microsoft.com as a self-extracting executable, currently VBRUN60SP6.EXE, about a 1MB download.  (If you have 
+	gotten this far, you already have them.)
+	iv. Hard disk space:  3148KB for CelestialTools540.exe.  An additional 1.5MB or so if the Visual Basic runtime files are needed.  Size of 
+	Favorite_Places.txt is negligible (106 bytes per location; a 4KB cluster could handle 38 locations).
+	v. Memory:  Less than 10MB available memory if all tools are running.
+	vi. Screen resolution:  800x600 or greater.  If you are using 800x600 and your Windows taskbar is at the bottom of the screen and Auto hide 
+	is not enabled, the bottom of the Sight Reduction window will be obscured by the taskbar.  It is recommended that Auto hide be enabled or 	
+	the taskbar be moved to the right side of the screen.  The same recommendation is made for any other toolbars, such as the Microsoft Office 
+	toolbar, that might obscure part of a window.
+	vii. Fonts:  Tahoma, Arial, Courier New, and Symbol, provided with Windows.  (Windows 95 will substitute MS Sans Serif for Tahoma.)  With 
+	the exception of Windows 10, font size must be set to 96 dpi (called small, smaller, standard, normal, or 100% depending on operating 
+	system).
+	viii. Mouse:  Recommended, but rarely required
+	ix. Printer:  Recommended
+
+c. Windows: Most of the working windows have two types of sections:  data entry and output display.  All windows can be minimized and moved but 
+cannot be maximized or resized.
+
+d. Tool Tip Text: When the cursor is over many of the items in the data entry section of a window, a tool tip will appear, showing information such as 
+the allowable input range.
+
+e. Inputs:  The inputs for all modules are set up to require minimum keystrokes. For example, a longitude of "072" degrees and "04.0" minutes can 
+simply be entered as "72" and "4".  There is considerable error checking, warning you if you have entered obviously incorrect values.  In certain cases, 
+if you have entered an illegal value, the program will not let you move on until you enter a legal value.  Except for the Interpolation tool, which has 
+special rules; the Observed ZT of LAN in Noon Sight; the desired ZT for body visibility in Sight Planner, which cannot be left blank; and the DR L in Sight 
+Reduction Latitude by altitude of Polaris, which has special meaning when left blank, numerical inputs initially left blank are treated as zero, but 
+subsequent zero entries should be of the proper format as shown in the associated tool tip text.  
+
+Most arc-minute data input boxes expect a format of MM.m, i.e. four characters including the decimal point, with only one digit after the decimal point.  
+Currently there is nothing in Celestial Tools to prevent inputs of M.mm or .mmm.  Be careful with these boxes.  Also, if one of these boxes has a value in 
+it that includes a decimal point, and you wish to change it to a value that starts with a decimal point, it is best not to highlight the original value and try 
+to enter the new value.  It will not accept an initial decimal point in these circumstances.  It is best to to delete the original value before entering the 
+new value, or start the new value with a zero, followed by the decimal point.
+
+Note:  Celestial Tools only accepts digits and dots (periods) for numerical inputs.  It will work for computers set for a language other than U.S. English, 
+but inputs must use dots (periods), rather than commas (or anything else), as decimal separators, regardless of the language.  Outputs will be displayed 
+in the format of the selected language.
+
+f. "Almanac" Accuracy:  The Sight Planner, Sight Reduction, and Noon Sight tools contain a medium-precision "almanac" for the 57 navigational stars, 
+the four navigational planets, the Sun, the Moon, and Polaris, plus 70 additional "helper" stars (see Sight Planner Help), limited to the years 1901-2099.  
+It also includes "tables" for dip, refraction, and Increments and Corrections. Accuracy details are described below, and values generally will not exactly 
+agree with the Nautical Almanac.  However, they are more than accurate enough to achieve results consistent with the purpose of the program.
+
+It should be noted that the Nautical Almanac itself does not claim perfect accuracy.  From page 261, paragraph 24, regarding the accuracy of the main 
+data:  "The quantities tabulated in this Almanac are generally correct to the nearest 0.1'; the exception is the Sun's GHA which is deliberately adjusted 
+by up to 0.15' to reduce the error due to ignoring the v-correction....The largest error that can occur in the GHA or Dec of any body other than the Sun 
+or Moon is less than 0.2'; it may reach 0.25' for the GHA of the Sun and 0.3' for that of the Moon....In practice it may be expected that only one third 
+of the values of GHA and Dec taken out will have errors larger than 0.05' and less than one tenth will have errors larger than 0.1'."
+
+Positional accuracy of the bodies:
+Considering the accuracy statements in the Nautical Almanac, for the Sight Reduction and Noon Sight tools the expected worst case errors for the 
+parameters used to calculate the GHA and declination, compared to values extracted from the Nautical almanac, are:
+Stars:  SHA 0.1' (Note 1); Dec 0.1' (Note 1); GHA Aries hr 0.1'; GHA Aries m s 0.0'; Dec 0.1'
+Planets:  GHA hr 0.1'; GHA m s 0.0'; v 0.1'; v corr 0.1' (Note 2); Dec hr 0.1'; d 0.1'; d corr 0.1' (Note 2); also see Note 3
+Sun:  GHA hr 0.1' (Note 4); GHA m s 0.0; Dec hr 0.1'; d 0.1'; d corr 0.1' (Note 2)
+Moon:  GHA hr 0.1'; GHA m s 0.0; v 0.1'; v corr 0.1' (Note 2); Dec hr 0.1'; d 0.1'; d corr 0.1' (Note 2)
+
+Note 1:  For the SHA and declination of the stars, the Nautical Almanac uses the value for UT 12h of the middle day of the three days covered by a daily 
+page.  Celestial Tools has options to do it that way or using the actual date and time of the sight for its calculation of SHA.  In either case a discrepancy 
+of no more than 0.1' is expected. 
+Note 2:  The v corr and d corr should be accurate for whatever v or d value is calculated, but since the calculated v or d value can have an error of 0.1', 
+so can v corr and d corr.  The v and d values of the planets and the d value of the Sun listed in the Nautical Almanac are "averages" for the three days 
+shown on the page.    For the Sun and planets, the Sight Reduction tool has two modes.  In the Nautical Almanac mode Celestial Tools calculates the d 
+value for the Sun and the v and d values for the planets using an "average" for the three days shown on the page.  In the Accurate mode it calculates 
+these values for the date and time of the sight.  In the Noon Sight tool, only the "average" value is used to calculate d.  Celestial Tools calculates the v 
+corr and d corr based on the Greenwich year of the sight.  See Yellow Pages (I&amp;C) Help regarding differences in Nautical Almanac Increments and 
+Corrections tables.
+Note 3:  The planet Venus exhibits phases like the Moon, which can be seen with optical aid.  From 1952 to 1984 the additional corrections for Venus 
+listed in the Nautical Almanac allowed for both parallax and phase.  The phase correction was required because the tabulated position was for the 
+planet's center of disk.  Before 1952 and since 1985 the tabulated position of Venus is for its center of light, and the phase correction is incorporated 
+into the tabulated values of GHA and Dec.  Celestial Tools does not correct for phase, i.e. it calculates the position of the center of disk (as do most 
+sources other than the Nautical Almanac), so the GHA of Venus can be as much as an additional 0.5' off compared to the Nautical Almanac for years 
+other than 1952-1984.  (Mars also exhibits phases, but the effect is negligible.)
+Note 4:  0.1' for Sight Reduction when set for "NA val. of hourly GHA/d" and for Noon Sight.  (0.0' for about 99% of the cases.)  0.2' for Sight 
+Reduction when set for "Accurate val. of hourly GHA/d" and for Sight Planner Star Finder Data.
+(The "averages" used by the Nautical Almanac to determine the v and d values for the planets and the d value for the Sun are based on the difference 
+between the associated value at 0h UT of the middle day of the page and 0h UT on the following day, divided by 24, as confirmed by Catherine 
+Hohenkerk of HMNAO.  This is in contrast to what is said in Bowditch (through the 2002 edition), which states that they are based on the difference 
+between the 1200 UT value and the 1300 UT value of the middle day.  According to Sean Urban, Chief of the Nautical Almanac Office of the US Naval 
+Observatory, these correction will be made in the next edition of Bowditch, expected mid-2017.)
+
+The Sight Reduction tool attempts to duplicate the steps of a manual reduction, adding several parameters, each with a potential error, to get a total.  
+As such, the resulting GHA or declination might not match the values obtained from a source that calculates GHA and declination directly, such as the 
+Sight Planner Star Finder Data tool.  Considering this, the expected worst case errors for GHA and declination are:
+Stars:  GHA 0.2'; Dec 0.1'
+Planets:  GHA 0.2' (0.7' for Venus compared to Nautical Almanacs before 1952 and since 1985); Dec 0.2'
+Sun:  GHA 0.2' (when set for "NA val. of hourly GHA"); Dec 0.2'
+Moon:  GHA 0.2'; Dec 0.2'
+
+For Latitude by Altitude of Polaris, the values of a0, a1, and a2 are expected to agree with those extracted from the Nautical Almanac within 0.1'.  It is 
+unlikely, however, that all three will be off at the same time.  Often, if one value is 0.1' too high another will be 0.1' too low, resulting in the proper total 
+correction  The calculated Zn should agree with the Nautical Almanac within 0.1°.
+
+The Sight Planner tool calculates all values directly, but rounds azimuths and altitudes to whole degrees before creating the list of visible bodies.  
+Therefore it is possible for there to be a one degree error in the values listed.
+
+Altitude corrections:
+The calculated value of dip will agree with the Nautical Almanac dip tables for values of height of eye up to 70.5 feet and 21.4 meters.  For greater 
+heights of eye, generally not a concern of the student, there are occasional discrepancies of 0.1'.  In the ranges of heights of eye of 8-10 feet and 
+2.4-3 meters, which are covered by both the interpolation and critical portions of the dip table, the calculated value of dip will agree with the critical 
+table.  (Note, for example, that the interpolated and critical portions of the dip table disagree at 8.1, 8.2, 8.7, and 9.8 feet.)
+
+Computed refraction (the Main altitude correction for the stars and planets, but affecting all bodies) will agree with the Nautical Almanac for apparent 
+altitudes greater than about 10°  (in Sight Reduction, when Show Ho corrections as SR Form is selected) , and may be a few tenths of a minute off for 
+lower altitudes.  For non-standard temperature and pressure, the additional refraction correction may be as much as several minutes off the Nautical 
+Almanac value for very low altitudes.  (When Show Ho corrections as Parameters is selected in Sight Reduction, there may be a larger difference for 
+refraction.)  The refraction corrections used by the Nautical Almanac changed in 2004.  For apparent altitudes less than about 10°, Celestial Tools uses 
+the formula from the Sight Reduction Procedures section of the Nautical Almanac (which did not change until 2005), based on the Greenwich year 
+derived from the date entered in the data entry section of the form in use (Sight Reduction &amp; Fix or Noon Sight).  (This is only a significant factor for 
+altitudes less than 2°.  However, this change also affected the critical values of apparent altitude on the Altitude Corrections Table 
+10°-90°-Sun,Stars,Planets (Table A2), so care should be taken to use the correct table when doing a manual calculation.)
+
+The additional correction for the planets Venus and Mars (parallax) should agree with 1985 and later Nautical Almanacs within 0.1.  Almanacs from 1952 
+to 1984 included a phase correction for Venus in addition to parallax.  Since 1985 the phase correction has been incorporated in the tabulations for the 
+GHA and Dec.   Celestial Tools only considers parallax, so for Almanac years prior to 1985 a discrepancy of a few tenths of an arc-minute can be 
+expected in the additional correction for Venus. 
+
+For dip short, Celestial Tools uses the formula in recent (1981 or later) editions of Bowditch.  This formula is exact for the refraction model adopted.  
+Current JN and N course materials (and the back of the SR form) use an approximate formula found in earlier editions of Bowditch, which matches the 
+exact formula in most cases, but differences, never exceeding 0.3', do appear for very short distances, and there is an occasional difference of 0.1' 
+elsewhere.  Because the approximate formula can develop unacceptably large errors with large heights of eye coupled with short distances, it should 
+not be used if it results in a dip that exceeds 200' (3º20').  
+
+Regarding the altitude correction for the Sun, for a given limb and apparent altitude, the Almanac Altitude Correction Tables use an average value of 
+semi-diameter over each of the six-month periods tabulated (and, on the bottom of the Sun column on each daily page, an average value of 
+semi-diameter for the three days covered by the page).  This allows a year's worth of corrections to occupy only a third of a page, with a maximum 
+error of only a few tenths of an arc minute.  In Sight Reduction and Noon Sight, if Show Ho corrections as SR Form is selected, Celestial Tools will 
+similarly use an average value of semi-diameter.  If Show Ho corrections as Parameters is selected, Celestial Tools uses the actual date and time in its 
+computation.  Additionally, from 1954 through 1969, the Almanac included an irradiation correction of -1.2' for the upper limb of the Sun, which is 
+included in Celestial Tools.  The refraction correction change of 2004 also affected the transition points of this table.  In all cases, the output of Celestial 
+Tools may not agree with that extracted from the Almanac.  If Show Ho corrections as SR form is selected, expected worst case error is 0.1' compared 
+to the Sun Altitude Correction Table or the semi-diameter value at the bottom of the Sun column of the daily page.   If Show Ho corrections as 
+Parameters is selected, the values, though more accurate, may be in less agreement with the Almanac.  Whichever mode is selected, the corresponding 
+value of Ho is used in the Law of Cosines calculation.
+
+The horizontal parallax (HP) of the Moon is expected to be within 0.1' of the value extracted from the Nautical Almanac, and is based on the whole UT 
+hour nearest to the time of observation, which could be the hour following the observation.  (This is the method on page 280 of the Nautical Almanac, 
+and in the USPS Navigation Student Manual since N2009.)  The Main and Add'l corrections for the Moon are expected to agree with the Nautical Almanac 
+within 0.1 (using the refraction formula for the entered year).
+
+Remember, though, that the purpose of Celestial Tools is not to do the student's work, but to provide an aid in locating errors.
+
+g. Data display "anomalies":  Versions of Celestial Tools prior to V4.0.0 used lower precision algorithms, so, in order to avoid additional errors, for most 
+tools, arithmetic was done to the full precision of the computer, followed by rounding.  (An exception to this rule was Height of Eye, where inches and 
+centimeters were converted to feet and meters, respectively, which were then rounded to one decimal place for dip calculation and display purposes.)  
+Occasionally this resulted in the whole not being equal to the sum of the parts.  Take, for example, 1.06 + 1.06.  If rounding to one decimal place is 
+done first, the result would be 1.1 + 1.1 = 2.2. If rounding to one decimal place is done last, you would have 1.06 + 1.06 = 2.12, resulting in a display 
+of 1.1 + 1.1 = 2.1.  With the improved accuracy of V4.0.0, it was no longer felt that this was necessary.  Rounding is always done first, so the whole 
+will equal the sum of the parts.  When calculating estimated positions or fixes, the values of intercept and azimuth are rounded to tenths of a nautical 
+mile and whole degrees, respectively, before the calculations are made, to more closely match a manual plot.
+
+In versions of Celestial Tool prior to V4.0.0, it might also have been noticed that an angle calculated by the program (one not entered by the user) in 
+degrees and minutes might not equal its representation in decimal degrees.  This was because the calculation was done in decimal degrees to the full 
+precision of the computer, then converted to degrees and minutes, followed by rounding the minutes to one decimal place.  Again, with the improved 
+accuracy of V4.0.0, the representation in decimal degrees will be correct for the angle displayed in degrees and minutes.
+
+One "anomaly" that has been retained in V4.0.0 and later is that, in most cases, the program does not round a number for one displayed value then 
+round it again for a subsequent displayed value.  This can result in an "anomaly".  As an example, say Sight Reduction calculates a value for Z of N 
+49.51... W.  Rounded to one decimal place, this is displayed as N 49.5 W.  When this is converted to Zn, the unrounded value of Z is rounded to whole 
+degrees, displaying a Zn value of 310.  If the rounded value of Z were used, a Zn value of 311 would be displayed.
+
+For the SR Methods tool, this "anomaly" will not occur.  In order to match manual sight reductions, intermediate values are rounded to the required 
+precision then used in subsequent calculations.  A Z of N 49.5 W results in a Zn of 311.
+
+h. Rounding:  Celestial Tools rounds by the method currently taught by the United States Power Squadrons, "rounding upward".  For instance, if 
+rounding to a whole number, 34.0-34.4 round to 34, and 34.5-34.9 round to 35.  In the past "rounding to the even", also known as "banker's rounding", 
+a method still used in some references, was used.  When using this method to round to a whole number, .5 is dropped if preceded by an even number, 
+but raising to the next whole number if preceded by an odd number.  For instance, 34.5 would round to 34, but 35.5 would round to 36. 
+
+i. Printing:  All of the windows worth printing have a small button with an icon of a printer in the upper right-hand corner below the Close button.  
+Except for the case of the Help window, when this button is activated, a bitmapped image of the window, including the title bar and border, is sent to 
+the selected printer.  For the Help window, the text alone is printed for all 20 topics (tabs) or any individual topic.  Individual words, sentences, 
+paragraphs, etc. can be cut and pasted into a text editor or word processor (e.g. Windows Notepad) and printed from there.  With the exception of the 
+Help, where this does not apply, all portions of a window intended to be printed must be contained within the monitor screen; offscreen portions will not 
+be printed.
+
+Printer selection is done from the main menu.  When the "Select Printer" button is activated, a window with a drop-down list of available printers 
+appears.  The default is the Windows default printer, but any of the others can be selected.  The selected printer is active for all the tools of Celestial 
+Tools, but does not affect any other program.
+
+j. Dates and times:  The default date is the system date.  It can be changed to any date from 1901 to 2099.  Invalid dates will produce an error 
+message.
+
+A note about Manual Zone Descriptions:  Although there are a limited number of locations that do not use whole hours as their zone description, there is 
+an even more limited number of hour values that are associated with the two possible minute values, 30 and 45.  Nevertheless, Celestial Tools allows for 
+any hour value to be associated with those minute values.  Negative manual zone descriptions are entered by putting a minus sign as the first character 
+of the ZD h box.  If a ZD of -0h30m or -0h45m is desired, a "-" or a "-0" should be entered in the ZD h box.  Positive manual zone descriptions will 
+accept, but do not requre, a "+".
+
+k. Contact information:  Please send any comments, suggestions, or recommendations to slk1000@aol.com.
+</value>
+  </data>
+  <data name="txtHelpPlan.Text" xml:space="preserve">
+    <value>SIGHT PLANNER
+
+a. Purpose:  "Twilight" calculator and "Star Finder".  It will calculate the times of the Sun's rising and setting phenomena (twilights) and azimuths of 
+sunrise and sunset for the entered date and location, and find the azimuth, altitude, and magnitude of the navigational bodies which are above the 
+horizon at a selected time, without the need to consult an almanac or tables or to use a Rude (2102-D) Star Finder.  (Since the program is intended to 
+emulate the Rude Star Finder, it does not include corrections for refraction and dip.)  It will also calculate the availability data for a Sun-Moon fix for the 
+entered date, location, azimuth range, and minimum altitude.  In addition, it will calculate the times (accurately or using the approximate method 
+currently taught in N) and azimuths of moonrise and moonset and the phase of the Moon for the entered date and location.
+
+b. Operation:  Initial required inputs are date and DR latitude and longitude.  Zone Description is automatically calculated based on longitude, but any 
+civil standard time zone can be entered manually to allow for time zones not based on longitude, or for Universal Time.  As a convenience feature, 
+the UT (GMT) option forces time outputs to be in Universal Time.  Check the DST box if the timepiece is set for Daylight Savings Time.  Select whether 
+the azimuths of the Sun and Moon should be shown for when the upper limb or the center of the body is on the visible horizon (see below).  Moon rise 
+and set data is calculated fairly accurately unless the "Approximate Moon rise and set data" box is checked, in which case the accuracy will be similar to 
+that of the approximate method currently taught in the N course.  (Checking or unchecking that box has the same effect as activating the "Get Twilight 
+Times/Moon Data" button.)  After activating the "Get Twilight Times/Moon Data" button, the program displays the zone times of sunrise, sunset, and 
+civil, nautical, and astronomical morning and evening twilights in 24-hour format; the azimuths of sunrise and sunset (in parentheses, next to the times, 
+if "Upper Limb" is selected); the times and azimuths of moonrise and moonset (if "Upper Limb" is selected), if they occur; and  the approximate phase of 
+the Moon at ZT 1200, expressed in percent illumination, and whether it is waxing or waning.  (Note that rises and sets are defined as when the upper 
+limb of the body is on the visible horizon.)  Any of the entered values can be changed at any time and the calculations redone.
+
+If "Center" is selected, the Sun and Moon azimuths shows are for when the center of the body is on the visible horizon.  Comparing the compass bearing 
+of a celestial body with a computer bearing provides an accurate means of checking the deviation of a compass at sea.  This is usually done by 
+measuring the body's amplitude, the angle between the body and the prime vertical (90° or 270°), measured along the horizon, when the center of the 
+body is on the visible horizon.  Amplitude is then applied to the appropriate prime vertical to get the true azimuth of the center of the body.  Celestial 
+Tools calculates the true azimuth directly, and displays it to the nearest tenth of a degree, as would a manual calculation.  (Although these azimuths are 
+associated with the rises and sets, they actually occur shortly after the rises and shortly before the sets.)
+
+(Note that changing between "Upper Limb" and "Center" has the same effect as activating the "Get Twilight Times/Moon Data" button:  the azimuths 
+are updated.)
+
+A time of "----" indicates that the Sun phenomenon does not occur for the date and location entered (e.g. midsummer sun does not set in high latitudes). 
+
+(Note that when a manual time zone or DST is used, it is possible for solar phenomena to occur on the previous or next day.  For example, if the Start 
+of AM Astronomical Twilight is 2336 and the Start of AM Nautical Twilight is 0058, the 2336 time is the previous day.)
+
+Note that in higher latitudes (generally above 62°) the Moon can remain above or below the horizon all day.  A less well known quirk of the arctic is that 
+on certain days the Moon can rise or set twice.  (Try 23 June 1989, L 66°N, Lo 0°.) 
+
+Enter the zone time of interest for body visibility (i.e. above the horizon).  Any time can be entered (hhmm format), but in most cases it will be the start 
+of AM civil twilight or the end of PM civil twilight, considered to be the middles of the optimum observing periods.  When the time is entered, a box next 
+to it will indicate whether the time entered occurs during daylight (yellow background), during twilight (blue background), or at night (black background).  
+(For the purposes of this function, morning twilight is defined as the time of the start of AM nautical twilight through the minute before the time of 
+sunrise;  evening twilight is defined as the time of sunset through the minute before the time of the end of PM nautical twilight.)  This is intended to help 
+catch errors in entering the desired zone time - in most cases the box should be blue, indicating twilight.  If it is not, be sure the entered time is the 
+desired time.  If a range of azimuths of interest for body visibility other than 0° to 360° (the default) is desired, select a single range of azimuths, going 
+clockwise.  (That is, from 10 to 350 would give a 340° range, but from 350 to 10 would give a 20° range.  Remember that sights on bodies that are not 
+above the available horizon could potentially be taken with a back sight.  To consider these, set the azimuth range from 0° to 360°.)  If desired, enter a 
+minimum altitude for the Sun-Moon fix other than the default value of 15°, the minimum altitude for which temperature and barometric pressure 
+corrections are not required.  Acceptable values are whole degrees from 0 to 90. (If 0° is used, only the upper limbs will be above the horizon.)  
+(Versions of Celestial Tools prior to V4.2.1 had an upper limit of 15°.  This change allows the times that the Sun and Moon are at a higher altitude to be 
+calculated.)  Select either "List Visible Bodies/Sun-Moon Fix", "View Visible Bodies", or "Star Finder Data".
+
+If "List Visible Bodies/Sun-Moon Fix" is selected, a table with three columns is displayed.  The three columns are for: the Sun, Moon, planets, and first 
+magnitude stars; second magnitude stars; and third magnitude stars.  They show the name, azimuth, altitude, and magnitude of bodies that are above 
+the horizon. (Note that star magnitudes, as listed in the Nautical Almanac, changed in 2006.  The magnitudes shown in Sight Planner are based on the 
+Greenwich year derived from the date entered in the data entry section of the Sight Planner form.)  Within each column, the bodies within the azimuth 
+range specified are listed in order of increasing azimuth.  For the Moon, percent illumination is given instead of magnitude.  Bodies within the JN altitude 
+range of 15° to 75° are shown in bold type.
+
+Also displayed is Sun-Moon fix availability data.  A box at the bottom of the third magnitude star column will indicate whether an acceptable Sun-Moon 
+fix is available for the entered date, location, azimuth range, and minimum altitude, and, if so, gives the range of zone times and the range of percent 
+illumination of the Moon.   An acceptable Sun-Moon fix is defined as having the centers (not the upper limbs) of the Sun and Moon above the entered 
+minimum altitude value, both bodies within the specified azimuth range, and the difference in azimuths between 45° and 135°.  Particular times, or even 
+entire dates, might be rejected by the user if it is felt that the Moon is too narrow.  Be aware that for certain dates and latitudes the maximum allowed 
+altitude of one of the bodies for a particular sight reduction method might be exceeded.
+
+Note that in all cases, including the variations of "View Visible Bodies" described below, if the time entered is that of sunrise, sunset, moonrise, or 
+moonset, the corresponding body will not be considered visible.  This is because the rise and set times are defined as when the upper limb of the body is
+on the visible horizon, so the body is actually below the horizon.  A body is considered visible when its center is above the visible horizon, so, for 
+example, it might be several minutes after the time of sunrise before the Sun is visible.
+
+If "View Visible Bodies" is selected, a view of how the bodies appear in the sky is displayed.  There are three options:
+
+If "View Overhead" is selected (the default), the view is from the inside of the celestial sphere, as it was on the 2102-A and 2102-B Star Finders.  The 
+diagram is oriented as if it were being held overhead while looking at the sky:  if the "N" is to the north, east is to the right.  Azimuth increases 
+counterclockwise.
+
+If "View "Star Finder"" is selected, the view is from the outside of the celestial sphere, the way it is on the 2102-D and 2102-C Star Finders.  Azimuth 
+increases clockwise.
+
+In either of these cases, the center of the diagram represents the zenith, and the outer circle represents the horizon.  The default view has south at 
+the bottom (view toward south), but it can be changed to view toward any of the cardinal compass points.  Circles of altitude at 15° increments are 
+shown:  the ones at the special JN altitudes of 15° and 75° are solid, while the rest are dotted.  Dotted azimuth lines at 15° increments are also shown.
+
+If "View Horizon" is selected, the view is 180° of azimuth from the horizon up to 90° altitude.  The default view is centered on south (180°) azimuth, but 
+it can be centered on any of the cardinal compass points.  Lines of altitude at 15° increments are shown:  the ones at the special JN altitudes of 15° and 
+75° are solid, while the rest are dotted.  Dotted azimuth lines at 15° increments are also shown.
+
+The navigational bodies are represented by filled circles of three sizes:  the larger ones represent the first-magnitude stars and solar system bodies; 
+the mid-sized ones represent the second-magnitude stars; and the smaller ones represent the third-magnitude stars.  There is the option of displaying 
+any combination of first magnitude stars and solar system objects; second magnitude stars; and third magnitude stars.  If the "Show Names" box is 
+checked, the names of the bodies will appear to the right of their circles.  (The default is all bodies without names.)
+
+If "Limit azimuth range" is unchecked (the default), the entire available sky is shown (360º for the "Overhead" and "Star Finder" views, 180º for the 
+"Horizon" view).  If "Limit azimuth range" is checked, the display is limited to the specified azimuth range.
+
+If "Show Helpers" is checked, the positions of another 70 stars are analyzed and, if visible, the stars are displayed.  These stars are represented by 
+open circles to distinguish them from the 64 navigational bodies.  Their magnitudes are represented by the size of the circles, and use the same binning 
+as the navigational bodies, with an additional smaller circle representing fourth magnitude and dimmer stars.  These stars include those selected to 
+complete the most recognizable asterisms (not constellations; e.g. the Big Dipper, not Ursa Major) that contain navigational stars, plus other "pointer" 
+stars, with the intent of making it easier to locate the body of interest.  Consistent with this purpose, when "Show Helpers" is checked, the check boxes 
+for the first, second, and third magnitude bodies become active but are disabled, forcing the display of all available bodies.  When "Show Helpers" is 
+unchecked, the three magnitude check boxes return to their previous states.  The option to limit azimuth range is still available when "Show Helpers" is 
+checked.  The names of the helpers are not shown even if the "Show Names" box is checked.
+
+As the mouse pointer crosses into the sky display, the pointer changes from an arrow to a cross, and the azimuth and altitude of its position is displayed 
+in the boxes to the right.  Regardless of whether or not "Show Names" is checked, when the pointer is over a body the name of the body will appear
+in a box by the azimuth and altitude boxes.  (Note that if a smaller circle, representing a dimmer star is obscured by a larger circle, representing a 
+brighter body, the name of the dimmer star might not appear.)
+
+Whenever "View Visible Bodies" is selected with "View Overhead" or "View "Star Finder"", an additional function, "Best Bodies Aid", is available.  It is 
+initially set to "Off", but if "Two-body fix", "Three-body fix (boat)", or "Three-body fix (beach)"  is selected, red radial lines appear on the sky view, and 
+two additional buttons, "Rotate CW" and "Rotate CCW" become enabled.
+
+If "Two-body fix" is selected, three pairs of red azimuth lines appear.  The two solid red lines are separated by 90°, which results in the optimum cut 
+(angle between LOPs) of 90° for a two-body fix.  A pair of dashed lines and a pair in a dash-dot pattern appear.  Each pair is 22.5° on either side of a 
+solid red line.  If two bodies are selected, each within one of these matched pairs of broken lines, the cut will be within the allowable range of 45° to 
+135°.
+
+For a three-body fix, the optimum cut can be achieved with an azimuth spread between bodies of 120° or 60°, represented by the three solid red lines.  
+The 120° spread is recommended when at least 240° of horizon and clear sky is available, most likely on a boat.  When those conditions cannot be met, 
+as when taking practice sights on a beach (unless a back sight might help), the 60° spread is recommended.  The "Three-body fix (boat)" and 
+"Three-body fix (beach)" options represent the 120° and 60° choices, respectively.  The 120° spread is preferred, but circumstances might make the 
+60° spread preferable even if the 120° spread is possible.
+
+If "Three-body fix (boat)" is selected, three additional pairs of broken lines appear, one dashed, one in a dash-dot pattern, and one in a dash-dot-dot 
+pattern.   Each pair is 15° on either side of a solid red line.  If three bodies are chosen, each within one of these matched pairs of broken lines, the 
+azimuth spread between bodies will be from 90° to 150°, meeting the requirement that the smaller angle between any two LOPs must be no less than 
+30°.
+
+If "Three-body fix (beach)" is selected, to achieve the allowable range of cuts, the angle between the middle body and either outer body must be 
+greater than or equal to 30° and less than or equal to 120°, and all three bodies must fall within a total angle of 150°.  This situation cannot be 
+represented by pairs of dotted lines on either side of the solid lines.  Only two dotted lines, showing the extent of the 150° angle that all three bodies 
+must fall within, will appear.  It is left to the user to ensure that the other requirement is met.
+
+All of the sets of red lines can be rotated clockwise or counterclockwise in 1° steps, using the buttons (mouse only, no keyboard control), at a rate of 
+about 10° per second.  This feature can be used in combination with any of the other features in order to select the best bodies for two- and 
+three-body fixes based on cut, magnitude, altitude, etc.  If options are selected that do not use this feature (e.g. "View Horizon"), the lines will 
+reappear in their last positions when an appropriate option is selected again or when switching between "Two-body fix" and either "Three-body fix".  
+The lines can be removed by selecting "Off", but will return to their last positions if "Two-body fix", "Three-body fix (boat)", or "Three-body fix (beach)" 
+is selected again.
+
+Note that there is some distortion in these views compared to the actual sky, especially with the "Horizon" view, but the altitudes and azimuths 
+observed here should be comparable to those obtained with "List Visible Bodies".  In the "Horizon" view there is increased distortion at higher altitudes - 
+the higher the altitude, the more the "sky" is stretched horizontally.  Also note that if the time of sunrise, sunset, moonrise, or moonset is used, the Sun 
+or Moon will not appear on the list or views, because, as explained earlier, the times are based on the Sun's or Moon's upper limb, but their visibility is 
+based on their centers.
+
+If "Star Finder Data" is selected, a table with data which a student would need to manually set a Star Finder is displayed.  This includes zone description; 
+GMT (UT); GHA of Aries; LHA of Aries; GHA, RA, and Dec of the Sun and Moon; and the SHA, RA, and Dec of the planets.
+
+If latitude, longitude, or time zone is changed, activating "List Visible Bodies", "View Visible Bodies", or "Star Finder Data", or changing the state of any of 
+the view check boxes automatically updates twilight times, the visible bodies list, the visible bodies views, and the star finder data.
+  
+The entered DR latitude is used to compute the altitudes and azimuths of the visible bodies.  In order to more closely match what would be found with a 
+Rude Star Finder, the DR latitude can be changed to the latitude of the appropriate blue Star Finder template before continuing.
+
+The program can also be used as a star (or planet) identifier by using one of the "views" with "Show Names" checked, or by matching the altitude and 
+azimuth of the unknown body with one on one of the tables of visible objects, for that date, time, and location.
+
+c. Accuracy/Resolution:  See Help&gt;General&gt;"Almanac" Accuracy.
+
+Azimuths and altitudes of the visible bodies are calculated quite accurately (better than can be achieved with a Rude Star Finder), but are displayed to
+the nearest degree.  In practice, additional precision is unwarranted, as it is unlikely that the sights will be taken at precisely the time used in the 
+calculation, and a typical sextant Galilean telescope has a 4° field of view (prismatic telescopes 7°).  However, in the upper part of the form, the 
+azimuths of the Sun and Moon, when either the upper limb or the center of the body is selected, are shown to the nearest tenth of a degree.  (Prior to 
+V5.1.5, the azimuths of only the upper limbs were shown, to whole degrees, when on the visible horizon.  This was changed so comparisons with the 
+azimuth of the center could be made easily.)  Magnitudes of the planets are approximate and are rounded to tenths.  The magnitudes of Venus, Mars, 
+and Jupiter are expected to be within 0.2 of the values in the Nautical Almanac.  The magnitude of Saturn may differ by more because the angle of its 
+rings is not considered in the calculation.
+
+Times of Sun rising and setting phenomena are rounded to whole minutes and are generally accurate to within one minute, about the accuracy 
+achievable with the Nautical Almanac.   (The one minute difference can be due to an actual variance of less than one second and the subsequent 
+rounding to whole minutes.)  The azimuths are rounded to whole degrees.  
+
+With the "Approximate Moon rise and set data" box unchecked, the times of moonrise and moonset are rounded to whole minutes and are accurate to 
+about one minute, except at high latitudes, where the uncertainty may reach several minutes.  For low to middle latitudes, manual calculations done 
+with the Nautical Almanac "precise" (Table I and Table II) method should agree fairly well, but those done with the "approximate" method (daily pages 
+only) can be off by almost an hour at high latitudes.  With the "Approximate Moon rise and set data" box checked, the times should agree with an 
+"approximate" method calculation within one minute; the azimuths will also be approximate, based on the approximate time calculated.  Azimuths are 
+rounded to whole degrees.   Percent illumination is rounded to whole percent.
+
+Often the differences between the Sun rise and set times and the twilight times calculated by Celestial Tools and those of the tables on the daily pages 
+of the Nautical Almanac are a result of the fact that the Nautical Almanac tables are calculated for the middle day of the three days shown on a page, 
+but are applied to all three days.
+
+There is the potential for a one minute difference between times calculated using Auto ZD and those calculated using Manual ZD.  Each is an 
+independent calculation, and the difference can arise because of rounding.
+
+For "List Visible Bodies" and related functions, altitudes and azimuths are rounded to whole degrees.  (Note that a calculated azimuth of 359.5° or 
+greater is shown rounded to 360°, not 000°, so as to retain its proper position when visible bodies are listed in order of increasing azimuth.) 
+
+In order to speed up the display of results on older, slower computers, the Sun-Moon calculation is done with five-minute resolution instead of 
+one-minute resolution.  This could potentially result in a "from" time that is as much as four minutes late and a "to" time that is as much as four minutes 
+early.  For its intended purpose, this should be of no concern.  (Another slight error is due to the fact that the calculations are done with values of 
+altitude and azimuth that have already been rounded to the nearest degree, but this is minor.)
+</value>
+  </data>
+  <data name="txtHelpNoon.Text" xml:space="preserve">
+    <value>NOON SIGHT
+
+a. Purpose:  Calculate the zone time of Local Apparent Noon to the nearest second.  (This is done by the GHA method.)  Calculate latitude from a noon 
+sight.  Calculate latitude and longitude from observed zone time of LAN.
+
+b. Operation:  Required inputs for zone time of LAN are date and DR longitude.   Zone description is automatically calculated based on longitude, but 
+any civil standard time zone can be entered manually to allow for time zones not based on longitude, or for Universal Time.  As a convenience feature, 
+the UT (GMT) option forces time outputs to be in Universal Time.  Check the "DST" box if the timepiece is set for Daylight Savings Time.  Any of the 
+entered values can be changed at any time and the calculations redone.  Press the "Get Zone Time of LAN" button to complete the calculation.
+
+In order to calculate latitude from a noon sight or longitude from observed zone time of LAN, the Observed ZT of LAN must have a value.  It cannot be 
+left blank. (The "Noon Sight" button will not appear until there is a value.)  In the case of a noon sight for a sight folder, the zone description will be 
+correct, based on the entered longitude of the known position, and the ZT of LAN will be accurate.  If this is done, that value will be automatically 
+inserted into the "Observed ZT of LAN" box, but it can be changed to the actual observed time, within the range of 111328 to 124427 (121328 to 
+134427 if "DST" is checked) if Auto ZD is selected, the extreme values during the available years of the program at the far west and east ends of a time 
+zone.  (When Manual ZD or UT (GMT) is selected, the time can fall outside this range.)  At sea, where DR longitude is just an estimate, the calculated ZT 
+of LAN gives the navigator an idea of when to be on deck to start a series of sights to determine the maximum altitude of the sun (for latitude) and 
+possibly the time of LAN (for longitude), a more difficult value to determine.  Watch time must be converted to zone time by applying watch error and 
+zone description.  If zone time then falls outside the specified range but can be corrected by adding or subtracting an integral number of hours 
+(probably just one hour, if the DR position is fairly accurate), then the zone description of the timepiece does not match the actual time zone.  Adjust 
+the hours to make this correction, and adjust the zone description, using the Manual option, as required.  (If the timepiece is set for a non-whole-hour 
+civil zone description, not done at sea, the additional minutes must be taken into account.)
+
+Additional required inputs for calculating latitude from a noon sight are azimuth of the sun (north or south) or DR Latitude, sextant altitude, type of 
+horizon (natural, artificial, or dip short), height of eye, index error, and temperature and pressure (defaults are standard values).  (When using 
+non-standard temperature or pressure, when the unit is changed the value is set to the standard value for the new unit.  If there is going to be a 
+change in the units of temperature or pressure, it is recommended that the units be changed before a value is entered.)  All the options available in the 
+"Sight Reduction and Fix" tool are available here.  If the calculated ZT of LAN is used for the Observed ZT of LAN, as would be done when working from 
+a known position, the program uses this value and the declination of the sun at this time.  (It is unnecessary to enter the actual time of the sight since, 
+even at the equinoxes, when the declination of the sun is changing the fastest, there is no significant change in the declination of the sun within 10 
+seconds of LAN, the previous allowable limit for USPS Sight Folders, currently 30 seconds.)  Press the "Noon Sight" button to complete the calculation.
+
+Note for Artificial Horizons:  Although superimposing the Sun on itself is not recommended for artificial horizon sights, as of V5.0.0 Celestial Tools permits 
+this.  If Artificial Horizon are selected, an additional choice, Center, appears in the Sun Limb box.  If this is chosen, the center of the Sun is used in the 
+calculation.  If Show Ho corrections as SR Form is selected, the altitude correction is done as it would be done using the Nautical Almanac:  the main 
+correction is obtained as if the body were a star or planet, i.e. semi-diameter and parallax are not included.  (Parallax is not zero but is considered small 
+enough to be ignored.)  If Show Ho corrections as Parameters is selected, parallax is included.
+
+Note for Dip Short sights:   For a given height of eye there is a dip short distance beyond which only standard dip values (based only on height of eye) 
+are required.  If the dip short distance exceed the distance to the natural horizon for the entered height of eye, the program will automatically switch 
+the Horizon from Dip Short to Natural.   Note that entry of the numerical portion of Ds dist. is limited to five characters, including a decimal point, which 
+should cover all reasonable values.
+
+Required inputs for calculating longitude from observed zone time of LAN are the date and zone description of the timepiece (from the "Zone Time of 
+LAN" section) plus the Observed ZT of LAN, the time the sun reaches its highest point in the sky.  (Strictly speaking,  the maximum altitude does not 
+necessarily occur at meridian transit.  See the Accuracy/Resolution section below.)  This can best be obtained from the average time of equal-altitude 
+sights before and after LAN, or from a plot (or a curve-fitting program) of a series of sights starting before and ending after LAN.  Keep in mind that all 
+these methods require accurate sights, which are difficult to obtain, especially during the times of year when the altitude of the sun does not change 
+much around LAN. 
+
+Press the "Noon Sight" button to complete the calculation.
+
+Both latitude and longitude can be calculated from a noon sight without entering a DR latitude or DR longitude.  Required inputs are the date and zone 
+description of the timepiece (from the "Zone Time of LAN" section), the Observed ZT of LAN, plus the sight and sextant data.  Press the "Noon Sight" 
+button to complete the calculation.
+
+If there is any vessel movement with a significant north-south component during the time of a meridian transit observation, the time at which maximum 
+altitude is observed will not be the exact time that the sun is directly on the vessel's meridian. This is because the rate of change of altitude due to the 
+vessel's motion is greater than the rate of change in altitude that would be observed from a stationary position.
+
+If you are only interested in longitude from observed zone time of LAN, it is not necessary to enter any altitude data, but any one of the "At LAN" 
+choices must be selected.  The resulting latitude calculation can be ignored.
+
+After activating the "Noon Sight" button, the program displays an "Altitude" box and a "Declination" box like those of "Sight Reduction and Fix", plus a 
+box showing the latitude computation.  If DR Latitude was selected rather than the azimuth of the sun, the difference between the DR Latitude and the 
+calculated latitude is displayed.  It also displays a half meridian diagram illustrating the calculation.  On this diagram, "O" is the sun, "Q" is the equator, 
+and "Pn" or "Ps" is the elevated pole.
+
+The longitude based on the observed zone time of LAN is also displayed at the bottom of the window.  If the ZD is correct, the longitude from the 
+observed ZT of LAN should be close to the calculated ZT of LAN.  It should also be noted that because the calculated ZT of LAN is rounded to the 
+nearest second, if that value is used to calculate longitude, the calculated longitude may disagree with the value of DR longitude used to calculate the 
+ZT of LAN by 0.1'.
+
+The ability to determine longitude from the time of LAN, in fact from the time of meridian transit of any of the 64 bodies included in the built-in almanac, 
+has always been available in the Sight Reduction tool of Celestial Tools.  See the Sight Reduction and Fix Help for how this is done.
+
+If any of the data used to calculate the time of LAN is changed, all the calculated data disappears.  This is to prevent another calculation from being 
+done with an incorrect time.
+
+c. Accuracy/Resolution:  See Help&gt;General&gt;"Almanac" Accuracy.
+
+The computed time of LAN should agree with a manual calculation within one second.  (If the value of the GHA Difference is exactly between two 
+tabulated values of GHA Increment, the minute/second value corresponding to the higher value is used.)  When Show Ho corrections as SR Form is 
+selected, the calculated latitude should be within 0.2' of the value obtained with a manual calculation using data from the Nautical Almanac.  The 
+longitude from the observed zone time of LAN should be within 0.2' of the value obtained with a manual calculation using data from the Nautical 
+Almanac.
+
+Because of the differences in the ways the tabular (SR Form) corrections and the parameters for the Sun are calculated, the results can be 
+slightly different for the SR Form and Parameters options.  This difference generally does not exceed 0.2'.  For the purposes of comparison to a manual 
+reduction, the SR Form option should be used.  Use the Parameters option only to see how the parameters change as the input values are changed.
+
+It should be noted that for bodies with a changing declination, such as the Sun, culmination (maximum altitude) does not necessarily occur at meridian 
+transit.  The time between culmination and meridian transit is a function of latitude and time of year.  For the Sun, the time difference increases with 
+increasing latitude, and is greatest at the equinoxes, when the declination of the Sun is changing the fastest, and is zero at the solstices.  At the 
+equinoxes, the time difference is, in seconds, approximately 15.3 x tan Lat.  In fact, even at the equinoxes, the difference in the altitude of the Sun at 
+culmination and at meridian transit does not reach 0.1' until the latitude reaches about 88°, where the time difference is over seven minutes.  The 
+recommendation of starting to take sights 10 to 20 minutes before the calculated time of meridian transit guarantees that the peak altitude will be seen, 
+and an accurate latitude can be determined.  However, the time of culmination cannot be used to determine an accurate longitude.  The actual time of 
+meridian passage, which is difficult to determine, must be used.  But even at the equinoxes and 88º latitude, the time difference (7m18s), which 
+amounts to 1°49.5' of longitude, is only about 3.8 nautical miles.
+</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAQAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAgICAAMDAwAAAAP8AAP8AAAD//wD/AAAA/wD/AP//
+        AAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////8AAAAAAAAAAAAAD///+Z////AAAAAAAAAAD///
+        +ZmZn///8AAAAAAAAP////mZmZ////8AAAAAAA////+ZmZmZ////8AAAAAD/////mZmZmf////8AAAAP
+        //////mZmZ//////8AAAD//////5mZmf//////AAAP////////mf////////AAD/////////////////
+        /wAA///////5mZmf//////8AD///////+ZmZn///////8A////////mZmZ////////AP////////mZmZ
+        ///////wD////////5mZmf//////8A/////////5mZmf//////AP////////+ZmZn//////wD///////
+        //+ZmZn/////8A//////////mZmZ//////AA////+ZmZn/mZmZ////8AAP////mZmZ/5mZmf////AAD/
+        ///5mZmf+ZmZn////wAAD///+ZmZmZmZmZ////AAAA////mZmZmZmZmf///wAAAA////mZmZmZmZ////
+        AAAAAA///5mZmZmZmf//8AAAAAAA///5mZmZmZ///wAAAAAAAA////mZmZ////AAAAAAAAAAD///////
+        //AAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/8A///4AB//4AAH/8AAA/+AAAH/AA
+        AA/gAAAHwAAAA8AAAAOAAAABgAAAAYAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA
+        AAGAAAABgAAAAcAAAAPAAAAD4AAAB/AAAA/4AAAf/AAAP/4AAH//gAH///AP/w==
+</value>
+  </data>
+</root>

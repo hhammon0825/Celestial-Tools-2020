@@ -1,0 +1,3 @@
+No=2;Name=St Simon;DRLat=31°08.0'N;DRLong=81°23.8'W;ZD=+09;DST=;HorType=Natural;HorDist=00;HorDistType=Feet;HE=24 ft;ApprxBrg=N;FromAZ=0;ToAZ=360;hsIEFmt=DM 
+No=3;Name=St Simon;DRLat=31°08.0'N;DRLong=81°23.8'W;ZD=Auto;DST=X;HorType=Natural;HorDist=00;HorDistType=Feet;HE=14 ft;ApprxBrg=N;FromAZ=0;ToAZ=360;hsIEFmt=DM 
+No=4;Name=St Simon #2;DRLat=31°21.3'N;DRLong=82°23.8'W;ZD=Auto;DST=;HorType=Natural;HorDist=00;HorDistType=Feet;HE=6 ft;ApprxBrg=N;FromAZ=0;ToAZ=360;hsIEFmt=DM 

@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RichTextBox3.Text" xml:space="preserve">
+    <value>Log Entry Data Entry Fields:
+
+Vessel:	
+Vessel name - required at all times
+
+Navigator:
+Name of navigator entering log data - required at all times
+
+From:
+The origin name or description for this log entry - required at all times
+
+To:
+The destination name or description for this log entry - required at all times
+
+Log Type:
+Drop down list containing the type of log entry - required at all times
+Log types in the drop down list are:
+DR Track    -     common 'dead reconing' entry to log date &amp; time, lat / long, compass course, deviation, 
+variation, any weather remarks, and any other general entry remarks required.
+GPS Track  -   entry to log where lat / long of location is provided by GPS and constitutes a known location
+Waypoint   - entry to log a planned location (Lat/Long) at a date/time
+Fix                -     entry to log where lat / long of location is provided by sight reduction fix
+and constitutes a known location
+Plan/Route  -   Unique entry made to plan a route between two locations. When this type is chosen, the 
+desstination fields described below are made visible, where the destination lat / long is entered.
+DR Advance - Select an existing DR entry and advance it for a select period of 
+time (hours and minutes) or distance (nm). Using the existing compass, speed, 
+variation, deviation data for the existing DR entry, the date/time is advanced the selected 
+amount and the Lat/Long location is advanced to a corresponding location.
+
+
+Zone Date/Time:
+The date &amp; time of the log entry made according to the current location (zone time)
+The valid values are controlled by the input form control.
+
+Latitude and Longitude:
+For DR entry type, this is the assumed current 'dead reconing' location for the entry
+For GPS, Sight, and Fix entry types, this is the position provided by GPS or sight reduction fix.
+For Plan entry type, this is the planned route origin location.
+Standard latitude and longitude data entry values are required. Minutes entered can be 
+decimal values or full integer numbers.
+Latitude degrees valid values are 0 to 89. Latitude minutes valid values are o to 59.9
+Latitude N/S drop down list has a default value of N.
+Longitude degrees valid values are 0 to 180. Longitude minutes valid values are o to 59.9
+Longitude E/W drop down list has a default value of W.
+
+Compass:
+For DR, Sight, GPS, and Fix entry types, this the current course as read from the compass.
+Valid values are 0 to 359 degrees
+
+Var: 
+This is the current magnetic variation for the log entry type and can be a zero entry.
+Valid values are 0 to 20.0 degrees and the default value for the drop down E/W is W.
+
+Dev:
+This is the current course magnetic deviation for the log entry type and can be a zero entry.
+Valid values are 0 to 20.0 degrees and the default value for the drop down E/W is W.
+
+Use Dev Form: Check box. When checked, the Dev field is protected from input, the Deviation Form is
+brought up, and its data is used to derive the Dev value. When unchecked, the Dev field is unprotected and
+available for use.
+
+Use for Eval: Check Box. When checked, this entry is used for the evaluation of later log entries of the same type. When
+unchecked, this log entry is skipped for any evaluation of subsequent entries.
+
+True:
+For the DR, GPS, Sight,  and Fix log entry types, this field is protected from input and calculated using the 
+Compass, Var, and Dev fields.
+For the Plan log entry type, this field is open for data input and the Compass field is procted from 
+input and calculated using the True, Var, and Dev fields.
+
+Speed:
+This is the log entry vessel speed. It is always required and has valid decimal values up to 99.9.
+
+Weather Notes:
+For all log entry types, this is an open textual field that can contain a description of weather conditions.
+It is not a required entry field.
+
+Log Entry Notes:
+For all log entry types, this is an open textual field that can contain a general textual notes. 
+It is not a required entry field.
+
+Hide Vessel, Navigator, From, To, Weather Remarks Columns in DataGrid:
+This is a check box that allows the user to hide from display the Vessel, Navigator, From, To, Weather Remarks Columns in DataGrid. 
+If it is checked they are hidden. If it is unchecked, they are displayed. This check box effect no field entry or edits.
+
+Plan Log Entry Destination Data:
+
+THESE DATA ENTRY FIELDS ONLY DISPLAY WHEN A LOG ENTRY TYPE OF 'Plan' is selected. Otherwise they are hidden from view and use.
+
+Dest Latitude and Longitude:
+For a log entry type of Plan, these are the only two sets of data entry fields required or allowed for a plan entry. They are 
+standard latitude and longitude entry fields.
+
+The following fields are calculated for Plan entry and are protected from any user input:
+True Course to Dest
+Distance in Dest 
+Time to Dest 
+Est Arrival at Dest
+
+
+
+
+	</value>
+  </data>
+  <data name="txtGenInfo.Text" xml:space="preserve">
+    <value>Route Planning and Deck Log Form
+
+With this form you can do the following:
+1. Input entries for a new deck log and save it as a .csv text file
+2. Open an existing deck log file for update or printing
+3. Export the entries in an open deck log entry file to a GPX file for use in common
+chartplotter, navigation, and GPS utlity programs (like OpenCPN or Navionics)
+
+Types of log entries:
+1. DR Track entry: current location from dead reconing, date and time, speed, course, 
+	deviation, variation, weather comments, and general log entry remarks 
+2. GPS Track entry: current location from GPS, date and time, speed, course, deviation,
+	variation, weather comments, and general log entry remarks 
+3. Fix entry: current location from Fix, date and time, and general log entry remarks 
+4. Waypoint entry: Planned location from GPS or software, date and time, and general log entry remarks 
+5. Plan/Route entry: planned starting location, planned starting date &amp; time, deviation,
+	variation, true course, and destination latitude &amp; longitude
+6. DR Advance entry: Select an existing DR entry and advance it for a select period of 
+time (hours and minutes) or a specific distance (nm). Using the existing compass, speed, 
+variation, deviation data for the existing DR entry, the date/time is advanced the selected 
+amount and the Lat/Long location is advanced to a corresponding location.
+	
+For log entries you can:
+1. Create a new entry from log entry data entered
+2. Update existing log entry info
+3. Delete existing log entry info
+4. Clear input fields of previous data
+5. Check box to suppress the data grid view of Vessel, Navigator, From, To, and
+	Weather Remarks (compressed, short display)
+	
+When you input a new log entry, or update an existing entry, or delete an existing 
+entry, the information in the data grid will be updated, resorted by date &amp; time, 
+each entry will be evaluated and recalcuated, and the datagrid redisplayed.
+
+At any time you can click the 'Save Current File' button to save the current data 
+into its original file or into a new file.
+
+When you want to exit this form, you can click one of two buttons:
+1. Exit and Save Input button - Save current input and then exits
+2. Exit with No Save button - If updates to the current data have been done and not
+saved, you will get a prompt asking if you want to save this data. If you answer 'yes'
+then you will get the standard file save prompts. If you answer 'no' you will exit the
+form without saving any data.
+
+When you click the 'Open a Deck Log' button, if there is updated existing data that has
+not been saved, you will get the same prompt to save this data yes or no. 
+
+Practically speaking, you can use this form in one of two ways:
+1. Input a planned route using the Plan entries and then input DR Track, Waypoint, Fix, GPS Track, and Sight
+entries as you proceed during a day per the usual standards of log keeping. That way
+you can compare actual proceeding on the water to a planned route.
+2. OR you can simply input the necessary DR, Fix, GPS, and Sight entries as you need to
+so that you create a true log of your proceeding on the water.
+The evaluation of sights and planned routes supports either method of use.</value>
+  </data>
+  <data name="RichTextBox1.Text" xml:space="preserve">
+    <value>Form and File Actions Buttons:
+
+Open a Deck Log:
+Brings up a standard file open dialog box to read an existing deck log file into the data grid	
+If updated data already exists in the data grid, then the user is first prompted to save the updated data yes / no.
+
+Start New Deck Log: 
+Clears the form of all data in the input fields and the data grid and prepare the form for totally new input 	
+If updated data already exists in the data grid, then the user is first prompted to save the updated data yes / no.
+
+Save Current File:
+Allows the user to save the current data in the data grid into a new or existing file name.
+	
+Print Data from Grid:
+Allows the user to print the data visible in the data grid using a standard Windows print dialog box.
+	
+Exit and Save Input:
+Allows the user to save the current data in the data grid into a new or existing file name, and then exit the form.
+	
+Exit with No Save:	
+Allows the user to exit the form
+If updated data already exists in the data grid, then the user is first prompted to save the updated data yes / no.
+
+Display Help Info:	
+Allows the user to display this help / info form</value>
+  </data>
+  <data name="RichTextBox2.Text" xml:space="preserve">
+    <value>Log Data Entry Buttons:
+
+When you have deck log data entry fields populated with data then you can use on of these buttons:
+
+Add New Log Entry:
+The data in the Data entry fields is editted for validity then a totally new deck entry is added to the data grid. 
+If the data &amp; time and location already exist, the deck log entry is still editted and entered into the data grid.
+The data entry fields are left intact and not cleared on any data.
+After the new entry is added, the data grid data is sorted by date &amp; time and evaluated for navigation data.
+
+Update Log Entry:
+The data in the Data entry fields is editted for validity then the existing deck entry is updated in the data grid. 
+The data entry fields are left intact and not cleared on any data.
+After the entry data is updated, the data grid data is sorted by date &amp; time and evaluated for navigation data.
+
+Delete Log Entry:
+The deck log entry corresponding to the date &amp; time in the data entry fields is deleted from the data grid totally.
+The data entry fields are left intact and not cleared on any data. The data can be used to add a new entry is so desired.
+After the entry is deleted, the data grid data is sorted by date &amp; time and evaluated for navigation data.
+
+Clear Input Fields:
+All data entry fields are cleared of their data and the data entry area is set to its original form</value>
+  </data>
+  <data name="RichTextBox4.Text" xml:space="preserve">
+    <value>Data Grid Actions:
+
+The only action a user can make in the data grid is to select a data row by clicking on its first field.
+When a row is selected, it will be parsed into the data entry fields at the top of the form.
+
+The individual data fields in a row are the same as those found at the top of the form.</value>
+  </data>
+</root>

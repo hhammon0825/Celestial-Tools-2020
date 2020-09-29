@@ -1,0 +1,7 @@
+No=10;Name=test loc 10;DRLat=15°12'N;DRLong=65°12'W;ZD=-03;DST=X;HorType=Dip Short;HorDist=1.5;HorDistType=Nautical Mile;HE=12 ft;ApprxBrg=NE;FromAZ=0;ToAZ=360;hsIEFmt=DM 
+No=4;Name=test loc 04 updated;DRLat=75°12'N;DRLong=91°12'W;ZD=-06;DST=;HorType=Dip Short;HorDist=1.2;HorDistType=Feet;HE=6.6 ft;ApprxBrg=S;FromAZ=0;ToAZ=360;hsIEFmt=DMS
+No=5;Name=test loc 05;DRLat=15°12'N;DRLong=65°12'W;ZD=-03;DST=X;HorType=Natural;HorDist=12;HorDistType=Feet;HE=12 ft;ApprxBrg=NE;FromAZ=0;ToAZ=360;hsIEFmt=DM 
+No=6;Name=test loc 06;DRLat=15°12'N;DRLong=65°12'W;ZD=-03;DST=X;HorType=Natural;HorDist=12;HorDistType=Feet;HE=12 ft;ApprxBrg=NE;FromAZ=0;ToAZ=360;hsIEFmt=DM 
+No=7;Name=test loc 07;DRLat=15°12'N;DRLong=65°12'W;ZD=-03;DST=X;HorType=Natural;HorDist=12;HorDistType=Feet;HE=12 ft;ApprxBrg=NE;FromAZ=0;ToAZ=360;hsIEFmt=DM 
+No=8;Name=test loc 08;DRLat=35°12'N;DRLong=25°12'W;ZD=-03;DST=X;HorType=Dip Short;HorDist=5500;HorDistType=Yards;HE=6 ft;ApprxBrg=NE;FromAZ=0;ToAZ=360;hsIEFmt=DM 
+No=9;Name=test loc 09;DRLat=15°12'N;DRLong=75°12'W;ZD=-03;DST=X;HorType=Natural;HorDist=12;HorDistType=Feet;HE=12 ft;ApprxBrg=NE;FromAZ=0;ToAZ=360;hsIEFmt=DM 

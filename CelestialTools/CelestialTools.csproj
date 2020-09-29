@@ -1,0 +1,723 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.3.0.0\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.3.0.0\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
+  <Import Project="..\packages\Microsoft.NetFramework.Analyzers.3.0.0\build\Microsoft.NetFramework.Analyzers.props" Condition="Exists('..\packages\Microsoft.NetFramework.Analyzers.3.0.0\build\Microsoft.NetFramework.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.NetCore.Analyzers.3.0.0\build\Microsoft.NetCore.Analyzers.props" Condition="Exists('..\packages\Microsoft.NetCore.Analyzers.3.0.0\build\Microsoft.NetCore.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.CodeQuality.Analyzers.3.0.0\build\Microsoft.CodeQuality.Analyzers.props" Condition="Exists('..\packages\Microsoft.CodeQuality.Analyzers.3.0.0\build\Microsoft.CodeQuality.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.0.0\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.0.0\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2CA08D1-4D4A-044F-01D7-9BE44AA42B81}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CelestialTools.My.MyApplication</StartupObject>
+    <RootNamespace>CelestialTools</RootNamespace>
+    <AssemblyName>CelestialTools</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ShouldCreateLogs>True</ShouldCreateLogs>
+    <AdvancedSettingsExpanded>False</AdvancedSettingsExpanded>
+    <UpdateAssemblyVersion>False</UpdateAssemblyVersion>
+    <UpdateAssemblyFileVersion>False</UpdateAssemblyFileVersion>
+    <UpdateAssemblyInfoVersion>False</UpdateAssemblyInfoVersion>
+    <AssemblyVersionSettings>
+    </AssemblyVersionSettings>
+    <UpdatePackageVersion>False</UpdatePackageVersion>
+    <AssemblyInfoVersionType>SettingsVersion</AssemblyInfoVersionType>
+    <InheritWinAppVersionFrom>None</InheritWinAppVersionFrom>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CelestialTools.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CelestialTools.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>53C11FC1E63DD6849E1EF25BB558A4FB89274DF9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CelestialTools_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>CelestialTools_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>globe32withstars1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility.Data" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing.Printing" />
+    <Import Include="System.Globalization" />
+    <Import Include="System.Threading" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\MyNamespace.Dynamic.Designer.cs" />
+    <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
+    <Compile Include="My Project\MyNamespace.Static.2.Designer.cs" />
+    <Compile Include="My Project\MyNamespace.Static.3.Designer.cs" />
+    <Compile Include="60DST.designer.cs">
+      <DependentUpon>60DST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="60DST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArcTime.designer.cs">
+      <DependentUpon>ArcTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArcTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLSForm.Designer.cs">
+      <DependentUpon>CLSForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLSForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonGlobals.cs" />
+    <Compile Include="CSVUpdater.designer.cs">
+      <DependentUpon>CSVUpdater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CSVUpdater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CSVUpdaterInfo.designer.cs">
+      <DependentUpon>CSVUpdaterInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CSVUpdaterInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTS_SOA.designer.cs">
+      <DependentUpon>CTS_SOA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTS_SOA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Currents.designer.cs">
+      <DependentUpon>Currents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Currents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomPlot.Designer.cs">
+      <DependentUpon>CustomPlot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPlot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeckLogHelp.designer.cs">
+      <DependentUpon>DeckLogHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeckLogHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeckLogUpdate.designer.cs">
+      <DependentUpon>DeckLogUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeckLogUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevForm.designer.cs">
+      <DependentUpon>DevForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevTable_frm.designer.cs">
+      <DependentUpon>DevTable_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevTable_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayEQTData.Designer.cs">
+      <DependentUpon>DisplayEQTData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayEQTData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayMTData.Designer.cs">
+      <DependentUpon>DisplayMTData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayMTData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Distances.designer.cs">
+      <DependentUpon>Distances.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Distances.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Earth_LBR.cs" />
+    <Compile Include="Favorites.designer.cs">
+      <DependentUpon>Favorites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Favorites.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FixDG.Designer.cs">
+      <DependentUpon>FixDG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FixDG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAboutCelestialTools.designer.cs">
+      <DependentUpon>frmAboutCelestialTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAboutCelestialTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCredits.designer.cs">
+      <DependentUpon>frmCredits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCredits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPointsOnGCR.designer.cs">
+      <DependentUpon>frmPointsOnGCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPointsOnGCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPointsOnRhumb.designer.cs">
+      <DependentUpon>frmPointsOnRhumb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPointsOnRhumb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSRMethod.designer.cs">
+      <DependentUpon>frmSRMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSRMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="HelpV2.designer.cs">
+      <DependentUpon>HelpV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="I&amp;C.designer.cs">
+      <DependentUpon>I&amp;C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="I&amp;C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NavMath.designer.cs">
+      <DependentUpon>NavMath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavMath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jupiter_LBR.cs" />
+    <Compile Include="Length.designer.cs">
+      <DependentUpon>Length.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Length.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mars_LBR.cs" />
+    <Compile Include="Menu.designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeridianDiagram.designer.cs">
+      <DependentUpon>MeridianDiagram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeridianDiagram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoBoard.designer.cs">
+      <DependentUpon>MoBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.cs" />
+    <Compile Include="My Project\Application.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NoonSight.designer.cs">
+      <DependentUpon>NoonSight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoonSight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plan1.designer.cs">
+      <DependentUpon>Plan1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plan1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintScreen.cs" />
+    <Compile Include="Sailings.designer.cs">
+      <DependentUpon>Sailings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sailings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Saturn_LBR.cs" />
+    <Compile Include="FavoriteLocations.designer.cs">
+      <DependentUpon>FavoriteLocations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FavoriteLocations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SightLog.designer.cs">
+      <DependentUpon>SightLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SightLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SRF1.designer.cs">
+      <DependentUpon>SRF1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SRF1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SRFTimeDiagram.Designer.cs">
+      <DependentUpon>SRFTimeDiagram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SRFTimeDiagram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestDev.designer.cs">
+      <DependentUpon>TestDev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tides.designer.cs">
+      <DependentUpon>Tides.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tides.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TraverseTable.Designer.cs">
+      <DependentUpon>TraverseTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TraverseTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TVMDC.designer.cs">
+      <DependentUpon>TVMDC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TVMDC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TwoBearings.designer.cs">
+      <DependentUpon>TwoBearings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TwoBearings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venus_LBR.cs" />
+    <Compile Include="Vertical.designer.cs">
+      <DependentUpon>Vertical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vertical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZTInfo.Designer.cs">
+      <DependentUpon>ZTInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZTInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="60DST.resX">
+      <DependentUpon>60DST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArcTime.resX">
+      <DependentUpon>ArcTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLSForm.resx">
+      <DependentUpon>CLSForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CSVUpdater.resx">
+      <DependentUpon>CSVUpdater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CSVUpdaterInfo.resx">
+      <DependentUpon>CSVUpdaterInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTS_SOA.resX">
+      <DependentUpon>CTS_SOA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Currents.resX">
+      <DependentUpon>Currents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomPlot.resx">
+      <DependentUpon>CustomPlot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeckLogHelp.resx">
+      <DependentUpon>DeckLogHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeckLogUpdate.resx">
+      <DependentUpon>DeckLogUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevForm.resx">
+      <DependentUpon>DevForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevTable_frm.resX">
+      <DependentUpon>DevTable_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayEQTData.resx">
+      <DependentUpon>DisplayEQTData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayMTData.resx">
+      <DependentUpon>DisplayMTData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Distances.resx">
+      <DependentUpon>Distances.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Favorites.resX">
+      <DependentUpon>Favorites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FixDG.resx">
+      <DependentUpon>FixDG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAboutCelestialTools.resX">
+      <DependentUpon>frmAboutCelestialTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCredits.resX">
+      <DependentUpon>frmCredits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPointsOnGCR.resX">
+      <DependentUpon>frmPointsOnGCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPointsOnRhumb.resx">
+      <DependentUpon>frmPointsOnRhumb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSRMethod.resX">
+      <DependentUpon>frmSRMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpV2.resx">
+      <DependentUpon>HelpV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I&amp;C.resX">
+      <DependentUpon>I&amp;C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavMath.resX">
+      <DependentUpon>NavMath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Length.resX">
+      <DependentUpon>Length.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeridianDiagram.resX">
+      <DependentUpon>MeridianDiagram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoBoard.resX">
+      <DependentUpon>MoBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>CelestialTools.My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoonSight.resX">
+      <DependentUpon>NoonSight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plan1.resX">
+      <DependentUpon>Plan1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sailings.resX">
+      <DependentUpon>Sailings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FavoriteLocations.resx">
+      <DependentUpon>FavoriteLocations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SightLog.resx">
+      <DependentUpon>SightLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SRF1.resx">
+      <DependentUpon>SRF1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SRFTimeDiagram.resx">
+      <DependentUpon>SRFTimeDiagram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestDev.resx">
+      <DependentUpon>TestDev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tides.resX">
+      <DependentUpon>Tides.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TraverseTable.resx">
+      <DependentUpon>TraverseTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TVMDC.resX">
+      <DependentUpon>TVMDC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TwoBearings.resX">
+      <DependentUpon>TwoBearings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vertical.resX">
+      <DependentUpon>Vertical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZTInfo.resx">
+      <DependentUpon>ZTInfo.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="CelestialTools_TemporaryKey.pfx" />
+    <None Include="HelpFiles\dirtext.csv" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>CelestialTools.My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="SightLogs\Current Screen Flows between CTForms,.pptx" />
+    <None Include="SightLogs\RonJonesEdizHook3BodyFixResults09242019.pdf" />
+    <None Include="SRFcboBodyDropDownListBuilder.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.0.0\analyzers\dotnet\Microsoft.CodeAnalysis.VersionCheckAnalyzer.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.3.0.0\analyzers\dotnet\vb\Humanizer.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.3.0.0\analyzers\dotnet\vb\Microsoft.CodeQuality.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.3.0.0\analyzers\dotnet\vb\Microsoft.CodeQuality.VisualBasic.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetCore.Analyzers.3.0.0\analyzers\dotnet\vb\Microsoft.NetCore.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetCore.Analyzers.3.0.0\analyzers\dotnet\vb\Microsoft.NetCore.VisualBasic.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.3.0.0\analyzers\dotnet\vb\Microsoft.NetFramework.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.3.0.0\analyzers\dotnet\vb\Microsoft.NetFramework.VisualBasic.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ABC.white.png" />
+    <Content Include="CLSForms\cls98plottemplate.jpg" />
+    <Content Include="CLSForms\cls98plottemplateV1.jpg" />
+    <Content Include="CLSForms\cls98template.jpg" />
+    <Content Include="CLSForms\cls98templateV1.jpg" />
+    <Content Include="CLSForms\ClsLog.txt" />
+    <Content Include="CLSForms\CLSPlot.jpg" />
+    <Content Include="CLSForms\CustomLog.txt" />
+    <Content Include="CLSForms\customplottemplateV1.jpg" />
+    <Content Include="CLSForms\SaveCustomPlotTemplateSave.jpg" />
+    <Content Include="DeviationTbl\Deviation_Table.txt" />
+    <Content Include="DeviationTbl\Deviation_TableOld.txt" />
+    <Content Include="DeviationTbl\DevTblTest0621.txt" />
+    <Content Include="FavoriteLocs\FavLocsTest1.txt" />
+    <Content Include="FavoriteLocs\FavLocsTest1SLReport.txt" />
+    <Content Include="FavoriteLocs\TestFile0416.txt" />
+    <Content Include="FavoriteLocs\TestLocationInput0411.txt" />
+    <Content Include="globe32withstars1.ico" />
+    <Content Include="Graphics\CLSPlot125058PM0.jpg" />
+    <Content Include="Graphics\CLSPlot125058PM1.jpg" />
+    <Content Include="Graphics\CustomPlot30142PM1.jpg" />
+    <Content Include="Graphics\CustomPlot30145PM0.jpg" />
+    <Content Include="Graphics\CustomPlot30145PM1.jpg" />
+    <Content Include="Graphics\MeridDiag93928AM1.jpg" />
+    <Content Include="Graphics\PlanForm93754AM006851888.jpg" />
+    <Content Include="Graphics\SRFForm93924AM0.jpg" />
+    <Content Include="Graphics\SRFForm93924AM1.jpg" />
+    <Content Include="HelpFiles\ArcTimeTxtBx.txt" />
+    <Content Include="HelpFiles\AvgTxtBx.txt" />
+    <Content Include="HelpFiles\BearingsTxtBx.txt" />
+    <Content Include="HelpFiles\CLSPlotFormTxtBx.txt" />
+    <Content Include="HelpFiles\CurrentsTxtBx.txt" />
+    <Content Include="HelpFiles\CustomPlotFormTxtBx.txt" />
+    <Content Include="HelpFiles\DegLenTxtBx.txt" />
+    <Content Include="HelpFiles\dirtext.txt" />
+    <Content Include="HelpFiles\DistantcesTxtBx.txt" />
+    <Content Include="HelpFiles\FavoritesTxtBx.txt" />
+    <Content Include="HelpFiles\GeneralTxtBx.txt" />
+    <Content Include="HelpFiles\MoBoardTxtBx.txt" />
+    <Content Include="HelpFiles\NavMathTxtBx.txt" />
+    <Content Include="HelpFiles\NoonSightTxtBx.txt" />
+    <Content Include="HelpFiles\SailingxTxtBx.txt" />
+    <Content Include="HelpFiles\SharedLocsTxtBx.txt" />
+    <Content Include="HelpFiles\SightLogTxtBx.txt" />
+    <Content Include="HelpFiles\SightPlanTxtBx.txt" />
+    <Content Include="HelpFiles\SixtyDSTTxtBx.txt" />
+    <Content Include="HelpFiles\SRFixTxtBx.txt" />
+    <Content Include="HelpFiles\SRMethodsTxtBx.txt" />
+    <Content Include="HelpFiles\TidesTxtBx.txt" />
+    <Content Include="HelpFiles\TVMDCTxtBx.txt" />
+    <Content Include="HelpFiles\WindCurrTxtBx.txt" />
+    <Content Include="HelpFiles\YellowPagesTxtBx.txt" />
+    <None Include="Resources\ABC.white.png" />
+    <None Include="Resources\up.png" />
+    <None Include="Resources\down.png" />
+    <None Include="Resources\forward.png" />
+    <None Include="Resources\back.png" />
+    <Content Include="SightLogs\EdizHook3BodyFix[11305].txt" />
+    <Content Include="SightLogs\EdizHook3BodyFix[11305]GHADecHo.txt" />
+    <Content Include="SightLogs\HRHtestAltSRIF10032019.txt" />
+    <Content Include="SightLogs\RonDavidsonFixLoop09202019.txt" />
+    <Content Include="SightLogs\RonDavidsonFixTesting09182019.txt" />
+    <Content Include="SightLogs\RonDavidsonTesting09122019.txt" />
+    <Content Include="SightLogs\RonDavidsonTesting09122019[11267].txt" />
+    <Content Include="SightLogs\RonDavidsonTesting09122019[11320].txt" />
+    <Content Include="SightLogs\RonDavidsonTesting09122019[11320]SLReport.txt" />
+    <Content Include="SightLogs\RonDavidsonTesting09122019[2627].txt" />
+    <Content Include="SightLogs\RonDavidsonTesting09122019[2908].txt" />
+    <Content Include="SightLogs\RonDavidsonTesting09132019.txt" />
+    <Content Include="SightLogs\RonJoesTesting[11266].txt" />
+    <Content Include="SightLogs\RonJonesEdizHook3BodyFixTestV09242019.txt" />
+    <Content Include="SightLogs\RonJonesEdizHook3BodyFixTest[11291].txt" />
+    <Content Include="SightLogs\RonJonesEdizHook3BodyFixTest[11291]V2.txt" />
+    <Content Include="SightLogs\RonJonesEdizHook3BodyFixTest[11291]V3.txt" />
+    <Content Include="SightLogs\RonJonesLimitTest[1798].txt" />
+    <Content Include="SightLogs\RonJonesLimitTest[1798][1862].txt" />
+    <Content Include="SightLogs\RonJonesLimitTest[1798][1862][2647].txt" />
+    <Content Include="SightLogs\RonJonesVegaSightStringTest[11276].txt" />
+    <Content Include="SightLogs\RonJonesVegaSightStringTest[11276]Orig.txt" />
+    <Content Include="SightLogs\RonJonesVegaSightStringTest[11276]TestV1.txt" />
+    <Content Include="SightLogs\RonJonesVegaTest.txt" />
+    <Content Include="SightLogs\TestSightLog0421Testing.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_UseGlobalSettings="True" BuildVersion_StartDate="2000/1/1" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.0.0\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.0.0\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeQuality.Analyzers.3.0.0\build\Microsoft.CodeQuality.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeQuality.Analyzers.3.0.0\build\Microsoft.CodeQuality.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NetCore.Analyzers.3.0.0\build\Microsoft.NetCore.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NetCore.Analyzers.3.0.0\build\Microsoft.NetCore.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NetFramework.Analyzers.3.0.0\build\Microsoft.NetFramework.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NetFramework.Analyzers.3.0.0\build\Microsoft.NetFramework.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.3.0.0\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.3.0.0\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

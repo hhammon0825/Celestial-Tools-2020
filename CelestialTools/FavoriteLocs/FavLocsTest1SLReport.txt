@@ -1,0 +1,40 @@
+Name = test loc 2	No = 2	DST = X	ZD = -03	DR Lat = 15°12'N	DR Long = 65°12'W
+ApprxBrg=NE	HE = 12 ft	Horizon = Natural	Dip Short = 12 Feet
+From AZ =0
+To AZ = 360
+hsIEFmt =DM 
+Remarks = 
+__________________________________________________________________________________________
+
+Name = test loc 2	No = 3	DST = X	ZD = -03	DR Lat = 15°12'N	DR Long = 65°12'W
+ApprxBrg=NE	HE = 12 ft	Horizon = Natural	Dip Short = 12 Feet
+From AZ =0
+To AZ = 360
+hsIEFmt =DM 
+Remarks = 
+__________________________________________________________________________________________
+
+Name = test loc 2	No = 4	DST = X	ZD = -03	DR Lat = 15°12'N	DR Long = 65°12'W
+ApprxBrg=NE	HE = 12 ft	Horizon = Natural	Dip Short = 12 Feet
+From AZ =0
+To AZ = 360
+hsIEFmt =DM 
+Remarks = 
+__________________________________________________________________________________________
+
+Name = test loc 6	No = 5	DST = X	ZD = -03	DR Lat = 35°12'N	DR Long = 25°12'W
+ApprxBrg=NE	HE = 6 ft	Horizon = Dip Short	Dip Short = 5500 Yards
+From AZ =0
+To AZ = 360
+hsIEFmt =DM 
+Remarks = 
+__________________________________________________________________________________________
+
+Name = test loc 3	No = 6	DST = X	ZD = -03	DR Lat = 15°12'N	DR Long = 75°12'W
+ApprxBrg=NE	HE = 12 ft	Horizon = Natural	Dip Short = 12 Feet
+From AZ =0
+To AZ = 360
+hsIEFmt =DM 
+Remarks = 
+__________________________________________________________________________________________
+
