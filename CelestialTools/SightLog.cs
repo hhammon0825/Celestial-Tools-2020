@@ -46,7 +46,7 @@ namespace CelestialTools
             _btnSaveLogAsTxt.Name = "btnSaveLogAsTxt";
         }
 
-        public struct SightEntry
+        public struct SightEntry : IEquatable<SightEntry>
         {
             public string EntryStatus;
             public string SLName;
@@ -82,9 +82,77 @@ namespace CelestialTools
             public string SRDec;
             public string SRHo;
             public string UserInfo;
+
+            public SightEntry(string entryStatus, string sLName, string sLSquadron, string sightNum, DateTime sightDateTime, string dST, string wE, string wEType, string dRLat, string dRLong, string lLoBy, string hS, string iC, string iCType, string hE, string horType, string bodyName, string bodyLimb, string horDist, string horDistType, string intercept, string zn, string zD, string remarks, string eP, string apprxBrg, double hSDouble, string wTDiff, string hSDiff, string hSWTRate, string sRGHA, string sRDec, string sRHo, string userInfo)
+            {
+                EntryStatus = entryStatus;
+                SLName = sLName;
+                SLSquadron = sLSquadron;
+                SightNum = sightNum;
+                SightDateTime = sightDateTime;
+                DST = dST;
+                WE = wE;
+                WEType = wEType;
+                DRLat = dRLat;
+                DRLong = dRLong;
+                LLoBy = lLoBy;
+                HS = hS;
+                IC = iC;
+                ICType = iCType;
+                HE = hE;
+                HorType = horType;
+                BodyName = bodyName;
+                BodyLimb = bodyLimb;
+                HorDist = horDist;
+                HorDistType = horDistType;
+                Intercept = intercept;
+                Zn = zn;
+                ZD = zD;
+                Remarks = remarks;
+                EP = eP;
+                ApprxBrg = apprxBrg;
+                HSDouble = hSDouble;
+                WTDiff = wTDiff;
+                HSDiff = hSDiff;
+                HSWTRate = hSWTRate;
+                SRGHA = sRGHA;
+                SRDec = sRDec;
+                SRHo = sRHo;
+                UserInfo = userInfo;
+            }
+
+            public override bool Equals(object obj)
+            {
+                return base.Equals(obj);
+            }
+
+            public override int GetHashCode()
+            {
+                return base.GetHashCode();
+            }
+
+            public override string ToString()
+            {
+                return base.ToString();
+            }
+
+            public bool Equals(SightEntry other)
+            {
+                throw new NotImplementedException();
+            }
+
+            public static bool operator ==(SightEntry left, SightEntry right)
+            {
+                return left.Equals(right);
+            }
+
+            public static bool operator !=(SightEntry left, SightEntry right)
+            {
+                return !(left == right);
+            }
         }
 
-        public struct ZDParms
+        public struct ZDParms : IEquatable<ZDParms>
         {
             public string ZDField;
             public int ZDIndex;
@@ -98,12 +166,42 @@ namespace CelestialTools
                 ZDHhours = HourIn;
                 ZDMin = MinIn;
             }
+
+            public override bool Equals(object obj)
+            {
+                return base.Equals(obj);
+            }
+
+            public override int GetHashCode()
+            {
+                return base.GetHashCode();
+            }
+
+            public override string ToString()
+            {
+                return base.ToString();
+            }
+
+            public bool Equals(ZDParms other)
+            {
+                throw new NotImplementedException();
+            }
+
+            public static bool operator ==(ZDParms left, ZDParms right)
+            {
+                return left.Equals(right);
+            }
+
+            public static bool operator !=(ZDParms left, ZDParms right)
+            {
+                return !(left == right);
+            }
         }
 
-        public string SaveCLSFileName;
-        public double SRFa = 0d;
-        public double SRFZn = 0d;
-        public bool SRFSightUpd = false;
+        //private string SaveCLSFileName;
+        //private double SRFa = 0d;
+        //private double SRFZn = 0d;
+        //private bool SRFSightUpd = false;
         private SightEntry[] SightLogArray;
         private string SLFName = Constants.vbNullString;
         private string SLDir = @"\SightLogs";
@@ -117,8 +215,8 @@ namespace CelestialTools
         private bool ReadError = false;
         private bool FileLoading = false;
         private ZDParms[] ZDArray = new[] { new ZDParms("+01", 0, 1, 0), new ZDParms("+02", 1, 2, 0), new ZDParms("+03", 2, 3, 0), new ZDParms("+03:30", 3, 3, 30), new ZDParms("+04", 4, 4, 0), new ZDParms("+04:30", 5, 4, 30), new ZDParms("+05", 6, 5, 0), new ZDParms("+05:30", 7, 5, 30), new ZDParms("+05:45", 8, 5, 45), new ZDParms("+06", 9, 6, 0), new ZDParms("+06:30", 10, 6, 30), new ZDParms("+07", 11, 7, 0), new ZDParms("+08", 12, 8, 0), new ZDParms("+08:45", 13, 8, 45), new ZDParms("+09", 14, 9, 0), new ZDParms("+09:30", 15, 9, 30), new ZDParms("+10", 16, 10, 0), new ZDParms("+10:30", 17, 10, 30), new ZDParms("+11", 18, 11, 0), new ZDParms("+12", 19, 12, 0), new ZDParms("+12:45", 20, 12, 45), new ZDParms("+13", 21, 13, 0), new ZDParms("+13:45", 22, 13, 45), new ZDParms("+14", 23, 14, 0), new ZDParms("+00", 24, 0, 0), new ZDParms("-01", 25, -1, 0), new ZDParms("-02", 26, -2, 0), new ZDParms("-02:30", 27, -2, 30), new ZDParms("-03", 28, -3, 0), new ZDParms("-03:30", 29, -3, 30), new ZDParms("-04", 30, -4, 0), new ZDParms("-05", 31, -5, 0), new ZDParms("-06", 32, -6, 0), new ZDParms("-07", 33, -7, 0), new ZDParms("-08", 34, -8, 0), new ZDParms("-09", 35, -9, 0), new ZDParms("-09:30", 36, -9, 30), new ZDParms("-10", 37, -10, 0), new ZDParms("-11", 38, -11, 0), new ZDParms("-12", 39, -12, 0), new ZDParms("Auto", 40, 0, 0) };
-        public int ZDGMTIdx = 24;
-        public int ZDInitIdx = 40;
+        //private int ZDGMTIdx = 24;
+        private int ZDInitIdx = 40;
         public double SRFFormZN;
         public double SRFFormIntercept;
         public string SRFFormEP;
@@ -134,37 +232,37 @@ namespace CelestialTools
         public bool FormSightPlanLoaded = false;  // Noon Sight Form
         public bool FormAltSRLoaded = false;  // Alt SR Method form
                                               // these are the indexes for the data grid view cells and they must ALWAY be kept in sync with the datagridview order of cells.
-        public int SightNumCell = 0;
-        public int SightDateTimeCell = 1;
-        public int BodyNameCell = 2;
-        public int BodyLimbCell = 3;
-        public int DSTCell = 4;
-        public int WECell = 5;
-        public int WETypeCell = 6;
-        public int ZDCell = 7;
-        public int HSCell = 8;
-        public int HorTypeCell = 9;
-        public int HorDistCell = 10;
-        public int ApprxBrgCell = 11;
-        public int HECell = 12;
-        public int ICCell = 13;
-        public int ICTypeCell = 14;
-        public int DRLatCell = 15;
-        public int DRLongCell = 16;
-        public int LLoByCell = 17;
-        public int InterceptCell = 18;
-        public int ZnCell = 19;
-        public int SLEP = 20;
-        public int SLNameCell = 21;
-        public int SLSquadron = 22;
-        public int SLWTDiff = 23;
-        public int SLhsdiff = 24;
-        public int SLhsWT = 25;
-        public int RemarksCell = 26;
-        public int SLGHACell = 27;
-        public int SLDecCell = 28;
-        public int SLHoCell = 29;
-        public int UserInfoCell = 30;
+        private int SightNumCell = 0;
+        private int SightDateTimeCell = 1;
+        private int BodyNameCell = 2;
+        private int BodyLimbCell = 3;
+        private int DSTCell = 4;
+        private int WECell = 5;
+        private int WETypeCell = 6;
+        private int ZDCell = 7;
+        private int HSCell = 8;
+        private int HorTypeCell = 9;
+        private int HorDistCell = 10;
+        private int ApprxBrgCell = 11;
+        private int HECell = 12;
+        private int ICCell = 13;
+        private int ICTypeCell = 14;
+        private int DRLatCell = 15;
+        private int DRLongCell = 16;
+        private int LLoByCell = 17;
+        private int InterceptCell = 18;
+        private int ZnCell = 19;
+        private int SLEP = 20;
+        private int SLNameCell = 21;
+        private int SLSquadron = 22;
+        private int SLWTDiff = 23;
+        private int SLhsdiff = 24;
+        private int SLhsWT = 25;
+        private int RemarksCell = 26;
+        private int SLGHACell = 27;
+        private int SLDecCell = 28;
+        private int SLHoCell = 29;
+        private int UserInfoCell = 30;
         // Public HorDistTypeCell As Integer = 25
         public string[] HdrStr = new[] { "Num", "DateTime", "Body", "Limb", "DST", "WE", "WEtype", "ZD", "Hs", "HorType", "HorDist", "Apprx Brg", "HEye", "IC", "ICType", "Lat", "Long", "LLoBy", "Int", "Az", "SLEP", "Name", "Squadron", "Remarks" };
         public string[] NullStr = new[] { Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString };

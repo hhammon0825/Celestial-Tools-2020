@@ -225,7 +225,6 @@ namespace CelestialTools
             if (SetCentralLatLong() == false)
             {
                 return false;
-                return default;
             }
             // SetPlotInfoFields()
             DrawBasicPlotForm();
@@ -233,7 +232,6 @@ namespace CelestialTools
             SaveDisplayBMFname();
             FormCLSLoading = false;
             return true;
-            return default;
         }
 
         private void CLSForm_Load(object sender, EventArgs e)
