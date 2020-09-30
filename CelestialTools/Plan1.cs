@@ -2733,7 +2733,7 @@ namespace CelestialTools
             var argTB = SunTxtBx;
             SetTxtBxBoldOn(ref argTB);
             SunTxtBx = argTB;
-            SunTxtBx.AppendText("Sun Rising and Setting Phenomena and Moon Data for " + DTPlan.Value.ToString("dd MMMM yyyy") + " at L " + Strings.Format(Conversion.Val(txtLDeg.Text), "0") + '°' + Strings.Format(Conversion.Val(LMin), "00.0") + "'" + cboL.Text + ", Lo " + Strings.Format(Conversion.Val(txtLoDeg.Text), "0") + '°' + Strings.Format(Conversion.Val(LoMin), "00.0") + "'" + cboLo.Text + Constants.vbNewLine);
+            SunTxtBx.AppendText("Sun Rising and Setting Phenomena and Moon Data for " + DTPlan.Value.ToString("dd MMMM yyyy") + " at L " + Strings.Format(Conversion.Val(txtLDeg.Text), "0") + '°' + Strings.Format(Conversion.Val(LMin), "00.0") + "'" + cboL.Text + ", Lo " + Strings.Format(Conversion.Val(txtLoDeg.Text), "0") + '°' + Strings.Format(Conversion.Val(LoMin), "00.0") + "'" + cboLo.Text + Environment.NewLine);
             SunTxtBx.SelectionAlignment = (System.Windows.Forms.HorizontalAlignment)System.Windows.HorizontalAlignment.Center;
             var argTB1 = SunTxtBx;
             SetTxtBxtoReg(ref argTB1);
@@ -2755,7 +2755,7 @@ namespace CelestialTools
             SunTxtBx.SelectionFont = new Font(SunTxtBx.Font, System.Drawing.FontStyle.Underline);
             SunTxtBx.AppendText("Approx. ZT");
             SunTxtBx.SelectionFont = new Font(SunTxtBx.Font, System.Drawing.FontStyle.Regular);
-            SunTxtBx.AppendText(Constants.vbNewLine);
+            SunTxtBx.AppendText(Environment.NewLine);
             SunTxtBx.AppendText("Start Of AM Astronomical Twilight" + Constants.vbTab + C3[1] + Constants.vbTab + Constants.vbTab + Constants.vbTab + "Sunset" + Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + C3[5]);
             if (C3[5] != "----" & optLimb.Checked == true)
             {
@@ -2775,9 +2775,9 @@ namespace CelestialTools
                 // nothing
             }
 
-            SunTxtBx.AppendText(Constants.vbNewLine);
-            SunTxtBx.AppendText("Start Of AM Nautical Twilight" + Constants.vbTab + Constants.vbTab + C3[2] + Constants.vbTab + Constants.vbTab + Constants.vbTab + "End Of PM Civil Twilight" + Constants.vbTab + Constants.vbTab + C3[6] + Constants.vbNewLine);
-            SunTxtBx.AppendText("Start Of AM Civil Twilight" + Constants.vbTab + Constants.vbTab + C3[3] + Constants.vbTab + Constants.vbTab + Constants.vbTab + "End Of PM Nautical Twilight" + Constants.vbTab + Constants.vbTab + C3[7] + Constants.vbNewLine);
+            SunTxtBx.AppendText(Environment.NewLine);
+            SunTxtBx.AppendText("Start Of AM Nautical Twilight" + Constants.vbTab + Constants.vbTab + C3[2] + Constants.vbTab + Constants.vbTab + Constants.vbTab + "End Of PM Civil Twilight" + Constants.vbTab + Constants.vbTab + C3[6] + Environment.NewLine);
+            SunTxtBx.AppendText("Start Of AM Civil Twilight" + Constants.vbTab + Constants.vbTab + C3[3] + Constants.vbTab + Constants.vbTab + Constants.vbTab + "End Of PM Nautical Twilight" + Constants.vbTab + Constants.vbTab + C3[7] + Environment.NewLine);
             // Print("Start of AM Civil Twilight", TAB(44), C3(3), TAB(80), "End of PM Nautical Twilight", TAB(124), C3(7))
             SunTxtBx.AppendText("Sunrise" + Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + C3[4]);
             if (C3[4] != "----" & optLimb.Checked == true)
@@ -3986,8 +3986,8 @@ namespace CelestialTools
             ReportTxtBx.Visible = true;
             ReportTxtBx.BringToFront();
             ReportTxtBx.Clear();
-            ReportTxtBx.AppendText("Date" + Constants.vbTab + Constants.vbTab + DTPlan.Value.ToString("dd MMM yyyy") + Constants.vbTab + Constants.vbTab + "DR L" + Strings.Space(5 + (3 - txtLDeg.Text.Length)) + Strings.Format(Conversion.Val(txtLDeg.Text), "0") + '°' + Strings.Format(Conversion.Val(LMin), "00.0") + "'" + cboL.Text + Constants.vbNewLine);
-            ReportTxtBx.AppendText("ZT" + Constants.vbTab + Constants.vbTab + txtTime.Text + Constants.vbTab + Constants.vbTab + Constants.vbTab + "DR Lo" + Strings.Space(5 + (3 - txtLoDeg.Text.Length)) + Strings.Format(Conversion.Val(txtLoDeg.Text), "0") + '°' + Strings.Format(Conversion.Val(LoMin), "00.0") + "'" + cboLo.Text + Constants.vbNewLine);
+            ReportTxtBx.AppendText("Date" + Constants.vbTab + Constants.vbTab + DTPlan.Value.ToString("dd MMM yyyy") + Constants.vbTab + Constants.vbTab + "DR L" + Strings.Space(5 + (3 - txtLDeg.Text.Length)) + Strings.Format(Conversion.Val(txtLDeg.Text), "0") + '°' + Strings.Format(Conversion.Val(LMin), "00.0") + "'" + cboL.Text + Environment.NewLine);
+            ReportTxtBx.AppendText("ZT" + Constants.vbTab + Constants.vbTab + txtTime.Text + Constants.vbTab + Constants.vbTab + Constants.vbTab + "DR Lo" + Strings.Space(5 + (3 - txtLoDeg.Text.Length)) + Strings.Format(Conversion.Val(txtLoDeg.Text), "0") + '°' + Strings.Format(Conversion.Val(LoMin), "00.0") + "'" + cboLo.Text + Environment.NewLine);
             ReportTxtBx.AppendText("ZD" + Constants.vbTab + Constants.vbTab + "(");
             if (Math.Sign(ZD) == 1)
                 ReportTxtBx.AppendText("+");
@@ -3998,35 +3998,35 @@ namespace CelestialTools
             ReportTxtBx.AppendText(")" + Strings.Space(1) + Strings.Format(Math.Abs(ZD), "00")); // Strings.format(Abs(Val(txtZDh.Text)), "00");
             if (optZDManual.Checked == true & cboZDm.Text != "00")
             {
-                ReportTxtBx.AppendText(cboZDm.Text + Constants.vbNewLine);
+                ReportTxtBx.AppendText(cboZDm.Text + Environment.NewLine);
             }
             else
             {
-                ReportTxtBx.AppendText(Constants.vbNewLine);
+                ReportTxtBx.AppendText(Environment.NewLine);
             }
 
-            ReportTxtBx.AppendText("UT (GMT)" + Constants.vbTab + Constants.vbTab + Strings.Format(GHour, "00") + Strings.Format(GMinute, "00") + Constants.vbNewLine);
-            ReportTxtBx.AppendText("G Day/Mo/Yr" + Constants.vbTab + Conversion.Str(GDay) + Strings.Space(1) + MonthatG + Conversion.Str(GYear) + Constants.vbNewLine);
-            ReportTxtBx.AppendText(Constants.vbNewLine);
-            ReportTxtBx.AppendText("GHA Aries     " + Constants.vbTab + Strings.Format(WD, "##0") + '°' + Strings.Format(WM, "00.0") + "'" + Constants.vbNewLine);
+            ReportTxtBx.AppendText("UT (GMT)" + Constants.vbTab + Constants.vbTab + Strings.Format(GHour, "00") + Strings.Format(GMinute, "00") + Environment.NewLine);
+            ReportTxtBx.AppendText("G Day/Mo/Yr" + Constants.vbTab + Conversion.Str(GDay) + Strings.Space(1) + MonthatG + Conversion.Str(GYear) + Environment.NewLine);
+            ReportTxtBx.AppendText(Environment.NewLine);
+            ReportTxtBx.AppendText("GHA Aries     " + Constants.vbTab + Strings.Format(WD, "##0") + '°' + Strings.Format(WM, "00.0") + "'" + Environment.NewLine);
             if (Math.Sign(Lo) == 1)
                 ReportTxtBx.AppendText("DR Lo       (-)");
             if (Math.Sign(Lo) == -1)
                 ReportTxtBx.AppendText("DR Lo       (+)");
             if (Math.Sign(Lo) == 0)
                 ReportTxtBx.AppendText("DR Lo       ( )");
-            ReportTxtBx.AppendText(Constants.vbTab + Strings.Format(Conversion.Val(txtLoDeg.Text), "0") + '°' + Strings.Format(Conversion.Val(LoMin), "00.0") + "'" + cboLo.Text + Constants.vbNewLine);
-            ReportTxtBx.AppendText("LHA Aries     " + Constants.vbTab + Strings.Format(QD, "##0") + '°' + Strings.Format(QM, "00.0") + "' = " + Strings.Format(LR, "##0.0") + '°' + Constants.vbNewLine);
-            ReportTxtBx.AppendText(Constants.vbNewLine);
-            ReportTxtBx.AppendText("GHA Sun       " + Constants.vbTab + Strings.Format(VD[1], "##0") + '°' + Strings.Format(VM[1], "00.0") + "'" + Constants.vbTab + Constants.vbTab + "GHA Moon       " + Strings.Space(4 - Strings.Len(Conversion.Str(VD[2]))) + Strings.Format(VD[2], "##0") + '°' + Strings.Format(VM[2], "00.0") + "'" + Constants.vbNewLine);
-            ReportTxtBx.AppendText("RA  Sun       " + Constants.vbTab + Strings.Format(GRD[1], "##0") + '°' + Strings.Format(GRM[1], "00.0") + "' = " + Strings.Format(RA[1], "##0.0") + '°' + Constants.vbTab + "RA  Moon       " + Strings.Space(4 - Strings.Len(Conversion.Str(GRD[2]))) + Strings.Format(GRD[2], "##0") + '°' + Strings.Format(GRM[2], "00.0") + "' = " + Strings.Format(RA[2], "##0.0") + '°' + Constants.vbNewLine);
-            ReportTxtBx.AppendText("Dec Sun       " + Constants.vbTab + Strings.Format(DF[1], "0.0") + '°' + HD[1] + Constants.vbTab + Constants.vbTab + "Dec Moon       " + Constants.vbTab + Strings.Format(DF[2], "0.0") + '°' + HD[2] + Constants.vbNewLine);
-            ReportTxtBx.AppendText(Constants.vbNewLine);
-            ReportTxtBx.AppendText("Planet " + Constants.vbTab + "SHA" + Constants.vbTab + Constants.vbTab + "RA" + Constants.vbTab + Constants.vbTab + "Dec" + Constants.vbNewLine);
-            ReportTxtBx.AppendText("Venus  " + Constants.vbTab + Strings.Format(SH[3], "##0.0") + '°' + Constants.vbTab + Constants.vbTab + Strings.Format(RA[3], "##0.0") + '°' + Constants.vbTab + Constants.vbTab + Strings.Format(DF[3], "#0.0") + '°' + HD[3] + Constants.vbNewLine);
-            ReportTxtBx.AppendText("Mars   " + Constants.vbTab + Strings.Format(SH[4], "##0.0") + '°' + Constants.vbTab + Constants.vbTab + Strings.Format(RA[4], "##0.0") + '°' + Constants.vbTab + Constants.vbTab + Strings.Format(DF[4], "#0.0") + '°' + HD[4] + Constants.vbNewLine);
-            ReportTxtBx.AppendText("Jupiter" + Constants.vbTab + Strings.Format(SH[5], "##0.0") + '°' + Constants.vbTab + Constants.vbTab + Strings.Format(RA[5], "##0.0") + '°' + Constants.vbTab + Constants.vbTab + Strings.Format(DF[5], "#0.0") + '°' + HD[5] + Constants.vbNewLine);
-            ReportTxtBx.AppendText("Saturn " + Constants.vbTab + Strings.Format(SH[6], "##0.0") + '°' + Constants.vbTab + Constants.vbTab + Strings.Format(RA[6], "##0.0") + '°' + Constants.vbTab + Constants.vbTab + Strings.Format(DF[6], "#0.0") + '°' + HD[6] + Constants.vbNewLine);
+            ReportTxtBx.AppendText(Constants.vbTab + Strings.Format(Conversion.Val(txtLoDeg.Text), "0") + '°' + Strings.Format(Conversion.Val(LoMin), "00.0") + "'" + cboLo.Text + Environment.NewLine);
+            ReportTxtBx.AppendText("LHA Aries     " + Constants.vbTab + Strings.Format(QD, "##0") + '°' + Strings.Format(QM, "00.0") + "' = " + Strings.Format(LR, "##0.0") + '°' + Environment.NewLine);
+            ReportTxtBx.AppendText(Environment.NewLine);
+            ReportTxtBx.AppendText("GHA Sun       " + Constants.vbTab + Strings.Format(VD[1], "##0") + '°' + Strings.Format(VM[1], "00.0") + "'" + Constants.vbTab + Constants.vbTab + "GHA Moon       " + Strings.Space(4 - Strings.Len(Conversion.Str(VD[2]))) + Strings.Format(VD[2], "##0") + '°' + Strings.Format(VM[2], "00.0") + "'" + Environment.NewLine);
+            ReportTxtBx.AppendText("RA  Sun       " + Constants.vbTab + Strings.Format(GRD[1], "##0") + '°' + Strings.Format(GRM[1], "00.0") + "' = " + Strings.Format(RA[1], "##0.0") + '°' + Constants.vbTab + "RA  Moon       " + Strings.Space(4 - Strings.Len(Conversion.Str(GRD[2]))) + Strings.Format(GRD[2], "##0") + '°' + Strings.Format(GRM[2], "00.0") + "' = " + Strings.Format(RA[2], "##0.0") + '°' + Environment.NewLine);
+            ReportTxtBx.AppendText("Dec Sun       " + Constants.vbTab + Strings.Format(DF[1], "0.0") + '°' + HD[1] + Constants.vbTab + Constants.vbTab + "Dec Moon       " + Constants.vbTab + Strings.Format(DF[2], "0.0") + '°' + HD[2] + Environment.NewLine);
+            ReportTxtBx.AppendText(Environment.NewLine);
+            ReportTxtBx.AppendText("Planet " + Constants.vbTab + "SHA" + Constants.vbTab + Constants.vbTab + "RA" + Constants.vbTab + Constants.vbTab + "Dec" + Environment.NewLine);
+            ReportTxtBx.AppendText("Venus  " + Constants.vbTab + Strings.Format(SH[3], "##0.0") + '°' + Constants.vbTab + Constants.vbTab + Strings.Format(RA[3], "##0.0") + '°' + Constants.vbTab + Constants.vbTab + Strings.Format(DF[3], "#0.0") + '°' + HD[3] + Environment.NewLine);
+            ReportTxtBx.AppendText("Mars   " + Constants.vbTab + Strings.Format(SH[4], "##0.0") + '°' + Constants.vbTab + Constants.vbTab + Strings.Format(RA[4], "##0.0") + '°' + Constants.vbTab + Constants.vbTab + Strings.Format(DF[4], "#0.0") + '°' + HD[4] + Environment.NewLine);
+            ReportTxtBx.AppendText("Jupiter" + Constants.vbTab + Strings.Format(SH[5], "##0.0") + '°' + Constants.vbTab + Constants.vbTab + Strings.Format(RA[5], "##0.0") + '°' + Constants.vbTab + Constants.vbTab + Strings.Format(DF[5], "#0.0") + '°' + HD[5] + Environment.NewLine);
+            ReportTxtBx.AppendText("Saturn " + Constants.vbTab + Strings.Format(SH[6], "##0.0") + '°' + Constants.vbTab + Constants.vbTab + Strings.Format(RA[6], "##0.0") + '°' + Constants.vbTab + Constants.vbTab + Strings.Format(DF[6], "#0.0") + '°' + HD[6] + Environment.NewLine);
             return;
         }
 
@@ -5528,13 +5528,13 @@ namespace CelestialTools
             Shape1.Clear();
             if (FirstTime != 0d)
             {
-                Shape1.Text = "Acceptable Sun-Moon fix from " + FTHours + FTMinutes + " To " + LTHours + LTMinutes + Constants.vbNewLine;
-                Shape1.AppendText("Moon from " + Strings.Format(MoonPhaseFirst, "#0") + "% to " + Strings.Format(MoonPhaseLast, "#0") + "% illuminated" + Constants.vbNewLine);
+                Shape1.Text = "Acceptable Sun-Moon fix from " + FTHours + FTMinutes + " To " + LTHours + LTMinutes + Environment.NewLine;
+                Shape1.AppendText("Moon from " + Strings.Format(MoonPhaseFirst, "#0") + "% to " + Strings.Format(MoonPhaseLast, "#0") + "% illuminated" + Environment.NewLine);
             }
 
             if (FirstTime == 0d)
             {
-                Shape1.Text = "No acceptable Sun-Moon fix this Date, location," + Constants.vbNewLine + "azimuth range, and minimum altitude ";
+                Shape1.Text = "No acceptable Sun-Moon fix this Date, location," + Environment.NewLine + "azimuth range, and minimum altitude ";
             }
         }
 

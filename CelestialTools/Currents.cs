@@ -709,9 +709,9 @@ namespace CelestialTools
             var argTB1 = Curr8TxtBx;
             SetTxtBxtoReg(ref argTB1);
             Curr8TxtBx = argTB1;
-            Curr10TxtBx.AppendText(Constants.vbNewLine);
-            Curr8TxtBx.AppendText("     Time Interval Between Selected Slack & Max.  " + Constants.vbNewLine);
-            Curr10TxtBx.AppendText(TimeIntSlackMaxHour.ToString() + " h " + Strings.Format(TimeIntSlackMaxMin, "00") + " m" + " (" + Strings.Format(TimeIntSlackMaxMinutes, "#") + " m)" + Constants.vbNewLine);
+            Curr10TxtBx.AppendText(Environment.NewLine);
+            Curr8TxtBx.AppendText("     Time Interval Between Selected Slack & Max.  " + Environment.NewLine);
+            Curr10TxtBx.AppendText(TimeIntSlackMaxHour.ToString() + " h " + Strings.Format(TimeIntSlackMaxMin, "00") + " m" + " (" + Strings.Format(TimeIntSlackMaxMinutes, "#") + " m)" + Environment.NewLine);
             if (optRule.Checked == false)
             {
                 Curr8TxtBx.AppendText("     Time Interval Between Selected Slack & Desired Time  ");
@@ -725,7 +725,7 @@ namespace CelestialTools
             }
 
             if (optRule.Checked == true)
-                Curr8TxtBx.AppendText(Constants.vbNewLine + "     Time#1-4  " + Time0 + Strings.Space(1) + Time1 + Strings.Space(1) + Time2 + Strings.Space(1) + Time3 + Strings.Space(1));
+                Curr8TxtBx.AppendText(Environment.NewLine + "     Time#1-4  " + Time0 + Strings.Space(1) + Time1 + Strings.Space(1) + Time2 + Strings.Space(1) + Time3 + Strings.Space(1));
             Curr11TxtBx.AppendText("Velocity Factor from ");
             if (optA.Checked == true | optB.Checked == true)
             {
@@ -773,7 +773,7 @@ namespace CelestialTools
             var argTB3 = Curr13TxtBx;
             SetTxtBxtoReg(ref argTB3);
             Curr13TxtBx = argTB3;
-            Curr13TxtBx.AppendText(Constants.vbNewLine);
+            Curr13TxtBx.AppendText(Environment.NewLine);
             Curr13TxtBx.AppendText("     Max. Velocity at Local (Table 2) Substation: ");
             // If TimeIntDesFlood <= TimeIntDesEbb Then FormCurrents.Font.Bold = True
             if ((int)chkF.CheckState == 1)
@@ -800,7 +800,7 @@ namespace CelestialTools
             var argTB7 = Curr13TxtBx;
             SetTxtBxtoReg(ref argTB7);
             Curr13TxtBx = argTB7;
-            Curr13TxtBx.AppendText(Constants.vbNewLine);
+            Curr13TxtBx.AppendText(Environment.NewLine);
 
             // Print " whichever is closer in time";
             // If TimeIntDesFlood <= TimeIntDesEbb Then Print Tab(131); LocVelFlood; " kn"
@@ -817,7 +817,7 @@ namespace CelestialTools
                     Curr14TxtBx.AppendText(Strings.Format(LocVelFlood, "0.0") + " kn");
                 }
 
-                Curr14TxtBx.AppendText(Constants.vbNewLine);
+                Curr14TxtBx.AppendText(Environment.NewLine);
             }
 
             if ((int)chkE.CheckState == 1)
@@ -832,7 +832,7 @@ namespace CelestialTools
                     Curr13TxtBx.AppendText(Strings.Format(LocVelEbb, "0.0") + " kn");
                 }
 
-                Curr14TxtBx.AppendText(Constants.vbNewLine);
+                Curr14TxtBx.AppendText(Environment.NewLine);
             }
 
             if (optCalc.Checked == false & optRule.Checked == false)

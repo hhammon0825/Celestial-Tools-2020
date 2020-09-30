@@ -62,7 +62,7 @@ namespace CelestialTools
 
                 if (Conversion.Val(txtBearing1.Text) != Conversion.Val(txtBearing2.Text) + 180d & Conversion.Val(txtBearing1.Text) != Conversion.Val(txtBearing2.Text) - 180d & Conversion.Val(txtRange2.Text) >= Conversion.Val(txtRange1.Text))
                 {
-                    txtMoB.AppendText("No further closure between vessels." + Constants.vbNewLine);
+                    txtMoB.AppendText("No further closure between vessels." + Environment.NewLine);
                     CPAexists = false;
                 } // Exit Sub
 
@@ -195,19 +195,19 @@ namespace CelestialTools
                 DRM = Conversion.Int(DRM * 10d + 0.5d) / 10d;
                 if (CPAexists == true)
                 {
-                    txtMoB.AppendText("CPA = " + Strings.Format(Range, "0.00") + " nm in " + Strings.Format(TimeToCPA, "0.0") + " minutes" + Constants.vbNewLine); // ;
-                    txtMoB.AppendText("Bearing at CPA = " + Strings.Format(CPABearing, "000.0") + '°' + Constants.vbNewLine);
-                    txtMoB.AppendText("Time of CPA = " + Strings.Format(TimeOfCPA, "0000") + Constants.vbNewLine);
+                    txtMoB.AppendText("CPA = " + Strings.Format(Range, "0.00") + " nm in " + Strings.Format(TimeToCPA, "0.0") + " minutes" + Environment.NewLine); // ;
+                    txtMoB.AppendText("Bearing at CPA = " + Strings.Format(CPABearing, "000.0") + '°' + Environment.NewLine);
+                    txtMoB.AppendText("Time of CPA = " + Strings.Format(TimeOfCPA, "0000") + Environment.NewLine);
                 }
 
                 if (CPAexists == false)
                 {
                 }
 
-                txtMoB.AppendText("DRM = " + Strings.Format(DRM, "000.0") + '°' + Constants.vbNewLine);
-                txtMoB.AppendText("SRM = " + Strings.Format(SRM, "0.0") + " knots" + Constants.vbNewLine);
-                txtMoB.AppendText("Vessel 2 Course = " + Strings.Format(V2Course, "000.0") + '°' + Constants.vbNewLine);
-                txtMoB.AppendText("Vessel 2 Speed = " + Strings.Format(V2Speed, "0.0") + " knots" + Constants.vbNewLine);
+                txtMoB.AppendText("DRM = " + Strings.Format(DRM, "000.0") + '°' + Environment.NewLine);
+                txtMoB.AppendText("SRM = " + Strings.Format(SRM, "0.0") + " knots" + Environment.NewLine);
+                txtMoB.AppendText("Vessel 2 Course = " + Strings.Format(V2Course, "000.0") + '°' + Environment.NewLine);
+                txtMoB.AppendText("Vessel 2 Speed = " + Strings.Format(V2Speed, "0.0") + " knots" + Environment.NewLine);
             }
 
             if (optCPATypeB.Checked == true)
@@ -352,16 +352,16 @@ namespace CelestialTools
                 Range = Conversion.Int(Range * 100d + 0.5d) / 100d;
                 if (CPAexists == true)
                 {
-                    txtMoB.AppendText("CPA = " + Strings.Format(Range, "0.00") + " nm in " + Strings.Format(TimeToCPA, "0.0") + " minutes" + Constants.vbNewLine); // ;
-                    txtMoB.AppendText("Bearing at CPA = " + Strings.Format(CPABearing, "000.0") + '°' + Constants.vbNewLine);
+                    txtMoB.AppendText("CPA = " + Strings.Format(Range, "0.00") + " nm in " + Strings.Format(TimeToCPA, "0.0") + " minutes" + Environment.NewLine); // ;
+                    txtMoB.AppendText("Bearing at CPA = " + Strings.Format(CPABearing, "000.0") + '°' + Environment.NewLine);
                 }
 
                 if (CPAexists == false)
                 {
                 }
 
-                txtMoB.AppendText("DRM = " + Strings.Format(DRM, "000.0") + '°' + Constants.vbNewLine);
-                txtMoB.AppendText("SRM = " + Strings.Format(SRM, "0.0") + " knots" + Constants.vbNewLine);
+                txtMoB.AppendText("DRM = " + Strings.Format(DRM, "000.0") + '°' + Environment.NewLine);
+                txtMoB.AppendText("SRM = " + Strings.Format(SRM, "0.0") + " knots" + Environment.NewLine);
             }
 
             if (optWind.Checked == true)
@@ -417,7 +417,7 @@ namespace CelestialTools
                     TrueWindDir = TrueWindDir + 360d;
                 TrueWindDir = Conversion.Int(TrueWindDir * 10d + 0.5d) / 10d;
                 TrueWindSpeed = Conversion.Int(TrueWindSpeed * 10d + 0.5d) / 10d;
-                txtMoB.AppendText("True wind from " + Strings.Format(TrueWindDir, "000.0") + '°' + " at " + Strings.Format(TrueWindSpeed, "0.0") + " knots" + Constants.vbNewLine);
+                txtMoB.AppendText("True wind from " + Strings.Format(TrueWindDir, "000.0") + '°' + " at " + Strings.Format(TrueWindSpeed, "0.0") + " knots" + Environment.NewLine);
             }
 
             if (optWindApp.Checked == true)
@@ -441,7 +441,7 @@ namespace CelestialTools
                     ApparentWindDir = 360f - ApparentWindDir; // 180º
                 ApparentWindDir = (float)(Conversion.Int(ApparentWindDir * 10f + 0.5d) / 10d);
                 ApparentWindSpeed = Conversion.Int(ApparentWindSpeed * 10d + 0.5d) / 10d;
-                txtMoB.AppendText("Apparent wind from " + Strings.Format(ApparentWindDir, "000.0") + '°' + " relative at " + Strings.Format(ApparentWindSpeed, "0.0") + " knots" + Constants.vbNewLine);
+                txtMoB.AppendText("Apparent wind from " + Strings.Format(ApparentWindDir, "000.0") + '°' + " relative at " + Strings.Format(ApparentWindSpeed, "0.0") + " knots" + Environment.NewLine);
             }
             // intResponse = ErrorMsgBoxResult.Ignore
         }

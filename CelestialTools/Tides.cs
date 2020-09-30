@@ -321,13 +321,13 @@ namespace CelestialTools
             Tides4Txt = argTB1;
             if (optCalc.Checked == true | optTable3.Checked == true)
             {
-                Tides4Txt.AppendText("(Use smaller of the two.)" + Constants.vbNewLine);
-                Tides5Txt.AppendText("Time Interval" + Constants.vbNewLine);
+                Tides4Txt.AppendText("(Use smaller of the two.)" + Environment.NewLine);
+                Tides5Txt.AppendText("Time Interval" + Environment.NewLine);
             }
             else
             {
-                Tides4Txt.AppendText(Constants.vbNewLine);
-                Tides5Txt.AppendText(Constants.vbNewLine);
+                Tides4Txt.AppendText(Environment.NewLine);
+                Tides5Txt.AppendText(Environment.NewLine);
             }
 
             if (optCalc.Checked == true | optTable3.Checked == true)
@@ -344,9 +344,9 @@ namespace CelestialTools
                 var argTB3 = Tides4Txt;
                 SetTxtBxtoReg(ref argTB3);
                 Tides4Txt = argTB3;
-                Tides4Txt.AppendText(Constants.vbNewLine);
+                Tides4Txt.AppendText(Environment.NewLine);
                 Tides5Txt.AppendText(TimeIntHighHour.ToString() + " h " + Strings.Format(TimeIntHighMin, "00") + " m");
-                Tides5Txt.AppendText(Constants.vbNewLine);
+                Tides5Txt.AppendText(Environment.NewLine);
                 Tides4Txt.AppendText("     Desired Time & Time of Local Low Tide  ");
                 if (TimeIntHighMinutes > TimeIntLowMinutes)
                 {
@@ -359,9 +359,9 @@ namespace CelestialTools
                 var argTB5 = Tides4Txt;
                 SetTxtBxtoReg(ref argTB5);
                 Tides4Txt = argTB5;
-                Tides4Txt.AppendText(Constants.vbNewLine);
+                Tides4Txt.AppendText(Environment.NewLine);
                 Tides5Txt.AppendText(TimeIntLowHour.ToString() + " h " + Strings.Format(TimeIntLowMin, "00") + " m");
-                Tides5Txt.AppendText(Constants.vbNewLine);
+                Tides5Txt.AppendText(Environment.NewLine);
             }
 
             if (optRule.Checked == true | optAltRule.Checked == true)
@@ -391,7 +391,7 @@ namespace CelestialTools
                 SetTxtBxtoReg(ref argTB9);
                 Tides4Txt = argTB9;
                 Tides4Txt.AppendText(" Tide");
-                Tides4Txt.AppendText(Constants.vbNewLine);
+                Tides4Txt.AppendText(Environment.NewLine);
                 if (TimeIntHighMinutes <= TimeIntLowMinutes)
                 {
                     Tides5Txt.AppendText(TimeIntHighHour.ToString() + " h " + Strings.Format(TimeIntHighMin, "00") + " m");
@@ -402,11 +402,11 @@ namespace CelestialTools
                     Tides5Txt.AppendText(TimeIntLowHour.ToString() + " h " + Strings.Format(TimeIntLowMin, "00") + " m");
                 }
 
-                Tides5Txt.AppendText(Constants.vbNewLine);
+                Tides5Txt.AppendText(Environment.NewLine);
                 Tides4Txt.AppendText("     Time of Local High Tide & Time of Local Low Tide  ");
-                Tides4Txt.AppendText(Constants.vbNewLine);
+                Tides4Txt.AppendText(Environment.NewLine);
                 Tides5Txt.AppendText(DurationHour.ToString() + " h " + Strings.Format(DurationMin, "00") + " m");
-                Tides5Txt.AppendText(Constants.vbNewLine);
+                Tides5Txt.AppendText(Environment.NewLine);
             }
             // >>>>>>>>>>>>>>>>>>>>>>>> format tides6txt and tides7txt boxes <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
@@ -452,9 +452,9 @@ namespace CelestialTools
                 var argTB15 = Tides6Txt;
                 SetTxtBxtoReg(ref argTB15);
                 Tides6Txt = argTB15;
-                Tides6Txt.AppendText(Constants.vbNewLine);
+                Tides6Txt.AppendText(Environment.NewLine);
                 Tides7Txt.AppendText(DurationHour.ToString() + " h " + Strings.Format(DurationMin, "00") + " m");
-                Tides7Txt.AppendText(Constants.vbNewLine);
+                Tides7Txt.AppendText(Environment.NewLine);
                 Tides6Txt.AppendText("     Time Interval of ");
                 if (TimeIntHighMinutes <= TimeIntLowMinutes)
                 {
@@ -480,7 +480,7 @@ namespace CelestialTools
                 SetTxtBxtoReg(ref argTB19);
                 Tides6Txt = argTB19;
                 Tides6Txt.AppendText(" (whichever is closer)");
-                Tides6Txt.AppendText(Constants.vbNewLine);
+                Tides6Txt.AppendText(Environment.NewLine);
                 if (TimeIntHighMinutes <= TimeIntLowMinutes)
                 {
                     Tides7Txt.AppendText(TimeIntHighHour.ToString() + " h " + Strings.Format(TimeIntHighMin, "00") + " m");
@@ -491,7 +491,7 @@ namespace CelestialTools
                     Tides7Txt.AppendText(TimeIntLowHour.ToString() + " h " + Strings.Format(TimeIntLowMin, "00") + " m");
                 }
 
-                Tides7Txt.AppendText(Constants.vbNewLine);
+                Tides7Txt.AppendText(Environment.NewLine);
             }
 
             if (optRule.Checked == true | optAltRule.Checked == true)
@@ -509,7 +509,7 @@ namespace CelestialTools
                 var argTB21 = Tides6Txt;
                 SetTxtBxtoReg(ref argTB21);
                 Tides6Txt = argTB21;
-                Tides6Txt.AppendText(Constants.vbNewLine);
+                Tides6Txt.AppendText(Environment.NewLine);
                 Tides6Txt.AppendText("     Time Interval from ");
                 if (LocTimeHighMinutes < DesTimeMinutes)
                 {
@@ -535,7 +535,7 @@ namespace CelestialTools
                 SetTxtBxtoReg(ref argTB25);
                 Tides6Txt = argTB25;
                 Tides6Txt.AppendText(" (whichever precedes desired time)");
-                Tides6Txt.AppendText(Constants.vbNewLine);
+                Tides6Txt.AppendText(Environment.NewLine);
                 // If LocTimeHighMinutes >= 1440 Then LocTimeHighMinutes = LocTimeHighMinutes - 1440
                 // If LocTimeLowMinutes >= 1440 Then LocTimeLowMinutes = LocTimeLowMinutes - 1440
 
@@ -549,9 +549,9 @@ namespace CelestialTools
                     Tides6Txt.AppendText(TimeIntLowHour.ToString() + " h " + Strings.Format(TimeIntLowMin, "00") + " m");
                 }
 
-                Tides7Txt.AppendText(Constants.vbNewLine);
-                Tides6Txt.AppendText("     Rounded Time Interval (as percent change)" + Constants.vbNewLine);
-                Tides7Txt.AppendText((Factor * 100f).ToString() + "%" + Constants.vbNewLine);
+                Tides7Txt.AppendText(Environment.NewLine);
+                Tides6Txt.AppendText("     Rounded Time Interval (as percent change)" + Environment.NewLine);
+                Tides7Txt.AppendText((Factor * 100f).ToString() + "%" + Environment.NewLine);
             }
 
             Tides6Txt.AppendText("     Range of Tide at Local (Table 2) Substation");
@@ -601,8 +601,8 @@ namespace CelestialTools
             var argTB27 = Tides6Txt;
             SetTxtBxtoReg(ref argTB27);
             Tides6Txt = argTB27;
-            Tides10Txt.AppendText(Constants.vbNewLine);
-            Tides11Txt.AppendText(Constants.vbNewLine);
+            Tides10Txt.AppendText(Environment.NewLine);
+            Tides11Txt.AppendText(Environment.NewLine);
             if (optCalc.Checked == true | optTable3.Checked == true)
             {
                 Tides10Txt.AppendText("     Ht. of Tide at Local Substation:  ");
@@ -630,7 +630,7 @@ namespace CelestialTools
                 SetTxtBxtoReg(ref argTB31);
                 Tides6Txt = argTB31;
                 Tides10Txt.AppendText(" whichever is closer in time.");
-                Tides10Txt.AppendText(Constants.vbNewLine);
+                Tides10Txt.AppendText(Environment.NewLine);
                 if (TimeIntHighMinutes <= TimeIntLowMinutes)
                 {
                     if (LocHtHigh < 0d)
@@ -649,7 +649,7 @@ namespace CelestialTools
                     Tides11Txt.AppendText(Strings.Format(Math.Abs(LocHtLow), "0.0") + " ft");
                 }
 
-                Tides11Txt.AppendText(Constants.vbNewLine);
+                Tides11Txt.AppendText(Environment.NewLine);
             }
 
             if (optRule.Checked == true | optAltRule.Checked == true)
@@ -679,7 +679,7 @@ namespace CelestialTools
                 SetTxtBxtoReg(ref argTB35);
                 Tides6Txt = argTB35;
                 Tides10Txt.AppendText(" whichever precedes desired time.");
-                Tides10Txt.AppendText(Constants.vbNewLine);
+                Tides10Txt.AppendText(Environment.NewLine);
                 if (LocTimeHighMinutes <= DesTimeMinutes)
                 {
                     if (LocHtHigh < 0d)
@@ -710,7 +710,7 @@ namespace CelestialTools
                     Tides11Txt.AppendText(Strings.Format(Math.Abs(LocHtLow), "0.0") + " ft");
                 }
 
-                Tides11Txt.AppendText(Constants.vbNewLine);
+                Tides11Txt.AppendText(Environment.NewLine);
             }
 
             if (optTable3.Checked == true)

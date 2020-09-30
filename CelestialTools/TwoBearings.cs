@@ -111,22 +111,22 @@ namespace CelestialTools
             TimeOfCPA = 100 * TimeOfCPAh + TimeOfCPAm;
             DistanceTxtBx.Clear();
             DistanceTxtBx.SelectionAlignment = HorizontalAlignment.Center;
-            DistanceTxtBx.AppendText("Distance of object at second bearing " + Strings.Format(DistanceToObject, "0.00") + " nm" + Constants.vbNewLine);
-            DistanceTxtBx.AppendText("Distance of object when abeam " + Strings.Format(BeamDistance, "0.00") + " nm" + Constants.vbNewLine);
-            DistanceTxtBx.AppendText("Distance until object is abeam " + Strings.Format(DistanceUntilObjectAbeam, "0.00") + " nm" + Constants.vbNewLine);
+            DistanceTxtBx.AppendText("Distance of object at second bearing " + Strings.Format(DistanceToObject, "0.00") + " nm" + Environment.NewLine);
+            DistanceTxtBx.AppendText("Distance of object when abeam " + Strings.Format(BeamDistance, "0.00") + " nm" + Environment.NewLine);
+            DistanceTxtBx.AppendText("Distance until object is abeam " + Strings.Format(DistanceUntilObjectAbeam, "0.00") + " nm" + Environment.NewLine);
             if (string.IsNullOrEmpty(txtDist.Text) & string.IsNullOrEmpty(txtTimeh.Text) & string.IsNullOrEmpty(txtTimem.Text) & !string.IsNullOrEmpty(txtTime1.Text))
             {
-                DistanceTxtBx.AppendText("Run Time " + Strings.Format(TimeHours, "##0") + "h" + Strings.Format(TimeMinutes, "00") + "m" + Constants.vbNewLine);
+                DistanceTxtBx.AppendText("Run Time " + Strings.Format(TimeHours, "##0") + "h" + Strings.Format(TimeMinutes, "00") + "m" + Environment.NewLine);
             }
 
             if (!string.IsNullOrEmpty(txtSpeed.Text))
             {
-                DistanceTxtBx.AppendText("Time from second bearing to object abeam " + Strings.Format(TimeToCPA, "0") + " min." + Constants.vbNewLine);
+                DistanceTxtBx.AppendText("Time from second bearing to object abeam " + Strings.Format(TimeToCPA, "0") + " min." + Environment.NewLine);
             }
 
             if (!string.IsNullOrEmpty(txtTime2.Text))
             {
-                DistanceTxtBx.AppendText("Time of object abeam " + Strings.Format(TimeOfCPA, "0000") + Constants.vbNewLine);
+                DistanceTxtBx.AppendText("Time of object abeam " + Strings.Format(TimeOfCPA, "0000") + Environment.NewLine);
             }
 
             return;

@@ -5982,16 +5982,16 @@ namespace CelestialTools
             IntAzTxtBx.Clear();
             IntAzTxtBx.Font = new Font(IntAzTxtBx.Font, FontStyle.Bold);
             IntAzTxtBx.SelectionAlignment = HorizontalAlignment.Center;
-            IntAzTxtBx.AppendText("LATITUDE by ALTITUDE of POLARIS" + Constants.vbNewLine);
+            IntAzTxtBx.AppendText("LATITUDE by ALTITUDE of POLARIS" + Environment.NewLine);
             IntAzTxtBx.SelectionAlignment = HorizontalAlignment.Left;
-            IntAzTxtBx.AppendText("LHA Aries      " + Strings.Format(XD, "##0") + '°' + Strings.Format(XM, "00.0") + "'" + Constants.vbTab + "Polaris Correction" + Constants.vbTab + Constants.vbTab + "Latitude Computation" + Constants.vbNewLine);
+            IntAzTxtBx.AppendText("LHA Aries      " + Strings.Format(XD, "##0") + '°' + Strings.Format(XM, "00.0") + "'" + Constants.vbTab + "Polaris Correction" + Constants.vbTab + Constants.vbTab + "Latitude Computation" + Environment.NewLine);
             IntAzTxtBx.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + "a0     " + Strings.Format(Pola0deg, "0") + '°' + Strings.Format(Pola0min, "00.0") + "'" + Constants.vbTab + Constants.vbTab + "Ho     ");
             if (Math.Sign(HoinMinutes) == -1)
             {
                 IntAzTxtBx.AppendText(Strings.Space(35 - HoDeg.ToString().Length) + "-");
             }
 
-            IntAzTxtBx.AppendText(Strings.Space(1) + Strings.Format(HoDeg, "##0") + '°' + Strings.Format(HoMin, "00.0") + "'" + Constants.vbNewLine);
+            IntAzTxtBx.AppendText(Strings.Space(1) + Strings.Format(HoDeg, "##0") + '°' + Strings.Format(HoMin, "00.0") + "'" + Environment.NewLine);
             IntAzTxtBx.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + "a1       " + Strings.Format(Pola1, "00.0") + "'" + Constants.vbTab + Constants.vbTab + "Corr (");
             if (PCorr == 0d)
             {
@@ -6010,7 +6010,7 @@ namespace CelestialTools
 
             if (PCorr != 0d)
             {
-                IntAzTxtBx.AppendText(Strings.Format(Math.Abs(PCorr), "00.0") + "'" + Constants.vbNewLine); // PCorr was PCorr2
+                IntAzTxtBx.AppendText(Strings.Format(Math.Abs(PCorr), "00.0") + "'" + Environment.NewLine); // PCorr was PCorr2
             }
 
             PL = CommonGlobals.g_LatN;
@@ -6024,21 +6024,21 @@ namespace CelestialTools
                 PL = " ";
             }
 
-            IntAzTxtBx.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + "a2       " + Strings.Format(Pola2, "00.0") + "'" + Constants.vbTab + Constants.vbTab + "Lat     " + Strings.Space(6 - Strings.Len(Conversion.Str(PD2))) + Strings.Format(Math.Abs(PD2), "#0") + '°' + Strings.Format(Math.Abs(PM), "00.0") + "'" + PL + Constants.vbNewLine);
+            IntAzTxtBx.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + "a2       " + Strings.Format(Pola2, "00.0") + "'" + Constants.vbTab + Constants.vbTab + "Lat     " + Strings.Space(6 - Strings.Len(Conversion.Str(PD2))) + Strings.Format(Math.Abs(PD2), "#0") + '°' + Strings.Format(Math.Abs(PM), "00.0") + "'" + PL + Environment.NewLine);
             IntAzTxtBx.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + "Total" + Strings.Space(4 - Strings.Len(Conversion.Str(PCdeg))) + Strings.Format(PCdeg, "0") + '°' + Strings.Format(PCmin, "00.0") + "'" + Constants.vbTab + Constants.vbTab);
             if (BNBodyName == "Polaris" & cboPolaris.Text != "Latitude by altitude of Polaris" | BNBodyName == "Polaris" & cboPolaris.Text == "Latitude by altitude of Polaris" & (!string.IsNullOrEmpty(txtLDeg.Text) | !string.IsNullOrEmpty(txtLMin.Text)))
             {
                 IntAzTxtBx.AppendText("DR Lat   " + Strings.Space(5 - Strings.Len(Conversion.Str(Conversion.Val(txtLDeg.Text)))) + Strings.Format(Conversion.Val(txtLDeg.Text), "0") + '°' + Strings.Format(Conversion.Val(txtLMin.Text), "00.0") + "'" + cboL.Text);
             }
 
-            IntAzTxtBx.AppendText(Constants.vbNewLine);
+            IntAzTxtBx.AppendText(Environment.NewLine);
             IntAzTxtBx.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + "    (-)1" + '°' + "00.0'" + Constants.vbTab + Constants.vbTab);
             if (BNBodyName == "Polaris" & cboPolaris.Text != "Latitude by altitude of Polaris" | BNBodyName == "Polaris" & cboPolaris.Text == "Latitude by altitude of Polaris" & (!string.IsNullOrEmpty(txtLDeg.Text) | !string.IsNullOrEmpty(txtLMin.Text)))
             {
                 IntAzTxtBx.AppendText("l diff   " + Strings.Space(5 - Strings.Len(Conversion.Str(ldiffDeg))) + Strings.Format(ldiffDeg, "0") + '°' + Strings.Format(ldiffMin, "00.0") + "'");
             }
 
-            IntAzTxtBx.AppendText(Constants.vbNewLine);
+            IntAzTxtBx.AppendText(Environment.NewLine);
             IntAzTxtBx.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + "Corr(");
             if (PCorr == 0d)
                 IntAzTxtBx.AppendText(" )  00.0'");
@@ -6047,8 +6047,8 @@ namespace CelestialTools
             if (PCorr < 0d)
                 IntAzTxtBx.AppendText("-)  ");
             if (PCorr != 0d)
-                IntAzTxtBx.AppendText(Strings.Format(Math.Abs(PCorr), "00.0") + "'" + Constants.vbTab + Constants.vbTab + "Zn       " + Strings.Space(5 - Strings.Len(Conversion.Str(Conversion.Int(ZN)))) + Strings.Format(Conversion.Int(ZN * 10d + 0.5d) / 10d, "##0.0") + '°' + Constants.vbNewLine);
-            IntAzTxtBx.AppendText("EP L  " + Strings.Space(11 - Strings.Len(Conversion.Str(PD2))) + Strings.Format(Math.Abs(PD2), "#0") + '°' + Strings.Format(Math.Abs(PM), "00.0") + "'" + PL + Constants.vbNewLine);
+                IntAzTxtBx.AppendText(Strings.Format(Math.Abs(PCorr), "00.0") + "'" + Constants.vbTab + Constants.vbTab + "Zn       " + Strings.Space(5 - Strings.Len(Conversion.Str(Conversion.Int(ZN)))) + Strings.Format(Conversion.Int(ZN * 10d + 0.5d) / 10d, "##0.0") + '°' + Environment.NewLine);
+            IntAzTxtBx.AppendText("EP L  " + Strings.Space(11 - Strings.Len(Conversion.Str(PD2))) + Strings.Format(Math.Abs(PD2), "#0") + '°' + Strings.Format(Math.Abs(PM), "00.0") + "'" + PL + Environment.NewLine);
             IntAzTxtBx.AppendText("EP Lo " + Strings.Space(11 - Strings.Len(Conversion.Str(Conversion.Val(txtLoDeg.Text)))) + Strings.Format(Conversion.Val(txtLoDeg.Text), "0") + '°' + Strings.Format(Conversion.Val(txtLoMin.Text), "00.0") + "'" + cboLo.Text);
             return;
         }
@@ -6059,11 +6059,11 @@ namespace CelestialTools
             IntAzTxtBx.Font = TxtBxFont;
             IntAzTxtBx.Font = new Font(IntAzTxtBx.Font, FontStyle.Bold);
             IntAzTxtBx.SelectionAlignment = HorizontalAlignment.Center;
-            IntAzTxtBx.AppendText("INTERCEPT and AZIMUTH by the LAW of COSINES METHOD" + Constants.vbNewLine);
+            IntAzTxtBx.AppendText("INTERCEPT and AZIMUTH by the LAW of COSINES METHOD" + Environment.NewLine);
             IntAzTxtBx.SelectionAlignment = HorizontalAlignment.Left;
             LHAOriginal = LHADeg + LHAMin / 60d;
-            IntAzTxtBx.AppendText(Strings.Space(25) + "LHA" + Strings.Space(5 - Strings.Len(Conversion.Str(LHADeg))) + Strings.Format(LHADeg, "0") + '°' + Strings.Format(LHAMin, "00.0") + "'" + Strings.Space(2) + "-------> LHA" + Strings.Space(9 - Strings.Len(Conversion.Str(LHADeg))) + Strings.Format(LHA, "0.00000") + '°' + Constants.vbNewLine);
-            IntAzTxtBx.AppendText(Strings.Space(25) + "Lat" + Strings.Space(5 - Strings.Len(Conversion.Str(Conversion.Val(txtLDeg.Text)))) + Strings.Format(Conversion.Val(txtLDeg.Text), "0") + '°' + Strings.Format(Conversion.Val(LMin), "00.0") + "'" + cboL.Text + "-------> Lat (+)" + Strings.Space(5 - Strings.Len(Conversion.Str(Conversion.Val(txtLDeg.Text)))) + Strings.Format(Math.Abs(Lat), "0.00000") + '°' + Constants.vbNewLine);
+            IntAzTxtBx.AppendText(Strings.Space(25) + "LHA" + Strings.Space(5 - Strings.Len(Conversion.Str(LHADeg))) + Strings.Format(LHADeg, "0") + '°' + Strings.Format(LHAMin, "00.0") + "'" + Strings.Space(2) + "-------> LHA" + Strings.Space(9 - Strings.Len(Conversion.Str(LHADeg))) + Strings.Format(LHA, "0.00000") + '°' + Environment.NewLine);
+            IntAzTxtBx.AppendText(Strings.Space(25) + "Lat" + Strings.Space(5 - Strings.Len(Conversion.Str(Conversion.Val(txtLDeg.Text)))) + Strings.Format(Conversion.Val(txtLDeg.Text), "0") + '°' + Strings.Format(Conversion.Val(LMin), "00.0") + "'" + cboL.Text + "-------> Lat (+)" + Strings.Space(5 - Strings.Len(Conversion.Str(Conversion.Val(txtLDeg.Text)))) + Strings.Format(Math.Abs(Lat), "0.00000") + '°' + Environment.NewLine);
             IntAzTxtBx.AppendText(Strings.Space(25) + "Dec" + Strings.Space(5 - Strings.Len(Conversion.Str(TotDecDegrees))) + Strings.Format(Math.Abs(TotDecDegrees), "0") + '°' + Strings.Format(TotDecMinutes, "00.0") + "'");
             if (TotDE > 0d)
             {
@@ -6090,8 +6090,8 @@ namespace CelestialTools
                 IntAzTxtBx.AppendText("+)");
             }
 
-            IntAzTxtBx.AppendText(Strings.Space(5 - Strings.Len(Conversion.Str(TotDecDegrees))) + Strings.Format(Math.Abs(TotDE), "0.00000") + '°' + Constants.vbNewLine);
-            IntAzTxtBx.AppendText(Strings.Space(5) + " (cos LHA x cos Lat x cos Dec) + (sin Lat x sin Dec) = sin Hc" + " ---->" + Strings.Space(3) + "Hc " + Strings.Format(Conversion.Int(Hc * 100000d + 0.5d) / 100000d, "0.00000") + '°' + Constants.vbNewLine);
+            IntAzTxtBx.AppendText(Strings.Space(5 - Strings.Len(Conversion.Str(TotDecDegrees))) + Strings.Format(Math.Abs(TotDE), "0.00000") + '°' + Environment.NewLine);
+            IntAzTxtBx.AppendText(Strings.Space(5) + " (cos LHA x cos Lat x cos Dec) + (sin Lat x sin Dec) = sin Hc" + " ---->" + Strings.Space(3) + "Hc " + Strings.Format(Conversion.Int(Hc * 100000d + 0.5d) / 100000d, "0.00000") + '°' + Environment.NewLine);
             IntAzTxtBx.AppendText(Strings.Space(5) + " (sin Dec - (sin Lat x sin Hc)) / (cos Lat x cos Hc) = cos Z" + " ----->" + Strings.Space(3) + "Z  " + cboL.Text + Strings.Format(Conversion.Int(Z * 10d + 0.5d) / 10d, "0.0") + '°');
             if (LHA <= 180d)
             {
@@ -6103,21 +6103,21 @@ namespace CelestialTools
                 IntAzTxtBx.AppendText(" E");
             }
 
-            IntAzTxtBx.AppendText(Constants.vbNewLine);
+            IntAzTxtBx.AppendText(Environment.NewLine);
             IntAzTxtBx.AppendText(Strings.Space(25) + " Hc");
             if (Math.Sign(Hc) == -1)
             {
                 IntAzTxtBx.AppendText(Strings.Space(4 - Strings.Len(Conversion.Str(HcDeg))) + "-");
             }
 
-            IntAzTxtBx.AppendText(Strings.Space(5 - Strings.Len(Conversion.Str(HcDeg))) + Strings.Format(Math.Abs(HcDeg), "0") + '°' + Strings.Format(Math.Abs(HcMin), "00.0") + "'" + Constants.vbNewLine);
+            IntAzTxtBx.AppendText(Strings.Space(5 - Strings.Len(Conversion.Str(HcDeg))) + Strings.Format(Math.Abs(HcDeg), "0") + '°' + Strings.Format(Math.Abs(HcMin), "00.0") + "'" + Environment.NewLine);
             IntAzTxtBx.AppendText(Strings.Space(25) + " Ho");
             if (Math.Sign(HoinMinutes) == -1)
             {
                 IntAzTxtBx.AppendText(Strings.Space(4 - Strings.Len(Conversion.Str(HoDeg))) + "-");
             }
 
-            IntAzTxtBx.AppendText(Strings.Space(5 - Strings.Len(Conversion.Str(HoDeg))) + Strings.Format(Math.Abs(HoDeg), "0") + '°' + Strings.Format(Math.Abs(HoMin), "00.0") + "'" + Constants.vbNewLine);
+            IntAzTxtBx.AppendText(Strings.Space(5 - Strings.Len(Conversion.Str(HoDeg))) + Strings.Format(Math.Abs(HoDeg), "0") + '°' + Strings.Format(Math.Abs(HoMin), "00.0") + "'" + Environment.NewLine);
             i = (short)Strings.Len(Conversion.Str(Conversion.Int(Math.Abs(Intercept) * 10d + 0.5d)));
             if (Math.Abs(Intercept) < 1d)
             {
@@ -6138,7 +6138,7 @@ namespace CelestialTools
                 PlotOut.PlotIntercept += " Away";
             }
 
-            IntAzTxtBx.AppendText(Strings.Space(5) + "Zn = " + Strings.Format(ZN, "000") + '°' + Constants.vbNewLine);
+            IntAzTxtBx.AppendText(Strings.Space(5) + "Zn = " + Strings.Format(ZN, "000") + '°' + Environment.NewLine);
             PlotOut.PlotAz = Strings.Format(ZN, "000") + '°';
             My.MyProject.Forms.SightLog.SRFFormEP = "";
             IntAzTxtBx.AppendText(Strings.Space(25) + " EP L " + Strings.Format(EstLDeg, "0") + '°' + Strings.Format(EstLMin, "00.0") + "'"); // Tab(10 - Len(Str$(EstLDeg)));

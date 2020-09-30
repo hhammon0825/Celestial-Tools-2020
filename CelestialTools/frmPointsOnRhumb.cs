@@ -180,7 +180,7 @@ namespace CelestialTools
             // 
 
             RhumbPointsTxtBx.Clear();
-            RhumbPointsTxtBx.AppendText(Strings.Space(15) + "Longitude" + Strings.Space(43) + "Latitude" + Constants.vbNewLine);
+            RhumbPointsTxtBx.AppendText(Strings.Space(15) + "Longitude" + Strings.Space(43) + "Latitude" + Environment.NewLine);
             if (!string.IsNullOrEmpty(txtLDeg.Text) | !string.IsNullOrEmpty(txtLMin.Text))
             {
                 RhumbPointsTxtBx.AppendText(Strings.Space(14) + Strings.Format(LoDeg, "0") + '°' + Strings.Format(LoMin, "00.0") + "'");
@@ -213,7 +213,7 @@ namespace CelestialTools
             }
 
             if (string.IsNullOrEmpty(txtLoDeg.Text) & string.IsNullOrEmpty(txtLoMin.Text))
-                RhumbPointsTxtBx.AppendText(Constants.vbNewLine);
+                RhumbPointsTxtBx.AppendText(Environment.NewLine);
             // If LFlag = True Or LoFlag = True Then Print Tab(11); "Point(s) beyond limits of rhumb line course."
             if (ExceedFlag == true)
                 RhumbPointsTxtBx.AppendText(Strings.Space(7) + "Warning:  Point(s) beyond limits of rhumb line course.");

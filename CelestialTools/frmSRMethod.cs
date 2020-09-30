@@ -783,8 +783,8 @@ namespace CelestialTools
             AlignCenterRTB(ref argTB);
             SRHdrTxtBx = argTB;
             SRHdrTxtBx.AppendText("INTERCEPT and AZIMUTH by the LAW of COSINES METHOD");
-            SRLgTxtBx.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + "LHA" + Strings.Space(6 - LHADeg.ToString().Length) + Strings.Format(LHADeg, "0") + '°' + Strings.Format(LHAMin, "00.0") + "' " + Strings.Space(2) + "-------> LHA" + Strings.Space(15 - LHADeg.ToString().Length) + Strings.Format(LHA, "0.00000") + '°' + Constants.vbNewLine);
-            SRLgTxtBx.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + "Lat" + Strings.Space(6 - Conversion.Val(txtLDeg.Text).ToString().Length) + Strings.Format(Conversion.Val(txtLDeg.Text), "0") + '°' + Strings.Format(Conversion.Val(txtLMin.Text), "00.0") + "'" + cboL.Text + Strings.Space(1) + "-------> Lat (+)" + Strings.Space(11 - txtLDeg.Text.Length) + Strings.Format(Math.Abs(L), "0.00000") + '°' + Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + "LHA" + Strings.Space(6 - LHADeg.ToString().Length) + Strings.Format(LHADeg, "0") + '°' + Strings.Format(LHAMin, "00.0") + "' " + Strings.Space(2) + "-------> LHA" + Strings.Space(15 - LHADeg.ToString().Length) + Strings.Format(LHA, "0.00000") + '°' + Environment.NewLine);
+            SRLgTxtBx.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + "Lat" + Strings.Space(6 - Conversion.Val(txtLDeg.Text).ToString().Length) + Strings.Format(Conversion.Val(txtLDeg.Text), "0") + '°' + Strings.Format(Conversion.Val(txtLMin.Text), "00.0") + "'" + cboL.Text + Strings.Space(1) + "-------> Lat (+)" + Strings.Space(11 - txtLDeg.Text.Length) + Strings.Format(Math.Abs(L), "0.00000") + '°' + Environment.NewLine);
             SRLgTxtBx.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + "Dec" + Strings.Space(6 - DecDegrees.ToString().Length) + Strings.Format(Math.Abs(DecDegrees), "0") + '°' + Strings.Format(DecMinutes, "00.0") + "'");
             if (DE == 0d)
             {
@@ -796,14 +796,14 @@ namespace CelestialTools
             }
 
             SRLgTxtBx.AppendText(Strings.Space(1) + "-------> Dec (" + SignDE + ")");
-            SRLgTxtBx.AppendText(Strings.Space(11 - DecDegrees.ToString().Length) + Strings.Format(Math.Abs(DE), "0.00000") + '°' + Constants.vbNewLine);
-            SRLgTxtBx.AppendText("(cos LHA x cos Lat x cos Dec) + (sin Lat x sin Dec) = sin Hc ---->" + "   Hc " + Strings.Format(Conversion.Int(Hc * 100000d + 0.5d) / 100000d, "0.00000") + '°' + Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Strings.Space(11 - DecDegrees.ToString().Length) + Strings.Format(Math.Abs(DE), "0.00000") + '°' + Environment.NewLine);
+            SRLgTxtBx.AppendText("(cos LHA x cos Lat x cos Dec) + (sin Lat x sin Dec) = sin Hc ---->" + "   Hc " + Strings.Format(Conversion.Int(Hc * 100000d + 0.5d) / 100000d, "0.00000") + '°' + Environment.NewLine);
             SRLgTxtBx.AppendText("(sin Dec - (sin Lat x sin Hc)) / (cos Lat x cos Hc) = cos Z ----->" + "   Z  " + cboL.Text + Strings.Space(1) + Strings.Format(Conversion.Int(Z * 10d + 0.5d) / 10d, "0.0") + '°');
             if (LHA <= 180d)
                 SRLgTxtBx.AppendText(" W");
             if (LHA > 180d)
                 SRLgTxtBx.AppendText(" E");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("Hc ");
             if (Math.Sign(Hc) == -1)
             {
@@ -814,7 +814,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Constants.vbTab + " ");
             }
 
-            SRLgTxtBx.AppendText(Strings.Format(Math.Abs(HcDeg), "0") + '°' + Strings.Format(HcMin, "00.0") + "'" + Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Strings.Format(Math.Abs(HcDeg), "0") + '°' + Strings.Format(HcMin, "00.0") + "'" + Environment.NewLine);
             SRLgTxtBx.AppendText("Ho ");
             if (Math.Sign(HoinMinutes) == -1)
             {
@@ -825,7 +825,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Constants.vbTab + " ");
             }
 
-            SRLgTxtBx.AppendText(Strings.Format(Math.Abs(HoDeg), "0") + '°' + Strings.Format(Math.Abs(HoMin), "00.0") + "'" + Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Strings.Format(Math.Abs(HoDeg), "0") + '°' + Strings.Format(Math.Abs(HoMin), "00.0") + "'" + Environment.NewLine);
             i = (short)Conversion.Int(Math.Abs(A) * 10d + 0.5d).ToString().Length;
             if (Math.Abs(A) < 1d)
             {
@@ -846,7 +846,7 @@ namespace CelestialTools
                 PlotOut.PlotIntercept += " Away";
             }
 
-            SRLgTxtBx.AppendText(Strings.Space(32) + "Zn " + Strings.Format(ZN, "000") + '°' + Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Strings.Space(32) + "Zn " + Strings.Format(ZN, "000") + '°' + Environment.NewLine);
             PlotOut.PlotAz = Strings.Format(ZN, "000") + '°';
             SRLgTxtBx.AppendText("EP L  " + Strings.Space(11 - EstLDeg.ToString().Length) + Strings.Format(EstLDeg, "0") + '°' + Strings.Format(EstLMin, "00.0") + "'");
             PlotOut.PlotSLEP = "EP L  " + Strings.Format(EstLDeg, "0") + '°' + Strings.Format(EstLMin, "00.0") + "'";
@@ -871,7 +871,7 @@ namespace CelestialTools
                 PlotOut.PlotLatNS = CommonGlobals.g_LatS;
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("EP Lo " + Strings.Space(11 - EstLoDeg.ToString().Length) + Strings.Format(EstLoDeg, "0") + '°' + Strings.Format(EstLoMin, "00.0") + "'");
             PlotOut.PlotSLEP += " EP Lo " + Strings.Format(EstLoDeg, "0") + '°' + Strings.Format(EstLoMin, "00.0") + "'";
             if (EstLo > 0d)
@@ -2270,8 +2270,8 @@ namespace CelestialTools
             var argTB1 = NASRAsmTxtBx;
             AlignCenterRTB(ref argTB1);
             NASRAsmTxtBx = argTB1;
-            SRLeftTxtBx.AppendText("Calc of Asm Lo & Asm LHA" + Strings.Space(20) + Constants.vbNewLine);
-            SRLeftTxtBx.AppendText("   Tot GHA" + Strings.Space(7 - GHAAsmDeg.ToString().Length) + Strings.Format(GHAAsmDeg, "0") + '°' + Strings.Format(GHAAsmMin, "00") + "'" + Constants.vbNewLine);
+            SRLeftTxtBx.AppendText("Calc of Asm Lo & Asm LHA" + Strings.Space(20) + Environment.NewLine);
+            SRLeftTxtBx.AppendText("   Tot GHA" + Strings.Space(7 - GHAAsmDeg.ToString().Length) + Strings.Format(GHAAsmDeg, "0") + '°' + Strings.Format(GHAAsmMin, "00") + "'" + Environment.NewLine);
             SRLeftTxtBx.AppendText("   Asm Lo (");
             if (AsmLo == 0d)
             {
@@ -2298,8 +2298,8 @@ namespace CelestialTools
             }
 
             SRLeftTxtBx.AppendText(")" + Strings.Space(4 - AsmLoDeg.ToString().Length) + Strings.Format(AsmLoDeg, "0") + '°' + Strings.Format(AsmLoMin, "00") + "'" + SignA3);
-            SRLeftTxtBx.AppendText(Constants.vbNewLine);
-            SRLeftTxtBx.AppendText("   Asm LHA" + Strings.Space(7 - AsmLHA.ToString().Length) + Strings.Format(AsmLHA, "0") + '°' + Constants.vbNewLine);
+            SRLeftTxtBx.AppendText(Environment.NewLine);
+            SRLeftTxtBx.AppendText("   Asm LHA" + Strings.Space(7 - AsmLHA.ToString().Length) + Strings.Format(AsmLHA, "0") + '°' + Environment.NewLine);
 
             // format right side text box
             NASRAsmTxtBx.AppendText("Asm L " + Strings.Format(Math.Abs(AsmL), "0") + '°');
@@ -2312,8 +2312,8 @@ namespace CelestialTools
                 NASRAsmTxtBx.AppendText(cboL.Text + "    Asm LHA " + Strings.Format(AsmLHA, "0") + '°');
             }
             // newline 2 times to space past the NASR Asm text box
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
             // now start writing first report text lines to right side text box
             LengthZ1Display = (short)Math.Abs(Z1display).ToString().Length;
             if (Math.Abs(Z1display) - Conversion.Int(Math.Abs(Z1display)) == 0f)
@@ -2322,13 +2322,13 @@ namespace CelestialTools
             }
 
             SRRightTxtBx.AppendText(Strings.Space(6) + "A " + Strings.Space(4 - AvalDeg.ToString().Length) + Strings.Format(AvalDeg, "0") + '°' + Strings.Format(AvalMin, "00") + "'" + Constants.vbTab + Constants.vbTab + "  B (" + SignB + ")" + Strings.Space(4 - BDeg.ToString().Length) + Strings.Format(Math.Abs(BDeg), "0") + '°' + Strings.Format(BMin, "00") + "'" + Constants.vbTab + Constants.vbTab + "Z1 (" + SignZ1 + ")" + Strings.Space(5 - LengthZ1Display) + Strings.Format(Math.Abs(Z1display), "0.0") + '°');
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
             SRRightTxtBx.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + "Dec (" + SignDE + ")" + Strings.Space(4 - DecDegrees.ToString().Length) + Strings.Format(DecDegrees, "0") + '°' + Strings.Format(DecMinDisplay, "00") + "'" + cboDec.Text);
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
             SRRightTxtBx.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + "  F (" + SignF + ")" + Strings.Space(4 - FDeg.ToString().Length) + Strings.Format(Math.Abs(FDeg), "0") + '°' + Strings.Format(FMin, "00") + "'");
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
             var argTB2 = NASRAFTxtBx;
             AlignCenterRTB(ref argTB2);
             NASRAFTxtBx = argTB2;
@@ -2343,7 +2343,7 @@ namespace CelestialTools
             if (H < 0d)
                 SRRightTxtBx.AppendText("    -");
             SRRightTxtBx.AppendText(Strings.Space(4 - Math.Abs(HDeg).ToString().Length) + Strings.Format(Math.Abs(HDeg), "0") + '°' + Strings.Format(Math.Abs(HMin), "00") + "'" + Constants.vbTab + Constants.vbTab + "P " + Strings.Format(PDeg, "0") + '°' + Strings.Space(10) + "Z2 (" + SignZ2 + ")" + Strings.Space(7 - LengthZ2Display) + Strings.Format(Math.Abs(Z2Display1), "0.0") + '°');
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
             i = (short)PDeg.ToString().Length;
             if (PDeg < 10)
             {
@@ -2356,10 +2356,10 @@ namespace CelestialTools
                 SRRightTxtBx.AppendText(Constants.vbTab + Constants.vbTab + "(supplement of " + Strings.Format(180f - Z2Display1, "0.0") + '°' + ")");
             } // was HoinMinutes < 0
 
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
             SRRightTxtBx.AppendText(Strings.Space(6) + "corr 2 (" + SignCorr2 + ")" + Strings.Space(2) + Strings.Format(Math.Abs(Corr2), "00") + "'" + Strings.Space(5) + "(A' " + Strings.Format(AvalMin, "00") + ", Z2º" + Strings.Space(4 - Conversion.Int(Z2Display2).ToString().Length) + Strings.Format(Conversion.Int(Math.Abs(Z2Display2)), "0") + ")");
             // added ABS to Z2Display after Healy tests
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
             LengthZtotDisplay = (short)Math.Abs(ZtotDisplay).ToString().Length;
             if (Math.Abs(ZtotDisplay) - Conversion.Int(Math.Abs(ZtotDisplay)) == 0f)
                 LengthZtotDisplay = (short)(LengthZtotDisplay + 2);
@@ -2374,7 +2374,7 @@ namespace CelestialTools
                 SRRightTxtBx.AppendText(" W");
             if (LHA > 180d)
                 SRRightTxtBx.AppendText(" E");
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
             SRRightTxtBx.AppendText(Strings.Space(6) + "Ho ");
             if (HoinMinutes < 0d)
             {
@@ -2386,7 +2386,7 @@ namespace CelestialTools
             }
 
             SRRightTxtBx.AppendText(Strings.Space(4 - HoDeg.ToString().Length) + Strings.Format(HoDeg, "0") + '°' + Strings.Format(Math.Abs(HoMin), "00") + "'");
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
             SRRightTxtBx.AppendText(Strings.Space(6) + "a" + Strings.Space(12 - Conversion.Int(Math.Abs(A)).ToString().Length) + Conversion.Int(Math.Abs(A) + 0.5d).ToString() + "nm ");
             PlotOut.PlotIntercept = Conversion.Int(Math.Abs(A) + 0.5d).ToString() + "nm ";
             if (A < 0d)
@@ -2402,7 +2402,7 @@ namespace CelestialTools
             }
 
             SRRightTxtBx.AppendText(Strings.Space(8) + "Zn " + Strings.Format(ZN, "000") + '°');
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
             PlotOut.PlotAz = Strings.Format(ZN, "000") + '°';
             SRRightTxtBx.AppendText(Strings.Space(6) + "AP/EP L " + Strings.Format(APEstLDeg, "0") + '°' + Strings.Format(APEstLMin, "00.0") + "'");
             if (APEstL > 0d)
@@ -2418,7 +2418,7 @@ namespace CelestialTools
                 SRRightTxtBx.AppendText(CommonGlobals.g_StrSpace);
             if (APEstLo < 0d)
                 SRRightTxtBx.AppendText(CommonGlobals.g_LongE);
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
             SRRightTxtBx.AppendText(Strings.Space(6) + "DR-LOP Distance " + Strings.Format(Math.Abs(KPLOPDist), "0.0") + " nm ");
             if (KPLOPDist < 0d)
                 SRRightTxtBx.AppendText("T");
@@ -2426,7 +2426,7 @@ namespace CelestialTools
                 SRRightTxtBx.AppendText("A");
             if (KPLOPDist == 0d)
                 SRRightTxtBx.AppendText(CommonGlobals.g_StrSpace);
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
             SRRightTxtBx.AppendText(Strings.Space(6) + "   EP L " + Strings.Format(EstLDeg, "0") + '°' + Strings.Format(EstLMin, "00.0") + "'");
             if (EstL >= 0d)
             {
@@ -2850,9 +2850,9 @@ namespace CelestialTools
 
             // format left side text box 
             SRLeftTxtBx.AppendText("Calc of Asm Lo & Asm LHA");
-            SRLeftTxtBx.AppendText(Constants.vbNewLine);
+            SRLeftTxtBx.AppendText(Environment.NewLine);
             SRLeftTxtBx.AppendText("GHA" + Strings.Space(15 - txtGHADeg.Text.ToString().Length) + Strings.Format(Conversion.Val(txtGHADeg.Text), "##0") + '°' + Strings.Format(Conversion.Val(txtGHAMin.Text), "00.0") + "'");
-            SRLeftTxtBx.AppendText(Constants.vbNewLine);
+            SRLeftTxtBx.AppendText(Environment.NewLine);
             SRLeftTxtBx.AppendText("Asm Lo (");
             if (AsmLo == 0d)
             {
@@ -2878,8 +2878,8 @@ namespace CelestialTools
                 SignA3 = " ";
             }
 
-            SRLeftTxtBx.AppendText(")" + Strings.Space(8 - AsmLoDeg.ToString().Length) + Strings.Format(AsmLoDeg, "0") + '°' + Strings.Format(AsmLoMin, "00.0") + "'" + SignA3 + Constants.vbNewLine);
-            SRLeftTxtBx.AppendText("LHA" + Strings.Space(15 - AsmLHA.ToString().Length) + Strings.Format(AsmLHA, "0") + '°' + Constants.vbNewLine);
+            SRLeftTxtBx.AppendText(")" + Strings.Space(8 - AsmLoDeg.ToString().Length) + Strings.Format(AsmLoDeg, "0") + '°' + Strings.Format(AsmLoMin, "00.0") + "'" + SignA3 + Environment.NewLine);
+            SRLeftTxtBx.AppendText("LHA" + Strings.Space(15 - AsmLHA.ToString().Length) + Strings.Format(AsmLHA, "0") + '°' + Environment.NewLine);
             SRLeftTxtBx.AppendText("Asm L " + Strings.Space(12 - AsmL.ToString().Length) + Strings.Format(Math.Abs(AsmL), "#0") + '°');
             if (AsmL == 0d)
             {
@@ -2890,9 +2890,9 @@ namespace CelestialTools
                 SRLeftTxtBx.AppendText(cboL.Text);
             }
 
-            SRLeftTxtBx.AppendText(Constants.vbNewLine);
-            SRLeftTxtBx.AppendText("Asm Dec" + Strings.Space(11 - DecDegrees.ToString().Length) + Strings.Format(DecDegrees, "#0") + '°' + cboDec.Text + Constants.vbNewLine);
-            SRLeftTxtBx.AppendText("Dec Incr" + Strings.Space(10 - DecIncr.ToString().Length) + Strings.Format(DecIncr, "00") + "'" + Constants.vbNewLine);
+            SRLeftTxtBx.AppendText(Environment.NewLine);
+            SRLeftTxtBx.AppendText("Asm Dec" + Strings.Space(11 - DecDegrees.ToString().Length) + Strings.Format(DecDegrees, "#0") + '°' + cboDec.Text + Environment.NewLine);
+            SRLeftTxtBx.AppendText("Dec Incr" + Strings.Space(10 - DecIncr.ToString().Length) + Strings.Format(DecIncr, "00") + "'" + Environment.NewLine);
 
             // format right side text box
             SRRightTxtBx.AppendText(Strings.Space(3) + "Tab Hc  ");
@@ -2911,9 +2911,9 @@ namespace CelestialTools
                 SRRightTxtBx.AppendText(" W");
             if (LHA > 180d)
                 SRRightTxtBx.AppendText(" E");
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
             SRRightTxtBx.AppendText(Strings.Space(3) + "d corr. (" + Signdcorr + ") " + Strings.Format(Math.Abs(dcorr), "00") + "'");
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
             SRRightTxtBx.AppendText(Strings.Space(3) + "Hc " + Strings.Space(5));
             if (sgnTotHc == -1)
             {
@@ -2925,7 +2925,7 @@ namespace CelestialTools
             }
 
             SRRightTxtBx.AppendText(Strings.Space(4 - Math.Abs(TotHcDeg).ToString().Length) + Strings.Format(Math.Abs(TotHcDeg), "0") + '°' + Strings.Format(Math.Abs(TotHcMin), "00") + "'");
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
             HoMin = Conversion.Int(HoMin + 0.5d);
             SRRightTxtBx.AppendText(Strings.Space(3) + "Ho " + Strings.Space(5));
             if (HoinMinutes < 0d)
@@ -2938,7 +2938,7 @@ namespace CelestialTools
             }
 
             SRRightTxtBx.AppendText(Strings.Space(4 - HoDeg.ToString().Length) + Strings.Format(Math.Abs(HoDeg), "0") + '°' + Strings.Format(Math.Abs(HoMin), "00") + "'");
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
             SRRightTxtBx.AppendText(Strings.Space(4) + "a " + Strings.Space(12 - Conversion.Int(Math.Abs(A)).ToString().Length) + Conversion.Int(Math.Abs(A) + 0.5d).ToString() + "nm ");
             PlotOut.PlotIntercept = Conversion.Int(Math.Abs(A) + 0.5d).ToString() + "nm ";
             if (TotHc < Ho)
@@ -2953,16 +2953,16 @@ namespace CelestialTools
                 PlotOut.PlotIntercept += " Away";
             }
 
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
             SRRightTxtBx.AppendText(Strings.Space(45) + "Zn  " + Strings.Format(ZN, "000") + '°');
             PlotOut.PlotAz = Strings.Format(ZN, "000") + '°';
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
-            DCorrTxtBx.AppendText(Strings.Space(6) + "d corr. Interpolation" + Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
+            DCorrTxtBx.AppendText(Strings.Space(6) + "d corr. Interpolation" + Environment.NewLine);
             DCorrTxtBx.AppendText(Strings.Space(3) + "d corr. = " + DecIncr + "x " + D.ToString() + "/ 60 => " + Signdcorr + Strings.Format(Math.Abs(dcorr), "00"));
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
             SRRightTxtBx.AppendText(Strings.Space(8) + "AP/EP L " + Strings.Format(APEstLDeg, "0") + '°' + Strings.Format(APEstLMin, "00.0") + "'");
             if (APEstL > 0d)
                 SRRightTxtBx.AppendText(CommonGlobals.g_LatN);
@@ -2977,7 +2977,7 @@ namespace CelestialTools
                 SRRightTxtBx.AppendText(CommonGlobals.g_StrSpace);
             if (APEstLo < 0d)
                 SRRightTxtBx.AppendText(CommonGlobals.g_LongE);
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
             SRRightTxtBx.AppendText(Strings.Space(8) + "DR-LOP Distance " + Strings.Format(Math.Abs(KPLOPDist), "0.0") + " nm ");
             if (KPLOPDist < 0d)
                 SRRightTxtBx.AppendText("T");
@@ -2985,7 +2985,7 @@ namespace CelestialTools
                 SRRightTxtBx.AppendText("A");
             if (KPLOPDist == 0d)
                 SRRightTxtBx.AppendText(CommonGlobals.g_StrSpace);
-            SRRightTxtBx.AppendText(Constants.vbNewLine);
+            SRRightTxtBx.AppendText(Environment.NewLine);
             SRRightTxtBx.AppendText(Strings.Space(8) + "   EP L " + Strings.Format(EstLDeg, "0") + '°' + Strings.Format(EstLMin, "00.0") + "'");
             SRRightTxtBx.AppendText("      EP Lo " + Strings.Format(EstLoDeg, "0") + '°' + Strings.Format(EstLoMin, "00.0") + "'");
             SRHdrTxtBx.Refresh();
@@ -3260,7 +3260,7 @@ namespace CelestialTools
             SRHdrTxtBx = argTB;
             SRHdrTxtBx.AppendText("INTERCEPT and AZIMUTH by WEEMS LINE OF POSITION BOOK");
             SRLgTxtBx.AppendText("GHA" + Strings.Space(16 - txtGHADeg.Text.ToString().Length) + Strings.Format(Conversion.Val(txtGHADeg.Text), "##0") + '°' + Strings.Format(Conversion.Val(txtGHAMin.Text), "00.0") + "'"); // ; Tab(83); "DEC and LAT "
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("Asm Lo (");
             if (AsmLo == 0d)
             {
@@ -3301,7 +3301,7 @@ namespace CelestialTools
             }
 
             SRLgTxtBx.AppendText(Strings.Space(8 - i) + Strings.Format(B4, "#0") + "   (top, from d)");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("t*(LHA)" + Strings.Space(11 - tDeg.ToString().Length) + Strings.Format(tDeg, "0") + '°');
             if (LHA <= 180d)
                 SRLgTxtBx.AppendText(CommonGlobals.g_LongW);
@@ -3357,7 +3357,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Strings.Space(9 - i) + Strings.Format(B3, "#0") + "   (bottom, from t)");
             if (T == 0d)
                 SRLgTxtBx.AppendText(Strings.Space(3) + "infinite (bottom, from t)");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("Asm L* " + Strings.Space(12 - Strings.Format(AsmL.ToString(), "#0").Length) + Strings.Format(AsmL.ToString(), "#0") + '°');
             if (AsmL == 0d)
                 SRLgTxtBx.AppendText(CommonGlobals.g_StrSpace);
@@ -3396,7 +3396,7 @@ namespace CelestialTools
             }
 
             SRLgTxtBx.AppendText(Strings.Space(3) + "<--" + Strings.Space(2) + "K~d*" + Strings.Space(5 - i) + Strings.Format(KdDeg, "0") + '°' + Strings.Format(KdMin, "00.0") + "'");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText(Strings.Space(26) + "A+B"); // THIS IS JUST AN ADDITION - DOES NOT NEED CHKINTERPOLATEB?  BUT IT CHANGES WITH CHKINTERPOLATEB
             i = (short)AB.ToString().Length;
             if (AB - Conversion.Int(AB) == 0d)
@@ -3431,9 +3431,9 @@ namespace CelestialTools
             }
 
             SRLgTxtBx.AppendText(Strings.Space(9 - i) + Strings.Format(B5, "#0") + "   (top, from Hc)");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText(Strings.Space(44) + "Ho" + Strings.Space(5 - HoDeg.ToString().Length) + Strings.Format(HoDeg, "0") + '°' + Strings.Format(HoMin, "00.0") + "'");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("Z ");
             if (DE >= L)
                 SRLgTxtBx.AppendText("N");
@@ -3491,7 +3491,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(" W");
             if (LHA > 180d)
                 SRLgTxtBx.AppendText(" E");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("    (by formula)" + Strings.Space(9) + "AP/EP L " + Strings.Format(APEstLDeg, "#0") + '°' + Strings.Format(APEstLMin, "00.0") + "'");
             if (APEstL > 0d)
                 SRLgTxtBx.AppendText(CommonGlobals.g_LatN);
@@ -3512,7 +3512,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Strings.Format(ZnTDeg, "#0") + '°' + Strings.Format(ZnTMin, "00") + "'");
             if ((int)chkInterpolateB.CheckState == 1)
                 SRLgTxtBx.AppendText(Strings.Format(ZnTDeg, "#0") + '°' + Strings.Format(ZnTMin, "00.0") + "'");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText(Strings.Space(25) + "DR-LOP Distance " + Strings.Format(Math.Abs(KPLOPDist), "0.0") + " nm ");
             if (KPLOPDist < 0d)
                 SRLgTxtBx.AppendText("Towards");
@@ -3521,13 +3521,13 @@ namespace CelestialTools
             if (KPLOPDist == 0d)
                 SRLgTxtBx.AppendText("       ");
             SRLgTxtBx.AppendText(Strings.Space(24) + "(by tables)");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             var argTB1 = SRLgTxtBx;
             AlignCenterRTB(ref argTB1);
             SRLgTxtBx = argTB1;
             SRLgTxtBx.AppendText("   EP L " + Strings.Format(EstLDeg, "0") + '°' + Strings.Format(EstLMin, "00.0") + "'");
             SRLgTxtBx.AppendText("      EP Lo " + Strings.Format(EstLoDeg, "0") + '°' + Strings.Format(EstLoMin, "00.0") + "'");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             var argTB2 = SRLgTxtBx;
             AlignLeftRTB(ref argTB2);
             SRLgTxtBx = argTB2;
@@ -3545,12 +3545,12 @@ namespace CelestialTools
             if ((cboL.Text ?? "") == (cboDec.Text ?? "") & DE < L)
             {
                 WeemsPVTxtBx.AppendText("Note:  Body altitude when on prime vertical " + Strings.Format(HpvDeg, "#0") + '°' + Strings.Format(HpvMin, "00.0") + "'.");
-                WeemsPVTxtBx.AppendText(Constants.vbNewLine);
+                WeemsPVTxtBx.AppendText(Environment.NewLine);
                 if (ZnLoC <= 90d | ZnLoC >= 270d)
                     WeemsPVTxtBx.AppendText(" Body is north of observer");
                 if (ZnLoC > 90d & ZnLoC < 270d)
                     WeemsPVTxtBx.AppendText(" Body is south of observer");
-                WeemsPVTxtBx.AppendText(Constants.vbNewLine);
+                WeemsPVTxtBx.AppendText(Environment.NewLine);
                 WeemsPVTxtBx.AppendText(" for Dec and DR L same name and Dec < DR L.");
             }
         }
@@ -3790,9 +3790,9 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(cboL.Text);
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("Tot GHA" + Strings.Space(9 - txtGHADeg.Text.ToString().Length) + Strings.Format(Conversion.Val(txtGHADeg.Text), "##0") + '°' + Strings.Format(Conversion.Val(txtGHAMin.Text), "00.0") + "'" + Strings.Space(60) + "DEC and LAT ");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("Asm Lo (");
             if (AsmLo == 0d)
             {
@@ -3831,7 +3831,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Strings.Space(21) + "CONTRARY NAME");
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             i = 89;
             if (TabZ < 100f)
             {
@@ -3855,7 +3855,7 @@ namespace CelestialTools
             SRLgTxtBx.AppendText(Strings.Space(9) + "Z diff (" + SignZdiff + ") " + Strings.Format(Math.Abs(Zdiff), "0.0") + '°');
             SRLgTxtBx.AppendText(Strings.Space(6) + "Tab Z " + Strings.Space(6 - TabZ.ToString().Length) + Strings.Format(TabZ, "0.0") + '°');
             // "Hc "; Tab(42 - Str$(TotHcDeg))); Format(TotHcDeg, "0"); Chr$(176); Format(TotHcMin, "00"); "'"
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             // i = 18: If Sgn(Hc) = -1 Then i = 17
 
             SRLgTxtBx.AppendText("Tab Hc " + Strings.Space(5));
@@ -3877,7 +3877,7 @@ namespace CelestialTools
 
             SRLgTxtBx.AppendText(Strings.Space(17) + "d1 corr. (" + SignD + ") " + Strings.Space(5 - Strings.Format(d1corr.ToString(), "0.0").Length) + Strings.Format(Math.Abs(d1corr), "0.0") + "'");
             SRLgTxtBx.AppendText(Strings.Space(18) + "Z corr (" + SignZdiff + ") " + Strings.Format(Math.Abs(Zcorr), "0.0") + '°');
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             i = 18;
             if (Math.Abs(Totcorr) < 10f)
             {
@@ -3892,7 +3892,7 @@ namespace CelestialTools
             }
 
             SRLgTxtBx.AppendText(Strings.Space(17) + "d2 corr. (" + SignD + ") " + Strings.Space(5 - Strings.Format(d2corr.ToString(), "0.0").Length) + Strings.Format(Math.Abs(d2corr), "0.0") + "'");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
 
             // i = 18: If Sgn(TotHc) = -1 Then i = 17
 
@@ -3939,7 +3939,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(" W");
             if (LHA > 180d)
                 SRLgTxtBx.AppendText(" E");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             i = 53;
             if (Math.Abs(Totcorr) < 10f)
             {
@@ -3959,7 +3959,7 @@ namespace CelestialTools
 
             SRLgTxtBx.AppendText(Strings.Space(4 - HoDeg.ToString().Length) + Strings.Format(Math.Abs(HoDeg), "0") + '°' + Strings.Format(Math.Abs(HoMin), "00.0") + "'");
             SRLgTxtBx.AppendText(Strings.Space(17) + "Tot corr (" + SignTotcorr + ") " + Strings.Space(5 - Strings.Format(Totcorr.ToString(), "0.0").Length) + Strings.Format(Math.Abs(Totcorr), "0.0") + "'");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText(Strings.Space(13) + "a " + Strings.Space(7 - Conversion.Int(Math.Abs(A)).ToString().Length) + Strings.Format(Conversion.Int(Math.Abs(A) * 10d + 0.5d) / 10d, "0.0") + " miles ");
             PlotOut.PlotIntercept = Strings.Format(Conversion.Int(Math.Abs(A) * 10d + 0.5d) / 10d, "0.0") + " nm ";
             if (A < 0d)
@@ -3976,8 +3976,8 @@ namespace CelestialTools
 
             SRLgTxtBx.AppendText(Strings.Space(19) + "Zn    " + Strings.Format(ZN, "000") + '°');
             PlotOut.PlotAz = Strings.Format(ZN, "000") + '°';
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText(Strings.Space(34) + "AP/EP L " + Strings.Format(APEstLDeg, "0") + '°' + Strings.Format(APEstLMin, "00.0") + "'");
             switch (APEstL)
             {
@@ -4027,7 +4027,7 @@ namespace CelestialTools
             // If APEstLo > 0 Then SRLgTxtBx.AppendText(g_LongW)
             // If APEstLo = 0 Then SRLgTxtBx.AppendText(g_StrSpace)
             // If APEstLo < 0 Then SRLgTxtBx.AppendText(g_LongE)
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText(Strings.Space(34) + "DR-LOP Distance " + Strings.Format(Math.Abs(KPLOPDist), "0.0") + " nm ");
             switch (KPLOPDist)
             {
@@ -4052,10 +4052,10 @@ namespace CelestialTools
             // If KPLOPDist < 0 Then SRLgTxtBx.AppendText("T")
             // If KPLOPDist > 0 Then SRLgTxtBx.AppendText("A")
             // If KPLOPDist = 0 Then SRLgTxtBx.AppendText(g_StrSpace)
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText(Strings.Space(34) + "   EP L " + Strings.Format(EstLDeg, "0") + '°' + Strings.Format(EstLMin, "00.0") + "'");
             SRLgTxtBx.AppendText("      EP Lo " + Strings.Format(EstLoDeg, "0") + '°' + Strings.Format(EstLoMin, "00.0") + "'");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.Refresh();
             SRHdrTxtBx.Refresh();
         }
@@ -4582,7 +4582,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Strings.Space(8) + "A " + Strings.Space(9 - i) + Strings.Format(A1, "0"));
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             if (optCompact.Checked == true)
             {
                 SRLgTxtBx.AppendText("Dec*" + Strings.Space(9 - txtDecDeg.Text.ToString().Length) + Strings.Format(Conversion.Val(txtDecDeg.Text), "0") + '°' + Strings.Format(DecMinutes, "00") + "'" + cboDec.Text);
@@ -4629,7 +4629,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Strings.Space(11) + "A " + Strings.Space(9 - i) + Strings.Format(A2, "0"));
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             i = (short)A3.ToString().Length;
             if (A3 - Conversion.Int(A3) == 0f)
             {
@@ -4709,7 +4709,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Strings.Space(11) + "A " + Strings.Space(9 - i) + Strings.Format(A4, "0"));
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             if (optCompact.Checked == true)
             {
                 SRLgTxtBx.AppendText("K    " + Strings.Space(8 - KDeg.ToString().Length) + Strings.Format(KDeg, "0") + '°' + Strings.Format(KMin, "00") + "'" + cboDec.Text);
@@ -4747,7 +4747,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText("A " + Strings.Space(9 - i) + Strings.Format(A5, "0"));
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             if (optCompact.Checked == true)
             {
                 SRLgTxtBx.AppendText("DR L " + Strings.Space(8 - txtLDeg.Text.ToString().Length));
@@ -4764,7 +4764,7 @@ namespace CelestialTools
                 SRLgTxtBx.SelectionFont = new Font(SRLgTxtBx.Font, FontStyle.Regular);
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             if (optCompact.Checked == true)
             {
                 SRLgTxtBx.AppendText("K ~ L" + Strings.Space(8 - KLDeg.ToString().Length) + Strings.Format(KLDeg, "0") + '°' + Strings.Format(KLMin, "00") + "'");
@@ -4806,7 +4806,7 @@ namespace CelestialTools
                 SRLgTxtBx.SelectionFont = new Font(SRLgTxtBx.Font, FontStyle.Regular);
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("Hc");
             if (KL > 90d)
             {
@@ -4879,7 +4879,7 @@ namespace CelestialTools
                 SRLgTxtBx.SelectionFont = new Font(SRLgTxtBx.Font, FontStyle.Regular);
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("Ho");
             if (HoMin < 0d)
             {
@@ -4906,7 +4906,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText("    Observed greater - Toward");
             if (Ho < HcDecimal)
                 SRLgTxtBx.AppendText("    Computed greater - Away");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("a" + Strings.Space(15 - Conversion.Int(Math.Abs(A)).ToString().Length));
             if (optCompact.Checked == true)
             {
@@ -4979,7 +4979,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText("A " + Strings.Space(9 - i) + Strings.Format(A7, "0"));
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText(Strings.Space(30) + "EP L " + Strings.Format(EstLDeg, "0") + '°' + Strings.Format(EstLMin, "00.0") + "'");
             PlotOut.PlotSLEP = "EP L " + Strings.Format(EstLDeg, "0") + '°' + Strings.Format(EstLMin, "00.0") + "'";
             if (EstL > 0d)
@@ -5026,15 +5026,15 @@ namespace CelestialTools
                 PlotOut.PlotLongEW = CommonGlobals.g_LongE;
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("*Table entry values");
             if (k >= 82d & k <= 98d)
             {
                 // Print Tab(23); "**An error of several miles can occur if K is between 82 and 98 degrees."
 
-                SRLgTxtBx.AppendText(Strings.Space(23) + "**If K is between 82" + '°' + " and 98" + '°' + " this B is interpolated." + Constants.vbNewLine);
-                SRLgTxtBx.AppendText(Strings.Space(25) + "USPS rule:  Discard the sight if K is between 82" + '°' + " and 98" + '°' + Constants.vbNewLine);
-                SRLgTxtBx.AppendText(Strings.Space(36) + " or use Sadler Technique." + Constants.vbNewLine);
+                SRLgTxtBx.AppendText(Strings.Space(23) + "**If K is between 82" + '°' + " and 98" + '°' + " this B is interpolated." + Environment.NewLine);
+                SRLgTxtBx.AppendText(Strings.Space(25) + "USPS rule:  Discard the sight if K is between 82" + '°' + " and 98" + '°' + Environment.NewLine);
+                SRLgTxtBx.AppendText(Strings.Space(36) + " or use Sadler Technique." + Environment.NewLine);
                 chkSadler.Visible = true;
             }
 
@@ -5086,7 +5086,7 @@ namespace CelestialTools
             SRHdrTxtBx = argTB;
             SRHdrTxtBx.AppendText("H.O. 208");
             SRLgTxtBx.AppendText("GHA" + Strings.Space(12 - txtGHADeg.Text.ToString().Length) + Strings.Format(Conversion.Val(txtGHADeg.Text), "##0") + '°' + Strings.Format(Conversion.Val(txtGHAMin.Text), "00.0") + "'");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("Asm Lo (");
             if (AsmLo == 0d)
             {
@@ -5113,9 +5113,9 @@ namespace CelestialTools
             }
 
             SRLgTxtBx.AppendText(")" + Strings.Space(4 - AsmLoDeg.ToString().Length) + Strings.Format(AsmLoDeg, "0") + '°' + Strings.Format(AsmLoMin, "00.0") + "'" + SignF);
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("Asm LHA" + Strings.Space(7 - AsmLHA.ToString().Length) + Strings.Format(AsmLHA, "0") + '°');
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             T = Conversion.Int(T);
             SRLgTxtBx.AppendText("t" + Strings.Space(14 - T.ToString().Length) + Strings.Format(T, "0") + '°');
             if (LHA <= 180d)
@@ -5123,7 +5123,7 @@ namespace CelestialTools
             if (LHA > 180d)
                 SRLgTxtBx.AppendText(CommonGlobals.g_LongE);
             SRLgTxtBx.AppendText(Strings.Space(8) + "d" + Strings.Space(4 - txtDecDeg.Text.ToString().Length) + Strings.Format(Conversion.Val(txtDecDeg.Text), "0") + '°' + Strings.Format(DecMinutes, "00.0") + "'" + cboDec.Text);
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             AsmL = Conversion.Int(AsmL);
             SRLgTxtBx.AppendText("Asm L " + Strings.Space(9 - AsmL.ToString().Length) + Strings.Format(Math.Abs(AsmL), "#0") + '°' + cboL.Text);
             i = (short)B1Deg.ToString().Length;
@@ -5142,7 +5142,7 @@ namespace CelestialTools
             }
 
             SRLgTxtBx.AppendText(Strings.Space(11) + "Z'" + Strings.Space(7 - i) + Strings.Format(Math.Abs(Z1), "0.0") + '°' + Strings.Space(1) + SignZ1);
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText(Strings.Space(22) + "d+b" + Strings.Space(4 - A3Deg.ToString().Length) + Strings.Format(A3Deg, "0") + '°' + Strings.Format(A3Min, "00.0") + "'" + SignA3);
             SRLgTxtBx.AppendText("  ->  ");
             i = (short)B2.ToString().Length;
@@ -5165,7 +5165,7 @@ namespace CelestialTools
             SRLgTxtBx.SelectionFont = new Font(SRLgTxtBx.Font, FontStyle.Underline);
             SRLgTxtBx.AppendText(Strings.Format(B3, "0"));
             SRLgTxtBx.SelectionFont = new Font(SRLgTxtBx.Font, FontStyle.Regular);
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("Hc");
             if (Hc < 0d)
             {
@@ -5208,7 +5208,7 @@ namespace CelestialTools
             // If Flag = False Then Print Spc(1); cboL.text
 
             SRLgTxtBx.AppendText(Strings.Space(1) + SignZ2);
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("Ho");
             if (HoinMinutes < 0d)
             {
@@ -5234,7 +5234,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(" W");
             if (LHA > 180d)
                 SRLgTxtBx.AppendText(" E");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("a" + Strings.Space(16 - Conversion.Int(Math.Abs(A)).ToString().Length) + Strings.Format(Conversion.Int(Math.Abs(A) * 10d + 0.5d) / 10d, "0.0") + " nm ");
             PlotOut.PlotIntercept = Strings.Format(Conversion.Int(Math.Abs(A) * 10d + 0.5d) / 10d, "0.0") + " nm ";
             if (Hc < Ho)
@@ -5251,8 +5251,8 @@ namespace CelestialTools
 
             SRLgTxtBx.AppendText(Strings.Space(23) + "Zn" + Strings.Space(4) + Strings.Format(ZN, "000") + '°');
             PlotOut.PlotAz = Strings.Format(ZN, "000") + '°';
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             var argTB1 = SRLgTxtBx;
             AlignCenterRTB(ref argTB1);
             SRLgTxtBx = argTB1;
@@ -5270,7 +5270,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(CommonGlobals.g_StrSpace);
             if (APEstLo < 0d)
                 SRLgTxtBx.AppendText(CommonGlobals.g_LongE);
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("DR-LOP Distance " + Strings.Format(Math.Abs(KPLOPDist), "0.0") + " nm ");
             if (KPLOPDist < 0d)
                 SRLgTxtBx.AppendText("T");
@@ -5278,10 +5278,10 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText("A");
             if (KPLOPDist == 0d)
                 SRLgTxtBx.AppendText(CommonGlobals.g_StrSpace);
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("   EP L " + Strings.Format(EstLDeg, "0") + '°' + Strings.Format(EstLMin, "00.0") + "'");
             SRLgTxtBx.AppendText("      EP Lo " + Strings.Format(EstLoDeg, "0") + '°' + Strings.Format(EstLoMin, "00.0") + "'");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.Refresh();
             SRHdrTxtBx.Refresh();
         }
@@ -5444,9 +5444,9 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText("   Calc. of Asm LHA");
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("Tot GHA" + Strings.Space(9 - txtGHADeg.Text.ToString().Length) + Strings.Format(Conversion.Val(txtGHADeg.Text), "##0") + '°' + Strings.Format(Conversion.Val(txtGHAMin.Text), "00.0") + "'");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             if (optd.Checked == true)
             {
                 SRLgTxtBx.AppendText("Asm Lo (");
@@ -5496,7 +5496,7 @@ namespace CelestialTools
 
             SRLgTxtBx.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab);
             SRLgTxtBx.AppendText(" DEC and LAT ");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             if (optd.Checked == true)
             {
                 SRLgTxtBx.AppendText("H.A." + Strings.Space(12 - T.ToString().Length) + Strings.Format(T, "0") + '°');
@@ -5528,7 +5528,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText("CONTRARY NAME");
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("Tab Alt. ");
             if (Math.Sign(Hc) == -1)
             {
@@ -5552,7 +5552,7 @@ namespace CelestialTools
             SRLgTxtBx.SelectionFont = new Font("Courier New", 8f, FontStyle.Regular);
             SRLgTxtBx.AppendText("d corr." + Strings.Space(1) + "(" + SignD + ") " + Strings.Space(5 - Strings.Format(d1corr.ToString(), "0.0").Length) + Strings.Format(Math.Abs(d1corr), "0.0") + "'");
             SRLgTxtBx.AppendText(Strings.Space(3) + "Tab Az. " + Strings.Space(5 - Strings.Format(TabZ.ToString(), "0.0").Length) + Strings.Format(TabZ, "0.0") + '°');
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("Tot corr" + " (" + SignTotcorr + ") " + Strings.Space(6 - Strings.Format(Totcorr.ToString(), "0.0").Length) + Strings.Format(Math.Abs(Totcorr), "0.0") + "'");
             if (optdt.Checked == true | optdtL.Checked == true)
             {
@@ -5580,7 +5580,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText("t corr." + Strings.Space(1) + "(" + Signd2corr + ") " + Strings.Space((int)(5d - Conversions.ToDouble(Strings.Format(d2corr.ToString(), "0.0").ToString()))) + Strings.Format(Math.Abs(d2corr), "0.0") + "'");
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("Hc ");
             if (Math.Sign(TotHc) == -1)
             {
@@ -5617,7 +5617,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(" W");
             if (LHA > 180d)
                 SRLgTxtBx.AppendText(" E");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("Ho ");
             if (HoinMinutes < 0d)
             {
@@ -5630,7 +5630,7 @@ namespace CelestialTools
 
             SRLgTxtBx.AppendText(Strings.Space(4 - HoDeg.ToString().Length) + Strings.Format(Math.Abs(HoDeg), "0") + '°' + Strings.Format(Math.Abs(HoMin), "00.0") + "'");
             SRLgTxtBx.AppendText(Strings.Space(34) + "Tot corr" + Strings.Space(1) + "(" + SignTotcorr + ") " + Strings.Space(5 - Strings.Format(Totcorr.ToString(), "0.0").Length) + Strings.Format(Math.Abs(Totcorr), "0.0") + "'");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText(Strings.Space(13) + "a " + Strings.Space(7 - Conversion.Int(Math.Abs(A)).ToString().Length) + Strings.Format(Conversion.Int(Math.Abs(A) * 10d + 0.5d) / 10d, "0.0") + " miles ");
             PlotOut.PlotIntercept = Strings.Format(Conversion.Int(Math.Abs(A) * 10d + 0.5d) / 10d, "0.0") + " nm ";
             if (A < 0d)
@@ -5648,7 +5648,7 @@ namespace CelestialTools
             SRLgTxtBx.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab);
             SRLgTxtBx.AppendText("Zn    " + Strings.Format(ZN, "000") + '°');
             PlotOut.PlotAz = Strings.Format(ZN, "000") + '°';
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             var argTB1 = SRLgTxtBx;
             AlignCenterRTB(ref argTB1);
             SRLgTxtBx = argTB1;
@@ -5667,8 +5667,8 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText("Plot LOP from DR L, DR Lo");
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
 
             // AlignLeftRTB(SRLgTxtBx)
 
@@ -5706,7 +5706,7 @@ namespace CelestialTools
                     SRLgTxtBx.AppendText(CommonGlobals.g_LongE);
                 }
 
-                SRLgTxtBx.AppendText(Constants.vbNewLine);
+                SRLgTxtBx.AppendText(Environment.NewLine);
                 SRLgTxtBx.AppendText("DR-LOP Distance " + Strings.Format(Math.Abs(KPLOPDist), "0.0") + " nm ");
                 if (KPLOPDist < 0d)
                     SRLgTxtBx.AppendText("T");
@@ -5714,12 +5714,12 @@ namespace CelestialTools
                     SRLgTxtBx.AppendText("A");
                 if (KPLOPDist == 0d)
                     SRLgTxtBx.AppendText(CommonGlobals.g_StrSpace);
-                SRLgTxtBx.AppendText(Constants.vbNewLine);
+                SRLgTxtBx.AppendText(Environment.NewLine);
             }
 
             SRLgTxtBx.AppendText("   EP L " + Strings.Format(EstLDeg, "0") + '°' + Strings.Format(EstLMin, "00.0") + "'");
             SRLgTxtBx.AppendText("      EP Lo " + Strings.Format(EstLoDeg, "0") + '°' + Strings.Format(EstLoMin, "00.0") + "'");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.Refresh();
         }
 
@@ -6346,7 +6346,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Strings.Space(11) + "A " + Strings.Space(7 - i) + Strings.Format(A1, "0") + "  ");
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             if (optCompact.Checked == true)
             {
                 SRLgTxtBx.AppendText("Dec*" + Strings.Space(10 - txtDecDeg.Text.Length) + Strings.Format(Conversion.Val(txtDecDeg.Text), "0") + '°' + Strings.Format(DecMinutes, "00") + "'" + cboDec.Text);
@@ -6402,7 +6402,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Strings.Space(11) + "B+" + Strings.Space(7 - i) + Strings.Format(B2, "0") + "  ");
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             if (optCompact.Checked == true)
                 SRLgTxtBx.AppendText("DR L" + Strings.Space(10 - txtLDeg.Text.Length) + Strings.Format(Conversion.Val(txtLDeg.Text), "0") + '°' + Strings.Format(Conversion.Int(Conversion.Val(txtLMin.Text) + 0.5d), "00") + "'" + cboL.Text);
             if (optOriginal.Checked == true)
@@ -6437,7 +6437,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Strings.Space(11) + "B+" + Strings.Space(7 - i) + Strings.Format(B3, "0") + "  ");
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("h1");
             if (L1 < 0d)
             {
@@ -6474,7 +6474,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Strings.Space(11) + "A" + Strings.Space(7 - i) + Strings.Format(A4, "0") + "  ");
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             if (optCompact.Checked == true)
             {
                 SRLgTxtBx.AppendText("Ho" + Strings.Space(12 - txtHoDeg.Text.Length) + Strings.Format(HoDeg, "0") + '°' + Strings.Format(Math.Abs(HoMin), "00") + "'");
@@ -6485,7 +6485,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText("Ho" + Strings.Space(12 - txtHoDeg.Text.Length) + Strings.Format(HoDeg, "0") + '°' + Strings.Format(Math.Abs(HoMin), "00.0") + "'");
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("h1+Ho");
             if (L2 < 0d)
             {
@@ -6506,7 +6506,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Strings.Space(12 - L2Deg.ToString().Length) + Strings.Format(L2Deg, "0") + '°' + Strings.Format(L2Min, "00.0") + "'");
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("(h1+Ho)/2");
             if (L3 < 0d)
             {
@@ -6548,7 +6548,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Strings.Space(25) + "B-" + Strings.Space(9 - i) + Strings.Format(B4, "0") + "  ");
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("h2");
             if (L4 < 0d)
             {
@@ -6585,7 +6585,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Strings.Space(24) + "A " + Strings.Space(7 - i) + Strings.Format(A5, "0") + "  ");
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("Hc(h1+h2)");
             if (L1 + L4 < 0d)
             {
@@ -6623,7 +6623,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Strings.Space(45) + "B-" + Strings.Space(7 - i) + Strings.Format(B5, "0") + "  ");
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             if (optCompact.Checked == true)
             {
                 SRLgTxtBx.AppendText("Ho" + Strings.Space(12 - txtHoDeg.Text.Length) + Strings.Format(HoDeg, "0") + '°' + Strings.Format(HoMin, "00") + "'");
@@ -6644,7 +6644,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText("    Computed greater - Away");
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("a" + Strings.Space(16 - Conversion.Int(Math.Abs(A)).ToString().Length));
             if (optCompact.Checked == true)
             {
@@ -6698,7 +6698,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Strings.Space(11) + "A " + Strings.Space(9 - i) + Strings.Format(A6, "0.0"));
             if (A6 - Conversion.Int(A6) == 0f)
                 SRLgTxtBx.AppendText(Strings.Space(11) + "A" + Strings.Space(7 - i) + Strings.Format(A6, "0") + "  ");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText(Strings.Space(25) + "EP L " + Strings.Format(EstLDeg, "0") + '°' + Strings.Format(EstLMin, "00.0") + "'");
             PlotOut.PlotSLEP = "EP L " + Strings.Format(EstLDeg, "0") + '°' + Strings.Format(EstLMin, "00.0") + "'";
             if (EstL > 0d)
@@ -6745,9 +6745,9 @@ namespace CelestialTools
                 PlotOut.PlotLongEW = CommonGlobals.g_LongE;
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText(Strings.Space(25) + "*Table entry values");
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.Refresh();
             SRHdrTxtBx.Refresh();
         }
@@ -7060,7 +7060,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Strings.Space(8) + "S1" + Strings.Space(9 - i) + Strings.Format(A1, "0.000"));
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             if (optPepperday.Checked == true)
             {
                 SRLgTxtBx.AppendText("Dec*    " + cboDec.Text + Strings.Space(4 - txtDecDeg.Text.ToString().Length) + Strings.Format(Conversion.Val(txtDecDeg.Text), "0") + '°' + Strings.Format(DecMinutes, "00") + "'");
@@ -7104,7 +7104,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Strings.Space(9) + "S2" + Strings.Space(9 - i) + Strings.Format(A2, "0.000"));
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             i = (short)(Conversion.Int(A3).ToString().Length + 4);
             if (optPepperday.Checked == true)
             {
@@ -7164,7 +7164,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Strings.Space(9) + "S3" + Strings.Space(9 - i) + Strings.Format(A4, "0.000"));
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("K" + Strings.Space(13 - KDeg.ToString().Length) + Strings.Format(KDeg, "0") + '°' + Strings.Format(KMin, "00") + "'");
             SRLgTxtBx.AppendText("<- <- <- <- <- <- <- <- <- ");
             i = (short)(Conversion.Int(A5).ToString().Length + 4);
@@ -7178,7 +7178,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText("S4" + Strings.Space(9 - i) + Strings.Format(A5, "0.000"));
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             if (optPepperday.Checked == true)
             {
                 SRLgTxtBx.AppendText("lat    " + cboL.Text + Strings.Space(5 - txtLDeg.Text.ToString().Length));
@@ -7206,7 +7206,7 @@ namespace CelestialTools
                 SRLgTxtBx.SelectionFont = new Font(SRLgTxtBx.Font, FontStyle.Regular);
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.AppendText("K");
             if ((cboDec.Text ?? "") == (cboL.Text ?? ""))
             {
@@ -7246,7 +7246,7 @@ namespace CelestialTools
                 SRLgTxtBx.SelectionFont = new Font(SRLgTxtBx.Font, FontStyle.Regular);
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             if (optPepperday.Checked == true)
             {
                 SRLgTxtBx.AppendText("Comp. alt");
@@ -7296,7 +7296,7 @@ namespace CelestialTools
                 SRLgTxtBx.SelectionFont = new Font(SRLgTxtBx.Font, FontStyle.Regular);
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             if (optPepperday.Checked == true)
             {
                 SRLgTxtBx.AppendText("obs.alt  ");
@@ -7320,7 +7320,7 @@ namespace CelestialTools
             SRLgTxtBx.SelectionFont = new Font(SRLgTxtBx.Font, FontStyle.Underline);
             SRLgTxtBx.AppendText(Strings.Format(HoDeg, "0") + '°' + Strings.Format(Math.Abs(HoMin), "00") + "'");
             SRLgTxtBx.SelectionFont = new Font(SRLgTxtBx.Font, FontStyle.Regular);
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             if (optPepperday.Checked == true)
             {
                 SRLgTxtBx.AppendText("intercept" + Strings.Space(7 - Conversion.Int(Math.Abs(A)).ToString().Length));
@@ -7420,7 +7420,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(" S " + Strings.Space(9 - i) + Strings.Format(A7, "0.000"));
             if (optFarley.Checked == true)
                 SRLgTxtBx.AppendText(" S7 " + Strings.Space(9 - i) + Strings.Format(A7, "0.000"));
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
 
             // Print ': Print
             var argTB1 = SRLgTxtBx;
@@ -7472,7 +7472,7 @@ namespace CelestialTools
                 PlotOut.PlotLongEW = CommonGlobals.g_LongE;
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             var argTB2 = SRLgTxtBx;
             AlignLeftRTB(ref argTB2);
             SRLgTxtBx = argTB2;
@@ -7482,7 +7482,7 @@ namespace CelestialTools
                 SRLgTxtBx.AppendText(Strings.Space(4) + "**If K is between 82" + '°' + " and 98" + '°' + " this C is interpolated.");
             }
 
-            SRLgTxtBx.AppendText(Constants.vbNewLine);
+            SRLgTxtBx.AppendText(Environment.NewLine);
             SRLgTxtBx.Refresh();
         }
 

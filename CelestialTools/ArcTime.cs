@@ -568,7 +568,7 @@ namespace CelestialTools
                     txtLMTZT.AppendText("ZT         ");
                 if (optZTtoLMT.Checked == true)
                     txtLMTZT.AppendText("LMT        ");
-                txtLMTZT.AppendText(Strings.Format(ConvertedTimeHours, "00") + "h" + Strings.Format(ConvertedTimeMinutes, "00") + "m" + Strings.Format(ConvertedTimeSeconds, "00") + CommonGlobals.g_LatS + Constants.vbNewLine);
+                txtLMTZT.AppendText(Strings.Format(ConvertedTimeHours, "00") + "h" + Strings.Format(ConvertedTimeMinutes, "00") + "m" + Strings.Format(ConvertedTimeSeconds, "00") + CommonGlobals.g_LatS + Environment.NewLine);
                 txtLMTZT.AppendText("ZM            " + Math.Abs(ZM) + '°');
                 if (ZM > 0)
                     txtLMTZT.AppendText(CommonGlobals.g_LongW);

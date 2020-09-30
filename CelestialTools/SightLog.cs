@@ -1628,7 +1628,7 @@ namespace CelestialTools
 
                         default:
                             {
-                                var Msg = MessageBox.Show("Invalid Record Read: " + rdline + Constants.vbNewLine + "Ignore & Continue = Yes; Stop = No", "Invalid Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+                                var Msg = MessageBox.Show("Invalid Record Read: " + rdline + Environment.NewLine + "Ignore & Continue = Yes; Stop = No", "Invalid Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
                                 if (Msg == DialogResult.Yes)
                                 {
                                     ReadError = false;
@@ -4035,29 +4035,29 @@ namespace CelestialTools
             string SaveStr = Constants.vbNullString;
             string StrParm = Strings.Space(3);
             string SepLine = "__________________________________________________________________________________________";
-            SaveStr = "Sight # = " + SE.SightNum + StrParm + "Body = " + SE.BodyName + StrParm + "Limb = " + SE.BodyLimb + StrParm + "Lat = " + SE.DRLat + StrParm + "Long = " + SE.DRLong + StrParm + "L/Lo By = " + SE.LLoBy + Constants.vbNewLine + "Date/Zone Time = " + SE.SightDateTime.ToString("MM/dd/yyyy HH:mm:ss") + StrParm + "DST = " + SE.DST + StrParm + "ZD = " + SE.ZD + StrParm + StrParm + "WE = " + SE.WE + " " + SE.WEType + Constants.vbNewLine + "HS = " + SE.HS + StrParm + "ApprxBrg=" + SE.ApprxBrg + StrParm + "IC = " + SE.IC + " " + SE.ICType + StrParm + "HE = " + SE.HE + StrParm + "Horizon = " + SE.HorType + StrParm; // SepLine & vbNewLine &
+            SaveStr = "Sight # = " + SE.SightNum + StrParm + "Body = " + SE.BodyName + StrParm + "Limb = " + SE.BodyLimb + StrParm + "Lat = " + SE.DRLat + StrParm + "Long = " + SE.DRLong + StrParm + "L/Lo By = " + SE.LLoBy + Environment.NewLine + "Date/Zone Time = " + SE.SightDateTime.ToString("MM/dd/yyyy HH:mm:ss") + StrParm + "DST = " + SE.DST + StrParm + "ZD = " + SE.ZD + StrParm + StrParm + "WE = " + SE.WE + " " + SE.WEType + Environment.NewLine + "HS = " + SE.HS + StrParm + "ApprxBrg=" + SE.ApprxBrg + StrParm + "IC = " + SE.IC + " " + SE.ICType + StrParm + "HE = " + SE.HE + StrParm + "Horizon = " + SE.HorType + StrParm; // SepLine & vbNewLine &
             if (SE.HorType == "Dip Short")
             {
                 SaveStr += "Dip Short = " + SE.HorDist + " " + SE.HorDistType;
             }
 
-            SaveStr += Constants.vbNewLine + "SR Intercept = " + SE.Intercept + StrParm + "SR Azimuth = " + SE.Zn + StrParm + "SR EP = " + SE.EP + Constants.vbNewLine + "SR GHA = " + SE.SRGHA + StrParm + "SR Dec = " + SE.SRDec + StrParm + "SR Ho = " + SE.SRHo + Constants.vbNewLine + "Name = " + SE.SLName + StrParm + "Squadron = " + SE.SLSquadron;
+            SaveStr += Environment.NewLine + "SR Intercept = " + SE.Intercept + StrParm + "SR Azimuth = " + SE.Zn + StrParm + "SR EP = " + SE.EP + Environment.NewLine + "SR GHA = " + SE.SRGHA + StrParm + "SR Dec = " + SE.SRDec + StrParm + "SR Ho = " + SE.SRHo + Environment.NewLine + "Name = " + SE.SLName + StrParm + "Squadron = " + SE.SLSquadron;
             if (!string.IsNullOrEmpty(SE.WTDiff))
             {
-                SaveStr += Constants.vbNewLine + "WT Diff = " + SE.WTDiff + StrParm + "hs Diff = " + SE.HSDiff + StrParm + "hs/WT = " + SE.HSWTRate;
+                SaveStr += Environment.NewLine + "WT Diff = " + SE.WTDiff + StrParm + "hs Diff = " + SE.HSDiff + StrParm + "hs/WT = " + SE.HSWTRate;
             }
 
             if (!string.IsNullOrEmpty(SE.Remarks))
             {
-                SaveStr += Constants.vbNewLine + "Remarks=" + SE.Remarks;
+                SaveStr += Environment.NewLine + "Remarks=" + SE.Remarks;
             }
 
             if (!string.IsNullOrEmpty(SE.UserInfo))
             {
-                SaveStr += Constants.vbNewLine + "UserInfo=" + SE.UserInfo;
+                SaveStr += Environment.NewLine + "UserInfo=" + SE.UserInfo;
             }
 
-            SaveStr += Constants.vbNewLine;
+            SaveStr += Environment.NewLine;
             return SaveStr;
             return default;
         }

@@ -108,10 +108,10 @@ namespace CelestialTools
 
                 CTSwithLeeway = (float)Conversion.Int(CTSwithLeeway + 0.5d);
                 txtWindCurrent.Clear();
-                txtWindCurrent.AppendText("Course to Steer (CTS) without leeway  " + Strings.Format(CTS, "000") + '°' + Constants.vbNewLine); // ; " *" '" True *"
-                txtWindCurrent.AppendText("Course to Steer (CTS) with leeway       " + Strings.Format(CTSwithLeeway, "000") + '°' + Constants.vbNewLine); // ; " *" '" True *"
-                txtWindCurrent.AppendText("Speed of Advance (SOA)  " + Strings.Format(SOA, "0.0") + " knots" + Constants.vbNewLine);
-                txtWindCurrent.AppendText("Speed required to achieve planned cruising speed  " + Strings.Format(RequiredSpeed, "0.0") + " knots" + Constants.vbNewLine);
+                txtWindCurrent.AppendText("Course to Steer (CTS) without leeway  " + Strings.Format(CTS, "000") + '°' + Environment.NewLine); // ; " *" '" True *"
+                txtWindCurrent.AppendText("Course to Steer (CTS) with leeway       " + Strings.Format(CTSwithLeeway, "000") + '°' + Environment.NewLine); // ; " *" '" True *"
+                txtWindCurrent.AppendText("Speed of Advance (SOA)  " + Strings.Format(SOA, "0.0") + " knots" + Environment.NewLine);
+                txtWindCurrent.AppendText("Speed required to achieve planned cruising speed  " + Strings.Format(RequiredSpeed, "0.0") + " knots" + Environment.NewLine);
             }
 
             if (optCMGSMG.Checked == true)
@@ -169,9 +169,9 @@ namespace CelestialTools
 
                 CMGWithLeeway = Conversion.Int(CMGWithLeeway + 0.5d);
                 txtWindCurrent.Clear();
-                txtWindCurrent.AppendText("Course Made Good (CMG) without leeway " + Strings.Format(CMG, "000") + '°' + Constants.vbNewLine);
-                txtWindCurrent.AppendText("Course Made Good (CMG) with leeway " + Strings.Format(CMGWithLeeway, "000") + '°' + Constants.vbNewLine);
-                txtWindCurrent.AppendText("Speed Made Good (SMG)  " + Strings.Format(SMG, "0.0") + " knots" + Constants.vbNewLine);
+                txtWindCurrent.AppendText("Course Made Good (CMG) without leeway " + Strings.Format(CMG, "000") + '°' + Environment.NewLine);
+                txtWindCurrent.AppendText("Course Made Good (CMG) with leeway " + Strings.Format(CMGWithLeeway, "000") + '°' + Environment.NewLine);
+                txtWindCurrent.AppendText("Speed Made Good (SMG)  " + Strings.Format(SMG, "0.0") + " knots" + Environment.NewLine);
             }
 
             Refresh();

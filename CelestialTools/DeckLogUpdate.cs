@@ -3631,22 +3631,23 @@ namespace CelestialTools
                         string LocalNm = DataGridView1.Rows[x].Cells[FromCell].Value.ToString() + "/" + DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() + " WayPt";
                         string GPSFixType = "<fix>" + "dgps" + "</fix>";
                         string FixFixType = "<fix>" + "2d" + "</fix>";
+                        string WPTName = "WPT" + (x + 1).ToString();
                         string WptStr1 = "";
                         if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeGPS ?? "") | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeOldGPS ?? ""))
                         {
-                            WptStr1 = "<wpt lat=\"" + TmpLat + "\" lon=\"" + TmpLong + "\">" + "<time>" + UTStr + "</time><name>" + LocalNm + "</name>" + GPSFixType + Constants.vbNewLine + "</wpt>";
+                            WptStr1 = "<wpt lat=\"" + TmpLat + "\" lon=\"" + TmpLong + "\">" + "<time>" + UTStr + "</time><name>" + WPTName + "</name>" + GPSFixType + Environment.NewLine + "</wpt>";
                         }
                         else if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeFix ?? ""))
                         {
-                            WptStr1 = "<wpt lat=\"" + TmpLat + "\" lon=\"" + TmpLong + "\">" + "<time>" + UTStr + "</time><name>" + LocalNm + "</name>" + FixFixType + Constants.vbNewLine + "</wpt>";
+                            WptStr1 = "<wpt lat=\"" + TmpLat + "\" lon=\"" + TmpLong + "\">" + "<time>" + UTStr + "</time><name>" + WPTName + "</name>" + FixFixType + Environment.NewLine + "</wpt>";
                         }
                         else if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeWayPoint ?? ""))
                         {
-                            WptStr1 = "<wpt lat=\"" + TmpLat + "\" lon=\"" + TmpLong + "\">" + "<time>" + UTStr + "</time><name>" + LocalNm + "</name>" + GPSFixType + Constants.vbNewLine + "</wpt>";
+                            WptStr1 = "<wpt lat=\"" + TmpLat + "\" lon=\"" + TmpLong + "\">" + "<time>" + UTStr + "</time><name>" + WPTName + "</name>" + GPSFixType + Environment.NewLine + "</wpt>";
                         }
                         else
                         {
-                            WptStr1 = "<wpt lat=\"" + TmpLat + "\" lon=\"" + TmpLong + "\">" + "<time>" + UTStr + "</time><name>" + LocalNm + "</name>" + "</wpt>";
+                            WptStr1 = "<wpt lat=\"" + TmpLat + "\" lon=\"" + TmpLong + "\">" + "<time>" + UTStr + "</time><name>" + WPTName + "</name>" + "</wpt>";
                         }
 
                         textstr.AppendLine(WptStr1);
@@ -3654,7 +3655,7 @@ namespace CelestialTools
                 }
             }
 
-            textstr.Append(Constants.vbNewLine + "<rte>");
+            textstr.Append(Environment.NewLine + "<rte>");
             for (int x = 0, loopTo1 = DataGridView1.Rows.Count - 1; x <= loopTo1; x++)
             {
                 if (Information.IsNothing(DataGridView1.Rows[x].Cells[VesselCell].Value) == false & !string.IsNullOrEmpty(DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString()) & (DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString() ?? "") != (BadLLoStr ?? ""))
@@ -3679,16 +3680,16 @@ namespace CelestialTools
                         var ZT = Convert.ToDateTime(DataGridView1.Rows[x].Cells[DTCell].Value);
                         var UT = TimeZoneInfo.ConvertTimeToUtc(ZT, customtz);
                         string UTStr = UT.ToString("yyyy-MM-ddTHH:mm:ssZ");
-                        string LocalNm = DataGridView1.Rows[x].Cells[FromCell].Value.ToString() + "/" + DataGridView1.Rows[x].Cells[ToCell].Value.ToString() + "/" + DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() + " RoutePt";
-                        string RteStr = "<rtept lat=\"" + TmpLat + "\" lon=\"" + TmpLong + "\">" + "<time>" + UTStr + "</time><name>" + LocalNm + "</name>" + Constants.vbNewLine + "</rtept>";
+                        string LocalNm = "RtePt" + (x + 1).ToString();     //DataGridView1.Rows[x].Cells[FromCell].Value.ToString() + "/" + DataGridView1.Rows[x].Cells[ToCell].Value.ToString() + "/" + DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() + " RoutePt";
+                        string RteStr = "<rtept lat=\"" + TmpLat + "\" lon=\"" + TmpLong + "\">" + "<time>" + UTStr + "</time><name>" + LocalNm + "</name>" + Environment.NewLine + "</rtept>";
                         textstr.AppendLine(RteStr);
                     }
                 }
             }
 
-            textstr.Append(Constants.vbNewLine + "</rte>");
-            textstr.Append(Constants.vbNewLine + "<trk>");
-            textstr.Append(Constants.vbNewLine + "<trkseg>");
+            textstr.Append(Environment.NewLine + "</rte>");
+            textstr.Append(Environment.NewLine + "<trk>");
+            textstr.Append(Environment.NewLine + "<trkseg>");
             for (int x = 0, loopTo2 = DataGridView1.Rows.Count - 1; x <= loopTo2; x++)
             {
                 if (Information.IsNothing(DataGridView1.Rows[x].Cells[VesselCell].Value) == false & !string.IsNullOrEmpty(DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString()) & (DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString() ?? "") != (BadLLoStr ?? ""))
@@ -3707,16 +3708,16 @@ namespace CelestialTools
                         var ZT = Convert.ToDateTime(DataGridView1.Rows[x].Cells[DTCell].Value);
                         var UT = TimeZoneInfo.ConvertTimeToUtc(ZT, customtz);
                         string UTStr = UT.ToString("yyyy-MM-ddTHH:mm:ssZ");
-                        string LocalNm = DataGridView1.Rows[x].Cells[FromCell].Value.ToString() + "/" + DataGridView1.Rows[x].Cells[ToCell].Value.ToString() + " TrackPt";
-                        string TrkStr = "<trkpt lat=\"" + TmpLat + "\" lon=\"" + TmpLong + "\">" + "<time>" + UTStr + "</time><name>" + LocalNm + "</name>" + Constants.vbNewLine + "</trkpt>";
+                        string LocalNm = "TrkPt" + (x + 1).ToString();    //DataGridView1.Rows[x].Cells[FromCell].Value.ToString() + "/" + DataGridView1.Rows[x].Cells[ToCell].Value.ToString() + " TrackPt";
+                        string TrkStr = "<trkpt lat=\"" + TmpLat + "\" lon=\"" + TmpLong + "\">" + "<time>" + UTStr + "</time><name>" + LocalNm + "</name>" + Environment.NewLine + "</trkpt>";
                         textstr.AppendLine(TrkStr);
                     }
                 }
             }
 
-            textstr.Append(Constants.vbNewLine + "</trkseg>");
-            textstr.Append(Constants.vbNewLine + "</trk>");
-            textstr.Append(Constants.vbNewLine + "</gpx>");
+            textstr.Append(Environment.NewLine + "</trkseg>");
+            textstr.Append(Environment.NewLine + "</trk>");
+            textstr.Append(Environment.NewLine + "</gpx>");
             System.IO.File.WriteAllText(FName, textstr.ToString(), System.Text.Encoding.Default);
             saveFileDialog1.Dispose();
             return;
@@ -3724,7 +3725,7 @@ namespace CelestialTools
 
         private string GetGPXHdr()
         {
-            string tmpstr = Conversions.ToString(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject("<gpx xmlns=\" http://www.topografix.com/GPX/1/1\" " + Constants.vbNewLine + "xmlns:xsi = \"http://www.w3.org/2001/XMLSchema-instance\" " + Constants.vbNewLine + "xsi:schemaLocation=\"http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd\"" + Constants.vbNewLine + "version=\"1.1\"" + Constants.vbNewLine + "creator=\"", DataGridView1.Rows[0].Cells[VesselCell].Value), " "), DataGridView1.Rows[0].Cells[FromCell].Value), "Plan Entries"), "\">"), Constants.vbNewLine));
+            string tmpstr = Conversions.ToString(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject("<gpx xmlns=\"http://www.topografix.com/GPX/1/1\" " + Environment.NewLine + "xmlns:xsi = \"http://www.w3.org/2001/XMLSchema-instance\" " + Environment.NewLine + "xsi:schemaLocation=\"http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd\"" + Environment.NewLine + "version=\"1.1\"" + Environment.NewLine + "creator=\"", DataGridView1.Rows[0].Cells[VesselCell].Value), " "), DataGridView1.Rows[0].Cells[FromCell].Value), "Plan Entries"), "\">"), Environment.NewLine));
             return tmpstr;
         }
 
@@ -3832,7 +3833,7 @@ namespace CelestialTools
                     DTDateZoneTime.Value = ReturnDestinationZoneTime(TmpZD, TmpZD1, 0d, DTDateZoneTime.Value);
                     if (!string.IsNullOrEmpty(txtRemarks.Text))
                     {
-                        txtRemarks.AppendText(Constants.vbNewLine);
+                        txtRemarks.AppendText(Environment.NewLine);
                     }
 
                     txtRemarks.AppendText("DR Advance moved L/Lo from ZD " + TmpZD.ToString("#0") + " To ZD " + TmpZD1.ToString("#0"));

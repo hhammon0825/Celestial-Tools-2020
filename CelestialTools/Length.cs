@@ -107,19 +107,19 @@ namespace CelestialTools
             LengthDegLoWGS84feet = (float)(LengthDegLoWGS84meters * 3.2808399d);
             LengthDegLoWGS84sm = LengthDegLoWGS84feet / 5280f;
             LengthDegLoWGS84nm = LengthDegLoWGS84meters / 1852f;
-            txtLength.AppendText(Constants.vbNewLine + Constants.vbTab + "At Latitude: " + Strings.Format(Convert.ToInt32(txtLDeg.Text), "#0") + '°' + Strings.Space(1) + Strings.Format(Convert.ToDouble(txtLMin.Text), "#0.0") + "'" + Constants.vbNewLine + Constants.vbNewLine);
-            txtLength.AppendText(Constants.vbTab + "Length of 1" + '°' + " of LATITUDE:" + Constants.vbNewLine);
-            txtLength.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + "Sphere" + Constants.vbTab + "WGS84 Spheroid" + Constants.vbNewLine);
-            txtLength.AppendText(Constants.vbTab + "Feet" + Constants.vbTab + Constants.vbTab + Strings.Format(LengthDegLSpherefeet, "#,0") + Constants.vbTab + Strings.Format(LengthDegLWGS84feet, "#,0") + Constants.vbNewLine);
-            txtLength.AppendText(Constants.vbTab + "Meters" + Constants.vbTab + Constants.vbTab + Strings.Format(LengthDegLSpheremeters, "#,0") + Constants.vbTab + Strings.Format(LengthDegLWGS84meters, "#,0") + Constants.vbNewLine);
-            txtLength.AppendText(Constants.vbTab + "Statute Miles" + Constants.vbTab + Strings.Format(LengthDegLSpheresm, "#0.000") + Constants.vbTab + Strings.Format(LengthDegLWGS84sm, "#0.000") + Constants.vbNewLine);
-            txtLength.AppendText(Constants.vbTab + "Nautical Miles" + Constants.vbTab + Strings.Format(LengthDegLSpherenm, "#0.000") + Constants.vbTab + Strings.Format(LengthDegLWGS84nm, "#0.000") + Constants.vbNewLine + Constants.vbNewLine);
-            txtLength.AppendText(Constants.vbTab + "Length of 1" + '°' + " of LONGITUDE:" + Constants.vbNewLine);
-            txtLength.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + "Sphere" + Constants.vbTab + "WGS84 Spheroid" + Constants.vbNewLine);
-            txtLength.AppendText(Constants.vbTab + "Feet" + Constants.vbTab + Constants.vbTab + Strings.Format(LengthDegLoSpherefeet, "#,0") + Constants.vbTab + Strings.Format(LengthDegLoWGS84feet, "#,0") + Constants.vbNewLine);
-            txtLength.AppendText(Constants.vbTab + "Meters" + Constants.vbTab + Constants.vbTab + Strings.Format(LengthDegLoSpheremeters, "#,0") + Constants.vbTab + Strings.Format(LengthDegLoWGS84meters, "#,0") + Constants.vbNewLine);
-            txtLength.AppendText(Constants.vbTab + "Statute Miles" + Constants.vbTab + Strings.Format(LengthDegLoSpheresm, "#0.000") + Constants.vbTab + Strings.Format(LengthDegLoWGS84sm, "#0.000") + Constants.vbNewLine);
-            txtLength.AppendText(Constants.vbTab + "Nautical Miles" + Constants.vbTab + Strings.Format(LengthDegLoSpherenm, "#0.000") + Constants.vbTab + Strings.Format(LengthDegLoWGS84nm, "#0.000") + Constants.vbNewLine);
+            txtLength.AppendText(Environment.NewLine + Constants.vbTab + "At Latitude: " + Strings.Format(Convert.ToInt32(txtLDeg.Text), "#0") + '°' + Strings.Space(1) + Strings.Format(Convert.ToDouble(txtLMin.Text), "#0.0") + "'" + Environment.NewLine + Environment.NewLine);
+            txtLength.AppendText(Constants.vbTab + "Length of 1" + '°' + " of LATITUDE:" + Environment.NewLine);
+            txtLength.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + "Sphere" + Constants.vbTab + "WGS84 Spheroid" + Environment.NewLine);
+            txtLength.AppendText(Constants.vbTab + "Feet" + Constants.vbTab + Constants.vbTab + Strings.Format(LengthDegLSpherefeet, "#,0") + Constants.vbTab + Strings.Format(LengthDegLWGS84feet, "#,0") + Environment.NewLine);
+            txtLength.AppendText(Constants.vbTab + "Meters" + Constants.vbTab + Constants.vbTab + Strings.Format(LengthDegLSpheremeters, "#,0") + Constants.vbTab + Strings.Format(LengthDegLWGS84meters, "#,0") + Environment.NewLine);
+            txtLength.AppendText(Constants.vbTab + "Statute Miles" + Constants.vbTab + Strings.Format(LengthDegLSpheresm, "#0.000") + Constants.vbTab + Strings.Format(LengthDegLWGS84sm, "#0.000") + Environment.NewLine);
+            txtLength.AppendText(Constants.vbTab + "Nautical Miles" + Constants.vbTab + Strings.Format(LengthDegLSpherenm, "#0.000") + Constants.vbTab + Strings.Format(LengthDegLWGS84nm, "#0.000") + Environment.NewLine + Environment.NewLine);
+            txtLength.AppendText(Constants.vbTab + "Length of 1" + '°' + " of LONGITUDE:" + Environment.NewLine);
+            txtLength.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + "Sphere" + Constants.vbTab + "WGS84 Spheroid" + Environment.NewLine);
+            txtLength.AppendText(Constants.vbTab + "Feet" + Constants.vbTab + Constants.vbTab + Strings.Format(LengthDegLoSpherefeet, "#,0") + Constants.vbTab + Strings.Format(LengthDegLoWGS84feet, "#,0") + Environment.NewLine);
+            txtLength.AppendText(Constants.vbTab + "Meters" + Constants.vbTab + Constants.vbTab + Strings.Format(LengthDegLoSpheremeters, "#,0") + Constants.vbTab + Strings.Format(LengthDegLoWGS84meters, "#,0") + Environment.NewLine);
+            txtLength.AppendText(Constants.vbTab + "Statute Miles" + Constants.vbTab + Strings.Format(LengthDegLoSpheresm, "#0.000") + Constants.vbTab + Strings.Format(LengthDegLoWGS84sm, "#0.000") + Environment.NewLine);
+            txtLength.AppendText(Constants.vbTab + "Nautical Miles" + Constants.vbTab + Strings.Format(LengthDegLoSpherenm, "#0.000") + Constants.vbTab + Strings.Format(LengthDegLoWGS84nm, "#0.000") + Environment.NewLine);
         }
 
         private void txtLDeg_TextChanged(object eventSender, EventArgs eventArgs)

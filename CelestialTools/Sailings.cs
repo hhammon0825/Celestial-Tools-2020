@@ -1470,15 +1470,15 @@ namespace CelestialTools
             txtSailings.Clear();
             txtSailings.SelectionAlignment = HorizontalAlignment.Left;
             txtSailings.WordWrap = true;
-            txtSailings.AppendText(Strings.Space(50) + "1. C = " + Prefix + Math.Abs(CourseAngle).ToString() + '°' + " " + Suffix + "    factor (C) = " + Math.Abs(Factor).ToString() + Constants.vbNewLine);
+            txtSailings.AppendText(Strings.Space(50) + "1. C = " + Prefix + Math.Abs(CourseAngle).ToString() + '°' + " " + Suffix + "    factor (C) = " + Math.Abs(Factor).ToString() + Environment.NewLine);
             CompC = (float)(90d - CourseAngle);
             Factor = (float)Math.Cos(CompC * Pi / 180d);
             Factor = (float)(Conversion.Int(Factor * 10f + 0.5d) / 10d);
             Departure = (float)(Distance * Factor);
             Departure = (float)(Conversion.Int(Departure * 10f + 0.5d) / 10d);
-            txtSailings.AppendText(Strings.Space(50) + "2. Complement C = " + CompC.ToString() + '°' + "    factor (Comp C) = " + Math.Abs(Factor).ToString() + Constants.vbNewLine);
-            txtSailings.AppendText(Strings.Space(50) + "3. Diff Lat = " + LatDiff.ToString() + "' rounded to " + IntLatDiff.ToString() + "'" + Constants.vbNewLine);
-            txtSailings.AppendText(Strings.Space(50) + "4. Departure = " + Math.Abs(Departure).ToString() + " nm" + Constants.vbNewLine);
+            txtSailings.AppendText(Strings.Space(50) + "2. Complement C = " + CompC.ToString() + '°' + "    factor (Comp C) = " + Math.Abs(Factor).ToString() + Environment.NewLine);
+            txtSailings.AppendText(Strings.Space(50) + "3. Diff Lat = " + LatDiff.ToString() + "' rounded to " + IntLatDiff.ToString() + "'" + Environment.NewLine);
+            txtSailings.AppendText(Strings.Space(50) + "4. Departure = " + Math.Abs(Departure).ToString() + " nm" + Environment.NewLine);
             if (Conversion.Val(txtCourse.Text) > 90d & Conversion.Val(txtCourse.Text) < 270d)
                 IntLatDiff = -IntLatDiff;
             L2 = L1 + IntLatDiff / 60d;
@@ -1520,7 +1520,7 @@ namespace CelestialTools
                 txtSailings.AppendText(CommonGlobals.g_LatS);
             }
 
-            txtSailings.AppendText(Constants.vbNewLine);
+            txtSailings.AppendText(Environment.NewLine);
             L2 = Math.Sign(L2) * (L2Deg + L2Min / 60d);
             Lm = (L1 + L2) / 2d; // Mid-latitude
             Factor = (float)Math.Abs(Math.Cos(Lm * Pi / 180d));
@@ -1551,11 +1551,11 @@ namespace CelestialTools
                 txtSailings.AppendText(CommonGlobals.g_LatS);
             }
 
-            txtSailings.AppendText(Constants.vbNewLine);
-            txtSailings.AppendText(Strings.Space(54) + "factor (Mid-Lat) = " + Factor.ToString() + Constants.vbNewLine);
+            txtSailings.AppendText(Environment.NewLine);
+            txtSailings.AppendText(Strings.Space(54) + "factor (Mid-Lat) = " + Factor.ToString() + Environment.NewLine);
             DLo = Conversion.Int(Departure / Factor * 10f + 0.5d) / 10d;
             IntDLo = (int)(Math.Sign(DLo) * Conversion.Int(Math.Abs(DLo) + 0.5d));
-            txtSailings.AppendText(Strings.Space(50) + "7. Diff Lo = " + Math.Abs(DLo).ToString() + "' rounded to " + Math.Abs(IntDLo).ToString() + "'" + Constants.vbNewLine);
+            txtSailings.AppendText(Strings.Space(50) + "7. Diff Lo = " + Math.Abs(DLo).ToString() + "' rounded to " + Math.Abs(IntDLo).ToString() + "'" + Environment.NewLine);
             if (Conversion.Val(txtCourse.Text) > 0d & Conversion.Val(txtCourse.Text) < 180d)
             {
                 IntDLo = -IntDLo;
@@ -1592,7 +1592,7 @@ namespace CelestialTools
                 txtSailings.AppendText(CommonGlobals.g_LongE);
             }
 
-            txtSailings.AppendText(Constants.vbNewLine);
+            txtSailings.AppendText(Environment.NewLine);
             txtSailings.AppendText(Strings.Space(50) + "Answer:  Arrival Position = L2 " + Strings.Format(L2Deg, "0") + '°' + Strings.Format(L2Min, "00") + "'");
             if (Math.Abs(L2) < 0.01d)
             {
@@ -1632,10 +1632,10 @@ namespace CelestialTools
                 txtSailings.AppendText(CommonGlobals.g_LongE);
             }
 
-            txtSailings.AppendText(" by Simplified Traverse Table" + Constants.vbNewLine);
+            txtSailings.AppendText(" by Simplified Traverse Table" + Environment.NewLine);
             if (string.IsNullOrEmpty(txtDist.Text) & string.IsNullOrEmpty(txtTimeh.Text) & string.IsNullOrEmpty(txtTimem.Text) & !string.IsNullOrEmpty(txtTime1.Text))
             {
-                txtSailings.AppendText(Strings.Space(10) + "Run Time  " + Strings.Format(TimeHours, "##0") + "h" + Strings.Format(TimeMinutes, "00") + "m" + Constants.vbNewLine);
+                txtSailings.AppendText(Strings.Space(10) + "Run Time  " + Strings.Format(TimeHours, "##0") + "h" + Strings.Format(TimeMinutes, "00") + "m" + Environment.NewLine);
             }
 
             if (string.IsNullOrEmpty(txtDist.Text))
@@ -4240,7 +4240,7 @@ namespace CelestialTools
                 txtSailings.AppendText(CommonGlobals.g_LatN);
             if (L2 < 0d & Math.Abs(L2) > 0.01d)
                 txtSailings.AppendText(CommonGlobals.g_LatS);
-            txtSailings.AppendText(Constants.vbNewLine);
+            txtSailings.AppendText(Environment.NewLine);
             txtSailings.AppendText(Strings.Space(65) + "Lo2" + Strings.Space(11) + Strings.Format(Lo2Deg, "0") + '°' + Strings.Format(Lo2Min, "00.0") + "'");
             if (Math.Abs(Lo2) < 0.01d)
             {
@@ -4263,28 +4263,28 @@ namespace CelestialTools
                 txtSailings.AppendText(CommonGlobals.g_LongE);
             }
 
-            txtSailings.AppendText(Constants.vbNewLine);
+            txtSailings.AppendText(Environment.NewLine);
             if (string.IsNullOrEmpty(txtDist.Text) & string.IsNullOrEmpty(txtTimeh.Text) & string.IsNullOrEmpty(txtTimem.Text) & !string.IsNullOrEmpty(txtTime1.Text))
             {
-                txtSailings.AppendText(Strings.Space(65) + "Run Time  " + Strings.Format(TimeHours, "##0") + "h" + Strings.Format(TimeMinutes, "00") + "m" + Constants.vbNewLine);
+                txtSailings.AppendText(Strings.Space(65) + "Run Time  " + Strings.Format(TimeHours, "##0") + "h" + Strings.Format(TimeMinutes, "00") + "m" + Environment.NewLine);
             }
 
             if (optL2Lo2GC.Checked == false & string.IsNullOrEmpty(txtDist.Text))
             {
-                txtSailings.AppendText(Strings.Space(65) + "Distance    " + Strings.Format(Distance, "##0.0") + " nm" + Constants.vbNewLine);
+                txtSailings.AppendText(Strings.Space(65) + "Distance    " + Strings.Format(Distance, "##0.0") + " nm" + Environment.NewLine);
             }
 
             if ((optMercatorE.Checked == true | optMercatorS.Checked == true) & Math.Abs(CourseAngle) != 90d) // < 85 Then
             {
-                txtSailings.AppendText(Strings.Space(65) + "M1" + Strings.Space(11) + Strings.Format(Math.Abs(MP1), "###0.0") + Constants.vbNewLine);
-                txtSailings.AppendText(Strings.Space(65) + "M2" + Strings.Space(11) + Strings.Format(Math.Abs(MP2), "###0.0") + Constants.vbNewLine);
+                txtSailings.AppendText(Strings.Space(65) + "M1" + Strings.Space(11) + Strings.Format(Math.Abs(MP1), "###0.0") + Environment.NewLine);
+                txtSailings.AppendText(Strings.Space(65) + "M2" + Strings.Space(11) + Strings.Format(Math.Abs(MP2), "###0.0") + Environment.NewLine);
                 txtSailings.AppendText(Strings.Space(65) + "m" + Strings.Space(13) + Strings.Format(Math.Abs(MP), "###0.0"));
             }
 
-            txtSailings.AppendText(Constants.vbNewLine);
+            txtSailings.AppendText(Environment.NewLine);
             if ((optMercatorE.Checked == true | optMercatorS.Checked == true) & Math.Abs(CourseAngle) == 90d)
             {
-                txtSailings.AppendText(Strings.Space(10) + "Calculated by conventional mid-latitude sailing for courses directly east or west." + Constants.vbNewLine);
+                txtSailings.AppendText(Strings.Space(10) + "Calculated by conventional mid-latitude sailing for courses directly east or west." + Environment.NewLine);
             }
 
             if (optGreatCircle.Checked == true)
@@ -4341,7 +4341,7 @@ namespace CelestialTools
                     txtSailings.AppendText(CommonGlobals.g_StrSpace);
                 }
 
-                txtSailings.AppendText(Constants.vbNewLine);
+                txtSailings.AppendText(Environment.NewLine);
                 txtSailings.AppendText(Strings.Space(53) + "Final course           " + Strings.Format(CourseFinal, "000.00") + '°' + " True => " + Strings.Format(CourseFinal, "000") + '°' + " True");
             }
         }
@@ -4360,19 +4360,19 @@ namespace CelestialTools
             Distance = Math.Abs(Conversion.Int(Distance * 10d + 0.5d) / 10d);
             if (optGreatCircle.Checked == true & chkComposite.CheckState == 0)
             {
-                txtSailings.AppendText("Great Circle Sailing results:" + Constants.vbNewLine);
+                txtSailings.AppendText("Great Circle Sailing results:" + Environment.NewLine);
             }
 
             if (optGreatCircle.Checked == true & (int)chkComposite.CheckState == 1)
             {
                 if (optMethod1.Checked == true)
                 {
-                    txtSailings.AppendText("Composite Sailing results, Method 1:" + Constants.vbNewLine);
+                    txtSailings.AppendText("Composite Sailing results, Method 1:" + Environment.NewLine);
                 }
 
                 if (optMethod2.Checked == true)
                 {
-                    txtSailings.AppendText("Composite Sailing results, Method 2:" + Constants.vbNewLine);
+                    txtSailings.AppendText("Composite Sailing results, Method 2:" + Environment.NewLine);
                 }
             }
             // If optGreatCircle.Checked = True Then CurrentY = 4800
@@ -4399,24 +4399,24 @@ namespace CelestialTools
 
             if (optGreatCircle.Checked == false) // txtSailings.AppendText(Space(40))
             {
-                txtSailings.AppendText(Strings.Space(40) + "Course" + Strings.Space(35) + Strings.Format(Course, "000.00") + '°' + " True => " + Strings.Format(Course, "000") + '°' + " True" + Constants.vbNewLine);
+                txtSailings.AppendText(Strings.Space(40) + "Course" + Strings.Space(35) + Strings.Format(Course, "000.00") + '°' + " True => " + Strings.Format(Course, "000") + '°' + " True" + Environment.NewLine);
             }
 
             if (optGreatCircle.Checked == true) // txtSailings.AppendText(Space(40))
             {
-                txtSailings.AppendText("Course" + Strings.Space(28) + Strings.Format(Course, "000.00") + '°' + " True => " + Strings.Format(Course, "000") + '°' + " True" + Constants.vbNewLine);
+                txtSailings.AppendText("Course" + Strings.Space(28) + Strings.Format(Course, "000.00") + '°' + " True => " + Strings.Format(Course, "000") + '°' + " True" + Environment.NewLine);
             }
 
             if (optGreatCircle.Checked == true & chkComposite.CheckState == 0 | optGreatCircle.Checked == false)
             {
-                txtSailings.AppendText(Strings.Space(40) + "Distance" + Strings.Space(34) + Strings.Format(Distance, "0.0") + " nm" + Constants.vbNewLine);
+                txtSailings.AppendText(Strings.Space(40) + "Distance" + Strings.Space(34) + Strings.Format(Distance, "0.0") + " nm" + Environment.NewLine);
             }
 
             if (optMercatorE.Checked == true | optMercatorS.Checked == true)
             {
-                txtSailings.AppendText(Strings.Space(40) + "M1" + Strings.Space(41) + Strings.Format(Math.Abs(MP1), "###0.0") + Constants.vbNewLine);
-                txtSailings.AppendText(Strings.Space(40) + "M2" + Strings.Space(41) + Strings.Format(Math.Abs(MP2), "###0.0") + Constants.vbNewLine);
-                txtSailings.AppendText(Strings.Space(40) + "m " + Strings.Space(42) + Strings.Format(Math.Abs(MP), "###0.0") + Constants.vbNewLine);
+                txtSailings.AppendText(Strings.Space(40) + "M1" + Strings.Space(41) + Strings.Format(Math.Abs(MP1), "###0.0") + Environment.NewLine);
+                txtSailings.AppendText(Strings.Space(40) + "M2" + Strings.Space(41) + Strings.Format(Math.Abs(MP2), "###0.0") + Environment.NewLine);
+                txtSailings.AppendText(Strings.Space(40) + "m " + Strings.Space(42) + Strings.Format(Math.Abs(MP), "###0.0") + Environment.NewLine);
             }
 
             if (optGreatCircle.Checked == true & chkComposite.CheckState == 0)
@@ -4446,9 +4446,9 @@ namespace CelestialTools
                         txtSailings.AppendText(CommonGlobals.g_StrSpace);
                 }
 
-                txtSailings.AppendText(Constants.vbNewLine);
+                txtSailings.AppendText(Environment.NewLine);
                 txtSailings.AppendText(Strings.Space(40) + "Final Course" + Strings.Space(28) + Strings.Format(CourseFinal, "000.00") + '°' + " True => " + Strings.Format(CourseFinal, "000") + '°' + " True");
-                txtSailings.AppendText(Constants.vbNewLine);
+                txtSailings.AppendText(Environment.NewLine);
             }
 
             L3 = Conversion.Val(txtL3Deg.Text) + Conversion.Val(txtL3Min.Text) / 60d;
@@ -4470,7 +4470,7 @@ namespace CelestialTools
                         txtSailings.AppendText(CommonGlobals.g_StrSpace);
                 }
 
-                txtSailings.AppendText(Constants.vbNewLine);
+                txtSailings.AppendText(Environment.NewLine);
                 if (L2 != L3)
                 {
                     txtSailings.AppendText(Strings.Space(40) + "Route leaves latitude limit at        " + Strings.Format(Lon32Deg, "0") + '°' + Strings.Format(Lon32Min, "00.0") + "'");
@@ -4482,19 +4482,19 @@ namespace CelestialTools
                         txtSailings.AppendText(CommonGlobals.g_StrSpace);
                 }
 
-                txtSailings.AppendText(Constants.vbNewLine);
+                txtSailings.AppendText(Environment.NewLine);
                 if (L1 != L3)
                 {
-                    txtSailings.AppendText(Strings.Space(27) + "Distance from departure to latitude limit       " + Strings.Format(Distance1, "0.0") + " nm" + Constants.vbNewLine);
+                    txtSailings.AppendText(Strings.Space(27) + "Distance from departure to latitude limit       " + Strings.Format(Distance1, "0.0") + " nm" + Environment.NewLine);
                 }
 
-                txtSailings.AppendText(Strings.Space(29) + "Distance along limiting latitude parallel      " + Strings.Format(Distance2, "0.0") + " nm" + Constants.vbNewLine);
+                txtSailings.AppendText(Strings.Space(29) + "Distance along limiting latitude parallel      " + Strings.Format(Distance2, "0.0") + " nm" + Environment.NewLine);
                 if (L2 != L3)
                 {
-                    txtSailings.AppendText(Strings.Space(27) + "Distance from latitude limit to destination     " + Strings.Format(Distance3, "0.0") + " nm" + Constants.vbNewLine);
+                    txtSailings.AppendText(Strings.Space(27) + "Distance from latitude limit to destination     " + Strings.Format(Distance3, "0.0") + " nm" + Environment.NewLine);
                 }
 
-                txtSailings.AppendText(Strings.Space(37) + "Total composite sailing distance      " + Strings.Format(DistanceComposite, "0.0") + " nm" + Constants.vbNewLine);
+                txtSailings.AppendText(Strings.Space(37) + "Total composite sailing distance      " + Strings.Format(DistanceComposite, "0.0") + " nm" + Environment.NewLine);
                 txtSailings.AppendText(Strings.Space(40) + "Final Course" + Strings.Space(29) + Strings.Format(CourseFinal, "000.00") + '°' + " True => " + Strings.Format(CourseFinal, "000") + '°' + " True");
             }
             // End If
@@ -4510,11 +4510,11 @@ namespace CelestialTools
             // txtSailings.Clear()
 
             Distance = Math.Abs(Conversion.Int(Distance * 10d + 0.5d) / 10d);
-            txtSailings.AppendText(Strings.Space(40) + "Set" + Strings.Space(34) + Strings.Format(Course, "000.00") + '°' + " True => " + Strings.Format(Course, "000") + '°' + " True" + Constants.vbNewLine); // was Format(Course, "000"); Chr$(176); " True" until V5.4.0
-            txtSailings.AppendText(Strings.Space(40) + "Total Drift" + Strings.Space(26) + Strings.Format(Distance, "0.0") + " nm" + Constants.vbNewLine);
+            txtSailings.AppendText(Strings.Space(40) + "Set" + Strings.Space(34) + Strings.Format(Course, "000.00") + '°' + " True => " + Strings.Format(Course, "000") + '°' + " True" + Environment.NewLine); // was Format(Course, "000"); Chr$(176); " True" until V5.4.0
+            txtSailings.AppendText(Strings.Space(40) + "Total Drift" + Strings.Space(26) + Strings.Format(Distance, "0.0") + " nm" + Environment.NewLine);
             if (TimeinMinutes != 0)
             {
-                txtSailings.AppendText(Strings.Space(40) + "Drift" + Strings.Space(34) + Strings.Format(Drift, "0.0") + " kn" + Constants.vbNewLine);
+                txtSailings.AppendText(Strings.Space(40) + "Drift" + Strings.Space(34) + Strings.Format(Drift, "0.0") + " kn" + Environment.NewLine);
             }
 
             if ((int)chkDriftAngle.CheckState == 1)
@@ -4540,19 +4540,19 @@ namespace CelestialTools
                     txtSailings.AppendText(" to port");
                 }
 
-                txtSailings.AppendText(Constants.vbNewLine);
+                txtSailings.AppendText(Environment.NewLine);
             }
 
             if (string.IsNullOrEmpty(txtTimeh.Text) & string.IsNullOrEmpty(txtTimem.Text) & TimeinMinutes != 0)
             {
-                txtSailings.AppendText(Strings.Space(40) + "Run Time" + Strings.Space(25) + Strings.Format(TimeHours, "##0") + "h" + Strings.Format(TimeMinutes, "00") + "m" + Constants.vbNewLine);
+                txtSailings.AppendText(Strings.Space(40) + "Run Time" + Strings.Space(25) + Strings.Format(TimeHours, "##0") + "h" + Strings.Format(TimeMinutes, "00") + "m" + Environment.NewLine);
             }
 
             if (optMercatorE.Checked == true | optMercatorS.Checked == true)
             {
-                txtSailings.AppendText(Strings.Space(40) + "M1" + Strings.Space(34) + Strings.Format((Math.Abs(MP1) * 10d + 0.5d) / 10d, "###0.0") + Constants.vbNewLine);
-                txtSailings.AppendText(Strings.Space(40) + "M2" + Strings.Space(34) + Strings.Format((Math.Abs(MP2) * 10d + 0.5d) / 10d, "###0.0") + Constants.vbNewLine);
-                txtSailings.AppendText(Strings.Space(40) + "m " + Strings.Space(35) + Strings.Format(Math.Abs(MP), "###0.0") + Constants.vbNewLine);
+                txtSailings.AppendText(Strings.Space(40) + "M1" + Strings.Space(34) + Strings.Format((Math.Abs(MP1) * 10d + 0.5d) / 10d, "###0.0") + Environment.NewLine);
+                txtSailings.AppendText(Strings.Space(40) + "M2" + Strings.Space(34) + Strings.Format((Math.Abs(MP2) * 10d + 0.5d) / 10d, "###0.0") + Environment.NewLine);
+                txtSailings.AppendText(Strings.Space(40) + "m " + Strings.Space(35) + Strings.Format(Math.Abs(MP), "###0.0") + Environment.NewLine);
             }
         }
 
@@ -4561,10 +4561,10 @@ namespace CelestialTools
 
             // txtSailings.Clear()
 
-            txtSailings.AppendText(Strings.Space(40) + "Distance between fixes       " + Strings.Format(Distance, "0.0") + " nm" + Constants.vbNewLine);
-            txtSailings.AppendText(Strings.Space(40) + "Course Made Good (CMG)  " + Strings.Format(Course, "000.00") + '°' + " True => " + Strings.Format(Course, "000") + '°' + " True" + Constants.vbNewLine);
+            txtSailings.AppendText(Strings.Space(40) + "Distance between fixes       " + Strings.Format(Distance, "0.0") + " nm" + Environment.NewLine);
+            txtSailings.AppendText(Strings.Space(40) + "Course Made Good (CMG)  " + Strings.Format(Course, "000.00") + '°' + " True => " + Strings.Format(Course, "000") + '°' + " True" + Environment.NewLine);
             if (TimeinMinutes != 0)
-                txtSailings.AppendText(Strings.Space(40) + "Speed Made Good (SMG)    " + Strings.Format(SMG, "0.0") + " kn" + Constants.vbNewLine);
+                txtSailings.AppendText(Strings.Space(40) + "Speed Made Good (SMG)    " + Strings.Format(SMG, "0.0") + " kn" + Environment.NewLine);
         }
 
         private void cmdPrint_Click(object eventSender, EventArgs eventArgs)

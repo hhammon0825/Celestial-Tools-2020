@@ -42,7 +42,7 @@ namespace CelestialTools
                     line = streamToPrint.ReadLine();
                     while (line is object)
                     {
-                        TxtBx.AppendText(line + Constants.vbNewLine);
+                        TxtBx.AppendText(line + Environment.NewLine);
                         line = streamToPrint.ReadLine();
                     }
                 }

@@ -716,7 +716,7 @@ namespace CelestialTools
             string SaveStr = Constants.vbNullString;
             string StrParm = Constants.vbTab;
             string SepLine = "__________________________________________________________________________________________";
-            SaveStr = "Name = " + SE.SLName + StrParm + "No = " + SE.SightNum + StrParm + "DST = " + SE.DST + StrParm + "ZD = " + SE.ZD + StrParm + "DR Lat = " + SE.DRLat + StrParm + "DR Long = " + SE.DRLong + Constants.vbNewLine + "ApprxBrg=" + SE.ApprxBrg + StrParm + "HE = " + SE.HE + StrParm + "Horizon = " + SE.HorType + StrParm + "Dip Short = " + SE.HorDist + " " + SE.HorDistType + Constants.vbNewLine + "From AZ =" + SE.FromAZ + Constants.vbNewLine + "To AZ = " + SE.ToAZ + Constants.vbNewLine + "hsIEFmt =" + SE.hsIEFormat + Constants.vbNewLine + "Remarks = " + SE.Remarks + Constants.vbNewLine + SepLine.ToString() + Constants.vbNewLine;
+            SaveStr = "Name = " + SE.SLName + StrParm + "No = " + SE.SightNum + StrParm + "DST = " + SE.DST + StrParm + "ZD = " + SE.ZD + StrParm + "DR Lat = " + SE.DRLat + StrParm + "DR Long = " + SE.DRLong + Environment.NewLine + "ApprxBrg=" + SE.ApprxBrg + StrParm + "HE = " + SE.HE + StrParm + "Horizon = " + SE.HorType + StrParm + "Dip Short = " + SE.HorDist + " " + SE.HorDistType + Environment.NewLine + "From AZ =" + SE.FromAZ + Environment.NewLine + "To AZ = " + SE.ToAZ + Environment.NewLine + "hsIEFmt =" + SE.hsIEFormat + Environment.NewLine + "Remarks = " + SE.Remarks + Environment.NewLine + SepLine.ToString() + Environment.NewLine;
             return SaveStr;
             return default;
         }
@@ -883,7 +883,7 @@ namespace CelestialTools
 
                         default:
                             {
-                                var Msg = MessageBox.Show("Invalid Record Read: " + rdline + Constants.vbNewLine + "Ignore & Continue = Yes; Stop = No", "Invalid Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+                                var Msg = MessageBox.Show("Invalid Record Read: " + rdline + Environment.NewLine + "Ignore & Continue = Yes; Stop = No", "Invalid Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
                                 if (Msg == DialogResult.Yes)
                                 {
                                     ReadError = false;

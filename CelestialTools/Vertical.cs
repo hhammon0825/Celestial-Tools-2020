@@ -21,11 +21,11 @@ namespace CelestialTools
             DC = (float)(Conversion.Val(txtCD.Text) + Conversion.Val(txtHeight.Text) - Conversion.Val(txtDraft.Text));
             VerticalTxtBx.SelectionAlignment = HorizontalAlignment.Center;
             VerticalTxtBx.AppendText("Height of MHW above MLLW = 1/2 Mean Range + Mean Tide");
-            VerticalTxtBx.AppendText(" = 1/2 (" + Conversion.Val(txtMTR.Text) + ") + " + Conversion.Val(txtMTL.Text).ToString() + " = " + H1.ToString() + Constants.vbNewLine);
+            VerticalTxtBx.AppendText(" = 1/2 (" + Conversion.Val(txtMTR.Text) + ") + " + Conversion.Val(txtMTL.Text).ToString() + " = " + H1.ToString() + Environment.NewLine);
             VerticalTxtBx.AppendText("Vertical Clearance = Charted Height + Height of MHW above MLLW - Height of Tide above MLLW");
-            VerticalTxtBx.AppendText(" = " + Conversion.Val(txtCH.Text) + " + " + H1.ToString() + " - " + Conversion.Val(txtHeight.Text).ToString() + " = " + VC.ToString() + Constants.vbNewLine);
+            VerticalTxtBx.AppendText(" = " + Conversion.Val(txtCH.Text) + " + " + H1.ToString() + " - " + Conversion.Val(txtHeight.Text).ToString() + " = " + VC.ToString() + Environment.NewLine);
             VerticalTxtBx.AppendText("Actual Clearance = Vertical Clearance - Boat Height");
-            VerticalTxtBx.AppendText(" = " + VC + " - " + Conversion.Val(txtBH.Text).ToString() + " = " + AC.ToString() + Constants.vbNewLine);
+            VerticalTxtBx.AppendText(" = " + VC + " - " + Conversion.Val(txtBH.Text).ToString() + " = " + AC.ToString() + Environment.NewLine);
             DepthTxtBx.SelectionAlignment = HorizontalAlignment.Center;
             DepthTxtBx.AppendText("Depth Clearance (under keel) = Charted Depth + Height of Tide above MLLW - Boat's Draft");
             DepthTxtBx.AppendText(" = " + Conversion.Val(txtCD.Text) + " + " + Conversion.Val(txtHeight.Text).ToString() + " - " + Conversion.Val(txtDraft.Text).ToString() + " = " + DC.ToString());

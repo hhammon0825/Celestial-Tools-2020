@@ -84,19 +84,19 @@ namespace CelestialTools
             LatDiff = Conversion.Int(LatDiff * 10d + 0.5d) / 10d;
             IntLatDiff = (int)Conversion.Int(LatDiff + 0.5d);
             txtSailings.Clear();
-            txtSailings.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + " Simplified Traverse Table Worksheet" + Constants.vbNewLine + Constants.vbNewLine);
+            txtSailings.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + " Simplified Traverse Table Worksheet" + Environment.NewLine + Environment.NewLine);
             txtSailings.SelectionAlignment = HorizontalAlignment.Left;
             txtSailings.WordWrap = true;
-            txtSailings.AppendText("1." + Constants.vbTab + "Course: " + CString + "T => C = " + Prefix + " " + Math.Abs(CourseAngle).ToString() + '°' + " " + Suffix + Constants.vbTab + Constants.vbTab + "factor (C) = " + Math.Abs(Factor).ToString() + Constants.vbNewLine);
+            txtSailings.AppendText("1." + Constants.vbTab + "Course: " + CString + "T => C = " + Prefix + " " + Math.Abs(CourseAngle).ToString() + '°' + " " + Suffix + Constants.vbTab + Constants.vbTab + "factor (C) = " + Math.Abs(Factor).ToString() + Environment.NewLine);
             Cfactor = Factor;
             CompC = (float)(90d - CourseAngle);
             Factor = (float)Math.Abs(Math.Cos(CompC * Math.PI / 180d));
             Factor = (float)(Conversion.Int(Factor * 10f + 0.5d) / 10d);
             Departure = (float)(Distance * Factor);
             Departure = (float)(Conversion.Int(Departure * 10f + 0.5d) / 10d);
-            txtSailings.AppendText("2." + Constants.vbTab + "Complement C = 90" + '°' + "- C " + Constants.vbNewLine + "   " + Constants.vbTab + Constants.vbTab + "= 90" + '°' + "-" + CourseAngle.ToString("##0") + Constants.vbNewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + CompC.ToString() + '°' + Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + "factor (Comp C) = " + Factor.ToString() + Constants.vbNewLine);
-            txtSailings.AppendText("3." + Constants.vbTab + "Diff Lat = D x factor(C) " + Constants.vbNewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + Distance.ToString("##0.0") + " nm x " + Cfactor.ToString("#0.0") + Constants.vbNewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + LatDiff.ToString("#0.0") + "'" + " rounded to " + IntLatDiff.ToString("#0") + "'" + Constants.vbNewLine);
-            txtSailings.AppendText("4." + Constants.vbTab + "Departure = D x factor(Comp C) " + Constants.vbNewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + Distance.ToString("##0.0") + " nm x " + Factor.ToString("#0.0") + Constants.vbNewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + Math.Abs(Departure).ToString("#0.0") + " nm" + Constants.vbNewLine);
+            txtSailings.AppendText("2." + Constants.vbTab + "Complement C = 90" + '°' + "- C " + Environment.NewLine + "   " + Constants.vbTab + Constants.vbTab + "= 90" + '°' + "-" + CourseAngle.ToString("##0") + Environment.NewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + CompC.ToString() + '°' + Constants.vbTab + Constants.vbTab + Constants.vbTab + Constants.vbTab + "factor (Comp C) = " + Factor.ToString() + Environment.NewLine);
+            txtSailings.AppendText("3." + Constants.vbTab + "Diff Lat = D x factor(C) " + Environment.NewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + Distance.ToString("##0.0") + " nm x " + Cfactor.ToString("#0.0") + Environment.NewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + LatDiff.ToString("#0.0") + "'" + " rounded to " + IntLatDiff.ToString("#0") + "'" + Environment.NewLine);
+            txtSailings.AppendText("4." + Constants.vbTab + "Departure = D x factor(Comp C) " + Environment.NewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + Distance.ToString("##0.0") + " nm x " + Factor.ToString("#0.0") + Environment.NewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + Math.Abs(Departure).ToString("#0.0") + " nm" + Environment.NewLine);
             string PlusMinusStr = "+";
             if (Conversion.Val(txtCourse.Text) > 90d & Conversion.Val(txtCourse.Text) < 270d)
             {
@@ -126,7 +126,7 @@ namespace CelestialTools
                 Lo2Deg = Lo2Deg + 1;
             }
 
-            txtSailings.AppendText("5." + Constants.vbTab + "L2 = L1 (+/-) Diff Lat" + Constants.vbNewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + txtL1Deg.Text.ToString() + '°' + txtL1Min.Text + "'" + cboL1.Text + " " + PlusMinusStr + " " + Math.Abs(IntLatDiff).ToString("0") + "'" + Constants.vbNewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + L2Deg.ToString("0") + '°' + Strings.Format(L2Min, "00") + "'");
+            txtSailings.AppendText("5." + Constants.vbTab + "L2 = L1 (+/-) Diff Lat" + Environment.NewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + txtL1Deg.Text.ToString() + '°' + txtL1Min.Text + "'" + cboL1.Text + " " + PlusMinusStr + " " + Math.Abs(IntLatDiff).ToString("0") + "'" + Environment.NewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + L2Deg.ToString("0") + '°' + Strings.Format(L2Min, "00") + "'");
             if (Math.Abs(L2) < 0.01d)
             {
                 L2 = 0d;
@@ -143,7 +143,7 @@ namespace CelestialTools
                 txtSailings.AppendText(CommonGlobals.g_LatS);
             }
 
-            txtSailings.AppendText(Constants.vbNewLine);
+            txtSailings.AppendText(Environment.NewLine);
             L2 = Math.Sign(L2) * (L2Deg + L2Min / 60d);
             Lm = (L1 + L2) / 2d; // Mid-latitude
             Factor = (float)Math.Abs(Math.Cos(Lm * Math.PI / 180d));
@@ -152,7 +152,7 @@ namespace CelestialTools
             LmMin = (float)((Math.Abs(Lm) - LmDeg) * 60d);
             LmMin = (float)(Conversion.Int(LmMin * 10f + 0.5d) / 10d);
             IntLmMin = (int)Conversion.Int(LmMin + 0.5d);
-            txtSailings.AppendText("6." + Constants.vbTab + "Mid Lat = L1 (+/-) (Diff Lat / 2) " + Constants.vbNewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + txtL1Deg.Text.ToString() + '°' + txtL1Min.Text + "'" + cboL1.Text + " " + PlusMinusStr + " " + Math.Abs(IntLatDiff).ToString("0") + "/2'" + Constants.vbNewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + Strings.Format(LmDeg, "0") + '°' + Strings.Format(LmMin, "00.0") + "'");
+            txtSailings.AppendText("6." + Constants.vbTab + "Mid Lat = L1 (+/-) (Diff Lat / 2) " + Environment.NewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + txtL1Deg.Text.ToString() + '°' + txtL1Min.Text + "'" + cboL1.Text + " " + PlusMinusStr + " " + Math.Abs(IntLatDiff).ToString("0") + "/2'" + Environment.NewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + Strings.Format(LmDeg, "0") + '°' + Strings.Format(LmMin, "00.0") + "'");
             if (Lm >= 0d)
             {
                 txtSailings.AppendText(CommonGlobals.g_LatN);
@@ -175,10 +175,10 @@ namespace CelestialTools
             }
 
             // txtSailings.AppendText(vbNewLine)
-            txtSailings.AppendText(Constants.vbTab + "factor (Mid-Lat) = " + Factor.ToString() + Constants.vbNewLine);
+            txtSailings.AppendText(Constants.vbTab + "factor (Mid-Lat) = " + Factor.ToString() + Environment.NewLine);
             DLo = Conversion.Int(Departure / Factor * 10f + 0.5d) / 10d;
             IntDLo = (int)(Math.Sign(DLo) * Conversion.Int(Math.Abs(DLo) + 0.5d));
-            txtSailings.AppendText("7." + Constants.vbTab + "Diff Lo = Departure / factor (Mid-Lat)" + Constants.vbNewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + Departure.ToString("#0.0") + " / " + Factor.ToString() + Constants.vbNewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + DLo.ToString("#0.0") + "' rounded to " + IntDLo.ToString() + "'" + Constants.vbNewLine);
+            txtSailings.AppendText("7." + Constants.vbTab + "Diff Lo = Departure / factor (Mid-Lat)" + Environment.NewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + Departure.ToString("#0.0") + " / " + Factor.ToString() + Environment.NewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + DLo.ToString("#0.0") + "' rounded to " + IntDLo.ToString() + "'" + Environment.NewLine);
             if (Conversion.Val(txtCourse.Text) > 0d & Conversion.Val(txtCourse.Text) < 180d)
             {
                 IntDLo = -IntDLo;
@@ -202,7 +202,7 @@ namespace CelestialTools
             Lo2Deg = (int)Conversion.Int(Math.Abs(Lo2));
             Lo2Min = (Math.Abs(Lo2) - Lo2Deg) * 60d;
             Lo2Min = Conversion.Int(Lo2Min + 0.5d);
-            txtSailings.AppendText("8." + Constants.vbTab + "Lo2 = Lo1 (+/-) Diff Lo" + Constants.vbNewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + txtLo1Deg.Text + '°' + " " + txtLo1Min.Text + "'" + cboLo1.Text + " " + PlusMinusStr + Math.Abs(IntDLo).ToString() + Constants.vbNewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + Strings.Format(Lo2Deg, "0") + '°' + Strings.Format(Lo2Min, "00") + "'");
+            txtSailings.AppendText("8." + Constants.vbTab + "Lo2 = Lo1 (+/-) Diff Lo" + Environment.NewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + txtLo1Deg.Text + '°' + " " + txtLo1Min.Text + "'" + cboLo1.Text + " " + PlusMinusStr + Math.Abs(IntDLo).ToString() + Environment.NewLine + "   " + Constants.vbTab + Constants.vbTab + "= " + Strings.Format(Lo2Deg, "0") + '°' + Strings.Format(Lo2Min, "00") + "'");
             if (Math.Abs(Lo2) < 0.01d)
             {
                 Lo2 = 0d;
@@ -221,8 +221,8 @@ namespace CelestialTools
                 txtSailings.AppendText(CommonGlobals.g_LongE);
             }
 
-            txtSailings.AppendText(Constants.vbNewLine);
-            txtSailings.AppendText(Constants.vbNewLine);
+            txtSailings.AppendText(Environment.NewLine);
+            txtSailings.AppendText(Environment.NewLine);
             txtSailings.AppendText("Arrival Position" + Constants.vbTab + "L2: " + Strings.Format(L2Deg, "0") + '°' + Strings.Format(L2Min, "00") + "'");
             if (Math.Abs(L2) < 0.01d)
             {
@@ -263,9 +263,9 @@ namespace CelestialTools
             }
 
             txtTraverseTbl.Clear();
-            txtTraverseTbl.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + "Simplified Traverse Table" + Constants.vbNewLine);
+            txtTraverseTbl.AppendText(Constants.vbTab + Constants.vbTab + Constants.vbTab + "Simplified Traverse Table" + Environment.NewLine);
             txtTraverseTbl.AppendText(Strings.Space(5) + "Angle  0" + '°' + Strings.Space(5) + "18" + '°' + Strings.Space(5) + "31" + '°' + Strings.Space(5) + "41" + '°' + Strings.Space(5) + "49" + '°' + Strings.Space(5) + "56" + '°' + Strings.Space(5) + "63" + '°' + Strings.Space(5) + "69" + '°' + Strings.Space(5) + "75" + '°' + Strings.Space(5) + "81" + '°' + Strings.Space(5) + "87" + '°' + Strings.Space(5) + "90" + '°');
-            txtTraverseTbl.AppendText(Constants.vbNewLine);
+            txtTraverseTbl.AppendText(Environment.NewLine);
             txtTraverseTbl.AppendText(Strings.Space(5) + "Factor" + Strings.Space(5) + "1.0" + Strings.Space(6) + "0.9" + Strings.Space(5) + "0.8" + Strings.Space(6) + "0.7" + Strings.Space(5) + "0.6" + Strings.Space(6) + "0.5" + Strings.Space(5) + "0.4" + Strings.Space(6) + "0.3" + Strings.Space(5) + "0.2" + Strings.Space(6) + "0.1" + Strings.Space(5) + "0.0");
             // if txtDist.Text = "" Then
             // txtSailings.AppendText("Distance   " & Format(Distance, "##0.0") & " nm")
