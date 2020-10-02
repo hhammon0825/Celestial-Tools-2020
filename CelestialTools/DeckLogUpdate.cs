@@ -584,7 +584,7 @@ namespace CelestialTools
                 return;
             }
             // if the selected row somehow has a blank or nullstring in the LogTypeCell then exit sub
-            if (Conversions.ToBoolean(Operators.OrObject(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[DataGridView1.CurrentRow.Index].Cells[LogTypeCell].Value, Constants.vbNullString, false), Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[DataGridView1.CurrentRow.Index].Cells[LogTypeCell].Value, "", false))))
+            if (string.IsNullOrEmpty(DataGridView1.Rows[DataGridView1.CurrentRow.Index].Cells[LogTypeCell].Value.ToString() ) )         
             {
                 return;
             }
@@ -623,7 +623,7 @@ namespace CelestialTools
             // Cell 26 =  Seas Height info
             // Cell 27 =  UseForEval Y/N 
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[VesselCell].Value, Constants.vbNullString, false)))
+            if (DataGridView1.Rows[n].Cells[VesselCell].Value.ToString() != Constants.vbNullString)
             {
                 UpdtRtn.Vessel = Conversions.ToString(DataGridView1.Rows[n].Cells[VesselCell].Value);
                 txtVessel.Text = Conversions.ToString(DataGridView1.Rows[n].Cells[VesselCell].Value);
@@ -634,7 +634,7 @@ namespace CelestialTools
                 txtVessel.Text = Constants.vbNullString;
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[NavigatorCell].Value, Constants.vbNullString, false)))
+            if (DataGridView1.Rows[n].Cells[NavigatorCell].Value.ToString() != Constants.vbNullString)
             {
                 UpdtRtn.Navigator = Conversions.ToString(DataGridView1.Rows[n].Cells[NavigatorCell].Value);
                 txtNavigator.Text = Conversions.ToString(DataGridView1.Rows[n].Cells[NavigatorCell].Value);
@@ -645,13 +645,13 @@ namespace CelestialTools
                 txtNavigator.Text = Constants.vbNullString;
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[FromCell].Value, Constants.vbNullString, false)))
+            if (DataGridView1.Rows[n].Cells[FromCell].Value.ToString() != Constants.vbNullString)
             {
                 UpdtRtn.LocFrom = Conversions.ToString(DataGridView1.Rows[n].Cells[FromCell].Value);
                 txtFrom.Text = Conversions.ToString(DataGridView1.Rows[n].Cells[FromCell].Value);
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[ToCell].Value, Constants.vbNullString, false)))
+            if (DataGridView1.Rows[n].Cells[ToCell].Value.ToString() != Constants.vbNullString)
             {
                 UpdtRtn.LocTo = Conversions.ToString(DataGridView1.Rows[n].Cells[ToCell].Value);
                 txtTo.Text = Conversions.ToString(DataGridView1.Rows[n].Cells[ToCell].Value);
@@ -662,7 +662,7 @@ namespace CelestialTools
                 txtTo.Text = Constants.vbNullString;
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[LogTypeCell].Value, Constants.vbNullString, false)))
+            if (DataGridView1.Rows[n].Cells[LogTypeCell].Value.ToString() != Constants.vbNullString)
             {
                 UpdtRtn.LogType = Conversions.ToString(DataGridView1.Rows[n].Cells[LogTypeCell].Value);
                 cboLocType.Text = Conversions.ToString(DataGridView1.Rows[n].Cells[LogTypeCell].Value);
@@ -673,7 +673,7 @@ namespace CelestialTools
                 cboLocType.Text = Constants.vbNullString;
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[DTCell].Value, Constants.vbNullString, false)))
+            if (DataGridView1.Rows[n].Cells[DTCell].Value.ToString() != Constants.vbNullString)
             {
                 UpdtRtn.DateZoneTime = Conversions.ToString(DataGridView1.Rows[n].Cells[DTCell].Value);
                 DTDateZoneTime.Value = Convert.ToDateTime(DataGridView1.Rows[n].Cells[DTCell].Value);
@@ -684,7 +684,7 @@ namespace CelestialTools
                 DTDateZoneTime.Value = DateAndTime.Now;
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[CompassCell].Value, Constants.vbNullString, false)))
+            if (DataGridView1.Rows[n].Cells[CompassCell].Value.ToString() != Constants.vbNullString)
             {
                 int tlen = DataGridView1.Rows[n].Cells[CompassCell].Value.ToString().Length;
                 UpdtRtn.Compass = DataGridView1.Rows[n].Cells[CompassCell].Value.ToString().Substring(0, tlen - 1);
@@ -696,7 +696,7 @@ namespace CelestialTools
                 txtCompass.Text = Constants.vbNullString;
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[VarCell].Value, Constants.vbNullString, false)))
+            if (DataGridView1.Rows[n].Cells[VarCell].Value.ToString() != Constants.vbNullString)
             {
                 UpdtRtn.Var = Conversions.ToString(DataGridView1.Rows[n].Cells[VarCell].Value);
                 UpdtRtn.VarEW = Conversions.ToString(UpdtRtn.Var.Last());
@@ -710,7 +710,7 @@ namespace CelestialTools
                 txtVar.Clear();
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[DevCell].Value, Constants.vbNullString, false)))
+            if (DataGridView1.Rows[n].Cells[DevCell].Value.ToString() != Constants.vbNullString)
             {
                 UpdtRtn.Dev = Conversions.ToString(DataGridView1.Rows[n].Cells[DevCell].Value);
                 UpdtRtn.DevEW = Conversions.ToString(UpdtRtn.Dev.Last());
@@ -727,7 +727,7 @@ namespace CelestialTools
             // End If
 
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[TrueCell].Value, Constants.vbNullString, false)))
+            if (DataGridView1.Rows[n].Cells[TrueCell].Value.ToString() != Constants.vbNullString)
             {
                 int tlen = DataGridView1.Rows[n].Cells[TrueCell].Value.ToString().Length;
                 UpdtRtn.CTrue = DataGridView1.Rows[n].Cells[TrueCell].Value.ToString().Substring(0, tlen - 1);
@@ -739,7 +739,7 @@ namespace CelestialTools
                 txtCTrue.Text = Constants.vbNullString;
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[DRSpeedCell].Value, Constants.vbNullString, false)))
+            if (DataGridView1.Rows[n].Cells[DRSpeedCell].Value.ToString() != Constants.vbNullString)
             {
                 int tlen = DataGridView1.Rows[n].Cells[DRSpeedCell].Value.ToString().Length;
                 UpdtRtn.Speed = DataGridView1.Rows[n].Cells[DRSpeedCell].Value.ToString().Substring(0, tlen - 2);
@@ -751,7 +751,7 @@ namespace CelestialTools
                 txtSpeed.Text = Constants.vbNullString;
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[DestLogTypeCell].Value, Constants.vbNullString, false)))
+            if (DataGridView1.Rows[n].Cells[DestLogTypeCell].Value.ToString() != Constants.vbNullString)
             {
                 UpdtRtn.PositionLatLong = Conversions.ToString(DataGridView1.Rows[n].Cells[DestLogTypeCell].Value);
                 string LLo = Conversions.ToString(DataGridView1.Rows[n].Cells[DestLogTypeCell].Value);
@@ -779,7 +779,7 @@ namespace CelestialTools
                 cboLo.SelectedIndex = 0;
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[ZDCell].Value, Constants.vbNullString, false)))
+            if (DataGridView1.Rows[n].Cells[ZDCell].Value.ToString() != Constants.vbNullString)
             {
                 UpdtRtn.ZD = Conversions.ToString(DataGridView1.Rows[n].Cells[ZDCell].Value);
                 txtZD.Text = Conversions.ToString(DataGridView1.Rows[n].Cells[ZDCell].Value);
@@ -799,7 +799,7 @@ namespace CelestialTools
                 }
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[KnotLogCell].Value, Constants.vbNullString, false)))
+            if (DataGridView1.Rows[n].Cells[KnotLogCell].Value.ToString() != Constants.vbNullString)
             {
                 UpdtRtn.KnotLog = Conversions.ToString(DataGridView1.Rows[n].Cells[KnotLogCell].Value);
                 txtKnotLog.Text = Conversions.ToString(DataGridView1.Rows[n].Cells[KnotLogCell].Value);
@@ -810,7 +810,7 @@ namespace CelestialTools
                 txtKnotLog.Text = Constants.vbNullString;
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[WeatherCell].Value, Constants.vbNullString, false)))
+            if (DataGridView1.Rows[n].Cells[WeatherCell].Value.ToString() != Constants.vbNullString)
             {
                 UpdtRtn.Weather = Conversions.ToString(DataGridView1.Rows[n].Cells[WeatherCell].Value);
                 txtWeather.Text = Conversions.ToString(DataGridView1.Rows[n].Cells[WeatherCell].Value);
@@ -821,7 +821,7 @@ namespace CelestialTools
                 txtWeather.Text = Constants.vbNullString;
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[WindCell].Value, Constants.vbNullString, false)))
+            if (DataGridView1.Rows[n].Cells[WindCell].Value.ToString() != Constants.vbNullString)
             {
                 UpdtRtn.Wind = Conversions.ToString(DataGridView1.Rows[n].Cells[WindCell].Value);
                 txtWind.Text = Conversions.ToString(DataGridView1.Rows[n].Cells[WindCell].Value);
@@ -832,7 +832,7 @@ namespace CelestialTools
                 txtWind.Text = Constants.vbNullString;
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[WindDirCell].Value, Constants.vbNullString, false)))
+            if (DataGridView1.Rows[n].Cells[WindDirCell].Value.ToString() != Constants.vbNullString)
             {
                 UpdtRtn.WindDir = Conversions.ToString(DataGridView1.Rows[n].Cells[WindDirCell].Value);
                 cboWindDir.Text = Conversions.ToString(DataGridView1.Rows[n].Cells[WindDirCell].Value);
@@ -843,7 +843,7 @@ namespace CelestialTools
                 cboWindDir.Text = Constants.vbNullString;
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[n].Cells[UseForEvalCell].Value, "Y", false)))
+            if (DataGridView1.Rows[n].Cells[UseForEvalCell].Value.ToString() == "Y")
             {
                 chkUseForEval.Checked = true;
                 UpdtRtn.UseForEval = "Y";
@@ -854,7 +854,7 @@ namespace CelestialTools
                 UpdtRtn.UseForEval = "N";
             }
 
-            if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[NotesCell].Value, Constants.vbNullString, false)))
+            if (DataGridView1.Rows[n].Cells[NotesCell].Value.ToString() != Constants.vbNullString)
             {
                 UpdtRtn.Remarks = Conversions.ToString(DataGridView1.Rows[n].Cells[NotesCell].Value);
                 txtRemarks.Text = Conversions.ToString(DataGridView1.Rows[n].Cells[NotesCell].Value);
@@ -875,18 +875,19 @@ namespace CelestialTools
                 cboAdvNm.Visible = false;
                 grpAdvInfo.Visible = false;
             }
-
+            
             if ((UpdtRtn.LogType ?? "") == (g_LogTypePlan ?? ""))
             {
-                txtDestElapsed.Text = Conversions.ToString(DataGridView1.Rows[n].Cells[ElapsedCell].Value);
-                UpdtRtn.DestEstElapsed = Conversions.ToString(DataGridView1.Rows[n].Cells[ElapsedCell].Value);
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[DistCell].Value, "", false)))
+                txtDestElapsed.Text = (DataGridView1.Rows[n].Cells[ElapsedCell].Value.ToString());
+                UpdtRtn.DestEstElapsed = (DataGridView1.Rows[n].Cells[ElapsedCell].Value.ToString());
+                if ((string.IsNullOrEmpty(DataGridView1.Rows[n].Cells[DistCell].Value.ToString())) == false )
                 {
                     txtDestDist.Text = Conversions.ToString(DataGridView1.Rows[n].Cells[DistCell].Value);
                     UpdtRtn.DestDistance = Convert.ToDouble(DataGridView1.Rows[n].Cells[DistCell].Value.ToString().Substring(0, txtDestDist.Text.ToString().Length - 2));
                 }
 
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[CalcDestLogTypeCell].Value, "", false)))
+                if ((string.IsNullOrEmpty(DataGridView1.Rows[n].Cells[CalcDestLogTypeCell].Value.ToString())) == false)
+                 //   if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[n].Cells[CalcDestLogTypeCell].Value, "", false)))
                 {
                     UpdtRtn.DestLatLongStr = Conversions.ToString(DataGridView1.Rows[n].Cells[CalcDestLogTypeCell].Value);
                     string DestLLo = Conversions.ToString(DataGridView1.Rows[n].Cells[CalcDestLogTypeCell].Value);
@@ -902,7 +903,7 @@ namespace CelestialTools
                     txtDestLoDeg.Text = DestLLo.Substring(LoPos + 1, LoDegPos - 1 - (LoPos + 1) + 1);
                     txtDestLoMin.Text = DestLLo.Substring(LoDegPos + 1, LoMinPos - 1 - (LoDegPos + 1) + 1);
                     cboDestLo.Text = DestLLo.Substring(LoMinPos + 1, 1);
-                    txtDestTrue.Text = Conversions.ToString(DataGridView1.Rows[n].Cells[CalcDestTrueCell].Value);
+                    txtDestTrue.Text = (DataGridView1.Rows[n].Cells[CalcDestTrueCell].Value.ToString());
                     UpdtRtn.DestTrueI = Convert.ToInt32(DataGridView1.Rows[n].Cells[CalcDestTrueCell].Value.ToString().Substring(0, txtDestTrue.Text.ToString().Length - 1));
                     int Pos1 = txtRemarks.Text.IndexOf(":", StringComparison.OrdinalIgnoreCase);
                     int Len1 = txtRemarks.Text.Length - (Pos1 + 1);
@@ -2894,49 +2895,50 @@ namespace CelestialTools
             // spin thru the datagridview and install the current and correct ZD based on the longitude
             for (int i = 0, loopTo = DGlimit - 1; i <= loopTo; i++)
             {
-                if (Conversions.ToBoolean(Operators.OrObject(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[i].Cells[LogTypeCell].Value, Constants.vbNullString, false), Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[i].Cells[LogTypeCell].Value, "", false))))
-                {
+                if (string.IsNullOrEmpty(DataGridView1.Rows[i].Cells[LogTypeCell].Value.ToString()))
+                { // nothing
                 }
-                // nothing
                 else
-                {
-                    var GeoLLo1 = ParseLatLong(Conversions.ToString(DataGridView1.Rows[i].Cells[DestLogTypeCell].Value));
+                { // install ZD based on Lat/Long cell
+                    var GeoLLo1 = ParseLatLong(DataGridView1.Rows[i].Cells[DestLogTypeCell].Value.ToString());
                     DataGridView1.Rows[i].Cells[ZDCell].Value = Math.Round(GeoLLo1.Longitude / 15d, 0);
                 }
             }
 
-            if (Conversions.ToBoolean(Operators.OrObject(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[0].Cells[LogTypeCell].Value, g_LogTypeGPS, false), Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[0].Cells[LogTypeCell].Value, g_LogTypeOldGPS, false))))
+            if ((DataGridView1.Rows[0].Cells[LogTypeCell].Value.ToString() == g_LogTypeGPS) | 
+                (DataGridView1.Rows[0].Cells[LogTypeCell].Value.ToString() == g_LogTypeOldGPS))
             {
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[0].Cells[UseForEvalCell].Value, "Y", false)))
+                if ((DataGridView1.Rows[0].Cells[UseForEvalCell].Value.ToString() == "Y"))
                 {
                     PrevGPSFIXExists = true;
                     PrevGPSFix = 0;
                 }
             }
 
-            if (Conversions.ToBoolean(Operators.OrObject(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[0].Cells[LogTypeCell].Value, g_LogTypeDR, false), Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[0].Cells[LogTypeCell].Value, g_LogTypeOldDR, false))))
+            if ((DataGridView1.Rows[0].Cells[LogTypeCell].Value.ToString() == g_LogTypeDR) | 
+                (DataGridView1.Rows[0].Cells[LogTypeCell].Value.ToString() == g_LogTypeOldDR))
             {
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[0].Cells[UseForEvalCell].Value, "Y", false)))
+                if ((DataGridView1.Rows[0].Cells[UseForEvalCell].Value.ToString() == "Y"))
                 {
                     PrevDRExists = true;
                     PrevDR = 0;
                 }
             }
 
-            if (Conversions.ToBoolean(Operators.OrObject(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[0].Cells[LogTypeCell].Value, g_LogTypeFix, false), Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[0].Cells[LogTypeCell].Value, g_LogTypeWayPoint, false))))
+            if ((DataGridView1.Rows[0].Cells[LogTypeCell].Value.ToString() == g_LogTypeFix) |
+               (DataGridView1.Rows[0].Cells[LogTypeCell].Value.ToString() == g_LogTypeWayPoint))
             {
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[0].Cells[UseForEvalCell].Value, "Y", false)))
+                if ((DataGridView1.Rows[0].Cells[UseForEvalCell].Value.ToString() == "Y"))
                 {
-                    PrevWPTFixExists = true;
-                    PrevWPTFix = 0;
+                    PrevDRExists = true;
+                    PrevDR = 0;
                 }
             }
-
 
             // now pass thru the data grid from the second record to the end evaluate each pair of records and calculating the final route results
             for (int i = 1, loopTo1 = DGlimit - 1; i <= loopTo1; i++)
             {
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[i].Cells[LogTypeCell].Value, g_LogTypePlan, false)))
+                if ((DataGridView1.Rows[i].Cells[LogTypeCell].Value.ToString() == g_LogTypePlan))
                 {
                     DataGridView1.Rows[i].Cells[ElapsedCell].Value = ""; // Elapsed Time
                     DataGridView1.Rows[i].Cells[DistCell].Value = ""; // Distance
@@ -2956,40 +2958,43 @@ namespace CelestialTools
 
                 // now pass thru the datagridview and evaluate pairs of log entries - GPS entries, DR and Fix entries, and WayPoints. 
                 // Ignore Plan entries because they are analyzed when they are created
-                if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[i].Cells[LogTypeCell].Value, g_LogTypePlan, false)))
+                if (DataGridView1.Rows[i].Cells[LogTypeCell].Value.ToString() == g_LogTypePlan)
                 {
                     DataGridView1.Rows[i].Cells[EvalCell].Value = "Planned Route Entry";
                 }
-                else if (Conversions.ToBoolean(Operators.OrObject(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[i].Cells[LogTypeCell].Value, g_LogTypeGPS, false), Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[i].Cells[LogTypeCell].Value, g_LogTypeOldGPS, false))))
+                else if ((DataGridView1.Rows[i].Cells[LogTypeCell].Value.ToString() == g_LogTypeGPS) | 
+                    (DataGridView1.Rows[i].Cells[LogTypeCell].Value.ToString() == g_LogTypeOldGPS))
                 {
                     if (PrevGPSFIXExists == true)
                     {
                         EvaluateDBPairs(i, PrevGPSFix, true);
-                        DataGridView1.Rows[i].Cells[EvalCell].Value = Operators.ConcatenateObject("GPS Track: ", DataGridView1.Rows[PrevGPSFix].Cells[DTCell].Value);
-                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[i].Cells[UseForEvalCell].Value, "Y", false)))
+                        DataGridView1.Rows[i].Cells[EvalCell].Value = ("GPS Track: " + DataGridView1.Rows[PrevGPSFix].Cells[DTCell].Value);
+                        if (DataGridView1.Rows[i].Cells[UseForEvalCell].Value.ToString() == "Y")
                         {
                             PrevGPSFix = i;
                         }
                     }
-                    else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[i].Cells[UseForEvalCell].Value, "Y", false)))
+                    else if (DataGridView1.Rows[i].Cells[UseForEvalCell].Value.ToString() == "Y")
                     {
                         PrevGPSFIXExists = true;
                         PrevGPSFix = i;
                     }
                 }
                 // evaluate DR Tracks and Fixes together since a Fix should be taken relative to the DR track (although a GPS basis could be argued as needed here)
-                else if (Conversions.ToBoolean(Operators.OrObject(Operators.OrObject(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[i].Cells[LogTypeCell].Value, g_LogTypeDR, false), Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[i].Cells[LogTypeCell].Value, g_LogTypeOldDR, false)), Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[i].Cells[LogTypeCell].Value, g_LogTypeFix, false))))
+                else if ((DataGridView1.Rows[i].Cells[LogTypeCell].Value.ToString() == g_LogTypeDR)| 
+                    (DataGridView1.Rows[i].Cells[LogTypeCell].Value.ToString() == g_LogTypeOldDR)|
+                    (DataGridView1.Rows[i].Cells[LogTypeCell].Value.ToString() == g_LogTypeFix))
                 {
                     if (PrevDRExists == true)
                     {
                         EvaluateDBPairs(i, PrevDR, false);
-                        DataGridView1.Rows[i].Cells[EvalCell].Value = Operators.ConcatenateObject("DR/Fix from: ", DataGridView1.Rows[PrevDR].Cells[DTCell].Value);
-                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[i].Cells[UseForEvalCell].Value, "Y", false)))
+                        DataGridView1.Rows[i].Cells[EvalCell].Value = ("DR/Fix from: "+ DataGridView1.Rows[PrevDR].Cells[DTCell].Value.ToString());
+                        if (DataGridView1.Rows[i].Cells[UseForEvalCell].Value.ToString() == "Y")
                         {
                             PrevDR = i;
                         }
                     }
-                    else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[i].Cells[UseForEvalCell].Value, "Y", false)))
+                    else if (DataGridView1.Rows[i].Cells[UseForEvalCell].Value.ToString() == "Y")
                     {
                         PrevDRExists = true;
                         PrevDR = i;
@@ -3001,13 +3006,13 @@ namespace CelestialTools
                     if (PrevWPTFixExists == true)
                     {
                         EvaluateDBPairs(i, PrevWPTFix, false);
-                        DataGridView1.Rows[i].Cells[EvalCell].Value = Operators.ConcatenateObject("WPT from: ", DataGridView1.Rows[PrevWPTFix].Cells[DTCell].Value);
-                        if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[i].Cells[UseForEvalCell].Value, "Y", false)))
+                        DataGridView1.Rows[i].Cells[EvalCell].Value = ("WPT from: " + DataGridView1.Rows[PrevWPTFix].Cells[DTCell].Value.ToString());
+                        if (DataGridView1.Rows[i].Cells[UseForEvalCell].Value.ToString() == "Y")
                         {
                             PrevWPTFix = i;
                         }
                     }
-                    else if (Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[i].Cells[UseForEvalCell].Value, "Y", false)))
+                    else if (DataGridView1.Rows[i].Cells[UseForEvalCell].Value.ToString() == "Y")
                     {
                         PrevWPTFixExists = true;
                         PrevWPTFix = i;
@@ -3133,7 +3138,8 @@ namespace CelestialTools
                 Dist = GetDistanceDG(PrevRec, CurrRec);
             }
 
-            if (Conversions.ToBoolean(Operators.OrObject(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[CurrRec].Cells[LogTypeCell].Value, g_LogTypeFix, false), Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[CurrRec].Cells[LogTypeCell].Value, g_LogTypeWayPoint, false))))
+            if ((DataGridView1.Rows[CurrRec].Cells[LogTypeCell].Value.ToString() == g_LogTypeFix)| 
+                (DataGridView1.Rows[CurrRec].Cells[LogTypeCell].Value.ToString() == g_LogTypeWayPoint))
             {
                 TempTrue = GetHeading(GeoLLo1.Latitude, GeoLLo1.Longitude, GeoLLo2.Latitude, GeoLLo2.Longitude);
                 // TempSpeed = Calc60DSTSpeed(DT1, DT2, Dist)
@@ -3615,7 +3621,10 @@ namespace CelestialTools
                 if (Information.IsNothing(DataGridView1.Rows[x].Cells[VesselCell].Value) == false & !string.IsNullOrEmpty(DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString()) & (DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString() ?? "") != (BadLLoStr ?? ""))
                 {
                     // If DataGridView1.Rows(x).Cells(LogTypeCell).Value <> g_LogTypePlan Then ' if this is NOT a Plan type log entry then it is GPS or Fix or a WPT as a WayPoint type
-                    if (Conversions.ToBoolean(Operators.OrObject(Operators.OrObject(Operators.OrObject(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[x].Cells[LogTypeCell].Value, g_LogTypeGPS, false), Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[x].Cells[LogTypeCell].Value, g_LogTypeOldGPS, false)), Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[x].Cells[LogTypeCell].Value, g_LogTypeWayPoint, false)), Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[x].Cells[LogTypeCell].Value, g_LogTypeFix, false))))
+                    if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() == g_LogTypeGPS)| 
+                        (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() == g_LogTypeOldGPS) |
+                        (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ==  g_LogTypeWayPoint)|
+                        (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ==  g_LogTypeFix))
                     {
                         var TmpGeo = ParseLatLong(Conversions.ToString(DataGridView1.Rows[x].Cells[DestLogTypeCell].Value));
                         string TmpLat = TmpGeo.Latitude.ToString("00.00000");
@@ -3661,7 +3670,8 @@ namespace CelestialTools
                 if (Information.IsNothing(DataGridView1.Rows[x].Cells[VesselCell].Value) == false & !string.IsNullOrEmpty(DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString()) & (DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString() ?? "") != (BadLLoStr ?? ""))
                 {
                     // If this entry type is a Plan Entry or Waypoint Entry then it is a RTE candidate
-                    if (Conversions.ToBoolean(Operators.OrObject(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[x].Cells[LogTypeCell].Value, g_LogTypePlan, false), Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[x].Cells[LogTypeCell].Value, g_LogTypeOldPlan, false))))
+                    if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() == g_LogTypePlan)|
+                        (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() == g_LogTypeOldPlan))
                     {
                         // DataGridView1.Rows(x).Cells(LogTypeCell).Value = g_LogTypeWayPoint Then
                         if (x == 0)
@@ -3695,7 +3705,11 @@ namespace CelestialTools
                 if (Information.IsNothing(DataGridView1.Rows[x].Cells[VesselCell].Value) == false & !string.IsNullOrEmpty(DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString()) & (DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString() ?? "") != (BadLLoStr ?? ""))
                 {
                     // if this is a  DR Track or GPS Track or Fix type it is a TRK candidate (exclude Plan and WPT entries)
-                    if (Conversions.ToBoolean(Operators.OrObject(Operators.OrObject(Operators.OrObject(Operators.OrObject(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[x].Cells[LogTypeCell].Value, g_LogTypeGPS, false), Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[x].Cells[LogTypeCell].Value, g_LogTypeOldGPS, false)), Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[x].Cells[LogTypeCell].Value, g_LogTypeDR, false)), Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[x].Cells[LogTypeCell].Value, g_LogTypeOldDR, false)), Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[x].Cells[LogTypeCell].Value, g_LogTypeFix, false))))
+                    if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() == g_LogTypeGPS) |
+                        (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() == g_LogTypeOldGPS)|
+                        (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() == g_LogTypeDR)|
+                        (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() == g_LogTypeOldDR)|
+                        (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() == g_LogTypeFix))
                     {
                         var TmpGeo = ParseLatLong(Conversions.ToString(DataGridView1.Rows[x].Cells[DestLogTypeCell].Value));
                         string TmpLat = TmpGeo.Latitude.ToString("00.00000");
@@ -3725,7 +3739,15 @@ namespace CelestialTools
 
         private string GetGPXHdr()
         {
-            string tmpstr = Conversions.ToString(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject("<gpx xmlns=\"http://www.topografix.com/GPX/1/1\" " + Environment.NewLine + "xmlns:xsi = \"http://www.w3.org/2001/XMLSchema-instance\" " + Environment.NewLine + "xsi:schemaLocation=\"http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd\"" + Environment.NewLine + "version=\"1.1\"" + Environment.NewLine + "creator=\"", DataGridView1.Rows[0].Cells[VesselCell].Value), " "), DataGridView1.Rows[0].Cells[FromCell].Value), "Plan Entries"), "\">"), Environment.NewLine));
+            //string tmpstr = Conversions.ToString(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject(Operators.ConcatenateObject("<gpx xmlns=\"http://www.topografix.com/GPX/1/1\" " + Environment.NewLine + "xmlns:xsi = \"http://www.w3.org/2001/XMLSchema-instance\" " + Environment.NewLine + "xsi:schemaLocation=\"http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd\"" + Environment.NewLine + "version=\"1.1\"" + Environment.NewLine + "creator=\"", DataGridView1.Rows[0].Cells[VesselCell].Value), " "), DataGridView1.Rows[0].Cells[FromCell].Value), "Plan Entries"), "\">"), Environment.NewLine));
+
+            string tmpstr = "<gpx xmlns=\"http://www.topografix.com/GPX/1/1\" " + Environment.NewLine + 
+                "xmlns:xsi = \"http://www.w3.org/2001/XMLSchema-instance\" " + Environment.NewLine + 
+                "xsi:schemaLocation=\"http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd\"" + Environment.NewLine + 
+                "version=\"1.1\"" + Environment.NewLine + 
+                "creator=\""+ DataGridView1.Rows[0].Cells[VesselCell].Value.ToString() + " "+
+                DataGridView1.Rows[0].Cells[FromCell].Value.ToString() + "Plan Entries" + "\">" + Environment.NewLine;
+
             return tmpstr;
         }
 
