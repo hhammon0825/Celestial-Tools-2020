@@ -65,7 +65,7 @@ namespace CelestialTools
         private readonly int GCRThreshhold = 500; // Per documentation at 500 nm in distance it makes sense to plot a Great Circle Route instead of a Rhumb Line
         private string DTFormatString = "yyyy/MM/dd HH:mm:ss";
         private DateTime MaxDate = new DateTime(2999, 12, 31, 23, 59, 59);
-        private DateTime DefaultDT = new DateTime(100L);
+        //private DateTime DefaultDT = new DateTime(100L);
         private readonly string[] HdrStr = new[] { "Vessel", "Navigator", "From", "To", "Log Type", "Log DateTime", "Course Psc", "Var", "Dev", "Course True", "Speed", "Position L/Lo", "Weather Notes", "Log Entry Notes", "ElapsedTime", "Distance", "Calc Dest", "Calc True", "Calc Speed", "Set", "Drift", "Eval Basis", "ZD", "KnotLog", "Wind", "WindDir", "Seas", "Use4Eval" };
         private readonly string[] NullStr = new[] { Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString, Constants.vbNullString };
 
@@ -216,7 +216,7 @@ namespace CelestialTools
 
         private void FormDeckLogUpdate_Load(object sender, EventArgs e)
         {
-            string DefFName = "DeckLog" + DateAndTime.Now.ToString("yyyyMMddHHmmss") + ".csv";
+            string DefFName = "DeckLog" + DateAndTime.Now.ToString("yyyyMMddHHmmss", CultureInfo.CurrentCulture) + ".csv";
             CurrDir = Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory + @"\DeckLog";
             InitialLoad = true;
             FName += CurrDir + "/" + DefFName;
@@ -787,7 +787,7 @@ namespace CelestialTools
             else
             {
                 int TempZD = (int)Math.Abs(Math.Round(Convert.ToDouble(txtLoDeg.Text) + Convert.ToDouble(txtLoMin.Text) / 60d / 15d, 0));
-                if ((cboLo.Text ?? "") == (CommonGlobals.g_LongW ?? ""))
+                if ((cboLo.Text.ToString() == CommonGlobals.g_LongW ))
                 {
                     UpdtRtn.ZD = "-" + TempZD.ToString("#0");
                     txtZD.Text = "-" + TempZD.ToString("#0");
@@ -865,7 +865,7 @@ namespace CelestialTools
                 txtRemarks.Text = Constants.vbNullString;
             }
 
-            if ((UpdtRtn.LogType ?? "") != (g_LogTypeDRAdv ?? ""))
+            if ((UpdtRtn.LogType ) != (g_LogTypeDRAdv ))
             {
                 lblAdvHrMin.Visible = false;
                 cboAdvHrs.Visible = false;
@@ -876,7 +876,7 @@ namespace CelestialTools
                 grpAdvInfo.Visible = false;
             }
             
-            if ((UpdtRtn.LogType ?? "") == (g_LogTypePlan ?? ""))
+            if ((UpdtRtn.LogType ) == (g_LogTypePlan ))
             {
                 txtDestElapsed.Text = (DataGridView1.Rows[n].Cells[ElapsedCell].Value.ToString());
                 UpdtRtn.DestEstElapsed = (DataGridView1.Rows[n].Cells[ElapsedCell].Value.ToString());
@@ -913,10 +913,10 @@ namespace CelestialTools
 
             cboLocType.Items.Clear();
             cboLocType.Enabled = false;
-            switch (UpdtRtn.LogType ?? "")
+            switch (UpdtRtn.LogType )
             {
-                case var @case when @case == (g_LogTypeDR ?? ""):
-                case var case1 when case1 == (g_LogTypeOldDR ?? ""):
+                case var @case when @case == (g_LogTypeDR ):
+                case var case1 when case1 == (g_LogTypeOldDR ):
                     {
                         cboLocType.Items.Add(g_LogTypeDR);
                         cboLocType.Items.Add(g_LogTypeDRAdv);
@@ -929,8 +929,8 @@ namespace CelestialTools
                         break;
                     }
 
-                case var case2 when case2 == (g_LogTypeFix ?? ""):
-                case var case3 when case3 == (g_LogTypeWayPoint ?? ""):
+                case var case2 when case2 == (g_LogTypeFix ):
+                case var case3 when case3 == (g_LogTypeWayPoint ):
                     {
                         cboLocType.Items.Add(g_LogTypeDR);
                         cboLocType.Items.Add(g_LogTypeGPS);
@@ -942,8 +942,8 @@ namespace CelestialTools
                         break;
                     }
 
-                case var case4 when case4 == (g_LogTypeGPS ?? ""):
-                case var case5 when case5 == (g_LogTypeOldGPS ?? ""):
+                case var case4 when case4 == (g_LogTypeGPS ):
+                case var case5 when case5 == (g_LogTypeOldGPS ):
                     {
                         cboLocType.Items.Add(g_LogTypeDR);
                         cboLocType.Items.Add(g_LogTypeGPS);
@@ -955,7 +955,7 @@ namespace CelestialTools
                         break;
                     }
 
-                case var case6 when case6 == (g_LogTypePlan ?? ""):
+                case var case6 when case6 == (g_LogTypePlan ):
                     {
                         cboLocType.Items.Add(g_LogTypeDR);
                         cboLocType.Items.Add(g_LogTypeGPS);
@@ -1001,7 +1001,7 @@ namespace CelestialTools
         private void ProcessAddNew()
         {
             AddNewMode = true;
-            if ((cboLocType.Text ?? "") == (g_LogTypeDR ?? ""))
+            if ((cboLocType.Text.ToString() == g_LogTypeDR ))
             {
                 if (My.MyProject.Forms.ZTInfo.InvokedbyDeckLog == true)
                 {
@@ -1024,7 +1024,7 @@ namespace CelestialTools
                 }
             }
 
-            if ((cboLocType.Text ?? "") == (g_LogTypeDRAdv ?? ""))
+            if ((cboLocType.Text.ToString() == g_LogTypeDRAdv ))
             {
                 DRAdvanceMode = true;
                 FindInstallAdvancedDR();
@@ -1067,7 +1067,7 @@ namespace CelestialTools
                 return;
             }
 
-            if ((cboLocType.Text ?? "") == (g_LogTypePlan ?? ""))
+            if ((cboLocType.Text.ToString() == g_LogTypePlan ))
             {
                 if (EditPlanFields() == false)
                 {
@@ -1084,12 +1084,12 @@ namespace CelestialTools
                 TempEval4Use = "Y";
             }
 
-            if ((cboLocType.Text ?? "") == (g_LogTypePlan ?? "") | (cboLocType.Text ?? "") == (g_LogTypeOldPlan ?? ""))
+            if ((cboLocType.Text.ToString() == g_LogTypePlan ) | (cboLocType.Text.ToString() == g_LogTypeOldPlan ))
             {
                 string DestLLo = "L=" + txtDestLDeg.Text.ToString() + '°' + txtDestLMin.Text.ToString() + "'" + cboDestL.Text.ToString() + " Lo=" + txtDestLoDeg.Text.ToString() + '°' + txtDestLoMin.Text.ToString() + "'" + cboDestLo.Text.ToString();
                 DataSet1.Tables[tablename].Rows.Add(txtVessel.Text.ToString(), txtNavigator.Text.ToString(), txtFrom.Text.ToString(), txtTo.Text.ToString(), cboLocType.Text.ToString(), DTDateZoneTime.Value.ToString(DTFormatString), txtCompass.Text.ToString() + '°', txtVar.Text.ToString() + cboVar.Text, txtDev.Text.ToString() + cboDev.Text, txtCTrue.Text.ToString() + '°', txtSpeed.Text.ToString() + "kn", LLo, txtWeather.Text.ToString(), txtRemarks.Text.ToString(), txtDestElapsed.Text, txtDestDist.Text, DestLLo, txtDestTrue.Text, "", "", "", "Plan Entry", txtZD.Text, txtKnotLog.Text, txtWind.Text, cboWindDir.Text.ToString(), txtSeas.Text.ToString(), TempEval4Use);
             }
-            else if ((cboLocType.Text ?? "") == (g_LogTypeFix ?? "") | (cboLocType.Text ?? "") == (g_LogTypeWayPoint ?? ""))
+            else if ((cboLocType.Text.ToString() == g_LogTypeFix ) | (cboLocType.Text.ToString() == g_LogTypeWayPoint ))
             {
                 DataSet1.Tables[tablename].Rows.Add(txtVessel.Text.ToString(), txtNavigator.Text.ToString(), txtFrom.Text.ToString(), txtTo.Text.ToString(), cboLocType.Text.ToString(), DTDateZoneTime.Value.ToString(DTFormatString), "", "", "", "", "", LLo, txtWeather.Text.ToString(), txtRemarks.Text.ToString(), "", "", "", "", "", "", "", "", txtZD.Text, txtKnotLog.Text, txtWind.Text, cboWindDir.Text.ToString(), txtSeas.Text.ToString(), TempEval4Use);
             }
@@ -1100,7 +1100,7 @@ namespace CelestialTools
 
             // transfer destination info to input fields for next Plan log entry
 
-            if ((cboLocType.Text ?? "") == (g_LogTypePlan ?? ""))
+            if ((cboLocType.Text.ToString() == g_LogTypePlan ))
             {
                 if (AutoGCRMode == false)
                 {
@@ -1116,7 +1116,7 @@ namespace CelestialTools
                     txtSpeed.Text = UpdtRtn.SpeedI.ToString("#0.0");
                     txtCTrue.Text = UpdtRtn.CTrueI.ToString("##0");   // txtDestTrue.Text.ToString.Substring(0, txtDestTrue.Text.ToString.Length - 1)
                     txtDev.Text = Math.Abs(UpdtRtn.DevI).ToString("#0");
-                    if ((UpdtRtn.DevEW ?? "") == (CommonGlobals.g_LongW ?? ""))
+                    if ((UpdtRtn.DevEW ) == (CommonGlobals.g_LongW ))
                     {
                         cboDev.SelectedIndex = 0;
                     }
@@ -1159,7 +1159,7 @@ namespace CelestialTools
                     txtSpeed.Text = UpdtRtn.SpeedI.ToString("#0.0");
                     txtCTrue.Text = UpdtRtn.CTrueI.ToString("##0");   // txtDestTrue.Text.ToString.Substring(0, txtDestTrue.Text.ToString.Length - 1)
                     txtDev.Text = Math.Abs(UpdtRtn.DevI).ToString("#0");
-                    if ((UpdtRtn.DevEW ?? "") == (CommonGlobals.g_LongW ?? ""))
+                    if ((UpdtRtn.DevEW ) == (CommonGlobals.g_LongW ))
                     {
                         cboDev.SelectedIndex = 0;
                     }
@@ -1195,7 +1195,7 @@ namespace CelestialTools
                 }
             }
 
-            if ((cboLocType.Text ?? "") != (g_LogTypePlan ?? "") & DRAdvanceMode == false & AutoGCRMode == false)
+            if ((cboLocType.Text.ToString() != g_LogTypePlan ) & DRAdvanceMode == false & AutoGCRMode == false)
             {
                 ResetSomeScreenFields();
                 DisplayCommonButtons();
@@ -1233,7 +1233,7 @@ namespace CelestialTools
         private void ProcessUpdateExisting()
         {
             AddNewMode = false;
-            if ((cboLocType.Text ?? "") == (g_LogTypeDRAdv ?? ""))
+            if ((cboLocType.Text.ToString() == g_LogTypeDRAdv ))
             {
                 var result = System.Windows.MessageBox.Show("Error - Can Not Update a DRAdvance type log entry - Change to DR type entry = Yes or No to exit", g_DrAdvError1, (MessageBoxButton)MessageBoxButtons.YesNo);
                 if (result == MessageBoxResult.Yes)
@@ -1261,7 +1261,7 @@ namespace CelestialTools
                 return;
             }
 
-            if ((cboLocType.Text ?? "") == (g_LogTypePlan ?? ""))
+            if ((cboLocType.Text.ToString() == g_LogTypePlan ))
             {
                 if (EditPlanFields() == false)
                 {
@@ -1277,7 +1277,7 @@ namespace CelestialTools
             var TDiff = default(TimeSpan);
             if (Convert.ToDateTime(DataGridView1.Rows[UpdtRow].Cells[DTCell].Value) != DTDateZoneTime.Value)
             {
-                if ((cboLocType.Text ?? "") == (g_LogTypePlan ?? "") | (cboLocType.Text ?? "") == (g_LogTypeOldPlan ?? ""))
+                if ((cboLocType.Text.ToString() == g_LogTypePlan ) | (cboLocType.Text.ToString() == g_LogTypeOldPlan ))
                 {
                     // if this is a planned route entry and the date/time has changed, ask if user wants to autocalc subsequent entries to new date / time and execute updat
                     if (UpdtRow < DataGridView1.Rows.Count)
@@ -1296,7 +1296,8 @@ namespace CelestialTools
                         }
                     }
                 }
-                else if ((cboLocType.Text ?? "") == (g_LogTypeDR ?? "") | (cboLocType.Text ?? "") == (g_LogTypeOldDR ?? "") | (cboLocType.Text ?? "") == (g_LogTypeOldGPS ?? "") | (cboLocType.Text ?? "") == (g_LogTypeGPS ?? ""))
+                else if ((cboLocType.Text == g_LogTypeDR ) | (cboLocType.Text == g_LogTypeOldDR ) | 
+                    (cboLocType.Text  == g_LogTypeOldGPS ) | (cboLocType.Text == g_LogTypeGPS ))
                 {
                     if (UpdtRow < DataGridView1.Rows.Count)
                     {
@@ -1324,7 +1325,7 @@ namespace CelestialTools
             DataGridView1.Rows[UpdtRow].Cells[ToCell].Value = txtTo.Text;
             DataGridView1.Rows[UpdtRow].Cells[LogTypeCell].Value = cboLocType.Text;
             DataGridView1.Rows[UpdtRow].Cells[DTCell].Value = DTDateZoneTime.Value.ToString(DTFormatString);
-            if ((cboLocType.Text ?? "") == (g_LogTypeWayPoint ?? "") | (cboLocType.Text ?? "") == (g_LogTypeFix ?? ""))
+            if ((cboLocType.Text.ToString() == g_LogTypeWayPoint ) | (cboLocType.Text.ToString() == g_LogTypeFix ))
             {
                 DataGridView1.Rows[UpdtRow].Cells[CompassCell].Value = "";
                 DataGridView1.Rows[UpdtRow].Cells[VarCell].Value = "";
@@ -1357,7 +1358,7 @@ namespace CelestialTools
                 DataGridView1.Rows[UpdtRow].Cells[UseForEvalCell].Value = "N";
             }
 
-            if ((cboLocType.Text ?? "") == (g_LogTypePlan ?? "") | (cboLocType.Text ?? "") == (g_LogTypeOldPlan ?? ""))
+            if ((cboLocType.Text.ToString() == g_LogTypePlan ) | (cboLocType.Text.ToString()  == g_LogTypeOldPlan))
             {
                 string DestLLo = "L=" + txtDestLDeg.Text.ToString() + '°' + txtDestLMin.Text.ToString() + "'" + cboDestL.Text.ToString() + " Lo=" + txtDestLoDeg.Text.ToString() + '°' + txtDestLoMin.Text.ToString() + "'" + cboDestLo.Text.ToString();
                 DataGridView1.Rows[UpdtRow].Cells[ElapsedCell].Value = txtDestElapsed.Text;
@@ -1370,7 +1371,7 @@ namespace CelestialTools
             {
                 for (int i = UpdtRow + 1, loopTo = DataGridView1.Rows.Count - 1; i <= loopTo; i++)
                 {
-                    if (Conversions.ToBoolean(Operators.AndObject(Operators.ConditionalCompareObjectEqual(DataGridView1.Rows[i].Cells[LogTypeCell].Value, g_LogTypePlan, false), i != UpdtRow)))
+                    if ((DataGridView1.Rows[i].Cells[LogTypeCell].Value.ToString() == g_LogTypePlan) & (i != UpdtRow))
                     {
                         var DTTemp = Convert.ToDateTime(DataGridView1.Rows[i].Cells[DTCell].Value);
                         if (DTTemp > OriginalDT)
@@ -1386,7 +1387,11 @@ namespace CelestialTools
             {
                 for (int i = UpdtRow + 1, loopTo1 = DataGridView1.Rows.Count - 1; i <= loopTo1; i++)
                 {
-                    if (Conversions.ToBoolean(Operators.AndObject(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[i].Cells[LogTypeCell].Value, g_LogTypePlan, false), i != UpdtRow)))
+                    if (((DataGridView1.Rows[i].Cells[LogTypeCell].Value.ToString() ==  g_LogTypeDR) |
+                        (DataGridView1.Rows[i].Cells[LogTypeCell].Value.ToString() == g_LogTypeOldDR) |
+                        (DataGridView1.Rows[i].Cells[LogTypeCell].Value.ToString() == g_LogTypeGPS) |
+                        (DataGridView1.Rows[i].Cells[LogTypeCell].Value.ToString() == g_LogTypeOldGPS)) & (i != UpdtRow))
+                        //if (Conversions.ToBoolean(Operators.AndObject(Operators.ConditionalCompareObjectNotEqual(DataGridView1.Rows[i].Cells[LogTypeCell].Value, g_LogTypePlan, false), i != UpdtRow)))
                     {
                         var DTTemp = Convert.ToDateTime(DataGridView1.Rows[i].Cells[DTCell].Value);
                         if (DTTemp > OriginalDT)
@@ -1513,7 +1518,7 @@ namespace CelestialTools
             {
                 UpdtRtn.LMinI = Convert.ToDouble(txtLMin.Text);
                 UpdtRtn.LNS = cboL.Text;
-                if ((cboL.Text ?? "") == (CommonGlobals.g_LatN ?? ""))
+                if ((cboL.Text.ToString() == CommonGlobals.g_LatN))
                 {
                     UpdtRtn.LatDouble = Convert.ToDouble(UpdtRtn.LDegI) + UpdtRtn.LMinI / 60d;
                 }
@@ -1577,7 +1582,7 @@ namespace CelestialTools
             {
                 UpdtRtn.LoMinI = Convert.ToDouble(txtLoMin.Text);
                 UpdtRtn.LoEW = cboLo.Text;
-                if ((cboLo.Text ?? "") == (CommonGlobals.g_LongW ?? ""))
+                if ((cboLo.Text.ToString() == CommonGlobals.g_LongW ))
                 {
                     UpdtRtn.LongDouble = -1 * (Convert.ToDouble(UpdtRtn.LoDegI) + UpdtRtn.LoMinI / 60d);
                 }
@@ -1598,7 +1603,7 @@ namespace CelestialTools
                 return false;
             }
 
-            if ((cboLocType.Text ?? "") == (g_LogTypeFix ?? "") & (string.IsNullOrEmpty(txtRemarks.Text) | string.IsNullOrEmpty(txtRemarks.Text)))
+            if ((cboLocType.Text.ToString() == g_LogTypeFix ) & (string.IsNullOrEmpty(txtRemarks.Text) | string.IsNullOrEmpty(txtRemarks.Text)))
             {
                 ErrorMsgBox("An Entry Type of Fix requires Remarks describing Fix data be entered");
                 return false;
@@ -1619,7 +1624,7 @@ namespace CelestialTools
             }
 
             int TempZD = (int)Math.Round((Convert.ToDouble(UpdtRtn.LoDegI) + UpdtRtn.LoMinI / 60d) / 15d, 0);
-            if ((cboLo.Text ?? "") == (CommonGlobals.g_LongE ?? ""))
+            if ((cboLo.Text.ToString() == CommonGlobals.g_LongE ))
             {
                 TempZD = -1 * TempZD;
             }
@@ -1628,14 +1633,14 @@ namespace CelestialTools
             UpdtRtn.ZD = TempZD.ToString();
 
             // Now if this is a Fix or Waypoint type of entry then edits are done because those types only require/allow date/time and location inputs
-            if ((cboLocType.Text ?? "") == (g_LogTypeFix ?? "") | (cboLocType.Text ?? "") == (g_LogTypeWayPoint ?? ""))
+            if ((cboLocType.Text.ToString() == g_LogTypeFix ) | (cboLocType.Text.ToString() == g_LogTypeWayPoint ))
             {
                 return true;
             }
 
             // A DR Track entry must have a compass course entered that is non-blank - a zero course is valid
             CompassInput = false;
-            if ((cboLocType.Text ?? "") == (g_LogTypeDR ?? "") | (cboLocType.Text ?? "") == (g_LogTypeOldDR ?? ""))
+            if ((cboLocType.Text.ToString() == g_LogTypeDR ) | (cboLocType.Text.ToString() == g_LogTypeOldDR ))
             {
                 if (string.IsNullOrEmpty(txtCompass.Text) | string.IsNullOrEmpty(txtCompass.Text))
                 {
@@ -1658,7 +1663,7 @@ namespace CelestialTools
 
             // GPS track log entries and Plan log entries must have True Course entries made - a zero true course is valid
             TrueInput = false;
-            if ((cboLocType.Text ?? "") == (g_LogTypeGPS ?? "") | (cboLocType.Text ?? "") == (g_LogTypeOldGPS ?? "") | (cboLocType.Text ?? "") == (g_LogTypePlan ?? "") | (cboLocType.Text ?? "") == (g_LogTypeOldPlan ?? ""))
+            if ((cboLocType.Text.ToString() == g_LogTypeGPS ) | (cboLocType.Text.ToString() == g_LogTypeOldGPS ) | (cboLocType.Text.ToString() == g_LogTypePlan ) | (cboLocType.Text.ToString() == g_LogTypeOldPlan ))
             {
                 if (string.IsNullOrEmpty(txtCTrue.Text) & string.IsNullOrEmpty(txtCTrue.Text))
                 {
@@ -1687,7 +1692,7 @@ namespace CelestialTools
             }
 
             // if log type is GPS, DR, or Fix = Not a Plan type
-            if ((cboLocType.Text ?? "") == (g_LogTypeDR ?? "") | (cboLocType.Text ?? "") == (g_LogTypeOldDR ?? ""))
+            if ((cboLocType.Text.ToString() == g_LogTypeDR ) | (cboLocType.Text.ToString() == g_LogTypeOldDR ))
             {
                 if (string.IsNullOrEmpty(txtKnotLog.Text) | string.IsNullOrEmpty(txtKnotLog.Text))
                 {
@@ -1704,7 +1709,7 @@ namespace CelestialTools
             {
                 if (string.IsNullOrEmpty(txtCompass.Text) | string.IsNullOrEmpty(txtCompass.Text))
                 {
-                    if ((cboLocType.Text ?? "") == (g_LogTypeFix ?? ""))
+                    if ((cboLocType.Text.ToString() == g_LogTypeFix ))
                     {
                         txtCompass.Text = "0";
                         UpdtRtn.CompassI = 0;
@@ -1798,10 +1803,10 @@ namespace CelestialTools
             if (chkDev.Checked == true & AutoGCRMode == false)
             {
                 // if GPS or Plan log type then true route and var were input; use True and Var to compute Magnetic and intepolate Mag to get Dev and then compute Compass
-                if ((cboLocType.Text ?? "") == (g_LogTypeGPS ?? "") | (cboLocType.Text ?? "") == (g_LogTypeOldGPS ?? "") | (cboLocType.Text ?? "") == (g_LogTypePlan ?? "") | (cboLocType.Text ?? "") == (g_LogTypeOldPlan ?? ""))
+                if ((cboLocType.Text.ToString() == g_LogTypeGPS ) | (cboLocType.Text.ToString() == g_LogTypeOldGPS ) | (cboLocType.Text.ToString() == g_LogTypePlan ) | (cboLocType.Text.ToString() == g_LogTypeOldPlan ))
                 {
                     int tempvar = Convert.ToInt32(txtVar.Text.ToString());
-                    if ((cboVar.Text ?? "") == (CommonGlobals.g_LongE ?? ""))
+                    if ((cboVar.Text.ToString() == CommonGlobals.g_LongE ))
                     {
                         tempvar = -1 * tempvar;
                     }
@@ -1811,7 +1816,7 @@ namespace CelestialTools
                     UpdtRtn.Dev = Math.Abs(rtnrec1.TblDev).ToString("#0");
                     UpdtRtn.DevEW = rtnrec1.TblDevEW;
                     txtDev.Text = Math.Abs(rtnrec1.TblDev).ToString("#0");
-                    if ((rtnrec1.TblDevEW ?? "") == (CommonGlobals.g_LongW ?? ""))
+                    if ((rtnrec1.TblDevEW ) == (CommonGlobals.g_LongW ))
                     {
                         cboDev.SelectedIndex = 0;
                     }
@@ -1826,13 +1831,13 @@ namespace CelestialTools
                 }
 
                 // if compass route was input then interpolate compass heading to get Dev and calculate True using Dev and Var
-                else if ((UpdtRtn.LogType ?? "") == (g_LogTypeDR ?? "") | (UpdtRtn.LogType ?? "") == (g_LogTypeDRAdv ?? "") | (UpdtRtn.LogType ?? "") == (g_LogTypeOldDR ?? ""))
+                else if ((UpdtRtn.LogType ) == (g_LogTypeDR ) | (UpdtRtn.LogType ) == (g_LogTypeDRAdv ) | (UpdtRtn.LogType ) == (g_LogTypeOldDR ))
                 {
                     var rtnrec = My.MyProject.Forms.DevForm.DevInterpolateCompass(Convert.ToInt32(txtCompass.Text.ToString()));
                     UpdtRtn.Dev = Math.Abs(rtnrec.TblDev).ToString("#0");
                     UpdtRtn.DevEW = rtnrec.TblDevEW;
                     txtDev.Text = Math.Abs(rtnrec.TblDev).ToString("#0");
-                    if ((rtnrec.TblDevEW ?? "") == (CommonGlobals.g_LongW ?? ""))
+                    if ((rtnrec.TblDevEW ) == (CommonGlobals.g_LongW ))
                     {
                         cboDev.SelectedIndex = 0;
                     }
@@ -1842,7 +1847,7 @@ namespace CelestialTools
                     }
 
                     int tempvar = Convert.ToInt32(txtVar.Text.ToString());
-                    if ((cboVar.Text ?? "") == (CommonGlobals.g_LongW ?? ""))
+                    if ((cboVar.Text.ToString() == CommonGlobals.g_LongW ))
                     {
                         tempvar = -1 * tempvar;
                     }
@@ -1889,16 +1894,16 @@ namespace CelestialTools
                 }
             }
 
-            if ((cboLocType.Text ?? "") != (g_LogTypePlan ?? "") & chkDev.Checked == false) // must be  DR track or GPS track log type and Dev check box is not checked
+            if ((cboLocType.Text.ToString() != g_LogTypePlan ) & chkDev.Checked == false) // must be  DR track or GPS track log type and Dev check box is not checked
             {
-                if ((cboLocType.Text ?? "") == (g_LogTypeDR ?? "") | (cboLocType.Text ?? "") == (g_LogTypeOldDR ?? "") | (UpdtRtn.LogType ?? "") == (g_LogTypeDRAdv ?? ""))
+                if ((cboLocType.Text.ToString() == g_LogTypeDR ) | (cboLocType.Text.ToString() == g_LogTypeOldDR ) | (UpdtRtn.LogType ) == (g_LogTypeDRAdv ))
                 {
-                    if ((cboVar.Text ?? "") == (CommonGlobals.g_LongW ?? ""))
+                    if ((cboVar.Text.ToString() == CommonGlobals.g_LongW ))
                     {
                         UpdtRtn.VarI = -UpdtRtn.VarI;
                     }
 
-                    if ((cboDev.Text ?? "") == (CommonGlobals.g_LongW ?? ""))
+                    if ((cboDev.Text.ToString() == CommonGlobals.g_LongW ))
                     {
                         UpdtRtn.DevI = -UpdtRtn.DevI;
                     }
@@ -1908,14 +1913,14 @@ namespace CelestialTools
                     UpdtRtn.CTrue = UpdtRtn.CTrueI.ToString("000");
                 }
 
-                if ((cboLocType.Text ?? "") == (g_LogTypeGPS ?? "") | (cboLocType.Text ?? "") == (g_LogTypeOldGPS ?? "") | (cboLocType.Text ?? "") == (g_LogTypePlan ?? "") | (cboLocType.Text ?? "") == (g_LogTypeOldPlan ?? ""))
+                if ((cboLocType.Text.ToString() == g_LogTypeGPS ) | (cboLocType.Text.ToString() == g_LogTypeOldGPS ) | (cboLocType.Text.ToString() == g_LogTypePlan ) | (cboLocType.Text.ToString() == g_LogTypeOldPlan ))
                 {
-                    if ((cboVar.Text ?? "") == (CommonGlobals.g_LongE ?? ""))
+                    if ((cboVar.Text.ToString() == CommonGlobals.g_LongE ))
                     {
                         UpdtRtn.VarI = -UpdtRtn.VarI;
                     }
 
-                    if ((cboDev.Text ?? "") == (CommonGlobals.g_LongE ?? ""))
+                    if ((cboDev.Text.ToString() == CommonGlobals.g_LongE ))
                     {
                         UpdtRtn.DevI = -UpdtRtn.DevI;
                     }
@@ -1926,14 +1931,14 @@ namespace CelestialTools
                 }
             }
 
-            if (((cboLocType.Text ?? "") == (g_LogTypePlan ?? "") | (cboLocType.Text ?? "") == (g_LogTypeOldPlan ?? "")) & chkDev.Checked == false)
+            if (((cboLocType.Text.ToString() == g_LogTypePlan ) | (cboLocType.Text.ToString() == g_LogTypeOldPlan )) & chkDev.Checked == false)
             {
-                if ((cboVar.Text ?? "") == (CommonGlobals.g_LongE ?? ""))
+                if ((cboVar.Text.ToString() == CommonGlobals.g_LongE ))
                 {
                     UpdtRtn.VarI = -UpdtRtn.VarI;
                 }
 
-                if ((cboDev.Text ?? "") == (CommonGlobals.g_LongE ?? ""))
+                if ((cboDev.Text.ToString() == CommonGlobals.g_LongE ))
                 {
                     UpdtRtn.DevI = -UpdtRtn.DevI;
                 }
@@ -1943,7 +1948,7 @@ namespace CelestialTools
                 UpdtRtn.Compass = UpdtRtn.CompassI.ToString("000");
                 // as insurance move deviation  to text field
                 txtDev.Text = UpdtRtn.Dev;
-                if ((UpdtRtn.DevEW ?? "") == (CommonGlobals.g_LongW ?? ""))
+                if ((UpdtRtn.DevEW  == CommonGlobals.g_LongW ))
                 {
                     cboDev.SelectedIndex = 0;
                 }
@@ -1953,7 +1958,7 @@ namespace CelestialTools
                 }
             }
 
-            if ((cboLocType.Text ?? "") == (g_LogTypeFix ?? "") | (cboLocType.Text ?? "") == (g_LogTypeWayPoint ?? ""))
+            if ((cboLocType.Text.ToString() == g_LogTypeFix ) | (cboLocType.Text.ToString() == g_LogTypeWayPoint ))
             {
                 // nothing to do
                 txtSpeed.Text = "";
@@ -2075,7 +2080,7 @@ namespace CelestialTools
             {
                 UpdtRtn.DestLMinI = Convert.ToDouble(txtDestLMin.Text);
                 UpdtRtn.DestLNS = cboDestL.Text;
-                if ((UpdtRtn.DestLNS ?? "") == (CommonGlobals.g_LatN ?? ""))
+                if ((UpdtRtn.DestLNS ) == (CommonGlobals.g_LatN ))
                 {
                     UpdtRtn.DestLatDouble = UpdtRtn.DestLDegI + UpdtRtn.DestLMinI / 60d;
                 }
@@ -2139,7 +2144,7 @@ namespace CelestialTools
             {
                 UpdtRtn.DestLoMinI = Convert.ToDouble(txtDestLoMin.Text);
                 UpdtRtn.DestLoEW = cboDestLo.Text;
-                if ((UpdtRtn.DestLoEW ?? "") == (CommonGlobals.g_LongW ?? ""))
+                if ((UpdtRtn.DestLoEW ) == (CommonGlobals.g_LongW ))
                 {
                     UpdtRtn.DestLongDouble = -1 * (UpdtRtn.DestLoDegI + UpdtRtn.DestLoMinI / 60.0d);
                 }
@@ -2276,7 +2281,7 @@ namespace CelestialTools
 
             int ZDLoc1 = (int)Math.Round(Loc1.Longitude / 15d, 0, MidpointRounding.AwayFromZero);
             int ZDLoc2 = (int)Math.Round(Loc2.Longitude / 15d, 0, MidpointRounding.AwayFromZero);
-            if ((cboDestLo.Text ?? "") == (CommonGlobals.g_LongE ?? ""))
+            if ((cboDestLo.Text.ToString() == CommonGlobals.g_LongE ))
             {
                 txtDestZD.Text = "+" + Math.Abs(ZDLoc2).ToString();
             }
@@ -3129,7 +3134,7 @@ namespace CelestialTools
             double TempSpeed = 0d;
             // get the distance from the previous location to the current entry location
             double Dist = 0d;
-            if ((DataGridView1.Rows[PrevRec].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeFix ?? "") | (DataGridView1.Rows[PrevRec].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeWayPoint ?? ""))
+            if ((DataGridView1.Rows[PrevRec].Cells[LogTypeCell].Value.ToString() ) == (g_LogTypeFix ) | (DataGridView1.Rows[PrevRec].Cells[LogTypeCell].Value.ToString() ) == (g_LogTypeWayPoint ))
             {
                 Dist = GetDistance(GeoLLo1.Latitude, GeoLLo1.Longitude, GeoLLo2.Latitude, GeoLLo2.Longitude);
             }
@@ -3327,7 +3332,7 @@ namespace CelestialTools
             double TempL1 = Convert.ToDouble(LLo1.Substring(LPos1 + 1, LDegPos1 - 1 - (LPos1 + 1) + 1)) + Convert.ToDouble(Conversions.ToDouble(LLo1.Substring(LDegPos1 + 1, LMinPos1 - 1 - (LDegPos1 + 1) + 1)) / 60d);
             string TempcboL1 = LLo1.Substring(LMinPos1 + 1, 1);
             double TempL1Disp = 0d;
-            if ((TempcboL1 ?? "") == (CommonGlobals.g_LatS ?? ""))
+            if ((TempcboL1 ) == (CommonGlobals.g_LatS ))
             {
                 TempL1Disp = -1 * TempL1;
             }
@@ -3339,7 +3344,7 @@ namespace CelestialTools
             double TempLo1 = Convert.ToDouble(LLo1.Substring(LoPos1 + 1, LoDegPos1 - 1 - (LoPos1 + 1) + 1)) + Convert.ToDouble(Conversions.ToDouble(LLo1.Substring(LoDegPos1 + 1, LoMinPos1 - 1 - (LoDegPos1 + 1) + 1)) / 60d);
             string TempcboLo1 = LLo1.Substring(LoMinPos1 + 1, 1);
             double TempLo1Disp = 0d;
-            if ((TempcboLo1 ?? "") == (CommonGlobals.g_LongW ?? ""))
+            if ((TempcboLo1 ) == (CommonGlobals.g_LongW ))
             {
                 TempLo1Disp = -1 * TempLo1;
             }
@@ -3414,17 +3419,17 @@ namespace CelestialTools
             txtCTrue.Visible = true;
             grpLogNotes.Visible = true;
             grpWeather.Visible = false;
-            if ((cboLocType.Text ?? "") == (g_LogTypePlan ?? ""))
+            if ((cboLocType.Text.ToString() == g_LogTypePlan ))
             {
                 ResetScreenFieldsforPlan();
             }
-            else if ((cboLocType.Text ?? "") == (g_LogTypeGPS ?? ""))
+            else if ((cboLocType.Text.ToString() == g_LogTypeGPS ))
             {
                 ResetScreenFieldsforGPS();
             }
-            else if ((cboLocType.Text ?? "") == (g_LogTypeDRAdv ?? ""))
+            else if ((cboLocType.Text.ToString() == g_LogTypeDRAdv ))
             {
-                if (Information.IsNothing(UpdtRow) | (DataGridView1.Rows[UpdtRow].Cells[LogTypeCell].Value.ToString() ?? "") != (g_LogTypeDR ?? ""))
+                if (Information.IsNothing(UpdtRow) | (DataGridView1.Rows[UpdtRow].Cells[LogTypeCell].Value.ToString() ) != (g_LogTypeDR ))
                 {
                     ErrorMsgBox("You can only Advance a DR Entry - This Entry Type Selection is Invalid - Selection is reset to DR");
                     cboLocType.SelectedIndex = 0;
@@ -3438,17 +3443,17 @@ namespace CelestialTools
                     cboAdvType_SelectedIndexChanged(sender, e);
                 }
             }
-            else if ((cboLocType.Text ?? "") == (g_LogTypeDR ?? ""))
+            else if ((cboLocType.Text.ToString() == g_LogTypeDR ))
             {
                 ResetScreenFieldsforDR();
             }
-            else if ((cboLocType.Text ?? "") == (g_LogTypeFix ?? "") | (cboLocType.Text ?? "") == (g_LogTypeWayPoint ?? ""))
+            else if ((cboLocType.Text.ToString() == g_LogTypeFix ) | (cboLocType.Text.ToString() == g_LogTypeWayPoint ))
             {
                 ResetScreenFieldsForWPFix();
                 DRAdvanceMode = false;
             }
             // you can only update the currently selected row with the same log type - if it is changed then you must add or delete not change to a new type
-            if (UpdtRow != default & DataGridView1.Rows.Count != 0 & (cboLocType.Text.ToString() ?? "") == (DataGridView1.Rows[UpdtRow].Cells[LogTypeCell].Value.ToString() ?? ""))
+            if (UpdtRow != default & DataGridView1.Rows.Count != 0 & (cboLocType.Text.ToString() ) == (DataGridView1.Rows[UpdtRow].Cells[LogTypeCell].Value.ToString() ))
             {
                 btnUpdateExisting.Visible = true;
             }
@@ -3457,25 +3462,25 @@ namespace CelestialTools
                 btnUpdateExisting.Visible = false;
             }
             // now set color coding of grpLogEntryInfo box to match the color coding for entries in the datagridview
-            switch (cboLocType.Text.ToString() ?? "")
+            switch (cboLocType.Text.ToString() )
             {
-                case var @case when @case == (g_LogTypeGPS ?? ""):
-                case var case1 when case1 == (g_LogTypeOldGPS ?? ""):
+                case var @case when @case == (g_LogTypeGPS ):
+                case var case1 when case1 == (g_LogTypeOldGPS ):
                     {
                         grpLogEntryInfo.BackColor = GPSBackColor;
                         grpLogEntryInfo.ForeColor = GPSForeColor;
                         break;
                     }
 
-                case var case2 when case2 == (g_LogTypeDR ?? ""):
-                case var case3 when case3 == (g_LogTypeOldDR ?? ""):
+                case var case2 when case2 == (g_LogTypeDR ):
+                case var case3 when case3 == (g_LogTypeOldDR ):
                     {
                         grpLogEntryInfo.BackColor = DRBackColor;
                         grpLogEntryInfo.ForeColor = DRForeColor;
                         break;
                     }
 
-                case var case4 when case4 == (g_LogTypeDRAdv ?? ""):
+                case var case4 when case4 == (g_LogTypeDRAdv ):
                     {
                         grpLogEntryInfo.BackColor = DRBackColor;
                         grpLogEntryInfo.ForeColor = DRForeColor;
@@ -3484,22 +3489,22 @@ namespace CelestialTools
                         break;
                     }
 
-                case var case5 when case5 == (g_LogTypePlan ?? ""):
-                case var case6 when case6 == (g_LogTypeOldPlan ?? ""):
+                case var case5 when case5 == (g_LogTypePlan ):
+                case var case6 when case6 == (g_LogTypeOldPlan ):
                     {
                         grpLogEntryInfo.BackColor = PlanBackColor;
                         grpLogEntryInfo.ForeColor = PlanForeColor;
                         break;
                     }
 
-                case var case7 when case7 == (g_LogTypeFix ?? ""):
+                case var case7 when case7 == (g_LogTypeFix ):
                     {
                         grpLogEntryInfo.BackColor = FixBackColor;
                         grpLogEntryInfo.ForeColor = FixForeColor;
                         break;
                     }
 
-                case var case8 when case8 == (g_LogTypeWayPoint ?? ""):
+                case var case8 when case8 == (g_LogTypeWayPoint ):
                     {
                         grpLogEntryInfo.BackColor = WPTBackColor;
                         grpLogEntryInfo.ForeColor = WPTForeColor;
@@ -3618,7 +3623,7 @@ namespace CelestialTools
             textstr.AppendLine(GetGPXHdr());
             for (int x = 0, loopTo = DataGridView1.Rows.Count - 1; x <= loopTo; x++)
             {
-                if (Information.IsNothing(DataGridView1.Rows[x].Cells[VesselCell].Value) == false & !string.IsNullOrEmpty(DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString()) & (DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString() ?? "") != (BadLLoStr ?? ""))
+                if (Information.IsNothing(DataGridView1.Rows[x].Cells[VesselCell].Value) == false & !string.IsNullOrEmpty(DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString()) & (DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString() ) != (BadLLoStr ))
                 {
                     // If DataGridView1.Rows(x).Cells(LogTypeCell).Value <> g_LogTypePlan Then ' if this is NOT a Plan type log entry then it is GPS or Fix or a WPT as a WayPoint type
                     if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() == g_LogTypeGPS)| 
@@ -3642,15 +3647,15 @@ namespace CelestialTools
                         string FixFixType = "<fix>" + "2d" + "</fix>";
                         string WPTName = "WPT" + (x + 1).ToString();
                         string WptStr1 = "";
-                        if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeGPS ?? "") | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeOldGPS ?? ""))
+                        if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ) == (g_LogTypeGPS ) | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ) == (g_LogTypeOldGPS ))
                         {
                             WptStr1 = "<wpt lat=\"" + TmpLat + "\" lon=\"" + TmpLong + "\">" + "<time>" + UTStr + "</time><name>" + WPTName + "</name>" + GPSFixType + Environment.NewLine + "</wpt>";
                         }
-                        else if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeFix ?? ""))
+                        else if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ) == (g_LogTypeFix ))
                         {
                             WptStr1 = "<wpt lat=\"" + TmpLat + "\" lon=\"" + TmpLong + "\">" + "<time>" + UTStr + "</time><name>" + WPTName + "</name>" + FixFixType + Environment.NewLine + "</wpt>";
                         }
-                        else if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeWayPoint ?? ""))
+                        else if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ) == (g_LogTypeWayPoint ))
                         {
                             WptStr1 = "<wpt lat=\"" + TmpLat + "\" lon=\"" + TmpLong + "\">" + "<time>" + UTStr + "</time><name>" + WPTName + "</name>" + GPSFixType + Environment.NewLine + "</wpt>";
                         }
@@ -3667,7 +3672,7 @@ namespace CelestialTools
             textstr.Append(Environment.NewLine + "<rte>");
             for (int x = 0, loopTo1 = DataGridView1.Rows.Count - 1; x <= loopTo1; x++)
             {
-                if (Information.IsNothing(DataGridView1.Rows[x].Cells[VesselCell].Value) == false & !string.IsNullOrEmpty(DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString()) & (DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString() ?? "") != (BadLLoStr ?? ""))
+                if (Information.IsNothing(DataGridView1.Rows[x].Cells[VesselCell].Value) == false & !string.IsNullOrEmpty(DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString()) & (DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString() ) != (BadLLoStr ))
                 {
                     // If this entry type is a Plan Entry or Waypoint Entry then it is a RTE candidate
                     if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() == g_LogTypePlan)|
@@ -3702,7 +3707,7 @@ namespace CelestialTools
             textstr.Append(Environment.NewLine + "<trkseg>");
             for (int x = 0, loopTo2 = DataGridView1.Rows.Count - 1; x <= loopTo2; x++)
             {
-                if (Information.IsNothing(DataGridView1.Rows[x].Cells[VesselCell].Value) == false & !string.IsNullOrEmpty(DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString()) & (DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString() ?? "") != (BadLLoStr ?? ""))
+                if (Information.IsNothing(DataGridView1.Rows[x].Cells[VesselCell].Value) == false & !string.IsNullOrEmpty(DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString()) & (DataGridView1.Rows[x].Cells[DestLogTypeCell].Value.ToString() ) != (BadLLoStr ))
                 {
                     // if this is a  DR Track or GPS Track or Fix type it is a TRK candidate (exclude Plan and WPT entries)
                     if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() == g_LogTypeGPS) |
@@ -4018,8 +4023,8 @@ namespace CelestialTools
             if (cboAdvHrs.Value != 0m | cboAdvMin.Value != 0m)
             {
                 My.MyProject.Forms.ZTInfo.DT1Days.Value = 0m;
-                My.MyProject.Forms.ZTInfo.DT1Hours.Value = Convert.ToInt32(cboAdvHrs.Value.ToString(), CultureInfo.CurrentCulture);
-                My.MyProject.Forms.ZTInfo.DT1Minutes.Value = Convert.ToInt32(cboAdvMin.Value.ToString(), CultureInfo.CurrentCulture);
+                My.MyProject.Forms.ZTInfo.DT1Hours.Value = Convert.ToInt32(value: cboAdvHrs.Value.ToString(), CultureInfo.CurrentCulture);
+                My.MyProject.Forms.ZTInfo.DT1Minutes.Value = Convert.ToInt32(value: cboAdvMin.Value.ToString(), CultureInfo.CurrentCulture);
             }
             else
             {
@@ -4028,7 +4033,7 @@ namespace CelestialTools
                 My.MyProject.Forms.ZTInfo.DT1Minutes.Value = 0m;
             }
 
-            if ((cboLocType.Text ?? "") == (g_LogTypePlan ?? "") | DRAdvanceMode == true)
+            if ((cboLocType.Text.ToString() == g_LogTypePlan ) | DRAdvanceMode == true)
             {
                 My.MyProject.Forms.ZTInfo.txtLoDegB.Text = txtDestLoDeg.Text;
                 My.MyProject.Forms.ZTInfo.txtLoMinB.Text = txtDestLoMin.Text;
@@ -4099,7 +4104,7 @@ namespace CelestialTools
             // Fix/WPT
             // DR/GPS/Fix/WPT
 
-            switch (cboDisplayRows.Text ?? "")
+            switch (cboDisplayRows.Text.ToString())
             {
                 case "All":
                     {
@@ -4127,7 +4132,7 @@ namespace CelestialTools
                     {
                         for (int x = 0, loopTo1 = DataGridView1.Rows.Count - 1; x <= loopTo1; x++)
                         {
-                            if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeFix ?? "") | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeWayPoint ?? ""))
+                            if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ) == (g_LogTypeFix ) | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ) == (g_LogTypeWayPoint ))
                             {
                                 DataGridView1.Rows[x].Visible = true;
                                 ColorDisplayRow(x);
@@ -4145,7 +4150,7 @@ namespace CelestialTools
                     {
                         for (int x = 0, loopTo2 = DataGridView1.Rows.Count - 1; x <= loopTo2; x++)
                         {
-                            if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypePlan ?? "") | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeOldPlan ?? ""))
+                            if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ) == (g_LogTypePlan ) | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ) == (g_LogTypeOldPlan ))
                             {
                                 DataGridView1.Rows[x].Visible = true;
                                 ColorDisplayRow(x);
@@ -4163,7 +4168,7 @@ namespace CelestialTools
                     {
                         for (int x = 0, loopTo3 = DataGridView1.Rows.Count - 1; x <= loopTo3; x++)
                         {
-                            if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeDR ?? "") | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeOldDR ?? "") | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeGPS ?? "") | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeOldGPS ?? ""))
+                            if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ) == (g_LogTypeDR ) | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ) == (g_LogTypeOldDR ) | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ) == (g_LogTypeGPS ) | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ) == (g_LogTypeOldGPS ))
                             {
                                 DataGridView1.Rows[x].Visible = true;
                                 ColorDisplayRow(x);
@@ -4181,7 +4186,7 @@ namespace CelestialTools
                     {
                         for (int x = 0, loopTo4 = DataGridView1.Rows.Count - 1; x <= loopTo4; x++)
                         {
-                            if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeGPS ?? "") | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeOldGPS ?? "") | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeDR ?? "") | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeOldDR ?? "") | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeWayPoint ?? "") | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ?? "") == (g_LogTypeFix ?? ""))
+                            if ((DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ) == (g_LogTypeGPS ) | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ) == (g_LogTypeOldGPS ) | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ) == (g_LogTypeDR ) | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ) == (g_LogTypeOldDR ) | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ) == (g_LogTypeWayPoint ) | (DataGridView1.Rows[x].Cells[LogTypeCell].Value.ToString() ) == (g_LogTypeFix ))
                             {
                                 DataGridView1.Rows[x].Visible = true;
                                 ColorDisplayRow(x);
@@ -4217,40 +4222,40 @@ namespace CelestialTools
 
         private void ColorDisplayRow(int rowin)
         {
-            switch (DataGridView1.Rows[rowin].Cells[LogTypeCell].Value.ToString() ?? "")
+            switch (DataGridView1.Rows[rowin].Cells[LogTypeCell].Value.ToString() )
             {
-                case var @case when @case == (g_LogTypeGPS ?? ""):
-                case var case1 when case1 == (g_LogTypeOldGPS ?? ""):
+                case var @case when @case == (g_LogTypeGPS ):
+                case var case1 when case1 == (g_LogTypeOldGPS ):
                     {
                         DataGridView1.Rows[rowin].DefaultCellStyle.BackColor = GPSBackColor;
                         DataGridView1.Rows[rowin].DefaultCellStyle.ForeColor = GPSForeColor;
                         break;
                     }
 
-                case var case2 when case2 == (g_LogTypeDR ?? ""):
-                case var case3 when case3 == (g_LogTypeOldDR ?? ""):
+                case var case2 when case2 == (g_LogTypeDR ):
+                case var case3 when case3 == (g_LogTypeOldDR ):
                     {
                         DataGridView1.Rows[rowin].DefaultCellStyle.BackColor = DRBackColor;
                         DataGridView1.Rows[rowin].DefaultCellStyle.ForeColor = DRForeColor;
                         break;
                     }
 
-                case var case4 when case4 == (g_LogTypePlan ?? ""):
-                case var case5 when case5 == (g_LogTypeOldPlan ?? ""):
+                case var case4 when case4 == (g_LogTypePlan ):
+                case var case5 when case5 == (g_LogTypeOldPlan ):
                     {
                         DataGridView1.Rows[rowin].DefaultCellStyle.BackColor = PlanBackColor;
                         DataGridView1.Rows[rowin].DefaultCellStyle.ForeColor = PlanForeColor;
                         break;
                     }
 
-                case var case6 when case6 == (g_LogTypeFix ?? ""):
+                case var case6 when case6 == (g_LogTypeFix ):
                     {
                         DataGridView1.Rows[rowin].DefaultCellStyle.BackColor = FixBackColor;
                         DataGridView1.Rows[rowin].DefaultCellStyle.ForeColor = FixForeColor;
                         break;
                     }
 
-                case var case7 when case7 == (g_LogTypeWayPoint ?? ""):
+                case var case7 when case7 == (g_LogTypeWayPoint ):
                     {
                         DataGridView1.Rows[rowin].DefaultCellStyle.BackColor = WPTBackColor;
                         DataGridView1.Rows[rowin].DefaultCellStyle.ForeColor = WPTForeColor;

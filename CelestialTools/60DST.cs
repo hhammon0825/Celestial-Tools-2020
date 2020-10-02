@@ -552,7 +552,7 @@ namespace CelestialTools
             Close();
         }
 
-        private void ExceedsLimit()
+        private static void ExceedsLimit()
         {
             ErrorMsgBox("Calculated value exceeds allowed limit.");
         }
@@ -562,13 +562,13 @@ namespace CelestialTools
             // Cleanup()
         }
 
-        private void SelectAllText(ref TextBox TB)
+        private static void SelectAllText(ref TextBox TB)
         {
             TB.SelectionStart = 0;
             TB.SelectionLength = Strings.Len(TB.Text);
         }
 
-        private void ErrorMsgBox(string ErrMsg)
+        private static void ErrorMsgBox(string ErrMsg)
         {
             MessageBox.Show(ErrMsg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
             return;
