@@ -546,12 +546,10 @@ namespace CelestialTools
             SelectAllText(ref argTB);
             txtSpeed = argTB;
         }
-
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             Close();
         }
-
         private static void ExceedsLimit()
         {
             ErrorMsgBox("Calculated value exceeds allowed limit.");
