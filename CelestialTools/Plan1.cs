@@ -2863,12 +2863,12 @@ namespace CelestialTools
             }
 
             MonthNumber = (short)DTin.Month; // cboMonth.SelectedIndex + 1
-            DayNumber = 0; // DTIn.DayOfYear
-            var loopTo = (short)(MonthNumber - 1);
-            for (i = 1; i <= loopTo; i++)
-                DayNumber = (short)(DayNumber + Conversion.Val(Strings.Mid(MonthDays, 2 * i - 1, 2))); // + DayNumber
-                                                                                                       // If MonthNumber >= 3 And LeapYear = True Then DayNumber = DayNumber + 1
-            DayNumber = (short)(DayNumber + DTin.Day); // Val(cboDay.Text)
+            DayNumber = (short)DTin.DayOfYear;
+            //var loopTo = (short)(MonthNumber - 1);
+            //for (i = 1; i <= loopTo; i++)
+            //    DayNumber = (short)(DayNumber + Conversion.Val(Strings.Mid(MonthDays, 2 * i - 1, 2))); // + DayNumber
+            //                                                                                           // If MonthNumber >= 3 And LeapYear = True Then DayNumber = DayNumber + 1
+            //DayNumber = (short)(DayNumber + DTin.Day); // Val(cboDay.Text)
             ZD = Math.Abs(Conversion.Val(txtZDh.Text));
             if (optZDManual.Checked == true)
             {
@@ -2888,9 +2888,10 @@ namespace CelestialTools
             ZDinSeconds = (int)(3600d * ZD);
             UTinSeconds = ZTinSeconds + ZDinSeconds;
             var ts = TimeSpan.FromSeconds(UTinSeconds);
-            GHour = (short)ts.Hours;
-            GMinute = ts.Minutes;
-            GSecond = ts.Seconds;
+            DateTime GrDt = DTin.AddSeconds(UTinSeconds);
+            GHour = (short)GrDt.Hour;   //(short)ts.Hours;
+            GMinute = GrDt.Minute;   //.Minutes;
+            GSecond = GrDt.Second;    //ts.Seconds;
 
             // GHour = UTinSeconds / 3600
             // GMinute = (UTinSeconds - (GHour * 3600)) / 60
@@ -2898,8 +2899,8 @@ namespace CelestialTools
             // GMinute = Int((UTinSeconds - CInt(GHour) * 3600) / 60)
             // GSecond = UTinSeconds - CInt(GHour) * 3600 - GMinute * 60
 
-            GYear = (short)DTin.Year;
-            GDayOfYear = DayNumber;
+            GYear = (short)GrDt.Year;   //(short)DTin.Year;
+            GDayOfYear = (short)GrDt.DayOfYear;   //DayNumber;
 
             // If GHour >= 24 Then
             // GHour = GHour - 24
@@ -2925,7 +2926,7 @@ namespace CelestialTools
         // If GDayOfYear = 0 And GLeapYear = False Then GDayOfYear = 365
         // If GDayOfYear = 0 And GLeapYear = True Then GDayOfYear = 366
 
-        GreenwichDate:
+        //GreenwichDate:
             ;
             DayG[0] = GDayOfYear;
             if (GLeapYear == true)
@@ -2952,7 +2953,7 @@ namespace CelestialTools
             ;
 
             // MonthList$ = "JanFebMarAprMayJunJulAugSepOctNovDec"
-            MonthatG = MonthList[GMonth - 1].ToString();
+            MonthatG = GrDt.Month.ToString("MMM");   // MonthList[GMonth - 1].ToString();
             return true;
         }
 

@@ -1102,1637 +1102,1726 @@ namespace CelestialTools
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAltSR));
-            ToolTip1 = new ToolTip(components);
-            _cmdPrint = new Button();
-            _cmdPrint.Click += new EventHandler(cmdPrint_Click);
-            _txtHoMin = new TextBox();
-            _txtHoMin.TextChanged += new EventHandler(txtHoMin_TextChanged);
-            _txtHoMin.KeyPress += new KeyPressEventHandler(txtHoMin_KeyPress);
-            _txtHoMin.Validating += new System.ComponentModel.CancelEventHandler(txtHoMin_Validating);
-            _txtHoMin.Enter += new EventHandler(txtHoMin_Enter);
-            _txtDecMin = new TextBox();
-            _txtDecMin.TextChanged += new EventHandler(txtDecMin_TextChanged);
-            _txtDecMin.KeyPress += new KeyPressEventHandler(txtDecMin_KeyPress);
-            _txtDecMin.Validating += new System.ComponentModel.CancelEventHandler(txtDecMin_Validating);
-            _txtDecMin.Enter += new EventHandler(txtDecMin_Enter);
-            _txtGHAMin = new TextBox();
-            _txtGHAMin.TextChanged += new EventHandler(txtGHAMin_TextChanged);
-            _txtGHAMin.KeyPress += new KeyPressEventHandler(txtGHAMin_KeyPress);
-            _txtGHAMin.Validating += new System.ComponentModel.CancelEventHandler(txtGHAMin_Validating);
-            _txtGHAMin.Enter += new EventHandler(txtGHAMin_Enter);
-            _txtHoDeg = new TextBox();
-            _txtHoDeg.TextChanged += new EventHandler(txtHoDeg_TextChanged);
-            _txtHoDeg.KeyPress += new KeyPressEventHandler(txtHoDeg_KeyPress);
-            _txtHoDeg.Validating += new System.ComponentModel.CancelEventHandler(txtHoDeg_Validating);
-            _txtHoDeg.Enter += new EventHandler(txtHoDeg_Enter);
-            _txtDecDeg = new TextBox();
-            _txtDecDeg.TextChanged += new EventHandler(txtDecDeg_TextChanged);
-            _txtDecDeg.KeyPress += new KeyPressEventHandler(txtDecDeg_KeyPress);
-            _txtDecDeg.Validating += new System.ComponentModel.CancelEventHandler(txtDecDeg_Validating);
-            _txtDecDeg.Enter += new EventHandler(txtDecDeg_Enter);
-            _txtGHADeg = new TextBox();
-            _txtGHADeg.TextChanged += new EventHandler(txtGHADeg_TextChanged);
-            _txtGHADeg.KeyPress += new KeyPressEventHandler(txtGHADeg_KeyPress);
-            _txtGHADeg.Validating += new System.ComponentModel.CancelEventHandler(txtGHADeg_Validating);
-            _txtGHADeg.Enter += new EventHandler(txtGHADeg_Enter);
-            _txtLMin = new TextBox();
-            _txtLMin.TextChanged += new EventHandler(txtLMin_TextChanged);
-            _txtLMin.KeyPress += new KeyPressEventHandler(txtLMin_KeyPress);
-            _txtLMin.Validating += new System.ComponentModel.CancelEventHandler(txtLMin_Validating);
-            _txtLMin.Enter += new EventHandler(txtLMin_Enter);
-            _txtLoDeg = new TextBox();
-            _txtLoDeg.TextChanged += new EventHandler(txtLoDeg_TextChanged);
-            _txtLoDeg.KeyPress += new KeyPressEventHandler(txtLoDeg_KeyPress);
-            _txtLoDeg.Validating += new System.ComponentModel.CancelEventHandler(txtLoDeg_Validating);
-            _txtLoDeg.Enter += new EventHandler(txtLoDeg_Enter);
-            _txtLoMin = new TextBox();
-            _txtLoMin.TextChanged += new EventHandler(txtLoMin_TextChanged);
-            _txtLoMin.KeyPress += new KeyPressEventHandler(txtLoMin_KeyPress);
-            _txtLoMin.Validating += new System.ComponentModel.CancelEventHandler(txtLoMin_Validating);
-            _txtLoMin.Enter += new EventHandler(txtLoMin_Enter);
-            _txtLDeg = new TextBox();
-            _txtLDeg.TextChanged += new EventHandler(txtLDeg_TextChanged);
-            _txtLDeg.KeyPress += new KeyPressEventHandler(txtLDeg_KeyPress);
-            _txtLDeg.Validating += new System.ComponentModel.CancelEventHandler(txtLDeg_Validating);
-            _txtLDeg.Enter += new EventHandler(txtLDeg_Enter);
-            _chkInterpolateB = new CheckBox();
-            _chkInterpolateB.CheckStateChanged += new EventHandler(chkInterpolateB_CheckStateChanged);
-            _cmdWeems = new Button();
-            _cmdWeems.Click += new EventHandler(cmdWeems_Click);
-            frameS = new GroupBox();
-            _optFarley = new RadioButton();
-            _optFarley.CheckedChanged += new EventHandler(optFarley_CheckedChanged);
-            _optPepperday = new RadioButton();
-            _optPepperday.CheckedChanged += new EventHandler(optPepperday_CheckedChanged);
-            _cmdSTable = new Button();
-            _cmdSTable.Click += new EventHandler(cmdSTable_Click);
-            _chkSadler = new CheckBox();
-            _chkSadler.CheckStateChanged += new EventHandler(chkSadler_CheckStateChanged);
-            frame214 = new GroupBox();
-            _optdtL = new RadioButton();
-            _optdtL.CheckedChanged += new EventHandler(optdtL_CheckedChanged);
-            _optdt = new RadioButton();
-            _optdt.CheckedChanged += new EventHandler(optdt_CheckedChanged);
-            _optd = new RadioButton();
-            _optd.CheckedChanged += new EventHandler(optd_CheckedChanged);
-            Label15 = new Label();
-            Label14 = new Label();
-            Label13 = new Label();
-            Label12 = new Label();
-            Label11 = new Label();
-            Label10 = new Label();
-            Label8 = new Label();
-            Label7 = new Label();
-            Label9 = new Label();
-            _chkDSD = new CheckBox();
-            _chkDSD.CheckStateChanged += new EventHandler(chkDSD_CheckStateChanged);
-            frame211 = new GroupBox();
-            _optCompact = new RadioButton();
-            _optCompact.CheckedChanged += new EventHandler(optCompact_CheckedChanged);
-            _optOriginal = new RadioButton();
-            _optOriginal.CheckedChanged += new EventHandler(optOriginal_CheckedChanged);
-            _cmd208 = new Button();
-            _cmd208.Click += new EventHandler(cmd208_Click);
-            _cmd211 = new Button();
-            _cmd211.Click += new EventHandler(cmd211_Click);
-            _cmd214 = new Button();
-            _cmd214.Click += new EventHandler(cmd214_Click);
-            _cmd229 = new Button();
-            _cmd229.Click += new EventHandler(cmd229_Click);
-            _cmd249 = new Button();
-            _cmd249.Click += new EventHandler(cmd249_Click);
-            _cmdClearSome = new Button();
-            _cmdClearSome.Click += new EventHandler(cmdClearSome_Click);
-            _cmdClear = new Button();
-            _cmdClear.Click += new EventHandler(cmdClear_Click);
-            _cmdFix = new Button();
-            _cmdFix.Click += new EventHandler(cmdFix_Click);
-            _cmdSave = new Button();
-            _cmdSave.Click += new EventHandler(cmdSave_Click);
-            frameNASRUsing = new GroupBox();
-            _optNATable = new RadioButton();
-            _optNATable.CheckedChanged += new EventHandler(optNATable_CheckedChanged);
-            _optUSPSTable = new RadioButton();
-            _optUSPSTable.CheckedChanged += new EventHandler(optUSPSTable_CheckedChanged);
-            _cmdNASR = new Button();
-            _cmdNASR.Click += new EventHandler(cmdNASR_Click);
-            _cmdLawOfCosines = new Button();
-            _cmdLawOfCosines.Click += new EventHandler(cmdLawOfCosines_Click);
-            _cboDec = new ComboBox();
-            _cboDec.SelectedIndexChanged += new EventHandler(CboDec_SelectedIndexChanged);
-            cboL = new ComboBox();
-            cboLo = new ComboBox();
-            Label6 = new Label();
-            Label5 = new Label();
-            Label4 = new Label();
-            lblHoMin = new Label();
-            lblDecMin = new Label();
-            lblGHAMin = new Label();
-            lblHoDeg = new Label();
-            lblDecDeg = new Label();
-            lblGHADeg = new Label();
-            Label3 = new Label();
-            Label2 = new Label();
-            Label1 = new Label();
-            lblDRL = new Label();
-            lblLDeg = new Label();
-            lblLMin = new Label();
-            lblDRLo = new Label();
-            lblLoDeg = new Label();
-            lblLoMin = new Label();
-            SRLgTxtBx = new RichTextBox();
-            _ExitBtn = new Button();
-            _ExitBtn.Click += new EventHandler(ExitBtn_Click);
-            SRHdrTxtBx = new RichTextBox();
-            SRLeftTxtBx = new RichTextBox();
-            SRRightTxtBx = new RichTextBox();
-            NASRAsmTxtBx = new RichTextBox();
-            NASRAFTxtBx = new RichTextBox();
-            DCorrTxtBx = new RichTextBox();
-            optFull = new RadioButton();
-            GroupBoxPrecision = new GroupBox();
-            optRound = new RadioButton();
-            WeemsPVTxtBx = new TextBox();
-            PictureBox1 = new PictureBox();
-            DTSight = new DateTimePicker();
-            lblDate = new Label();
-            _btnUseCLS = new Button();
-            _btnUseCLS.Click += new EventHandler(btnUseCLS_Click);
-            _btnCustomPlot = new Button();
-            _btnCustomPlot.Click += new EventHandler(btnCustomPlot_Click);
-            _cmdMerDiag = new Button();
-            _cmdMerDiag.Click += new EventHandler(cmdMerDiag_Click_1);
-            txtUserInfo = new TextBox();
-            Label16 = new Label();
-            cboLLoBy = new ComboBox();
-            Label17 = new Label();
-            grpSLInfo = new GroupBox();
-            lblBodyNm = new Label();
-            lblLimb = new Label();
-            cbLimb = new ComboBox();
-            cboBody = new ComboBox();
-            _btnNASRFix = new Button();
-            _btnNASRFix.Click += new EventHandler(btnNASRFix_Click);
-            frameS.SuspendLayout();
-            frame214.SuspendLayout();
-            frame211.SuspendLayout();
-            frameNASRUsing.SuspendLayout();
-            GroupBoxPrecision.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)PictureBox1).BeginInit();
-            grpSLInfo.SuspendLayout();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAltSR));
+            this.ToolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this._cmdPrint = new System.Windows.Forms.Button();
+            this._txtHoMin = new System.Windows.Forms.TextBox();
+            this._txtDecMin = new System.Windows.Forms.TextBox();
+            this._txtGHAMin = new System.Windows.Forms.TextBox();
+            this._txtHoDeg = new System.Windows.Forms.TextBox();
+            this._txtDecDeg = new System.Windows.Forms.TextBox();
+            this._txtGHADeg = new System.Windows.Forms.TextBox();
+            this._txtLMin = new System.Windows.Forms.TextBox();
+            this._txtLoDeg = new System.Windows.Forms.TextBox();
+            this._txtLoMin = new System.Windows.Forms.TextBox();
+            this._txtLDeg = new System.Windows.Forms.TextBox();
+            this._chkInterpolateB = new System.Windows.Forms.CheckBox();
+            this._cmdWeems = new System.Windows.Forms.Button();
+            this.frameS = new System.Windows.Forms.GroupBox();
+            this._optFarley = new System.Windows.Forms.RadioButton();
+            this._optPepperday = new System.Windows.Forms.RadioButton();
+            this._cmdSTable = new System.Windows.Forms.Button();
+            this._chkSadler = new System.Windows.Forms.CheckBox();
+            this.frame214 = new System.Windows.Forms.GroupBox();
+            this._optdtL = new System.Windows.Forms.RadioButton();
+            this._optdt = new System.Windows.Forms.RadioButton();
+            this._optd = new System.Windows.Forms.RadioButton();
+            this.Label15 = new System.Windows.Forms.Label();
+            this.Label14 = new System.Windows.Forms.Label();
+            this.Label13 = new System.Windows.Forms.Label();
+            this.Label12 = new System.Windows.Forms.Label();
+            this.Label11 = new System.Windows.Forms.Label();
+            this.Label10 = new System.Windows.Forms.Label();
+            this.Label8 = new System.Windows.Forms.Label();
+            this.Label7 = new System.Windows.Forms.Label();
+            this.Label9 = new System.Windows.Forms.Label();
+            this._chkDSD = new System.Windows.Forms.CheckBox();
+            this.frame211 = new System.Windows.Forms.GroupBox();
+            this._optCompact = new System.Windows.Forms.RadioButton();
+            this._optOriginal = new System.Windows.Forms.RadioButton();
+            this._cmd208 = new System.Windows.Forms.Button();
+            this._cmd211 = new System.Windows.Forms.Button();
+            this._cmd214 = new System.Windows.Forms.Button();
+            this._cmd229 = new System.Windows.Forms.Button();
+            this._cmd249 = new System.Windows.Forms.Button();
+            this._cmdClearSome = new System.Windows.Forms.Button();
+            this._cmdClear = new System.Windows.Forms.Button();
+            this._cmdFix = new System.Windows.Forms.Button();
+            this._cmdSave = new System.Windows.Forms.Button();
+            this.frameNASRUsing = new System.Windows.Forms.GroupBox();
+            this._optNATable = new System.Windows.Forms.RadioButton();
+            this._optUSPSTable = new System.Windows.Forms.RadioButton();
+            this._cmdNASR = new System.Windows.Forms.Button();
+            this._cmdLawOfCosines = new System.Windows.Forms.Button();
+            this._cboDec = new System.Windows.Forms.ComboBox();
+            this.cboL = new System.Windows.Forms.ComboBox();
+            this.cboLo = new System.Windows.Forms.ComboBox();
+            this.Label6 = new System.Windows.Forms.Label();
+            this.Label5 = new System.Windows.Forms.Label();
+            this.Label4 = new System.Windows.Forms.Label();
+            this.lblHoMin = new System.Windows.Forms.Label();
+            this.lblDecMin = new System.Windows.Forms.Label();
+            this.lblGHAMin = new System.Windows.Forms.Label();
+            this.lblHoDeg = new System.Windows.Forms.Label();
+            this.lblDecDeg = new System.Windows.Forms.Label();
+            this.lblGHADeg = new System.Windows.Forms.Label();
+            this.Label3 = new System.Windows.Forms.Label();
+            this.Label2 = new System.Windows.Forms.Label();
+            this.Label1 = new System.Windows.Forms.Label();
+            this.lblDRL = new System.Windows.Forms.Label();
+            this.lblLDeg = new System.Windows.Forms.Label();
+            this.lblLMin = new System.Windows.Forms.Label();
+            this.lblDRLo = new System.Windows.Forms.Label();
+            this.lblLoDeg = new System.Windows.Forms.Label();
+            this.lblLoMin = new System.Windows.Forms.Label();
+            this.SRLgTxtBx = new System.Windows.Forms.RichTextBox();
+            this._ExitBtn = new System.Windows.Forms.Button();
+            this.SRHdrTxtBx = new System.Windows.Forms.RichTextBox();
+            this.SRLeftTxtBx = new System.Windows.Forms.RichTextBox();
+            this.SRRightTxtBx = new System.Windows.Forms.RichTextBox();
+            this.NASRAsmTxtBx = new System.Windows.Forms.RichTextBox();
+            this.NASRAFTxtBx = new System.Windows.Forms.RichTextBox();
+            this.DCorrTxtBx = new System.Windows.Forms.RichTextBox();
+            this.optFull = new System.Windows.Forms.RadioButton();
+            this.GroupBoxPrecision = new System.Windows.Forms.GroupBox();
+            this.optRound = new System.Windows.Forms.RadioButton();
+            this.WeemsPVTxtBx = new System.Windows.Forms.TextBox();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.DTSight = new System.Windows.Forms.DateTimePicker();
+            this.lblDate = new System.Windows.Forms.Label();
+            this._btnUseCLS = new System.Windows.Forms.Button();
+            this._btnCustomPlot = new System.Windows.Forms.Button();
+            this._cmdMerDiag = new System.Windows.Forms.Button();
+            this.txtUserInfo = new System.Windows.Forms.TextBox();
+            this.Label16 = new System.Windows.Forms.Label();
+            this.cboLLoBy = new System.Windows.Forms.ComboBox();
+            this.Label17 = new System.Windows.Forms.Label();
+            this.grpSLInfo = new System.Windows.Forms.GroupBox();
+            this.lblBodyNm = new System.Windows.Forms.Label();
+            this.lblLimb = new System.Windows.Forms.Label();
+            this.cbLimb = new System.Windows.Forms.ComboBox();
+            this.cboBody = new System.Windows.Forms.ComboBox();
+            this._btnNASRFix = new System.Windows.Forms.Button();
+            this.frameS.SuspendLayout();
+            this.frame214.SuspendLayout();
+            this.frame211.SuspendLayout();
+            this.frameNASRUsing.SuspendLayout();
+            this.GroupBoxPrecision.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            this.grpSLInfo.SuspendLayout();
+            this.SuspendLayout();
             // 
-            // cmdPrint
+            // _cmdPrint
             // 
-            _cmdPrint.BackColor = SystemColors.Control;
-            _cmdPrint.Cursor = Cursors.Default;
-            _cmdPrint.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cmdPrint.ForeColor = SystemColors.ControlText;
-            _cmdPrint.Image = (Image)resources.GetObject("cmdPrint.Image");
-            _cmdPrint.Location = new Point(646, 2);
-            _cmdPrint.Name = "_cmdPrint";
-            _cmdPrint.RightToLeft = RightToLeft.No;
-            _cmdPrint.Size = new Size(21, 21);
-            _cmdPrint.TabIndex = 72;
-            _cmdPrint.TextAlign = ContentAlignment.BottomCenter;
-            ToolTip1.SetToolTip(_cmdPrint, "Print window");
-            _cmdPrint.UseVisualStyleBackColor = false;
+            this._cmdPrint.BackColor = System.Drawing.SystemColors.Control;
+            this._cmdPrint.Cursor = System.Windows.Forms.Cursors.Default;
+            this._cmdPrint.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cmdPrint.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._cmdPrint.Image = ((System.Drawing.Image)(resources.GetObject("_cmdPrint.Image")));
+            this._cmdPrint.Location = new System.Drawing.Point(646, 2);
+            this._cmdPrint.Name = "_cmdPrint";
+            this._cmdPrint.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._cmdPrint.Size = new System.Drawing.Size(21, 21);
+            this._cmdPrint.TabIndex = 72;
+            this._cmdPrint.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ToolTip1.SetToolTip(this._cmdPrint, "Print window");
+            this._cmdPrint.UseVisualStyleBackColor = false;
+            this._cmdPrint.Click += new System.EventHandler(this.cmdPrint_Click);
             // 
-            // txtHoMin
+            // _txtHoMin
             // 
-            _txtHoMin.AcceptsReturn = true;
-            _txtHoMin.BackColor = SystemColors.Window;
-            _txtHoMin.Cursor = Cursors.IBeam;
-            _txtHoMin.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtHoMin.ForeColor = SystemColors.WindowText;
-            _txtHoMin.Location = new Point(80, 58);
-            _txtHoMin.MaxLength = 5;
-            _txtHoMin.Name = "_txtHoMin";
-            _txtHoMin.RightToLeft = RightToLeft.No;
-            _txtHoMin.Size = new Size(33, 20);
-            _txtHoMin.TabIndex = 6;
-            ToolTip1.SetToolTip(_txtHoMin, "Range -59.9 to 59.9");
+            this._txtHoMin.AcceptsReturn = true;
+            this._txtHoMin.BackColor = System.Drawing.SystemColors.Window;
+            this._txtHoMin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this._txtHoMin.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtHoMin.ForeColor = System.Drawing.SystemColors.WindowText;
+            this._txtHoMin.Location = new System.Drawing.Point(80, 58);
+            this._txtHoMin.MaxLength = 5;
+            this._txtHoMin.Name = "_txtHoMin";
+            this._txtHoMin.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._txtHoMin.Size = new System.Drawing.Size(33, 20);
+            this._txtHoMin.TabIndex = 6;
+            this._txtHoMin.Text = "0";
+            this.ToolTip1.SetToolTip(this._txtHoMin, "Range -59.9 to 59.9");
+            this._txtHoMin.TextChanged += new System.EventHandler(this.txtHoMin_TextChanged);
+            this._txtHoMin.Enter += new System.EventHandler(this.txtHoMin_Enter);
+            this._txtHoMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHoMin_KeyPress);
+            this._txtHoMin.Validating += new System.ComponentModel.CancelEventHandler(this.txtHoMin_Validating);
             // 
-            // txtDecMin
+            // _txtDecMin
             // 
-            _txtDecMin.AcceptsReturn = true;
-            _txtDecMin.BackColor = SystemColors.Window;
-            _txtDecMin.Cursor = Cursors.IBeam;
-            _txtDecMin.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtDecMin.ForeColor = SystemColors.WindowText;
-            _txtDecMin.Location = new Point(80, 34);
-            _txtDecMin.MaxLength = 4;
-            _txtDecMin.Name = "_txtDecMin";
-            _txtDecMin.RightToLeft = RightToLeft.No;
-            _txtDecMin.Size = new Size(33, 20);
-            _txtDecMin.TabIndex = 3;
-            ToolTip1.SetToolTip(_txtDecMin, "Range 0 to 59.9");
+            this._txtDecMin.AcceptsReturn = true;
+            this._txtDecMin.BackColor = System.Drawing.SystemColors.Window;
+            this._txtDecMin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this._txtDecMin.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtDecMin.ForeColor = System.Drawing.SystemColors.WindowText;
+            this._txtDecMin.Location = new System.Drawing.Point(80, 34);
+            this._txtDecMin.MaxLength = 4;
+            this._txtDecMin.Name = "_txtDecMin";
+            this._txtDecMin.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._txtDecMin.Size = new System.Drawing.Size(33, 20);
+            this._txtDecMin.TabIndex = 3;
+            this._txtDecMin.Text = "0";
+            this.ToolTip1.SetToolTip(this._txtDecMin, "Range 0 to 59.9");
+            this._txtDecMin.TextChanged += new System.EventHandler(this.txtDecMin_TextChanged);
+            this._txtDecMin.Enter += new System.EventHandler(this.txtDecMin_Enter);
+            this._txtDecMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDecMin_KeyPress);
+            this._txtDecMin.Validating += new System.ComponentModel.CancelEventHandler(this.txtDecMin_Validating);
             // 
-            // txtGHAMin
+            // _txtGHAMin
             // 
-            _txtGHAMin.AcceptsReturn = true;
-            _txtGHAMin.BackColor = SystemColors.Window;
-            _txtGHAMin.Cursor = Cursors.IBeam;
-            _txtGHAMin.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtGHAMin.ForeColor = SystemColors.WindowText;
-            _txtGHAMin.Location = new Point(80, 10);
-            _txtGHAMin.MaxLength = 4;
-            _txtGHAMin.Name = "_txtGHAMin";
-            _txtGHAMin.RightToLeft = RightToLeft.No;
-            _txtGHAMin.Size = new Size(33, 20);
-            _txtGHAMin.TabIndex = 1;
-            ToolTip1.SetToolTip(_txtGHAMin, "Range 0 to 59.9");
+            this._txtGHAMin.AcceptsReturn = true;
+            this._txtGHAMin.BackColor = System.Drawing.SystemColors.Window;
+            this._txtGHAMin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this._txtGHAMin.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtGHAMin.ForeColor = System.Drawing.SystemColors.WindowText;
+            this._txtGHAMin.Location = new System.Drawing.Point(80, 10);
+            this._txtGHAMin.MaxLength = 4;
+            this._txtGHAMin.Name = "_txtGHAMin";
+            this._txtGHAMin.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._txtGHAMin.Size = new System.Drawing.Size(33, 20);
+            this._txtGHAMin.TabIndex = 1;
+            this._txtGHAMin.Text = "0";
+            this.ToolTip1.SetToolTip(this._txtGHAMin, "Range 0 to 59.9");
+            this._txtGHAMin.TextChanged += new System.EventHandler(this.txtGHAMin_TextChanged);
+            this._txtGHAMin.Enter += new System.EventHandler(this.txtGHAMin_Enter);
+            this._txtGHAMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGHAMin_KeyPress);
+            this._txtGHAMin.Validating += new System.ComponentModel.CancelEventHandler(this.txtGHAMin_Validating);
             // 
-            // txtHoDeg
+            // _txtHoDeg
             // 
-            _txtHoDeg.AcceptsReturn = true;
-            _txtHoDeg.BackColor = SystemColors.Window;
-            _txtHoDeg.Cursor = Cursors.IBeam;
-            _txtHoDeg.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtHoDeg.ForeColor = SystemColors.WindowText;
-            _txtHoDeg.Location = new Point(40, 58);
-            _txtHoDeg.MaxLength = 2;
-            _txtHoDeg.Name = "_txtHoDeg";
-            _txtHoDeg.RightToLeft = RightToLeft.No;
-            _txtHoDeg.Size = new Size(33, 20);
-            _txtHoDeg.TabIndex = 5;
-            ToolTip1.SetToolTip(_txtHoDeg, "Range 0 to 88 for LoC, 0 to 75 for NASR, 0 to 85 for 229, 0 to 90 for others");
+            this._txtHoDeg.AcceptsReturn = true;
+            this._txtHoDeg.BackColor = System.Drawing.SystemColors.Window;
+            this._txtHoDeg.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this._txtHoDeg.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtHoDeg.ForeColor = System.Drawing.SystemColors.WindowText;
+            this._txtHoDeg.Location = new System.Drawing.Point(40, 58);
+            this._txtHoDeg.MaxLength = 2;
+            this._txtHoDeg.Name = "_txtHoDeg";
+            this._txtHoDeg.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._txtHoDeg.Size = new System.Drawing.Size(33, 20);
+            this._txtHoDeg.TabIndex = 5;
+            this._txtHoDeg.Text = "0";
+            this.ToolTip1.SetToolTip(this._txtHoDeg, "Range 0 to 88 for LoC, 0 to 75 for NASR, 0 to 85 for 229, 0 to 90 for others");
+            this._txtHoDeg.TextChanged += new System.EventHandler(this.txtHoDeg_TextChanged);
+            this._txtHoDeg.Enter += new System.EventHandler(this.txtHoDeg_Enter);
+            this._txtHoDeg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHoDeg_KeyPress);
+            this._txtHoDeg.Validating += new System.ComponentModel.CancelEventHandler(this.txtHoDeg_Validating);
             // 
-            // txtDecDeg
+            // _txtDecDeg
             // 
-            _txtDecDeg.AcceptsReturn = true;
-            _txtDecDeg.BackColor = SystemColors.Window;
-            _txtDecDeg.Cursor = Cursors.IBeam;
-            _txtDecDeg.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtDecDeg.ForeColor = SystemColors.WindowText;
-            _txtDecDeg.Location = new Point(40, 34);
-            _txtDecDeg.MaxLength = 2;
-            _txtDecDeg.Name = "_txtDecDeg";
-            _txtDecDeg.RightToLeft = RightToLeft.No;
-            _txtDecDeg.Size = new Size(33, 20);
-            _txtDecDeg.TabIndex = 2;
-            ToolTip1.SetToolTip(_txtDecDeg, "Range 0 to 90");
+            this._txtDecDeg.AcceptsReturn = true;
+            this._txtDecDeg.BackColor = System.Drawing.SystemColors.Window;
+            this._txtDecDeg.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this._txtDecDeg.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtDecDeg.ForeColor = System.Drawing.SystemColors.WindowText;
+            this._txtDecDeg.Location = new System.Drawing.Point(40, 34);
+            this._txtDecDeg.MaxLength = 2;
+            this._txtDecDeg.Name = "_txtDecDeg";
+            this._txtDecDeg.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._txtDecDeg.Size = new System.Drawing.Size(33, 20);
+            this._txtDecDeg.TabIndex = 2;
+            this._txtDecDeg.Text = "0";
+            this.ToolTip1.SetToolTip(this._txtDecDeg, "Range 0 to 90");
+            this._txtDecDeg.TextChanged += new System.EventHandler(this.txtDecDeg_TextChanged);
+            this._txtDecDeg.Enter += new System.EventHandler(this.txtDecDeg_Enter);
+            this._txtDecDeg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDecDeg_KeyPress);
+            this._txtDecDeg.Validating += new System.ComponentModel.CancelEventHandler(this.txtDecDeg_Validating);
             // 
-            // txtGHADeg
+            // _txtGHADeg
             // 
-            _txtGHADeg.AcceptsReturn = true;
-            _txtGHADeg.BackColor = SystemColors.Window;
-            _txtGHADeg.Cursor = Cursors.IBeam;
-            _txtGHADeg.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtGHADeg.ForeColor = SystemColors.WindowText;
-            _txtGHADeg.Location = new Point(40, 10);
-            _txtGHADeg.MaxLength = 3;
-            _txtGHADeg.Name = "_txtGHADeg";
-            _txtGHADeg.RightToLeft = RightToLeft.No;
-            _txtGHADeg.Size = new Size(33, 20);
-            _txtGHADeg.TabIndex = 0;
-            ToolTip1.SetToolTip(_txtGHADeg, "Range 0 to 719");
+            this._txtGHADeg.AcceptsReturn = true;
+            this._txtGHADeg.BackColor = System.Drawing.SystemColors.Window;
+            this._txtGHADeg.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this._txtGHADeg.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtGHADeg.ForeColor = System.Drawing.SystemColors.WindowText;
+            this._txtGHADeg.Location = new System.Drawing.Point(40, 10);
+            this._txtGHADeg.MaxLength = 3;
+            this._txtGHADeg.Name = "_txtGHADeg";
+            this._txtGHADeg.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._txtGHADeg.Size = new System.Drawing.Size(33, 20);
+            this._txtGHADeg.TabIndex = 0;
+            this._txtGHADeg.Text = "0";
+            this.ToolTip1.SetToolTip(this._txtGHADeg, "Range 0 to 719");
+            this._txtGHADeg.TextChanged += new System.EventHandler(this.txtGHADeg_TextChanged);
+            this._txtGHADeg.Enter += new System.EventHandler(this.txtGHADeg_Enter);
+            this._txtGHADeg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGHADeg_KeyPress);
+            this._txtGHADeg.Validating += new System.ComponentModel.CancelEventHandler(this.txtGHADeg_Validating);
             // 
-            // txtLMin
+            // _txtLMin
             // 
-            _txtLMin.AcceptsReturn = true;
-            _txtLMin.BackColor = SystemColors.Window;
-            _txtLMin.Cursor = Cursors.IBeam;
-            _txtLMin.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtLMin.ForeColor = SystemColors.WindowText;
-            _txtLMin.Location = new Point(296, 8);
-            _txtLMin.MaxLength = 4;
-            _txtLMin.Name = "_txtLMin";
-            _txtLMin.RightToLeft = RightToLeft.No;
-            _txtLMin.Size = new Size(33, 20);
-            _txtLMin.TabIndex = 8;
-            ToolTip1.SetToolTip(_txtLMin, "Range 0 to 59.9");
+            this._txtLMin.AcceptsReturn = true;
+            this._txtLMin.BackColor = System.Drawing.SystemColors.Window;
+            this._txtLMin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this._txtLMin.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtLMin.ForeColor = System.Drawing.SystemColors.WindowText;
+            this._txtLMin.Location = new System.Drawing.Point(296, 8);
+            this._txtLMin.MaxLength = 4;
+            this._txtLMin.Name = "_txtLMin";
+            this._txtLMin.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._txtLMin.Size = new System.Drawing.Size(33, 20);
+            this._txtLMin.TabIndex = 8;
+            this._txtLMin.Text = "0";
+            this.ToolTip1.SetToolTip(this._txtLMin, "Range 0 to 59.9");
+            this._txtLMin.TextChanged += new System.EventHandler(this.txtLMin_TextChanged);
+            this._txtLMin.Enter += new System.EventHandler(this.txtLMin_Enter);
+            this._txtLMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLMin_KeyPress);
+            this._txtLMin.Validating += new System.ComponentModel.CancelEventHandler(this.txtLMin_Validating);
             // 
-            // txtLoDeg
+            // _txtLoDeg
             // 
-            _txtLoDeg.AcceptsReturn = true;
-            _txtLoDeg.BackColor = SystemColors.Window;
-            _txtLoDeg.Cursor = Cursors.IBeam;
-            _txtLoDeg.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtLoDeg.ForeColor = SystemColors.WindowText;
-            _txtLoDeg.Location = new Point(256, 32);
-            _txtLoDeg.MaxLength = 3;
-            _txtLoDeg.Name = "_txtLoDeg";
-            _txtLoDeg.RightToLeft = RightToLeft.No;
-            _txtLoDeg.Size = new Size(33, 20);
-            _txtLoDeg.TabIndex = 10;
-            ToolTip1.SetToolTip(_txtLoDeg, "Range 0 to 180");
+            this._txtLoDeg.AcceptsReturn = true;
+            this._txtLoDeg.BackColor = System.Drawing.SystemColors.Window;
+            this._txtLoDeg.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this._txtLoDeg.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtLoDeg.ForeColor = System.Drawing.SystemColors.WindowText;
+            this._txtLoDeg.Location = new System.Drawing.Point(256, 32);
+            this._txtLoDeg.MaxLength = 3;
+            this._txtLoDeg.Name = "_txtLoDeg";
+            this._txtLoDeg.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._txtLoDeg.Size = new System.Drawing.Size(33, 20);
+            this._txtLoDeg.TabIndex = 10;
+            this._txtLoDeg.Text = "0";
+            this.ToolTip1.SetToolTip(this._txtLoDeg, "Range 0 to 180");
+            this._txtLoDeg.TextChanged += new System.EventHandler(this.txtLoDeg_TextChanged);
+            this._txtLoDeg.Enter += new System.EventHandler(this.txtLoDeg_Enter);
+            this._txtLoDeg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLoDeg_KeyPress);
+            this._txtLoDeg.Validating += new System.ComponentModel.CancelEventHandler(this.txtLoDeg_Validating);
             // 
-            // txtLoMin
+            // _txtLoMin
             // 
-            _txtLoMin.AcceptsReturn = true;
-            _txtLoMin.BackColor = SystemColors.Window;
-            _txtLoMin.Cursor = Cursors.IBeam;
-            _txtLoMin.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtLoMin.ForeColor = SystemColors.WindowText;
-            _txtLoMin.Location = new Point(296, 32);
-            _txtLoMin.MaxLength = 4;
-            _txtLoMin.Name = "_txtLoMin";
-            _txtLoMin.RightToLeft = RightToLeft.No;
-            _txtLoMin.Size = new Size(33, 20);
-            _txtLoMin.TabIndex = 11;
-            ToolTip1.SetToolTip(_txtLoMin, "Range 0 to 59.9");
+            this._txtLoMin.AcceptsReturn = true;
+            this._txtLoMin.BackColor = System.Drawing.SystemColors.Window;
+            this._txtLoMin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this._txtLoMin.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtLoMin.ForeColor = System.Drawing.SystemColors.WindowText;
+            this._txtLoMin.Location = new System.Drawing.Point(296, 32);
+            this._txtLoMin.MaxLength = 4;
+            this._txtLoMin.Name = "_txtLoMin";
+            this._txtLoMin.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._txtLoMin.Size = new System.Drawing.Size(33, 20);
+            this._txtLoMin.TabIndex = 11;
+            this._txtLoMin.Text = "0";
+            this.ToolTip1.SetToolTip(this._txtLoMin, "Range 0 to 59.9");
+            this._txtLoMin.TextChanged += new System.EventHandler(this.txtLoMin_TextChanged);
+            this._txtLoMin.Enter += new System.EventHandler(this.txtLoMin_Enter);
+            this._txtLoMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLoMin_KeyPress);
+            this._txtLoMin.Validating += new System.ComponentModel.CancelEventHandler(this.txtLoMin_Validating);
             // 
-            // txtLDeg
+            // _txtLDeg
             // 
-            _txtLDeg.AcceptsReturn = true;
-            _txtLDeg.BackColor = SystemColors.Window;
-            _txtLDeg.Cursor = Cursors.IBeam;
-            _txtLDeg.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _txtLDeg.ForeColor = SystemColors.WindowText;
-            _txtLDeg.Location = new Point(256, 8);
-            _txtLDeg.MaxLength = 2;
-            _txtLDeg.Name = "_txtLDeg";
-            _txtLDeg.RightToLeft = RightToLeft.No;
-            _txtLDeg.Size = new Size(33, 20);
-            _txtLDeg.TabIndex = 7;
-            ToolTip1.SetToolTip(_txtLDeg, "Range 0 to 90");
+            this._txtLDeg.AcceptsReturn = true;
+            this._txtLDeg.BackColor = System.Drawing.SystemColors.Window;
+            this._txtLDeg.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this._txtLDeg.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._txtLDeg.ForeColor = System.Drawing.SystemColors.WindowText;
+            this._txtLDeg.Location = new System.Drawing.Point(256, 8);
+            this._txtLDeg.MaxLength = 2;
+            this._txtLDeg.Name = "_txtLDeg";
+            this._txtLDeg.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._txtLDeg.Size = new System.Drawing.Size(33, 20);
+            this._txtLDeg.TabIndex = 7;
+            this._txtLDeg.Text = "0";
+            this.ToolTip1.SetToolTip(this._txtLDeg, "Range 0 to 90");
+            this._txtLDeg.TextChanged += new System.EventHandler(this.txtLDeg_TextChanged);
+            this._txtLDeg.Enter += new System.EventHandler(this.txtLDeg_Enter);
+            this._txtLDeg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLDeg_KeyPress);
+            this._txtLDeg.Validating += new System.ComponentModel.CancelEventHandler(this.txtLDeg_Validating);
             // 
-            // chkInterpolateB
+            // _chkInterpolateB
             // 
-            _chkInterpolateB.BackColor = SystemColors.Window;
-            _chkInterpolateB.Cursor = Cursors.Default;
-            _chkInterpolateB.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _chkInterpolateB.ForeColor = SystemColors.ControlText;
-            _chkInterpolateB.Location = new Point(7, 155);
-            _chkInterpolateB.Name = "_chkInterpolateB";
-            _chkInterpolateB.RightToLeft = RightToLeft.No;
-            _chkInterpolateB.Size = new Size(190, 22);
-            _chkInterpolateB.TabIndex = 66;
-            _chkInterpolateB.Text = "Interpolate Table B (for Hc calc.)";
-            _chkInterpolateB.UseVisualStyleBackColor = false;
-            _chkInterpolateB.Visible = false;
+            this._chkInterpolateB.BackColor = System.Drawing.SystemColors.Window;
+            this._chkInterpolateB.Cursor = System.Windows.Forms.Cursors.Default;
+            this._chkInterpolateB.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._chkInterpolateB.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._chkInterpolateB.Location = new System.Drawing.Point(7, 155);
+            this._chkInterpolateB.Name = "_chkInterpolateB";
+            this._chkInterpolateB.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._chkInterpolateB.Size = new System.Drawing.Size(190, 22);
+            this._chkInterpolateB.TabIndex = 66;
+            this._chkInterpolateB.Text = "Interpolate Table B (for Hc calc.)";
+            this._chkInterpolateB.UseVisualStyleBackColor = false;
+            this._chkInterpolateB.Visible = false;
+            this._chkInterpolateB.CheckStateChanged += new System.EventHandler(this.chkInterpolateB_CheckStateChanged);
             // 
-            // cmdWeems
+            // _cmdWeems
             // 
-            _cmdWeems.BackColor = SystemColors.Control;
-            _cmdWeems.Cursor = Cursors.Default;
-            _cmdWeems.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cmdWeems.ForeColor = SystemColors.ControlText;
-            _cmdWeems.Location = new Point(536, 120);
-            _cmdWeems.Name = "_cmdWeems";
-            _cmdWeems.RightToLeft = RightToLeft.No;
-            _cmdWeems.Size = new Size(65, 22);
-            _cmdWeems.TabIndex = 42;
-            _cmdWeems.Text = "&Weems LPB";
-            _cmdWeems.UseVisualStyleBackColor = false;
+            this._cmdWeems.BackColor = System.Drawing.SystemColors.Control;
+            this._cmdWeems.Cursor = System.Windows.Forms.Cursors.Default;
+            this._cmdWeems.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cmdWeems.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._cmdWeems.Location = new System.Drawing.Point(536, 120);
+            this._cmdWeems.Name = "_cmdWeems";
+            this._cmdWeems.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._cmdWeems.Size = new System.Drawing.Size(65, 22);
+            this._cmdWeems.TabIndex = 42;
+            this._cmdWeems.Text = "&Weems LPB";
+            this._cmdWeems.UseVisualStyleBackColor = false;
+            this._cmdWeems.Click += new System.EventHandler(this.cmdWeems_Click);
             // 
             // frameS
             // 
-            frameS.BackColor = SystemColors.Window;
-            frameS.Controls.Add(_optFarley);
-            frameS.Controls.Add(_optPepperday);
-            frameS.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            frameS.ForeColor = SystemColors.ControlText;
-            frameS.Location = new Point(526, 145);
-            frameS.Name = "frameS";
-            frameS.Padding = new Padding(0);
-            frameS.RightToLeft = RightToLeft.No;
-            frameS.Size = new Size(140, 32);
-            frameS.TabIndex = 63;
-            frameS.TabStop = false;
-            frameS.Text = "Version";
-            frameS.Visible = false;
+            this.frameS.BackColor = System.Drawing.SystemColors.Window;
+            this.frameS.Controls.Add(this._optFarley);
+            this.frameS.Controls.Add(this._optPepperday);
+            this.frameS.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.frameS.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.frameS.Location = new System.Drawing.Point(526, 145);
+            this.frameS.Name = "frameS";
+            this.frameS.Padding = new System.Windows.Forms.Padding(0);
+            this.frameS.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.frameS.Size = new System.Drawing.Size(140, 32);
+            this.frameS.TabIndex = 63;
+            this.frameS.TabStop = false;
+            this.frameS.Text = "Version";
+            this.frameS.Visible = false;
             // 
-            // optFarley
+            // _optFarley
             // 
-            _optFarley.BackColor = SystemColors.Window;
-            _optFarley.Cursor = Cursors.Default;
-            _optFarley.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _optFarley.ForeColor = SystemColors.ControlText;
-            _optFarley.Location = new Point(83, 10);
-            _optFarley.Name = "_optFarley";
-            _optFarley.RightToLeft = RightToLeft.No;
-            _optFarley.Size = new Size(57, 21);
-            _optFarley.TabIndex = 65;
-            _optFarley.TabStop = true;
-            _optFarley.Text = "Farley";
-            _optFarley.UseVisualStyleBackColor = false;
+            this._optFarley.BackColor = System.Drawing.SystemColors.Window;
+            this._optFarley.Cursor = System.Windows.Forms.Cursors.Default;
+            this._optFarley.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._optFarley.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._optFarley.Location = new System.Drawing.Point(83, 10);
+            this._optFarley.Name = "_optFarley";
+            this._optFarley.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._optFarley.Size = new System.Drawing.Size(57, 21);
+            this._optFarley.TabIndex = 65;
+            this._optFarley.TabStop = true;
+            this._optFarley.Text = "Farley";
+            this._optFarley.UseVisualStyleBackColor = false;
+            this._optFarley.CheckedChanged += new System.EventHandler(this.optFarley_CheckedChanged);
             // 
-            // optPepperday
+            // _optPepperday
             // 
-            _optPepperday.BackColor = SystemColors.Window;
-            _optPepperday.Checked = true;
-            _optPepperday.Cursor = Cursors.Default;
-            _optPepperday.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _optPepperday.ForeColor = SystemColors.ControlText;
-            _optPepperday.Location = new Point(8, 11);
-            _optPepperday.Name = "_optPepperday";
-            _optPepperday.RightToLeft = RightToLeft.No;
-            _optPepperday.Size = new Size(81, 18);
-            _optPepperday.TabIndex = 64;
-            _optPepperday.TabStop = true;
-            _optPepperday.Text = "Pepperday";
-            _optPepperday.UseVisualStyleBackColor = false;
+            this._optPepperday.BackColor = System.Drawing.SystemColors.Window;
+            this._optPepperday.Checked = true;
+            this._optPepperday.Cursor = System.Windows.Forms.Cursors.Default;
+            this._optPepperday.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._optPepperday.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._optPepperday.Location = new System.Drawing.Point(8, 11);
+            this._optPepperday.Name = "_optPepperday";
+            this._optPepperday.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._optPepperday.Size = new System.Drawing.Size(81, 18);
+            this._optPepperday.TabIndex = 64;
+            this._optPepperday.TabStop = true;
+            this._optPepperday.Text = "Pepperday";
+            this._optPepperday.UseVisualStyleBackColor = false;
+            this._optPepperday.CheckedChanged += new System.EventHandler(this.optPepperday_CheckedChanged);
             // 
-            // cmdSTable
+            // _cmdSTable
             // 
-            _cmdSTable.BackColor = SystemColors.Control;
-            _cmdSTable.Cursor = Cursors.Default;
-            _cmdSTable.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cmdSTable.ForeColor = SystemColors.ControlText;
-            _cmdSTable.Location = new Point(608, 120);
-            _cmdSTable.Name = "_cmdSTable";
-            _cmdSTable.RightToLeft = RightToLeft.No;
-            _cmdSTable.Size = new Size(57, 22);
-            _cmdSTable.TabIndex = 43;
-            _cmdSTable.Text = "&S-Table";
-            _cmdSTable.UseVisualStyleBackColor = false;
+            this._cmdSTable.BackColor = System.Drawing.SystemColors.Control;
+            this._cmdSTable.Cursor = System.Windows.Forms.Cursors.Default;
+            this._cmdSTable.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cmdSTable.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._cmdSTable.Location = new System.Drawing.Point(608, 120);
+            this._cmdSTable.Name = "_cmdSTable";
+            this._cmdSTable.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._cmdSTable.Size = new System.Drawing.Size(57, 22);
+            this._cmdSTable.TabIndex = 43;
+            this._cmdSTable.Text = "&S-Table";
+            this._cmdSTable.UseVisualStyleBackColor = false;
+            this._cmdSTable.Click += new System.EventHandler(this.cmdSTable_Click);
             // 
-            // chkSadler
+            // _chkSadler
             // 
-            _chkSadler.BackColor = SystemColors.Window;
-            _chkSadler.Cursor = Cursors.Default;
-            _chkSadler.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _chkSadler.ForeColor = SystemColors.ControlText;
-            _chkSadler.Location = new Point(133, 501);
-            _chkSadler.Name = "_chkSadler";
-            _chkSadler.RightToLeft = RightToLeft.No;
-            _chkSadler.Size = new Size(132, 17);
-            _chkSadler.TabIndex = 62;
-            _chkSadler.Text = "Use Sadler Technique";
-            _chkSadler.UseVisualStyleBackColor = false;
-            _chkSadler.Visible = false;
+            this._chkSadler.BackColor = System.Drawing.SystemColors.Window;
+            this._chkSadler.Cursor = System.Windows.Forms.Cursors.Default;
+            this._chkSadler.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._chkSadler.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._chkSadler.Location = new System.Drawing.Point(133, 501);
+            this._chkSadler.Name = "_chkSadler";
+            this._chkSadler.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._chkSadler.Size = new System.Drawing.Size(132, 17);
+            this._chkSadler.TabIndex = 62;
+            this._chkSadler.Text = "Use Sadler Technique";
+            this._chkSadler.UseVisualStyleBackColor = false;
+            this._chkSadler.Visible = false;
+            this._chkSadler.CheckStateChanged += new System.EventHandler(this.chkSadler_CheckStateChanged);
             // 
             // frame214
             // 
-            frame214.BackColor = SystemColors.Window;
-            frame214.Controls.Add(_optdtL);
-            frame214.Controls.Add(_optdt);
-            frame214.Controls.Add(_optd);
-            frame214.Controls.Add(Label15);
-            frame214.Controls.Add(Label14);
-            frame214.Controls.Add(Label13);
-            frame214.Controls.Add(Label12);
-            frame214.Controls.Add(Label11);
-            frame214.Controls.Add(Label10);
-            frame214.Controls.Add(Label8);
-            frame214.Controls.Add(Label7);
-            frame214.Controls.Add(Label9);
-            frame214.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            frame214.ForeColor = SystemColors.ControlText;
-            frame214.Location = new Point(320, 145);
-            frame214.Name = "frame214";
-            frame214.Padding = new Padding(0);
-            frame214.RightToLeft = RightToLeft.No;
-            frame214.Size = new Size(201, 34);
-            frame214.TabIndex = 49;
-            frame214.TabStop = false;
-            frame214.Text = "Solution using";
-            frame214.Visible = false;
+            this.frame214.BackColor = System.Drawing.SystemColors.Window;
+            this.frame214.Controls.Add(this._optdtL);
+            this.frame214.Controls.Add(this._optdt);
+            this.frame214.Controls.Add(this._optd);
+            this.frame214.Controls.Add(this.Label15);
+            this.frame214.Controls.Add(this.Label14);
+            this.frame214.Controls.Add(this.Label13);
+            this.frame214.Controls.Add(this.Label12);
+            this.frame214.Controls.Add(this.Label11);
+            this.frame214.Controls.Add(this.Label10);
+            this.frame214.Controls.Add(this.Label8);
+            this.frame214.Controls.Add(this.Label7);
+            this.frame214.Controls.Add(this.Label9);
+            this.frame214.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.frame214.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.frame214.Location = new System.Drawing.Point(320, 145);
+            this.frame214.Name = "frame214";
+            this.frame214.Padding = new System.Windows.Forms.Padding(0);
+            this.frame214.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.frame214.Size = new System.Drawing.Size(201, 34);
+            this.frame214.TabIndex = 49;
+            this.frame214.TabStop = false;
+            this.frame214.Text = "Solution using";
+            this.frame214.Visible = false;
             // 
-            // optdtL
+            // _optdtL
             // 
-            _optdtL.BackColor = SystemColors.Window;
-            _optdtL.Cursor = Cursors.Default;
-            _optdtL.Font = new Font("Symbol", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(2));
-            _optdtL.ForeColor = SystemColors.ControlText;
-            _optdtL.Location = new Point(120, 14);
-            _optdtL.Name = "_optdtL";
-            _optdtL.RightToLeft = RightToLeft.No;
-            _optdtL.Size = new Size(25, 14);
-            _optdtL.TabIndex = 53;
-            _optdtL.TabStop = true;
-            _optdtL.Text = "D";
-            _optdtL.UseVisualStyleBackColor = false;
+            this._optdtL.BackColor = System.Drawing.SystemColors.Window;
+            this._optdtL.Cursor = System.Windows.Forms.Cursors.Default;
+            this._optdtL.Font = new System.Drawing.Font("Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this._optdtL.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._optdtL.Location = new System.Drawing.Point(120, 14);
+            this._optdtL.Name = "_optdtL";
+            this._optdtL.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._optdtL.Size = new System.Drawing.Size(25, 14);
+            this._optdtL.TabIndex = 53;
+            this._optdtL.TabStop = true;
+            this._optdtL.Text = "D";
+            this._optdtL.UseVisualStyleBackColor = false;
+            this._optdtL.CheckedChanged += new System.EventHandler(this.optdtL_CheckedChanged);
             // 
-            // optdt
+            // _optdt
             // 
-            _optdt.BackColor = SystemColors.Window;
-            _optdt.Cursor = Cursors.Default;
-            _optdt.Font = new Font("Symbol", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(2));
-            _optdt.ForeColor = SystemColors.ControlText;
-            _optdt.Location = new Point(56, 14);
-            _optdt.Name = "_optdt";
-            _optdt.RightToLeft = RightToLeft.No;
-            _optdt.Size = new Size(25, 14);
-            _optdt.TabIndex = 51;
-            _optdt.TabStop = true;
-            _optdt.Text = "D";
-            _optdt.UseVisualStyleBackColor = false;
+            this._optdt.BackColor = System.Drawing.SystemColors.Window;
+            this._optdt.Cursor = System.Windows.Forms.Cursors.Default;
+            this._optdt.Font = new System.Drawing.Font("Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this._optdt.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._optdt.Location = new System.Drawing.Point(56, 14);
+            this._optdt.Name = "_optdt";
+            this._optdt.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._optdt.Size = new System.Drawing.Size(25, 14);
+            this._optdt.TabIndex = 51;
+            this._optdt.TabStop = true;
+            this._optdt.Text = "D";
+            this._optdt.UseVisualStyleBackColor = false;
+            this._optdt.CheckedChanged += new System.EventHandler(this.optdt_CheckedChanged);
             // 
-            // optd
+            // _optd
             // 
-            _optd.BackColor = SystemColors.Window;
-            _optd.Checked = true;
-            _optd.Cursor = Cursors.Default;
-            _optd.Font = new Font("Symbol", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(2));
-            _optd.ForeColor = SystemColors.ControlText;
-            _optd.Location = new Point(8, 14);
-            _optd.Name = "_optd";
-            _optd.RightToLeft = RightToLeft.No;
-            _optd.Size = new Size(25, 14);
-            _optd.TabIndex = 50;
-            _optd.TabStop = true;
-            _optd.Text = "D";
-            _optd.UseVisualStyleBackColor = false;
+            this._optd.BackColor = System.Drawing.SystemColors.Window;
+            this._optd.Checked = true;
+            this._optd.Cursor = System.Windows.Forms.Cursors.Default;
+            this._optd.Font = new System.Drawing.Font("Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this._optd.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._optd.Location = new System.Drawing.Point(8, 14);
+            this._optd.Name = "_optd";
+            this._optd.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._optd.Size = new System.Drawing.Size(25, 14);
+            this._optd.TabIndex = 50;
+            this._optd.TabStop = true;
+            this._optd.Text = "D";
+            this._optd.UseVisualStyleBackColor = false;
+            this._optd.CheckedChanged += new System.EventHandler(this.optd_CheckedChanged);
             // 
             // Label15
             // 
-            Label15.BackColor = SystemColors.Window;
-            Label15.Cursor = Cursors.Default;
-            Label15.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label15.ForeColor = SystemColors.ControlText;
-            Label15.Location = new Point(186, 14);
-            Label15.Name = "Label15";
-            Label15.RightToLeft = RightToLeft.No;
-            Label15.Size = new Size(8, 17);
-            Label15.TabIndex = 61;
-            Label15.Text = "L";
+            this.Label15.BackColor = System.Drawing.SystemColors.Window;
+            this.Label15.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Label15.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label15.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Label15.Location = new System.Drawing.Point(186, 14);
+            this.Label15.Name = "Label15";
+            this.Label15.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Label15.Size = new System.Drawing.Size(8, 17);
+            this.Label15.TabIndex = 61;
+            this.Label15.Text = "L";
             // 
             // Label14
             // 
-            Label14.BackColor = SystemColors.Window;
-            Label14.Cursor = Cursors.Default;
-            Label14.Font = new Font("Symbol", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(2));
-            Label14.ForeColor = SystemColors.ControlText;
-            Label14.Location = new Point(176, 14);
-            Label14.Name = "Label14";
-            Label14.RightToLeft = RightToLeft.No;
-            Label14.Size = new Size(8, 17);
-            Label14.TabIndex = 60;
-            Label14.Text = "D";
+            this.Label14.BackColor = System.Drawing.SystemColors.Window;
+            this.Label14.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Label14.Font = new System.Drawing.Font("Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Label14.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Label14.Location = new System.Drawing.Point(176, 14);
+            this.Label14.Name = "Label14";
+            this.Label14.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Label14.Size = new System.Drawing.Size(8, 17);
+            this.Label14.TabIndex = 60;
+            this.Label14.Text = "D";
             // 
             // Label13
             // 
-            Label13.BackColor = SystemColors.Window;
-            Label13.Cursor = Cursors.Default;
-            Label13.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label13.ForeColor = SystemColors.ControlText;
-            Label13.Location = new Point(168, 14);
-            Label13.Name = "Label13";
-            Label13.RightToLeft = RightToLeft.No;
-            Label13.Size = new Size(8, 17);
-            Label13.TabIndex = 59;
-            Label13.Text = "t,";
+            this.Label13.BackColor = System.Drawing.SystemColors.Window;
+            this.Label13.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Label13.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label13.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Label13.Location = new System.Drawing.Point(168, 14);
+            this.Label13.Name = "Label13";
+            this.Label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Label13.Size = new System.Drawing.Size(8, 17);
+            this.Label13.TabIndex = 59;
+            this.Label13.Text = "t,";
             // 
             // Label12
             // 
-            Label12.BackColor = SystemColors.Window;
-            Label12.Cursor = Cursors.Default;
-            Label12.Font = new Font("Symbol", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(2));
-            Label12.ForeColor = SystemColors.ControlText;
-            Label12.Location = new Point(157, 14);
-            Label12.Name = "Label12";
-            Label12.RightToLeft = RightToLeft.No;
-            Label12.Size = new Size(8, 17);
-            Label12.TabIndex = 58;
-            Label12.Text = "D";
+            this.Label12.BackColor = System.Drawing.SystemColors.Window;
+            this.Label12.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Label12.Font = new System.Drawing.Font("Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Label12.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Label12.Location = new System.Drawing.Point(157, 14);
+            this.Label12.Name = "Label12";
+            this.Label12.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Label12.Size = new System.Drawing.Size(8, 17);
+            this.Label12.TabIndex = 58;
+            this.Label12.Text = "D";
             // 
             // Label11
             // 
-            Label11.BackColor = SystemColors.Window;
-            Label11.Cursor = Cursors.Default;
-            Label11.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label11.ForeColor = SystemColors.ControlText;
-            Label11.Location = new Point(147, 14);
-            Label11.Name = "Label11";
-            Label11.RightToLeft = RightToLeft.No;
-            Label11.Size = new Size(8, 17);
-            Label11.TabIndex = 57;
-            Label11.Text = "d,";
+            this.Label11.BackColor = System.Drawing.SystemColors.Window;
+            this.Label11.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Label11.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label11.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Label11.Location = new System.Drawing.Point(147, 14);
+            this.Label11.Name = "Label11";
+            this.Label11.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Label11.Size = new System.Drawing.Size(8, 17);
+            this.Label11.TabIndex = 57;
+            this.Label11.Text = "d,";
             // 
             // Label10
             // 
-            Label10.BackColor = SystemColors.Window;
-            Label10.Cursor = Cursors.Default;
-            Label10.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label10.ForeColor = SystemColors.ControlText;
-            Label10.Location = new Point(104, 14);
-            Label10.Name = "Label10";
-            Label10.RightToLeft = RightToLeft.No;
-            Label10.Size = new Size(5, 17);
-            Label10.TabIndex = 56;
-            Label10.Text = "t";
+            this.Label10.BackColor = System.Drawing.SystemColors.Window;
+            this.Label10.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Label10.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label10.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Label10.Location = new System.Drawing.Point(104, 14);
+            this.Label10.Name = "Label10";
+            this.Label10.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Label10.Size = new System.Drawing.Size(5, 17);
+            this.Label10.TabIndex = 56;
+            this.Label10.Text = "t";
             // 
             // Label8
             // 
-            Label8.BackColor = SystemColors.Window;
-            Label8.Cursor = Cursors.Default;
-            Label8.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label8.ForeColor = SystemColors.ControlText;
-            Label8.Location = new Point(84, 14);
-            Label8.Name = "Label8";
-            Label8.RightToLeft = RightToLeft.No;
-            Label8.Size = new Size(8, 14);
-            Label8.TabIndex = 55;
-            Label8.Text = "d,";
+            this.Label8.BackColor = System.Drawing.SystemColors.Window;
+            this.Label8.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Label8.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label8.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Label8.Location = new System.Drawing.Point(84, 14);
+            this.Label8.Name = "Label8";
+            this.Label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Label8.Size = new System.Drawing.Size(8, 14);
+            this.Label8.TabIndex = 55;
+            this.Label8.Text = "d,";
             // 
             // Label7
             // 
-            Label7.BackColor = SystemColors.Window;
-            Label7.Cursor = Cursors.Default;
-            Label7.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label7.ForeColor = SystemColors.ControlText;
-            Label7.Location = new Point(35, 14);
-            Label7.Name = "Label7";
-            Label7.RightToLeft = RightToLeft.No;
-            Label7.Size = new Size(5, 14);
-            Label7.TabIndex = 54;
-            Label7.Text = "d";
+            this.Label7.BackColor = System.Drawing.SystemColors.Window;
+            this.Label7.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Label7.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label7.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Label7.Location = new System.Drawing.Point(35, 14);
+            this.Label7.Name = "Label7";
+            this.Label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Label7.Size = new System.Drawing.Size(5, 14);
+            this.Label7.TabIndex = 54;
+            this.Label7.Text = "d";
             // 
             // Label9
             // 
-            Label9.BackColor = SystemColors.Window;
-            Label9.Cursor = Cursors.Default;
-            Label9.Font = new Font("Symbol", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(2));
-            Label9.ForeColor = SystemColors.ControlText;
-            Label9.Location = new Point(94, 14);
-            Label9.Name = "Label9";
-            Label9.RightToLeft = RightToLeft.No;
-            Label9.Size = new Size(8, 17);
-            Label9.TabIndex = 52;
-            Label9.Text = "D";
-            Label9.Visible = false;
+            this.Label9.BackColor = System.Drawing.SystemColors.Window;
+            this.Label9.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Label9.Font = new System.Drawing.Font("Symbol", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Label9.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Label9.Location = new System.Drawing.Point(94, 14);
+            this.Label9.Name = "Label9";
+            this.Label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Label9.Size = new System.Drawing.Size(8, 17);
+            this.Label9.TabIndex = 52;
+            this.Label9.Text = "D";
+            this.Label9.Visible = false;
             // 
-            // chkDSD
+            // _chkDSD
             // 
-            _chkDSD.BackColor = SystemColors.Window;
-            _chkDSD.Cursor = Cursors.Default;
-            _chkDSD.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _chkDSD.ForeColor = SystemColors.ControlText;
-            _chkDSD.Location = new Point(204, 157);
-            _chkDSD.Name = "_chkDSD";
-            _chkDSD.RightToLeft = RightToLeft.No;
-            _chkDSD.Size = new Size(117, 19);
-            _chkDSD.TabIndex = 47;
-            _chkDSD.Text = "Always use DSD";
-            _chkDSD.UseVisualStyleBackColor = false;
-            _chkDSD.Visible = false;
+            this._chkDSD.BackColor = System.Drawing.SystemColors.Window;
+            this._chkDSD.Cursor = System.Windows.Forms.Cursors.Default;
+            this._chkDSD.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._chkDSD.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._chkDSD.Location = new System.Drawing.Point(204, 157);
+            this._chkDSD.Name = "_chkDSD";
+            this._chkDSD.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._chkDSD.Size = new System.Drawing.Size(117, 19);
+            this._chkDSD.TabIndex = 47;
+            this._chkDSD.Text = "Always use DSD";
+            this._chkDSD.UseVisualStyleBackColor = false;
+            this._chkDSD.Visible = false;
+            this._chkDSD.CheckStateChanged += new System.EventHandler(this.chkDSD_CheckStateChanged);
             // 
             // frame211
             // 
-            frame211.BackColor = SystemColors.Window;
-            frame211.Controls.Add(_optCompact);
-            frame211.Controls.Add(_optOriginal);
-            frame211.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            frame211.ForeColor = SystemColors.ControlText;
-            frame211.Location = new Point(528, 145);
-            frame211.Name = "frame211";
-            frame211.Padding = new Padding(0);
-            frame211.RightToLeft = RightToLeft.No;
-            frame211.Size = new Size(137, 34);
-            frame211.TabIndex = 44;
-            frame211.TabStop = false;
-            frame211.Text = "Version";
-            frame211.Visible = false;
+            this.frame211.BackColor = System.Drawing.SystemColors.Window;
+            this.frame211.Controls.Add(this._optCompact);
+            this.frame211.Controls.Add(this._optOriginal);
+            this.frame211.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.frame211.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.frame211.Location = new System.Drawing.Point(528, 145);
+            this.frame211.Name = "frame211";
+            this.frame211.Padding = new System.Windows.Forms.Padding(0);
+            this.frame211.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.frame211.Size = new System.Drawing.Size(137, 34);
+            this.frame211.TabIndex = 44;
+            this.frame211.TabStop = false;
+            this.frame211.Text = "Version";
+            this.frame211.Visible = false;
             // 
-            // optCompact
+            // _optCompact
             // 
-            _optCompact.BackColor = SystemColors.Window;
-            _optCompact.Checked = true;
-            _optCompact.Cursor = Cursors.Default;
-            _optCompact.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _optCompact.ForeColor = SystemColors.ControlText;
-            _optCompact.Location = new Point(4, 14);
-            _optCompact.Name = "_optCompact";
-            _optCompact.RightToLeft = RightToLeft.No;
-            _optCompact.Size = new Size(67, 17);
-            _optCompact.TabIndex = 46;
-            _optCompact.TabStop = true;
-            _optCompact.Text = "Compact";
-            _optCompact.UseVisualStyleBackColor = false;
+            this._optCompact.BackColor = System.Drawing.SystemColors.Window;
+            this._optCompact.Checked = true;
+            this._optCompact.Cursor = System.Windows.Forms.Cursors.Default;
+            this._optCompact.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._optCompact.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._optCompact.Location = new System.Drawing.Point(4, 14);
+            this._optCompact.Name = "_optCompact";
+            this._optCompact.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._optCompact.Size = new System.Drawing.Size(67, 17);
+            this._optCompact.TabIndex = 46;
+            this._optCompact.TabStop = true;
+            this._optCompact.Text = "Compact";
+            this._optCompact.UseVisualStyleBackColor = false;
+            this._optCompact.CheckedChanged += new System.EventHandler(this.optCompact_CheckedChanged);
             // 
-            // optOriginal
+            // _optOriginal
             // 
-            _optOriginal.BackColor = SystemColors.Window;
-            _optOriginal.Cursor = Cursors.Default;
-            _optOriginal.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _optOriginal.ForeColor = SystemColors.ControlText;
-            _optOriginal.Location = new Point(72, 14);
-            _optOriginal.Name = "_optOriginal";
-            _optOriginal.RightToLeft = RightToLeft.No;
-            _optOriginal.Size = new Size(61, 17);
-            _optOriginal.TabIndex = 45;
-            _optOriginal.TabStop = true;
-            _optOriginal.Text = "Original";
-            _optOriginal.UseVisualStyleBackColor = false;
+            this._optOriginal.BackColor = System.Drawing.SystemColors.Window;
+            this._optOriginal.Cursor = System.Windows.Forms.Cursors.Default;
+            this._optOriginal.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._optOriginal.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._optOriginal.Location = new System.Drawing.Point(72, 14);
+            this._optOriginal.Name = "_optOriginal";
+            this._optOriginal.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._optOriginal.Size = new System.Drawing.Size(61, 17);
+            this._optOriginal.TabIndex = 45;
+            this._optOriginal.TabStop = true;
+            this._optOriginal.Text = "Original";
+            this._optOriginal.UseVisualStyleBackColor = false;
+            this._optOriginal.CheckedChanged += new System.EventHandler(this.optOriginal_CheckedChanged);
             // 
-            // cmd208
+            // _cmd208
             // 
-            _cmd208.BackColor = SystemColors.Control;
-            _cmd208.Cursor = Cursors.Default;
-            _cmd208.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cmd208.ForeColor = SystemColors.ControlText;
-            _cmd208.Location = new Point(608, 88);
-            _cmd208.Name = "_cmd208";
-            _cmd208.RightToLeft = RightToLeft.No;
-            _cmd208.Size = new Size(57, 25);
-            _cmd208.TabIndex = 41;
-            _cmd208.Text = "H.O. 20&8";
-            _cmd208.UseVisualStyleBackColor = false;
+            this._cmd208.BackColor = System.Drawing.SystemColors.Control;
+            this._cmd208.Cursor = System.Windows.Forms.Cursors.Default;
+            this._cmd208.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cmd208.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._cmd208.Location = new System.Drawing.Point(608, 88);
+            this._cmd208.Name = "_cmd208";
+            this._cmd208.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._cmd208.Size = new System.Drawing.Size(57, 25);
+            this._cmd208.TabIndex = 41;
+            this._cmd208.Text = "H.O. 20&8";
+            this._cmd208.UseVisualStyleBackColor = false;
+            this._cmd208.Click += new System.EventHandler(this.cmd208_Click);
             // 
-            // cmd211
+            // _cmd211
             // 
-            _cmd211.BackColor = SystemColors.Control;
-            _cmd211.Cursor = Cursors.Default;
-            _cmd211.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cmd211.ForeColor = SystemColors.ControlText;
-            _cmd211.Location = new Point(608, 56);
-            _cmd211.Name = "_cmd211";
-            _cmd211.RightToLeft = RightToLeft.No;
-            _cmd211.Size = new Size(57, 25);
-            _cmd211.TabIndex = 40;
-            _cmd211.Text = "H.O. 21&1";
-            _cmd211.UseVisualStyleBackColor = false;
+            this._cmd211.BackColor = System.Drawing.SystemColors.Control;
+            this._cmd211.Cursor = System.Windows.Forms.Cursors.Default;
+            this._cmd211.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cmd211.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._cmd211.Location = new System.Drawing.Point(608, 56);
+            this._cmd211.Name = "_cmd211";
+            this._cmd211.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._cmd211.Size = new System.Drawing.Size(57, 25);
+            this._cmd211.TabIndex = 40;
+            this._cmd211.Text = "H.O. 21&1";
+            this._cmd211.UseVisualStyleBackColor = false;
+            this._cmd211.Click += new System.EventHandler(this.cmd211_Click);
             // 
-            // cmd214
+            // _cmd214
             // 
-            _cmd214.BackColor = SystemColors.Control;
-            _cmd214.Cursor = Cursors.Default;
-            _cmd214.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cmd214.ForeColor = SystemColors.ControlText;
-            _cmd214.Location = new Point(536, 88);
-            _cmd214.Name = "_cmd214";
-            _cmd214.RightToLeft = RightToLeft.No;
-            _cmd214.Size = new Size(65, 25);
-            _cmd214.TabIndex = 39;
-            _cmd214.Text = "H.O. 21&4";
-            _cmd214.UseVisualStyleBackColor = false;
+            this._cmd214.BackColor = System.Drawing.SystemColors.Control;
+            this._cmd214.Cursor = System.Windows.Forms.Cursors.Default;
+            this._cmd214.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cmd214.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._cmd214.Location = new System.Drawing.Point(536, 88);
+            this._cmd214.Name = "_cmd214";
+            this._cmd214.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._cmd214.Size = new System.Drawing.Size(65, 25);
+            this._cmd214.TabIndex = 39;
+            this._cmd214.Text = "H.O. 21&4";
+            this._cmd214.UseVisualStyleBackColor = false;
+            this._cmd214.Click += new System.EventHandler(this.cmd214_Click);
             // 
-            // cmd229
+            // _cmd229
             // 
-            _cmd229.BackColor = SystemColors.Control;
-            _cmd229.Cursor = Cursors.Default;
-            _cmd229.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cmd229.ForeColor = SystemColors.ControlText;
-            _cmd229.Location = new Point(536, 56);
-            _cmd229.Name = "_cmd229";
-            _cmd229.RightToLeft = RightToLeft.No;
-            _cmd229.Size = new Size(65, 25);
-            _cmd229.TabIndex = 38;
-            _cmd229.Text = "Pub. 22&9";
-            _cmd229.UseVisualStyleBackColor = false;
+            this._cmd229.BackColor = System.Drawing.SystemColors.Control;
+            this._cmd229.Cursor = System.Windows.Forms.Cursors.Default;
+            this._cmd229.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cmd229.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._cmd229.Location = new System.Drawing.Point(536, 56);
+            this._cmd229.Name = "_cmd229";
+            this._cmd229.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._cmd229.Size = new System.Drawing.Size(65, 25);
+            this._cmd229.TabIndex = 38;
+            this._cmd229.Text = "Pub. 22&9";
+            this._cmd229.UseVisualStyleBackColor = false;
+            this._cmd229.Click += new System.EventHandler(this.cmd229_Click);
             // 
-            // cmd249
+            // _cmd249
             // 
-            _cmd249.BackColor = SystemColors.Control;
-            _cmd249.Cursor = Cursors.Default;
-            _cmd249.Font = new Font("Arial", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cmd249.ForeColor = SystemColors.ControlText;
-            _cmd249.Location = new Point(536, 24);
-            _cmd249.Name = "_cmd249";
-            _cmd249.RightToLeft = RightToLeft.No;
-            _cmd249.Size = new Size(128, 25);
-            _cmd249.TabIndex = 37;
-            _cmd249.Text = "Pub. &249 Vol. 2 && 3";
-            _cmd249.UseVisualStyleBackColor = false;
+            this._cmd249.BackColor = System.Drawing.SystemColors.Control;
+            this._cmd249.Cursor = System.Windows.Forms.Cursors.Default;
+            this._cmd249.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cmd249.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._cmd249.Location = new System.Drawing.Point(536, 24);
+            this._cmd249.Name = "_cmd249";
+            this._cmd249.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._cmd249.Size = new System.Drawing.Size(128, 25);
+            this._cmd249.TabIndex = 37;
+            this._cmd249.Text = "Pub. &249 Vol. 2 && 3";
+            this._cmd249.UseVisualStyleBackColor = false;
+            this._cmd249.Click += new System.EventHandler(this.cmd249_Click);
             // 
-            // cmdClearSome
+            // _cmdClearSome
             // 
-            _cmdClearSome.BackColor = SystemColors.Control;
-            _cmdClearSome.Cursor = Cursors.Default;
-            _cmdClearSome.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cmdClearSome.ForeColor = SystemColors.ControlText;
-            _cmdClearSome.Location = new Point(90, 467);
-            _cmdClearSome.Name = "_cmdClearSome";
-            _cmdClearSome.RightToLeft = RightToLeft.No;
-            _cmdClearSome.Size = new Size(97, 25);
-            _cmdClearSome.TabIndex = 70;
-            _cmdClearSome.Text = "&Clear except DR";
-            _cmdClearSome.UseVisualStyleBackColor = false;
+            this._cmdClearSome.BackColor = System.Drawing.SystemColors.Control;
+            this._cmdClearSome.Cursor = System.Windows.Forms.Cursors.Default;
+            this._cmdClearSome.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cmdClearSome.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._cmdClearSome.Location = new System.Drawing.Point(90, 467);
+            this._cmdClearSome.Name = "_cmdClearSome";
+            this._cmdClearSome.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._cmdClearSome.Size = new System.Drawing.Size(97, 25);
+            this._cmdClearSome.TabIndex = 70;
+            this._cmdClearSome.Text = "&Clear except DR";
+            this._cmdClearSome.UseVisualStyleBackColor = false;
+            this._cmdClearSome.Click += new System.EventHandler(this.cmdClearSome_Click);
             // 
-            // cmdClear
+            // _cmdClear
             // 
-            _cmdClear.BackColor = SystemColors.Control;
-            _cmdClear.Cursor = Cursors.Default;
-            _cmdClear.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cmdClear.ForeColor = SystemColors.ControlText;
-            _cmdClear.Location = new Point(3, 468);
-            _cmdClear.Name = "_cmdClear";
-            _cmdClear.RightToLeft = RightToLeft.No;
-            _cmdClear.Size = new Size(81, 25);
-            _cmdClear.TabIndex = 71;
-            _cmdClear.Text = "Clear &All";
-            _cmdClear.UseVisualStyleBackColor = false;
+            this._cmdClear.BackColor = System.Drawing.SystemColors.Control;
+            this._cmdClear.Cursor = System.Windows.Forms.Cursors.Default;
+            this._cmdClear.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cmdClear.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._cmdClear.Location = new System.Drawing.Point(3, 468);
+            this._cmdClear.Name = "_cmdClear";
+            this._cmdClear.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._cmdClear.Size = new System.Drawing.Size(81, 25);
+            this._cmdClear.TabIndex = 71;
+            this._cmdClear.Text = "Clear &All";
+            this._cmdClear.UseVisualStyleBackColor = false;
+            this._cmdClear.Click += new System.EventHandler(this.cmdClear_Click);
             // 
-            // cmdFix
+            // _cmdFix
             // 
-            _cmdFix.BackColor = SystemColors.Control;
-            _cmdFix.Cursor = Cursors.Default;
-            _cmdFix.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cmdFix.ForeColor = SystemColors.ControlText;
-            _cmdFix.Location = new Point(2, 497);
-            _cmdFix.Name = "_cmdFix";
-            _cmdFix.RightToLeft = RightToLeft.No;
-            _cmdFix.Size = new Size(111, 25);
-            _cmdFix.TabIndex = 68;
-            _cmdFix.Text = "&Establish Fix";
-            _cmdFix.UseVisualStyleBackColor = false;
-            _cmdFix.Visible = false;
+            this._cmdFix.BackColor = System.Drawing.SystemColors.Control;
+            this._cmdFix.Cursor = System.Windows.Forms.Cursors.Default;
+            this._cmdFix.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cmdFix.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._cmdFix.Location = new System.Drawing.Point(2, 497);
+            this._cmdFix.Name = "_cmdFix";
+            this._cmdFix.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._cmdFix.Size = new System.Drawing.Size(111, 25);
+            this._cmdFix.TabIndex = 68;
+            this._cmdFix.Text = "&Establish Fix";
+            this._cmdFix.UseVisualStyleBackColor = false;
+            this._cmdFix.Visible = false;
+            this._cmdFix.Click += new System.EventHandler(this.cmdFix_Click);
             // 
-            // cmdSave
+            // _cmdSave
             // 
-            _cmdSave.BackColor = SystemColors.Control;
-            _cmdSave.Cursor = Cursors.Default;
-            _cmdSave.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cmdSave.ForeColor = SystemColors.ControlText;
-            _cmdSave.Location = new Point(3, 525);
-            _cmdSave.Name = "_cmdSave";
-            _cmdSave.RightToLeft = RightToLeft.No;
-            _cmdSave.Size = new Size(110, 25);
-            _cmdSave.TabIndex = 67;
-            _cmdSave.Text = "Save for LOC Fix";
-            _cmdSave.UseVisualStyleBackColor = false;
-            _cmdSave.Visible = false;
+            this._cmdSave.BackColor = System.Drawing.SystemColors.Control;
+            this._cmdSave.Cursor = System.Windows.Forms.Cursors.Default;
+            this._cmdSave.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cmdSave.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._cmdSave.Location = new System.Drawing.Point(3, 525);
+            this._cmdSave.Name = "_cmdSave";
+            this._cmdSave.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._cmdSave.Size = new System.Drawing.Size(110, 25);
+            this._cmdSave.TabIndex = 67;
+            this._cmdSave.Text = "Save for LOC Fix";
+            this._cmdSave.UseVisualStyleBackColor = false;
+            this._cmdSave.Visible = false;
+            this._cmdSave.Click += new System.EventHandler(this.cmdSave_Click);
             // 
             // frameNASRUsing
             // 
-            frameNASRUsing.BackColor = SystemColors.Window;
-            frameNASRUsing.Controls.Add(_optNATable);
-            frameNASRUsing.Controls.Add(_optUSPSTable);
-            frameNASRUsing.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            frameNASRUsing.ForeColor = SystemColors.ControlText;
-            frameNASRUsing.Location = new Point(8, 398);
-            frameNASRUsing.Name = "frameNASRUsing";
-            frameNASRUsing.Padding = new Padding(0);
-            frameNASRUsing.RightToLeft = RightToLeft.No;
-            frameNASRUsing.Size = new Size(171, 57);
-            frameNASRUsing.TabIndex = 31;
-            frameNASRUsing.TabStop = false;
-            frameNASRUsing.Text = "Use Auxiliary Table from";
-            frameNASRUsing.Visible = false;
+            this.frameNASRUsing.BackColor = System.Drawing.SystemColors.Window;
+            this.frameNASRUsing.Controls.Add(this._optNATable);
+            this.frameNASRUsing.Controls.Add(this._optUSPSTable);
+            this.frameNASRUsing.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.frameNASRUsing.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.frameNASRUsing.Location = new System.Drawing.Point(8, 398);
+            this.frameNASRUsing.Name = "frameNASRUsing";
+            this.frameNASRUsing.Padding = new System.Windows.Forms.Padding(0);
+            this.frameNASRUsing.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.frameNASRUsing.Size = new System.Drawing.Size(171, 57);
+            this.frameNASRUsing.TabIndex = 31;
+            this.frameNASRUsing.TabStop = false;
+            this.frameNASRUsing.Text = "Use Auxiliary Table from";
+            this.frameNASRUsing.Visible = false;
             // 
-            // optNATable
+            // _optNATable
             // 
-            _optNATable.BackColor = SystemColors.Window;
-            _optNATable.Checked = true;
-            _optNATable.Cursor = Cursors.Default;
-            _optNATable.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _optNATable.ForeColor = SystemColors.ControlText;
-            _optNATable.Location = new Point(8, 16);
-            _optNATable.Name = "_optNATable";
-            _optNATable.RightToLeft = RightToLeft.No;
-            _optNATable.Size = new Size(164, 17);
-            _optNATable.TabIndex = 33;
-            _optNATable.TabStop = true;
-            _optNATable.Text = "Pre-1999/post-2004 Almanac ";
-            _optNATable.UseVisualStyleBackColor = false;
+            this._optNATable.BackColor = System.Drawing.SystemColors.Window;
+            this._optNATable.Checked = true;
+            this._optNATable.Cursor = System.Windows.Forms.Cursors.Default;
+            this._optNATable.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._optNATable.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._optNATable.Location = new System.Drawing.Point(8, 16);
+            this._optNATable.Name = "_optNATable";
+            this._optNATable.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._optNATable.Size = new System.Drawing.Size(164, 17);
+            this._optNATable.TabIndex = 33;
+            this._optNATable.TabStop = true;
+            this._optNATable.Text = "Pre-1999/post-2004 Almanac ";
+            this._optNATable.UseVisualStyleBackColor = false;
+            this._optNATable.CheckedChanged += new System.EventHandler(this.optNATable_CheckedChanged);
             // 
-            // optUSPSTable
+            // _optUSPSTable
             // 
-            _optUSPSTable.BackColor = SystemColors.Window;
-            _optUSPSTable.Cursor = Cursors.Default;
-            _optUSPSTable.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _optUSPSTable.ForeColor = SystemColors.ControlText;
-            _optUSPSTable.Location = new Point(8, 32);
-            _optUSPSTable.Name = "_optUSPSTable";
-            _optUSPSTable.RightToLeft = RightToLeft.No;
-            _optUSPSTable.Size = new Size(120, 17);
-            _optUSPSTable.TabIndex = 32;
-            _optUSPSTable.TabStop = true;
-            _optUSPSTable.Text = "1999-2004 Almanac";
-            _optUSPSTable.UseVisualStyleBackColor = false;
+            this._optUSPSTable.BackColor = System.Drawing.SystemColors.Window;
+            this._optUSPSTable.Cursor = System.Windows.Forms.Cursors.Default;
+            this._optUSPSTable.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._optUSPSTable.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._optUSPSTable.Location = new System.Drawing.Point(8, 32);
+            this._optUSPSTable.Name = "_optUSPSTable";
+            this._optUSPSTable.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._optUSPSTable.Size = new System.Drawing.Size(120, 17);
+            this._optUSPSTable.TabIndex = 32;
+            this._optUSPSTable.TabStop = true;
+            this._optUSPSTable.Text = "1999-2004 Almanac";
+            this._optUSPSTable.UseVisualStyleBackColor = false;
+            this._optUSPSTable.CheckedChanged += new System.EventHandler(this.optUSPSTable_CheckedChanged);
             // 
-            // cmdNASR
+            // _cmdNASR
             // 
-            _cmdNASR.BackColor = SystemColors.Control;
-            _cmdNASR.Cursor = Cursors.Default;
-            _cmdNASR.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cmdNASR.ForeColor = SystemColors.ControlText;
-            _cmdNASR.Location = new Point(424, 52);
-            _cmdNASR.Name = "_cmdNASR";
-            _cmdNASR.RightToLeft = RightToLeft.No;
-            _cmdNASR.Size = new Size(97, 25);
-            _cmdNASR.TabIndex = 30;
-            _cmdNASR.Text = "&NASR";
-            _cmdNASR.UseVisualStyleBackColor = false;
+            this._cmdNASR.BackColor = System.Drawing.SystemColors.Control;
+            this._cmdNASR.Cursor = System.Windows.Forms.Cursors.Default;
+            this._cmdNASR.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cmdNASR.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._cmdNASR.Location = new System.Drawing.Point(424, 52);
+            this._cmdNASR.Name = "_cmdNASR";
+            this._cmdNASR.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._cmdNASR.Size = new System.Drawing.Size(97, 25);
+            this._cmdNASR.TabIndex = 30;
+            this._cmdNASR.Text = "&NASR";
+            this._cmdNASR.UseVisualStyleBackColor = false;
+            this._cmdNASR.Click += new System.EventHandler(this.cmdNASR_Click);
             // 
-            // cmdLawOfCosines
+            // _cmdLawOfCosines
             // 
-            _cmdLawOfCosines.BackColor = SystemColors.Control;
-            _cmdLawOfCosines.Cursor = Cursors.Default;
-            _cmdLawOfCosines.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cmdLawOfCosines.ForeColor = SystemColors.ControlText;
-            _cmdLawOfCosines.Location = new Point(424, 24);
-            _cmdLawOfCosines.Name = "_cmdLawOfCosines";
-            _cmdLawOfCosines.RightToLeft = RightToLeft.No;
-            _cmdLawOfCosines.Size = new Size(97, 25);
-            _cmdLawOfCosines.TabIndex = 29;
-            _cmdLawOfCosines.Text = "&Law of Cosines";
-            _cmdLawOfCosines.UseVisualStyleBackColor = false;
+            this._cmdLawOfCosines.BackColor = System.Drawing.SystemColors.Control;
+            this._cmdLawOfCosines.Cursor = System.Windows.Forms.Cursors.Default;
+            this._cmdLawOfCosines.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cmdLawOfCosines.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._cmdLawOfCosines.Location = new System.Drawing.Point(424, 24);
+            this._cmdLawOfCosines.Name = "_cmdLawOfCosines";
+            this._cmdLawOfCosines.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._cmdLawOfCosines.Size = new System.Drawing.Size(97, 25);
+            this._cmdLawOfCosines.TabIndex = 29;
+            this._cmdLawOfCosines.Text = "&Law of Cosines";
+            this._cmdLawOfCosines.UseVisualStyleBackColor = false;
+            this._cmdLawOfCosines.Click += new System.EventHandler(this.cmdLawOfCosines_Click);
             // 
-            // cboDec
+            // _cboDec
             // 
-            _cboDec.BackColor = SystemColors.Window;
-            _cboDec.Cursor = Cursors.Default;
-            _cboDec.DropDownStyle = ComboBoxStyle.DropDownList;
-            _cboDec.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cboDec.ForeColor = SystemColors.WindowText;
-            _cboDec.Items.AddRange(new object[] { "N", "S" });
-            _cboDec.Location = new Point(120, 34);
-            _cboDec.Name = "_cboDec";
-            _cboDec.RightToLeft = RightToLeft.No;
-            _cboDec.Size = new Size(41, 22);
-            _cboDec.TabIndex = 4;
+            this._cboDec.BackColor = System.Drawing.SystemColors.Window;
+            this._cboDec.Cursor = System.Windows.Forms.Cursors.Default;
+            this._cboDec.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cboDec.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cboDec.ForeColor = System.Drawing.SystemColors.WindowText;
+            this._cboDec.Items.AddRange(new object[] {
+            "N",
+            "S"});
+            this._cboDec.Location = new System.Drawing.Point(120, 34);
+            this._cboDec.Name = "_cboDec";
+            this._cboDec.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._cboDec.Size = new System.Drawing.Size(41, 22);
+            this._cboDec.TabIndex = 4;
+            this._cboDec.SelectedIndexChanged += new System.EventHandler(this.CboDec_SelectedIndexChanged);
             // 
             // cboL
             // 
-            cboL.BackColor = SystemColors.Window;
-            cboL.Cursor = Cursors.Default;
-            cboL.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboL.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            cboL.ForeColor = SystemColors.WindowText;
-            cboL.Items.AddRange(new object[] { "N", "S" });
-            cboL.Location = new Point(336, 8);
-            cboL.Name = "cboL";
-            cboL.RightToLeft = RightToLeft.No;
-            cboL.Size = new Size(41, 22);
-            cboL.TabIndex = 9;
+            this.cboL.BackColor = System.Drawing.SystemColors.Window;
+            this.cboL.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cboL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboL.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboL.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.cboL.Items.AddRange(new object[] {
+            "N",
+            "S"});
+            this.cboL.Location = new System.Drawing.Point(336, 8);
+            this.cboL.Name = "cboL";
+            this.cboL.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cboL.Size = new System.Drawing.Size(41, 22);
+            this.cboL.TabIndex = 9;
             // 
             // cboLo
             // 
-            cboLo.BackColor = SystemColors.Window;
-            cboLo.Cursor = Cursors.Default;
-            cboLo.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboLo.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            cboLo.ForeColor = SystemColors.WindowText;
-            cboLo.Items.AddRange(new object[] { "W", "E" });
-            cboLo.Location = new Point(336, 31);
-            cboLo.Name = "cboLo";
-            cboLo.RightToLeft = RightToLeft.No;
-            cboLo.Size = new Size(41, 22);
-            cboLo.TabIndex = 12;
+            this.cboLo.BackColor = System.Drawing.SystemColors.Window;
+            this.cboLo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cboLo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboLo.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboLo.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.cboLo.Items.AddRange(new object[] {
+            "W",
+            "E"});
+            this.cboLo.Location = new System.Drawing.Point(336, 31);
+            this.cboLo.Name = "cboLo";
+            this.cboLo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cboLo.Size = new System.Drawing.Size(41, 22);
+            this.cboLo.TabIndex = 12;
             // 
             // Label6
             // 
-            Label6.BackColor = SystemColors.Window;
-            Label6.Cursor = Cursors.Default;
-            Label6.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label6.ForeColor = SystemColors.ControlText;
-            Label6.Location = new Point(427, 6);
-            Label6.Name = "Label6";
-            Label6.RightToLeft = RightToLeft.No;
-            Label6.Size = new Size(213, 17);
-            Label6.TabIndex = 48;
-            Label6.Text = "Select Sight Reduction Method";
-            Label6.TextAlign = ContentAlignment.MiddleCenter;
+            this.Label6.BackColor = System.Drawing.SystemColors.Window;
+            this.Label6.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Label6.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Label6.Location = new System.Drawing.Point(427, 6);
+            this.Label6.Name = "Label6";
+            this.Label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Label6.Size = new System.Drawing.Size(213, 17);
+            this.Label6.TabIndex = 48;
+            this.Label6.Text = "Select Sight Reduction Method";
+            this.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Label5
             // 
-            Label5.BackColor = SystemColors.Window;
-            Label5.BorderStyle = BorderStyle.FixedSingle;
-            Label5.Cursor = Cursors.Default;
-            Label5.Font = new Font("Arial", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label5.ForeColor = SystemColors.ControlText;
-            Label5.Location = new Point(8, 81);
-            Label5.Name = "Label5";
-            Label5.RightToLeft = RightToLeft.No;
-            Label5.Size = new Size(281, 34);
-            Label5.TabIndex = 36;
-            Label5.Text = "To use LHA instead of GHA, enter LHA  in place of GHA and set DR Lo to zero or le" + "ave blank.";
-            Label5.TextAlign = ContentAlignment.MiddleCenter;
+            this.Label5.BackColor = System.Drawing.SystemColors.Window;
+            this.Label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Label5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Label5.Location = new System.Drawing.Point(8, 81);
+            this.Label5.Name = "Label5";
+            this.Label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Label5.Size = new System.Drawing.Size(281, 34);
+            this.Label5.TabIndex = 36;
+            this.Label5.Text = "To use LHA instead of GHA, enter LHA  in place of GHA and set DR Lo to zero or le" +
+    "ave blank.";
+            this.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Label4
             // 
-            Label4.BackColor = SystemColors.Window;
-            Label4.BorderStyle = BorderStyle.FixedSingle;
-            Label4.Cursor = Cursors.Default;
-            Label4.Font = new Font("Arial", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label4.ForeColor = SystemColors.ControlText;
-            Label4.Location = new Point(290, 81);
-            Label4.Name = "Label4";
-            Label4.RightToLeft = RightToLeft.No;
-            Label4.Size = new Size(231, 34);
-            Label4.TabIndex = 35;
-            Label4.Text = "Time is only required for establishing a fix from a moving vessel using Law of Co" + "sines.";
+            this.Label4.BackColor = System.Drawing.SystemColors.Window;
+            this.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Label4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Label4.Location = new System.Drawing.Point(290, 81);
+            this.Label4.Name = "Label4";
+            this.Label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Label4.Size = new System.Drawing.Size(231, 34);
+            this.Label4.TabIndex = 35;
+            this.Label4.Text = "Time is only required for establishing a fix from a moving vessel using Law of Co" +
+    "sines.";
             // 
             // lblHoMin
             // 
-            lblHoMin.BackColor = SystemColors.Window;
-            lblHoMin.Cursor = Cursors.Default;
-            lblHoMin.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            lblHoMin.ForeColor = SystemColors.ControlText;
-            lblHoMin.Location = new Point(113, 58);
-            lblHoMin.Name = "lblHoMin";
-            lblHoMin.RightToLeft = RightToLeft.No;
-            lblHoMin.Size = new Size(9, 17);
-            lblHoMin.TabIndex = 28;
-            lblHoMin.Text = "'";
+            this.lblHoMin.BackColor = System.Drawing.SystemColors.Window;
+            this.lblHoMin.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblHoMin.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoMin.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblHoMin.Location = new System.Drawing.Point(113, 58);
+            this.lblHoMin.Name = "lblHoMin";
+            this.lblHoMin.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblHoMin.Size = new System.Drawing.Size(9, 17);
+            this.lblHoMin.TabIndex = 28;
+            this.lblHoMin.Text = "\'";
             // 
             // lblDecMin
             // 
-            lblDecMin.BackColor = SystemColors.Window;
-            lblDecMin.Cursor = Cursors.Default;
-            lblDecMin.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            lblDecMin.ForeColor = SystemColors.ControlText;
-            lblDecMin.Location = new Point(113, 34);
-            lblDecMin.Name = "lblDecMin";
-            lblDecMin.RightToLeft = RightToLeft.No;
-            lblDecMin.Size = new Size(9, 17);
-            lblDecMin.TabIndex = 27;
-            lblDecMin.Text = "'";
+            this.lblDecMin.BackColor = System.Drawing.SystemColors.Window;
+            this.lblDecMin.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblDecMin.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDecMin.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblDecMin.Location = new System.Drawing.Point(113, 34);
+            this.lblDecMin.Name = "lblDecMin";
+            this.lblDecMin.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblDecMin.Size = new System.Drawing.Size(9, 17);
+            this.lblDecMin.TabIndex = 27;
+            this.lblDecMin.Text = "\'";
             // 
             // lblGHAMin
             // 
-            lblGHAMin.BackColor = SystemColors.Window;
-            lblGHAMin.Cursor = Cursors.Default;
-            lblGHAMin.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            lblGHAMin.ForeColor = SystemColors.ControlText;
-            lblGHAMin.Location = new Point(113, 10);
-            lblGHAMin.Name = "lblGHAMin";
-            lblGHAMin.RightToLeft = RightToLeft.No;
-            lblGHAMin.Size = new Size(9, 17);
-            lblGHAMin.TabIndex = 26;
-            lblGHAMin.Text = "'";
+            this.lblGHAMin.BackColor = System.Drawing.SystemColors.Window;
+            this.lblGHAMin.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblGHAMin.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGHAMin.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblGHAMin.Location = new System.Drawing.Point(113, 10);
+            this.lblGHAMin.Name = "lblGHAMin";
+            this.lblGHAMin.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblGHAMin.Size = new System.Drawing.Size(9, 17);
+            this.lblGHAMin.TabIndex = 26;
+            this.lblGHAMin.Text = "\'";
             // 
             // lblHoDeg
             // 
-            lblHoDeg.BackColor = SystemColors.Window;
-            lblHoDeg.Cursor = Cursors.Default;
-            lblHoDeg.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            lblHoDeg.ForeColor = SystemColors.ControlText;
-            lblHoDeg.Location = new Point(73, 58);
-            lblHoDeg.Name = "lblHoDeg";
-            lblHoDeg.RightToLeft = RightToLeft.No;
-            lblHoDeg.Size = new Size(9, 17);
-            lblHoDeg.TabIndex = 25;
-            lblHoDeg.Text = "°";
+            this.lblHoDeg.BackColor = System.Drawing.SystemColors.Window;
+            this.lblHoDeg.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblHoDeg.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoDeg.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblHoDeg.Location = new System.Drawing.Point(73, 58);
+            this.lblHoDeg.Name = "lblHoDeg";
+            this.lblHoDeg.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblHoDeg.Size = new System.Drawing.Size(9, 17);
+            this.lblHoDeg.TabIndex = 25;
+            this.lblHoDeg.Text = "°";
             // 
             // lblDecDeg
             // 
-            lblDecDeg.BackColor = SystemColors.Window;
-            lblDecDeg.Cursor = Cursors.Default;
-            lblDecDeg.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            lblDecDeg.ForeColor = SystemColors.ControlText;
-            lblDecDeg.Location = new Point(73, 34);
-            lblDecDeg.Name = "lblDecDeg";
-            lblDecDeg.RightToLeft = RightToLeft.No;
-            lblDecDeg.Size = new Size(9, 17);
-            lblDecDeg.TabIndex = 24;
-            lblDecDeg.Text = "°";
+            this.lblDecDeg.BackColor = System.Drawing.SystemColors.Window;
+            this.lblDecDeg.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblDecDeg.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDecDeg.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblDecDeg.Location = new System.Drawing.Point(73, 34);
+            this.lblDecDeg.Name = "lblDecDeg";
+            this.lblDecDeg.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblDecDeg.Size = new System.Drawing.Size(9, 17);
+            this.lblDecDeg.TabIndex = 24;
+            this.lblDecDeg.Text = "°";
             // 
             // lblGHADeg
             // 
-            lblGHADeg.BackColor = SystemColors.Window;
-            lblGHADeg.Cursor = Cursors.Default;
-            lblGHADeg.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            lblGHADeg.ForeColor = SystemColors.ControlText;
-            lblGHADeg.Location = new Point(73, 10);
-            lblGHADeg.Name = "lblGHADeg";
-            lblGHADeg.RightToLeft = RightToLeft.No;
-            lblGHADeg.Size = new Size(9, 17);
-            lblGHADeg.TabIndex = 23;
-            lblGHADeg.Text = "°";
+            this.lblGHADeg.BackColor = System.Drawing.SystemColors.Window;
+            this.lblGHADeg.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblGHADeg.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGHADeg.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblGHADeg.Location = new System.Drawing.Point(73, 10);
+            this.lblGHADeg.Name = "lblGHADeg";
+            this.lblGHADeg.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblGHADeg.Size = new System.Drawing.Size(9, 17);
+            this.lblGHADeg.TabIndex = 23;
+            this.lblGHADeg.Text = "°";
             // 
             // Label3
             // 
-            Label3.BackColor = SystemColors.Window;
-            Label3.Cursor = Cursors.Default;
-            Label3.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label3.ForeColor = SystemColors.ControlText;
-            Label3.Location = new Point(8, 59);
-            Label3.Name = "Label3";
-            Label3.RightToLeft = RightToLeft.No;
-            Label3.Size = new Size(25, 17);
-            Label3.TabIndex = 22;
-            Label3.Text = "Ho";
+            this.Label3.BackColor = System.Drawing.SystemColors.Window;
+            this.Label3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Label3.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Label3.Location = new System.Drawing.Point(8, 59);
+            this.Label3.Name = "Label3";
+            this.Label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Label3.Size = new System.Drawing.Size(25, 17);
+            this.Label3.TabIndex = 22;
+            this.Label3.Text = "Ho";
             // 
             // Label2
             // 
-            Label2.BackColor = SystemColors.Window;
-            Label2.Cursor = Cursors.Default;
-            Label2.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label2.ForeColor = SystemColors.ControlText;
-            Label2.Location = new Point(7, 36);
-            Label2.Name = "Label2";
-            Label2.RightToLeft = RightToLeft.No;
-            Label2.Size = new Size(33, 17);
-            Label2.TabIndex = 21;
-            Label2.Text = "Dec";
+            this.Label2.BackColor = System.Drawing.SystemColors.Window;
+            this.Label2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Label2.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Label2.Location = new System.Drawing.Point(7, 36);
+            this.Label2.Name = "Label2";
+            this.Label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Label2.Size = new System.Drawing.Size(33, 17);
+            this.Label2.TabIndex = 21;
+            this.Label2.Text = "Dec";
             // 
             // Label1
             // 
-            Label1.BackColor = SystemColors.Window;
-            Label1.Cursor = Cursors.Default;
-            Label1.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label1.ForeColor = SystemColors.ControlText;
-            Label1.Location = new Point(7, 12);
-            Label1.Name = "Label1";
-            Label1.RightToLeft = RightToLeft.No;
-            Label1.Size = new Size(33, 17);
-            Label1.TabIndex = 20;
-            Label1.Text = "GHA";
+            this.Label1.BackColor = System.Drawing.SystemColors.Window;
+            this.Label1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Label1.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Label1.Location = new System.Drawing.Point(7, 12);
+            this.Label1.Name = "Label1";
+            this.Label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Label1.Size = new System.Drawing.Size(33, 17);
+            this.Label1.TabIndex = 20;
+            this.Label1.Text = "GHA";
             // 
             // lblDRL
             // 
-            lblDRL.BackColor = SystemColors.Window;
-            lblDRL.Cursor = Cursors.Default;
-            lblDRL.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            lblDRL.ForeColor = SystemColors.ControlText;
-            lblDRL.Location = new Point(216, 8);
-            lblDRL.Name = "lblDRL";
-            lblDRL.RightToLeft = RightToLeft.No;
-            lblDRL.Size = new Size(32, 17);
-            lblDRL.TabIndex = 19;
-            lblDRL.Text = "DR L";
+            this.lblDRL.BackColor = System.Drawing.SystemColors.Window;
+            this.lblDRL.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblDRL.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDRL.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblDRL.Location = new System.Drawing.Point(216, 8);
+            this.lblDRL.Name = "lblDRL";
+            this.lblDRL.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblDRL.Size = new System.Drawing.Size(32, 17);
+            this.lblDRL.TabIndex = 19;
+            this.lblDRL.Text = "DR L";
             // 
             // lblLDeg
             // 
-            lblLDeg.BackColor = SystemColors.Window;
-            lblLDeg.Cursor = Cursors.Default;
-            lblLDeg.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            lblLDeg.ForeColor = SystemColors.ControlText;
-            lblLDeg.Location = new Point(289, 8);
-            lblLDeg.Name = "lblLDeg";
-            lblLDeg.RightToLeft = RightToLeft.No;
-            lblLDeg.Size = new Size(9, 17);
-            lblLDeg.TabIndex = 18;
-            lblLDeg.Text = "°";
+            this.lblLDeg.BackColor = System.Drawing.SystemColors.Window;
+            this.lblLDeg.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblLDeg.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDeg.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblLDeg.Location = new System.Drawing.Point(289, 8);
+            this.lblLDeg.Name = "lblLDeg";
+            this.lblLDeg.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblLDeg.Size = new System.Drawing.Size(9, 17);
+            this.lblLDeg.TabIndex = 18;
+            this.lblLDeg.Text = "°";
             // 
             // lblLMin
             // 
-            lblLMin.BackColor = SystemColors.Window;
-            lblLMin.Cursor = Cursors.Default;
-            lblLMin.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            lblLMin.ForeColor = SystemColors.ControlText;
-            lblLMin.Location = new Point(329, 8);
-            lblLMin.Name = "lblLMin";
-            lblLMin.RightToLeft = RightToLeft.No;
-            lblLMin.Size = new Size(9, 17);
-            lblLMin.TabIndex = 17;
-            lblLMin.Text = "'";
+            this.lblLMin.BackColor = System.Drawing.SystemColors.Window;
+            this.lblLMin.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblLMin.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLMin.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblLMin.Location = new System.Drawing.Point(329, 8);
+            this.lblLMin.Name = "lblLMin";
+            this.lblLMin.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblLMin.Size = new System.Drawing.Size(9, 17);
+            this.lblLMin.TabIndex = 17;
+            this.lblLMin.Text = "\'";
             // 
             // lblDRLo
             // 
-            lblDRLo.BackColor = SystemColors.Window;
-            lblDRLo.Cursor = Cursors.Default;
-            lblDRLo.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            lblDRLo.ForeColor = SystemColors.ControlText;
-            lblDRLo.Location = new Point(216, 32);
-            lblDRLo.Name = "lblDRLo";
-            lblDRLo.RightToLeft = RightToLeft.No;
-            lblDRLo.Size = new Size(36, 17);
-            lblDRLo.TabIndex = 16;
-            lblDRLo.Text = "DR Lo";
+            this.lblDRLo.BackColor = System.Drawing.SystemColors.Window;
+            this.lblDRLo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblDRLo.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDRLo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblDRLo.Location = new System.Drawing.Point(216, 32);
+            this.lblDRLo.Name = "lblDRLo";
+            this.lblDRLo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblDRLo.Size = new System.Drawing.Size(36, 17);
+            this.lblDRLo.TabIndex = 16;
+            this.lblDRLo.Text = "DR Lo";
             // 
             // lblLoDeg
             // 
-            lblLoDeg.BackColor = SystemColors.Window;
-            lblLoDeg.Cursor = Cursors.Default;
-            lblLoDeg.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            lblLoDeg.ForeColor = SystemColors.ControlText;
-            lblLoDeg.Location = new Point(289, 32);
-            lblLoDeg.Name = "lblLoDeg";
-            lblLoDeg.RightToLeft = RightToLeft.No;
-            lblLoDeg.Size = new Size(9, 17);
-            lblLoDeg.TabIndex = 15;
-            lblLoDeg.Text = "°";
+            this.lblLoDeg.BackColor = System.Drawing.SystemColors.Window;
+            this.lblLoDeg.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblLoDeg.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoDeg.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblLoDeg.Location = new System.Drawing.Point(289, 32);
+            this.lblLoDeg.Name = "lblLoDeg";
+            this.lblLoDeg.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblLoDeg.Size = new System.Drawing.Size(9, 17);
+            this.lblLoDeg.TabIndex = 15;
+            this.lblLoDeg.Text = "°";
             // 
             // lblLoMin
             // 
-            lblLoMin.BackColor = SystemColors.Window;
-            lblLoMin.Cursor = Cursors.Default;
-            lblLoMin.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            lblLoMin.ForeColor = SystemColors.ControlText;
-            lblLoMin.Location = new Point(329, 32);
-            lblLoMin.Name = "lblLoMin";
-            lblLoMin.RightToLeft = RightToLeft.No;
-            lblLoMin.Size = new Size(9, 17);
-            lblLoMin.TabIndex = 14;
-            lblLoMin.Text = "'";
+            this.lblLoMin.BackColor = System.Drawing.SystemColors.Window;
+            this.lblLoMin.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblLoMin.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoMin.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblLoMin.Location = new System.Drawing.Point(329, 32);
+            this.lblLoMin.Name = "lblLoMin";
+            this.lblLoMin.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblLoMin.Size = new System.Drawing.Size(9, 17);
+            this.lblLoMin.TabIndex = 14;
+            this.lblLoMin.Text = "\'";
             // 
             // SRLgTxtBx
             // 
-            SRLgTxtBx.Font = new Font("Courier New", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            SRLgTxtBx.Location = new Point(2, 207);
-            SRLgTxtBx.Name = "SRLgTxtBx";
-            SRLgTxtBx.ReadOnly = true;
-            SRLgTxtBx.Size = new Size(669, 258);
-            SRLgTxtBx.TabIndex = 74;
-            SRLgTxtBx.Text = "";
+            this.SRLgTxtBx.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SRLgTxtBx.Location = new System.Drawing.Point(2, 207);
+            this.SRLgTxtBx.Name = "SRLgTxtBx";
+            this.SRLgTxtBx.ReadOnly = true;
+            this.SRLgTxtBx.Size = new System.Drawing.Size(669, 258);
+            this.SRLgTxtBx.TabIndex = 74;
+            this.SRLgTxtBx.Text = "";
             // 
-            // ExitBtn
+            // _ExitBtn
             // 
-            _ExitBtn.BackColor = Color.Red;
-            _ExitBtn.Cursor = Cursors.Default;
-            _ExitBtn.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _ExitBtn.ForeColor = SystemColors.ControlLightLight;
-            _ExitBtn.Location = new Point(591, 468);
-            _ExitBtn.Name = "_ExitBtn";
-            _ExitBtn.RightToLeft = RightToLeft.No;
-            _ExitBtn.Size = new Size(70, 25);
-            _ExitBtn.TabIndex = 75;
-            _ExitBtn.Text = "Exit";
-            _ExitBtn.UseVisualStyleBackColor = false;
+            this._ExitBtn.BackColor = System.Drawing.Color.Red;
+            this._ExitBtn.Cursor = System.Windows.Forms.Cursors.Default;
+            this._ExitBtn.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._ExitBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this._ExitBtn.Location = new System.Drawing.Point(591, 468);
+            this._ExitBtn.Name = "_ExitBtn";
+            this._ExitBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._ExitBtn.Size = new System.Drawing.Size(70, 25);
+            this._ExitBtn.TabIndex = 75;
+            this._ExitBtn.Text = "Exit";
+            this._ExitBtn.UseVisualStyleBackColor = false;
+            this._ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // SRHdrTxtBx
             // 
-            SRHdrTxtBx.Font = new Font("Courier New", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            SRHdrTxtBx.Location = new Point(1, 180);
-            SRHdrTxtBx.Name = "SRHdrTxtBx";
-            SRHdrTxtBx.ReadOnly = true;
-            SRHdrTxtBx.Size = new Size(671, 24);
-            SRHdrTxtBx.TabIndex = 76;
-            SRHdrTxtBx.Text = "";
+            this.SRHdrTxtBx.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SRHdrTxtBx.Location = new System.Drawing.Point(1, 180);
+            this.SRHdrTxtBx.Name = "SRHdrTxtBx";
+            this.SRHdrTxtBx.ReadOnly = true;
+            this.SRHdrTxtBx.Size = new System.Drawing.Size(671, 24);
+            this.SRHdrTxtBx.TabIndex = 76;
+            this.SRHdrTxtBx.Text = "";
             // 
             // SRLeftTxtBx
             // 
-            SRLeftTxtBx.Font = new Font("Courier New", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            SRLeftTxtBx.Location = new Point(1, 207);
-            SRLeftTxtBx.Name = "SRLeftTxtBx";
-            SRLeftTxtBx.ReadOnly = true;
-            SRLeftTxtBx.Size = new Size(184, 255);
-            SRLeftTxtBx.TabIndex = 77;
-            SRLeftTxtBx.Text = "";
+            this.SRLeftTxtBx.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SRLeftTxtBx.Location = new System.Drawing.Point(1, 207);
+            this.SRLeftTxtBx.Name = "SRLeftTxtBx";
+            this.SRLeftTxtBx.ReadOnly = true;
+            this.SRLeftTxtBx.Size = new System.Drawing.Size(184, 255);
+            this.SRLeftTxtBx.TabIndex = 77;
+            this.SRLeftTxtBx.Text = "";
             // 
             // SRRightTxtBx
             // 
-            SRRightTxtBx.Font = new Font("Courier New", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            SRRightTxtBx.Location = new Point(183, 207);
-            SRRightTxtBx.Name = "SRRightTxtBx";
-            SRRightTxtBx.ReadOnly = true;
-            SRRightTxtBx.Size = new Size(489, 255);
-            SRRightTxtBx.TabIndex = 78;
-            SRRightTxtBx.Text = "";
+            this.SRRightTxtBx.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SRRightTxtBx.Location = new System.Drawing.Point(183, 207);
+            this.SRRightTxtBx.Name = "SRRightTxtBx";
+            this.SRRightTxtBx.ReadOnly = true;
+            this.SRRightTxtBx.Size = new System.Drawing.Size(489, 255);
+            this.SRRightTxtBx.TabIndex = 78;
+            this.SRRightTxtBx.Text = "";
             // 
             // NASRAsmTxtBx
             // 
-            NASRAsmTxtBx.Font = new Font("Courier New", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            NASRAsmTxtBx.Location = new Point(315, 214);
-            NASRAsmTxtBx.Name = "NASRAsmTxtBx";
-            NASRAsmTxtBx.ReadOnly = true;
-            NASRAsmTxtBx.Size = new Size(230, 22);
-            NASRAsmTxtBx.TabIndex = 79;
-            NASRAsmTxtBx.Text = "";
-            NASRAsmTxtBx.Visible = false;
+            this.NASRAsmTxtBx.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NASRAsmTxtBx.Location = new System.Drawing.Point(315, 214);
+            this.NASRAsmTxtBx.Name = "NASRAsmTxtBx";
+            this.NASRAsmTxtBx.ReadOnly = true;
+            this.NASRAsmTxtBx.Size = new System.Drawing.Size(230, 22);
+            this.NASRAsmTxtBx.TabIndex = 79;
+            this.NASRAsmTxtBx.Text = "";
+            this.NASRAsmTxtBx.Visible = false;
             // 
             // NASRAFTxtBx
             // 
-            NASRAFTxtBx.Font = new Font("Courier New", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            NASRAFTxtBx.Location = new Point(332, 279);
-            NASRAFTxtBx.Name = "NASRAFTxtBx";
-            NASRAFTxtBx.ReadOnly = true;
-            NASRAFTxtBx.Size = new Size(193, 22);
-            NASRAFTxtBx.TabIndex = 80;
-            NASRAFTxtBx.Text = "";
-            NASRAFTxtBx.Visible = false;
+            this.NASRAFTxtBx.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NASRAFTxtBx.Location = new System.Drawing.Point(332, 279);
+            this.NASRAFTxtBx.Name = "NASRAFTxtBx";
+            this.NASRAFTxtBx.ReadOnly = true;
+            this.NASRAFTxtBx.Size = new System.Drawing.Size(193, 22);
+            this.NASRAFTxtBx.TabIndex = 80;
+            this.NASRAFTxtBx.Text = "";
+            this.NASRAFTxtBx.Visible = false;
             // 
             // DCorrTxtBx
             // 
-            DCorrTxtBx.Font = new Font("Courier New", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            DCorrTxtBx.Location = new Point(191, 302);
-            DCorrTxtBx.Name = "DCorrTxtBx";
-            DCorrTxtBx.ReadOnly = true;
-            DCorrTxtBx.Size = new Size(259, 37);
-            DCorrTxtBx.TabIndex = 81;
-            DCorrTxtBx.Text = "";
-            DCorrTxtBx.Visible = false;
+            this.DCorrTxtBx.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DCorrTxtBx.Location = new System.Drawing.Point(191, 302);
+            this.DCorrTxtBx.Name = "DCorrTxtBx";
+            this.DCorrTxtBx.ReadOnly = true;
+            this.DCorrTxtBx.Size = new System.Drawing.Size(259, 37);
+            this.DCorrTxtBx.TabIndex = 81;
+            this.DCorrTxtBx.Text = "";
+            this.DCorrTxtBx.Visible = false;
             // 
             // optFull
             // 
-            optFull.AutoSize = true;
-            optFull.Checked = true;
-            optFull.Location = new Point(6, 20);
-            optFull.Name = "optFull";
-            optFull.Size = new Size(41, 17);
-            optFull.TabIndex = 82;
-            optFull.TabStop = true;
-            optFull.Text = "Full";
-            optFull.UseVisualStyleBackColor = true;
+            this.optFull.AutoSize = true;
+            this.optFull.Checked = true;
+            this.optFull.Location = new System.Drawing.Point(6, 20);
+            this.optFull.Name = "optFull";
+            this.optFull.Size = new System.Drawing.Size(41, 17);
+            this.optFull.TabIndex = 82;
+            this.optFull.TabStop = true;
+            this.optFull.Text = "Full";
+            this.optFull.UseVisualStyleBackColor = true;
             // 
             // GroupBoxPrecision
             // 
-            GroupBoxPrecision.Controls.Add(optRound);
-            GroupBoxPrecision.Controls.Add(optFull);
-            GroupBoxPrecision.Location = new Point(16, 231);
-            GroupBoxPrecision.Name = "GroupBoxPrecision";
-            GroupBoxPrecision.Size = new Size(232, 38);
-            GroupBoxPrecision.TabIndex = 83;
-            GroupBoxPrecision.TabStop = false;
-            GroupBoxPrecision.Text = "Precision to use for subsequent calculations";
-            GroupBoxPrecision.Visible = false;
+            this.GroupBoxPrecision.Controls.Add(this.optRound);
+            this.GroupBoxPrecision.Controls.Add(this.optFull);
+            this.GroupBoxPrecision.Location = new System.Drawing.Point(16, 231);
+            this.GroupBoxPrecision.Name = "GroupBoxPrecision";
+            this.GroupBoxPrecision.Size = new System.Drawing.Size(232, 38);
+            this.GroupBoxPrecision.TabIndex = 83;
+            this.GroupBoxPrecision.TabStop = false;
+            this.GroupBoxPrecision.Text = "Precision to use for subsequent calculations";
+            this.GroupBoxPrecision.Visible = false;
             // 
             // optRound
             // 
-            optRound.AutoSize = true;
-            optRound.Location = new Point(54, 20);
-            optRound.Name = "optRound";
-            optRound.Size = new Size(173, 17);
-            optRound.TabIndex = 83;
-            optRound.TabStop = true;
-            optRound.Text = "Rounded to five decimal places";
-            optRound.UseVisualStyleBackColor = true;
+            this.optRound.AutoSize = true;
+            this.optRound.Location = new System.Drawing.Point(54, 20);
+            this.optRound.Name = "optRound";
+            this.optRound.Size = new System.Drawing.Size(173, 17);
+            this.optRound.TabIndex = 83;
+            this.optRound.TabStop = true;
+            this.optRound.Text = "Rounded to five decimal places";
+            this.optRound.UseVisualStyleBackColor = true;
             // 
             // WeemsPVTxtBx
             // 
-            WeemsPVTxtBx.Location = new Point(191, 409);
-            WeemsPVTxtBx.Multiline = true;
-            WeemsPVTxtBx.Name = "WeemsPVTxtBx";
-            WeemsPVTxtBx.Size = new Size(267, 50);
-            WeemsPVTxtBx.TabIndex = 84;
-            WeemsPVTxtBx.Visible = false;
+            this.WeemsPVTxtBx.Location = new System.Drawing.Point(191, 409);
+            this.WeemsPVTxtBx.Multiline = true;
+            this.WeemsPVTxtBx.Name = "WeemsPVTxtBx";
+            this.WeemsPVTxtBx.Size = new System.Drawing.Size(267, 50);
+            this.WeemsPVTxtBx.TabIndex = 84;
+            this.WeemsPVTxtBx.Visible = false;
             // 
             // PictureBox1
             // 
-            PictureBox1.Image = My.Resources.Resources.ABC_white;
-            PictureBox1.Location = new Point(132, 525);
-            PictureBox1.Name = "PictureBox1";
-            PictureBox1.Size = new Size(413, 50);
-            PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            PictureBox1.TabIndex = 102;
-            PictureBox1.TabStop = false;
+            this.PictureBox1.Image = global::CelestialTools.My.Resources.Resources.ABC_white;
+            this.PictureBox1.Location = new System.Drawing.Point(132, 525);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(413, 50);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox1.TabIndex = 102;
+            this.PictureBox1.TabStop = false;
             // 
             // DTSight
             // 
-            DTSight.CustomFormat = "MM / dd / yyyy HH:mm:ss ";
-            DTSight.DropDownAlign = LeftRightAlignment.Right;
-            DTSight.Format = DateTimePickerFormat.Custom;
-            DTSight.Location = new Point(254, 58);
-            DTSight.Name = "DTSight";
-            DTSight.ShowUpDown = true;
-            DTSight.Size = new Size(146, 21);
-            DTSight.TabIndex = 126;
+            this.DTSight.CustomFormat = "MM / dd / yyyy HH:mm:ss ";
+            this.DTSight.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.DTSight.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DTSight.Location = new System.Drawing.Point(254, 58);
+            this.DTSight.Name = "DTSight";
+            this.DTSight.ShowUpDown = true;
+            this.DTSight.Size = new System.Drawing.Size(146, 21);
+            this.DTSight.TabIndex = 126;
             // 
             // lblDate
             // 
-            lblDate.BackColor = SystemColors.Window;
-            lblDate.Cursor = Cursors.Default;
-            lblDate.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            lblDate.ForeColor = SystemColors.ControlText;
-            lblDate.Location = new Point(167, 58);
-            lblDate.Name = "lblDate";
-            lblDate.RightToLeft = RightToLeft.No;
-            lblDate.Size = new Size(85, 22);
-            lblDate.TabIndex = 125;
-            lblDate.Text = "Sight Date/Time";
-            lblDate.TextAlign = ContentAlignment.MiddleLeft;
+            this.lblDate.BackColor = System.Drawing.SystemColors.Window;
+            this.lblDate.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblDate.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblDate.Location = new System.Drawing.Point(167, 58);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblDate.Size = new System.Drawing.Size(85, 22);
+            this.lblDate.TabIndex = 125;
+            this.lblDate.Text = "Sight Date/Time";
+            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnUseCLS
+            // _btnUseCLS
             // 
-            _btnUseCLS.BackColor = Color.Yellow;
-            _btnUseCLS.Font = new Font("Arial Narrow", 8.25f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnUseCLS.ForeColor = SystemColors.WindowText;
-            _btnUseCLS.Location = new Point(564, 502);
-            _btnUseCLS.Name = "_btnUseCLS";
-            _btnUseCLS.Size = new Size(100, 23);
-            _btnUseCLS.TabIndex = 174;
-            _btnUseCLS.Text = "CLS Form Plot";
-            _btnUseCLS.UseVisualStyleBackColor = false;
-            _btnUseCLS.Visible = false;
+            this._btnUseCLS.BackColor = System.Drawing.Color.Yellow;
+            this._btnUseCLS.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnUseCLS.ForeColor = System.Drawing.SystemColors.WindowText;
+            this._btnUseCLS.Location = new System.Drawing.Point(564, 502);
+            this._btnUseCLS.Name = "_btnUseCLS";
+            this._btnUseCLS.Size = new System.Drawing.Size(100, 23);
+            this._btnUseCLS.TabIndex = 174;
+            this._btnUseCLS.Text = "CLS Form Plot";
+            this._btnUseCLS.UseVisualStyleBackColor = false;
+            this._btnUseCLS.Visible = false;
+            this._btnUseCLS.Click += new System.EventHandler(this.btnUseCLS_Click);
             // 
-            // btnCustomPlot
+            // _btnCustomPlot
             // 
-            _btnCustomPlot.BackColor = Color.Yellow;
-            _btnCustomPlot.Font = new Font("Arial Narrow", 8.25f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnCustomPlot.ForeColor = SystemColors.WindowText;
-            _btnCustomPlot.Location = new Point(564, 528);
-            _btnCustomPlot.Name = "_btnCustomPlot";
-            _btnCustomPlot.Size = new Size(100, 23);
-            _btnCustomPlot.TabIndex = 175;
-            _btnCustomPlot.Text = "Custom Plot Form";
-            _btnCustomPlot.UseVisualStyleBackColor = false;
-            _btnCustomPlot.Visible = false;
+            this._btnCustomPlot.BackColor = System.Drawing.Color.Yellow;
+            this._btnCustomPlot.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnCustomPlot.ForeColor = System.Drawing.SystemColors.WindowText;
+            this._btnCustomPlot.Location = new System.Drawing.Point(564, 528);
+            this._btnCustomPlot.Name = "_btnCustomPlot";
+            this._btnCustomPlot.Size = new System.Drawing.Size(100, 23);
+            this._btnCustomPlot.TabIndex = 175;
+            this._btnCustomPlot.Text = "Custom Plot Form";
+            this._btnCustomPlot.UseVisualStyleBackColor = false;
+            this._btnCustomPlot.Visible = false;
+            this._btnCustomPlot.Click += new System.EventHandler(this.btnCustomPlot_Click);
             // 
-            // cmdMerDiag
+            // _cmdMerDiag
             // 
-            _cmdMerDiag.BackColor = Color.Yellow;
-            _cmdMerDiag.Font = new Font("Arial Narrow", 8.25f, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _cmdMerDiag.ForeColor = SystemColors.WindowText;
-            _cmdMerDiag.Location = new Point(564, 553);
-            _cmdMerDiag.Name = "_cmdMerDiag";
-            _cmdMerDiag.Size = new Size(100, 23);
-            _cmdMerDiag.TabIndex = 177;
-            _cmdMerDiag.Text = "Meridian Diagram";
-            _cmdMerDiag.UseVisualStyleBackColor = false;
-            _cmdMerDiag.Visible = false;
+            this._cmdMerDiag.BackColor = System.Drawing.Color.Yellow;
+            this._cmdMerDiag.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._cmdMerDiag.ForeColor = System.Drawing.SystemColors.WindowText;
+            this._cmdMerDiag.Location = new System.Drawing.Point(564, 553);
+            this._cmdMerDiag.Name = "_cmdMerDiag";
+            this._cmdMerDiag.Size = new System.Drawing.Size(100, 23);
+            this._cmdMerDiag.TabIndex = 177;
+            this._cmdMerDiag.Text = "Meridian Diagram";
+            this._cmdMerDiag.UseVisualStyleBackColor = false;
+            this._cmdMerDiag.Visible = false;
+            this._cmdMerDiag.Click += new System.EventHandler(this.cmdMerDiag_Click_1);
             // 
             // txtUserInfo
             // 
-            txtUserInfo.Font = new Font("Times New Roman", 9.75f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            txtUserInfo.HideSelection = false;
-            txtUserInfo.Location = new Point(250, 469);
-            txtUserInfo.Name = "txtUserInfo";
-            txtUserInfo.Size = new Size(335, 22);
-            txtUserInfo.TabIndex = 202;
+            this.txtUserInfo.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserInfo.HideSelection = false;
+            this.txtUserInfo.Location = new System.Drawing.Point(250, 469);
+            this.txtUserInfo.Name = "txtUserInfo";
+            this.txtUserInfo.Size = new System.Drawing.Size(335, 22);
+            this.txtUserInfo.TabIndex = 202;
             // 
             // Label16
             // 
-            Label16.AutoSize = true;
-            Label16.Font = new Font("Times New Roman", 9.75f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label16.Location = new Point(190, 472);
-            Label16.Name = "Label16";
-            Label16.Size = new Size(57, 15);
-            Label16.TabIndex = 201;
-            Label16.Text = "User Info";
-            Label16.TextAlign = ContentAlignment.MiddleCenter;
+            this.Label16.AutoSize = true;
+            this.Label16.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label16.Location = new System.Drawing.Point(190, 472);
+            this.Label16.Name = "Label16";
+            this.Label16.Size = new System.Drawing.Size(57, 15);
+            this.Label16.TabIndex = 201;
+            this.Label16.Text = "User Info";
+            this.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cboLLoBy
             // 
-            cboLLoBy.BackColor = SystemColors.Window;
-            cboLLoBy.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboLLoBy.Font = new Font("Arial", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            cboLLoBy.FormattingEnabled = true;
-            cboLLoBy.Items.AddRange(new object[] { "DR", "GPS", "KP" });
-            cboLLoBy.Location = new Point(436, 9);
-            cboLLoBy.Name = "cboLLoBy";
-            cboLLoBy.Size = new Size(70, 22);
-            cboLLoBy.TabIndex = 204;
+            this.cboLLoBy.BackColor = System.Drawing.SystemColors.Window;
+            this.cboLLoBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboLLoBy.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboLLoBy.FormattingEnabled = true;
+            this.cboLLoBy.Items.AddRange(new object[] {
+            "DR",
+            "GPS",
+            "KP"});
+            this.cboLLoBy.Location = new System.Drawing.Point(436, 9);
+            this.cboLLoBy.Name = "cboLLoBy";
+            this.cboLLoBy.Size = new System.Drawing.Size(70, 22);
+            this.cboLLoBy.TabIndex = 204;
             // 
             // Label17
             // 
-            Label17.AutoSize = true;
-            Label17.Font = new Font("Arial", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Label17.Location = new Point(389, 13);
-            Label17.Name = "Label17";
-            Label17.Size = new Size(46, 14);
-            Label17.TabIndex = 203;
-            Label17.Text = "L/Lo by:";
-            Label17.TextAlign = ContentAlignment.MiddleCenter;
+            this.Label17.AutoSize = true;
+            this.Label17.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label17.Location = new System.Drawing.Point(389, 13);
+            this.Label17.Name = "Label17";
+            this.Label17.Size = new System.Drawing.Size(46, 14);
+            this.Label17.TabIndex = 203;
+            this.Label17.Text = "L/Lo by:";
+            this.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // grpSLInfo
             // 
-            grpSLInfo.BackColor = SystemColors.Info;
-            grpSLInfo.Controls.Add(lblBodyNm);
-            grpSLInfo.Controls.Add(lblLimb);
-            grpSLInfo.Controls.Add(cbLimb);
-            grpSLInfo.Controls.Add(cboBody);
-            grpSLInfo.Controls.Add(Label17);
-            grpSLInfo.Controls.Add(cboLLoBy);
-            grpSLInfo.Location = new Point(7, 118);
-            grpSLInfo.Name = "grpSLInfo";
-            grpSLInfo.Size = new Size(515, 35);
-            grpSLInfo.TabIndex = 205;
-            grpSLInfo.TabStop = false;
-            grpSLInfo.Text = "SightLog Info";
-            grpSLInfo.Visible = false;
+            this.grpSLInfo.BackColor = System.Drawing.SystemColors.Info;
+            this.grpSLInfo.Controls.Add(this.lblBodyNm);
+            this.grpSLInfo.Controls.Add(this.lblLimb);
+            this.grpSLInfo.Controls.Add(this.cbLimb);
+            this.grpSLInfo.Controls.Add(this.cboBody);
+            this.grpSLInfo.Controls.Add(this.Label17);
+            this.grpSLInfo.Controls.Add(this.cboLLoBy);
+            this.grpSLInfo.Location = new System.Drawing.Point(7, 118);
+            this.grpSLInfo.Name = "grpSLInfo";
+            this.grpSLInfo.Size = new System.Drawing.Size(515, 35);
+            this.grpSLInfo.TabIndex = 205;
+            this.grpSLInfo.TabStop = false;
+            this.grpSLInfo.Text = "SightLog Info";
+            this.grpSLInfo.Visible = false;
             // 
             // lblBodyNm
             // 
-            lblBodyNm.BackColor = SystemColors.Control;
-            lblBodyNm.Cursor = Cursors.Default;
-            lblBodyNm.Font = new Font("Arial", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            lblBodyNm.ForeColor = SystemColors.ControlText;
-            lblBodyNm.Location = new Point(49, 14);
-            lblBodyNm.Name = "lblBodyNm";
-            lblBodyNm.RightToLeft = RightToLeft.No;
-            lblBodyNm.Size = new Size(45, 17);
-            lblBodyNm.TabIndex = 208;
-            lblBodyNm.Text = "Body";
-            lblBodyNm.TextAlign = ContentAlignment.MiddleCenter;
+            this.lblBodyNm.BackColor = System.Drawing.SystemColors.Control;
+            this.lblBodyNm.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblBodyNm.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBodyNm.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblBodyNm.Location = new System.Drawing.Point(49, 14);
+            this.lblBodyNm.Name = "lblBodyNm";
+            this.lblBodyNm.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblBodyNm.Size = new System.Drawing.Size(45, 17);
+            this.lblBodyNm.TabIndex = 208;
+            this.lblBodyNm.Text = "Body";
+            this.lblBodyNm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblLimb
             // 
-            lblLimb.BackColor = SystemColors.Control;
-            lblLimb.Cursor = Cursors.Default;
-            lblLimb.Font = new Font("Arial", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            lblLimb.ForeColor = SystemColors.ControlText;
-            lblLimb.Location = new Point(248, 12);
-            lblLimb.Name = "lblLimb";
-            lblLimb.RightToLeft = RightToLeft.No;
-            lblLimb.Size = new Size(38, 17);
-            lblLimb.TabIndex = 207;
-            lblLimb.Text = "Limb";
-            lblLimb.TextAlign = ContentAlignment.MiddleCenter;
+            this.lblLimb.BackColor = System.Drawing.SystemColors.Control;
+            this.lblLimb.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblLimb.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLimb.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblLimb.Location = new System.Drawing.Point(248, 12);
+            this.lblLimb.Name = "lblLimb";
+            this.lblLimb.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblLimb.Size = new System.Drawing.Size(38, 17);
+            this.lblLimb.TabIndex = 207;
+            this.lblLimb.Text = "Limb";
+            this.lblLimb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cbLimb
             // 
-            cbLimb.BackColor = SystemColors.Window;
-            cbLimb.Cursor = Cursors.Default;
-            cbLimb.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbLimb.Enabled = false;
-            cbLimb.Font = new Font("Arial", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            cbLimb.ForeColor = SystemColors.WindowText;
-            cbLimb.Items.AddRange(new object[] { "Lower", "Upper", "Center" });
-            cbLimb.Location = new Point(288, 9);
-            cbLimb.Name = "cbLimb";
-            cbLimb.RightToLeft = RightToLeft.No;
-            cbLimb.Size = new Size(100, 22);
-            cbLimb.TabIndex = 206;
+            this.cbLimb.BackColor = System.Drawing.SystemColors.Window;
+            this.cbLimb.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cbLimb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLimb.Enabled = false;
+            this.cbLimb.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLimb.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.cbLimb.Items.AddRange(new object[] {
+            "Lower",
+            "Upper",
+            "Center"});
+            this.cbLimb.Location = new System.Drawing.Point(288, 9);
+            this.cbLimb.Name = "cbLimb";
+            this.cbLimb.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cbLimb.Size = new System.Drawing.Size(100, 22);
+            this.cbLimb.TabIndex = 206;
             // 
             // cboBody
             // 
-            cboBody.BackColor = SystemColors.Window;
-            cboBody.Cursor = Cursors.Default;
-            cboBody.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboBody.Enabled = false;
-            cboBody.Font = new Font("Arial", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            cboBody.ForeColor = SystemColors.WindowText;
-            cboBody.Items.AddRange(new object[] { "Sun", "Moon", "Venus", "Mars", "Jupiter", "Saturn", "Acamar", "Achernar", "Acrux", "Adhara", "Aldebaran", "Alioth", "Alkaid", "Al Na'ir", "Alnilam", "Alphard", "Alphecca", "Alpheratz", "Altair", "Ankaa", "Antares", "Arcturus", "Atria", "Avior", "Bellatrix", "Betelgeuse", "Canopus", "Capella", "Deneb", "Denebola", "Diphda", "Dubhe", "Elnath", "Eltanin", "Enif", "Fomalhaut", "Gacrux", "Gienah", "Hadar", "Hamal", "Kaus Australis", "Kochab", "Markab", "Menkar", "Menkent", "Miaplacidus", "Mirfak", "Nunki", "Peacock", "Polaris", "Pollux", "Procyon", "Rasalhague", "Regulus", "Rigel", "Rigil Kentaurus", "Sabik", "Schedar", "Shaula", "Sirius", "Spica", "Suhail", "Vega", "Zubenelgenubi" + '\t' });
-            cboBody.Location = new Point(95, 9);
-            cboBody.Name = "cboBody";
-            cboBody.RightToLeft = RightToLeft.No;
-            cboBody.Size = new Size(150, 22);
-            cboBody.TabIndex = 205;
+            this.cboBody.BackColor = System.Drawing.SystemColors.Window;
+            this.cboBody.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cboBody.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboBody.Enabled = false;
+            this.cboBody.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBody.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.cboBody.Items.AddRange(new object[] {
+            "Sun",
+            "Moon",
+            "Venus",
+            "Mars",
+            "Jupiter",
+            "Saturn",
+            "Acamar",
+            "Achernar",
+            "Acrux",
+            "Adhara",
+            "Aldebaran",
+            "Alioth",
+            "Alkaid",
+            "Al Na\'ir",
+            "Alnilam",
+            "Alphard",
+            "Alphecca",
+            "Alpheratz",
+            "Altair",
+            "Ankaa",
+            "Antares",
+            "Arcturus",
+            "Atria",
+            "Avior",
+            "Bellatrix",
+            "Betelgeuse",
+            "Canopus",
+            "Capella",
+            "Deneb",
+            "Denebola",
+            "Diphda",
+            "Dubhe",
+            "Elnath",
+            "Eltanin",
+            "Enif",
+            "Fomalhaut",
+            "Gacrux",
+            "Gienah",
+            "Hadar",
+            "Hamal",
+            "Kaus Australis",
+            "Kochab",
+            "Markab",
+            "Menkar",
+            "Menkent",
+            "Miaplacidus",
+            "Mirfak",
+            "Nunki",
+            "Peacock",
+            "Polaris",
+            "Pollux",
+            "Procyon",
+            "Rasalhague",
+            "Regulus",
+            "Rigel",
+            "Rigil Kentaurus",
+            "Sabik",
+            "Schedar",
+            "Shaula",
+            "Sirius",
+            "Spica",
+            "Suhail",
+            "Vega",
+            "Zubenelgenubi\t"});
+            this.cboBody.Location = new System.Drawing.Point(95, 9);
+            this.cboBody.Name = "cboBody";
+            this.cboBody.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cboBody.Size = new System.Drawing.Size(150, 22);
+            this.cboBody.TabIndex = 205;
             // 
-            // btnNASRFix
+            // _btnNASRFix
             // 
-            _btnNASRFix.BackColor = SystemColors.Control;
-            _btnNASRFix.Cursor = Cursors.Default;
-            _btnNASRFix.Font = new Font("Arial", 8.0f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _btnNASRFix.ForeColor = SystemColors.ControlText;
-            _btnNASRFix.Location = new Point(3, 553);
-            _btnNASRFix.Name = "_btnNASRFix";
-            _btnNASRFix.RightToLeft = RightToLeft.No;
-            _btnNASRFix.Size = new Size(110, 25);
-            _btnNASRFix.TabIndex = 206;
-            _btnNASRFix.Text = "Save for NASR Fix";
-            _btnNASRFix.UseVisualStyleBackColor = false;
-            _btnNASRFix.Visible = false;
+            this._btnNASRFix.BackColor = System.Drawing.SystemColors.Control;
+            this._btnNASRFix.Cursor = System.Windows.Forms.Cursors.Default;
+            this._btnNASRFix.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnNASRFix.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._btnNASRFix.Location = new System.Drawing.Point(3, 553);
+            this._btnNASRFix.Name = "_btnNASRFix";
+            this._btnNASRFix.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this._btnNASRFix.Size = new System.Drawing.Size(110, 25);
+            this._btnNASRFix.TabIndex = 206;
+            this._btnNASRFix.Text = "Save for NASR Fix";
+            this._btnNASRFix.UseVisualStyleBackColor = false;
+            this._btnNASRFix.Visible = false;
+            this._btnNASRFix.Click += new System.EventHandler(this.btnNASRFix_Click);
             // 
             // FormAltSR
             // 
-            AutoScaleDimensions = new SizeF(6.0f, 13.0f);
-            AutoScaleMode = AutoScaleMode.Font;
-            AutoScroll = true;
-            BackColor = SystemColors.Window;
-            ClientSize = new Size(672, 585);
-            Controls.Add(_btnNASRFix);
-            Controls.Add(grpSLInfo);
-            Controls.Add(txtUserInfo);
-            Controls.Add(Label16);
-            Controls.Add(_cmdMerDiag);
-            Controls.Add(_btnCustomPlot);
-            Controls.Add(_btnUseCLS);
-            Controls.Add(DTSight);
-            Controls.Add(lblDate);
-            Controls.Add(PictureBox1);
-            Controls.Add(WeemsPVTxtBx);
-            Controls.Add(GroupBoxPrecision);
-            Controls.Add(DCorrTxtBx);
-            Controls.Add(NASRAFTxtBx);
-            Controls.Add(NASRAsmTxtBx);
-            Controls.Add(SRRightTxtBx);
-            Controls.Add(SRHdrTxtBx);
-            Controls.Add(_ExitBtn);
-            Controls.Add(_chkInterpolateB);
-            Controls.Add(_cmdWeems);
-            Controls.Add(frameS);
-            Controls.Add(_cmdSTable);
-            Controls.Add(_chkSadler);
-            Controls.Add(frame214);
-            Controls.Add(_chkDSD);
-            Controls.Add(frame211);
-            Controls.Add(_cmd208);
-            Controls.Add(_cmd211);
-            Controls.Add(_cmd214);
-            Controls.Add(_cmd229);
-            Controls.Add(_cmd249);
-            Controls.Add(_cmdClearSome);
-            Controls.Add(_cmdClear);
-            Controls.Add(_cmdFix);
-            Controls.Add(_cmdSave);
-            Controls.Add(frameNASRUsing);
-            Controls.Add(_cmdPrint);
-            Controls.Add(_cmdNASR);
-            Controls.Add(_cmdLawOfCosines);
-            Controls.Add(_cboDec);
-            Controls.Add(_txtHoMin);
-            Controls.Add(_txtDecMin);
-            Controls.Add(_txtGHAMin);
-            Controls.Add(_txtHoDeg);
-            Controls.Add(_txtDecDeg);
-            Controls.Add(_txtGHADeg);
-            Controls.Add(_txtLMin);
-            Controls.Add(cboL);
-            Controls.Add(_txtLoDeg);
-            Controls.Add(_txtLoMin);
-            Controls.Add(cboLo);
-            Controls.Add(_txtLDeg);
-            Controls.Add(Label6);
-            Controls.Add(Label5);
-            Controls.Add(Label4);
-            Controls.Add(lblHoMin);
-            Controls.Add(lblDecMin);
-            Controls.Add(lblGHAMin);
-            Controls.Add(lblHoDeg);
-            Controls.Add(lblDecDeg);
-            Controls.Add(lblGHADeg);
-            Controls.Add(Label3);
-            Controls.Add(Label2);
-            Controls.Add(Label1);
-            Controls.Add(lblDRL);
-            Controls.Add(lblLDeg);
-            Controls.Add(lblLMin);
-            Controls.Add(lblDRLo);
-            Controls.Add(lblLoDeg);
-            Controls.Add(lblLoMin);
-            Controls.Add(SRLgTxtBx);
-            Controls.Add(SRLeftTxtBx);
-            Cursor = Cursors.Default;
-            Font = new Font("Tahoma", 8.25f, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Location = new Point(61, 187);
-            MaximizeBox = false;
-            Name = "FormAltSR";
-            RightToLeft = RightToLeft.No;
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Sight Reduction Methods";
-            frameS.ResumeLayout(false);
-            frame214.ResumeLayout(false);
-            frame211.ResumeLayout(false);
-            frameNASRUsing.ResumeLayout(false);
-            GroupBoxPrecision.ResumeLayout(false);
-            GroupBoxPrecision.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)PictureBox1).EndInit();
-            grpSLInfo.ResumeLayout(false);
-            grpSLInfo.PerformLayout();
-            Load += new EventHandler(FormAltSR_Load);
-            FormClosed += new FormClosedEventHandler(FormAltSR_FormClosed);
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(672, 585);
+            this.Controls.Add(this._btnNASRFix);
+            this.Controls.Add(this.grpSLInfo);
+            this.Controls.Add(this.txtUserInfo);
+            this.Controls.Add(this.Label16);
+            this.Controls.Add(this._cmdMerDiag);
+            this.Controls.Add(this._btnCustomPlot);
+            this.Controls.Add(this._btnUseCLS);
+            this.Controls.Add(this.DTSight);
+            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.PictureBox1);
+            this.Controls.Add(this.WeemsPVTxtBx);
+            this.Controls.Add(this.GroupBoxPrecision);
+            this.Controls.Add(this.DCorrTxtBx);
+            this.Controls.Add(this.NASRAFTxtBx);
+            this.Controls.Add(this.NASRAsmTxtBx);
+            this.Controls.Add(this.SRRightTxtBx);
+            this.Controls.Add(this.SRHdrTxtBx);
+            this.Controls.Add(this._ExitBtn);
+            this.Controls.Add(this._chkInterpolateB);
+            this.Controls.Add(this._cmdWeems);
+            this.Controls.Add(this.frameS);
+            this.Controls.Add(this._cmdSTable);
+            this.Controls.Add(this._chkSadler);
+            this.Controls.Add(this.frame214);
+            this.Controls.Add(this._chkDSD);
+            this.Controls.Add(this.frame211);
+            this.Controls.Add(this._cmd208);
+            this.Controls.Add(this._cmd211);
+            this.Controls.Add(this._cmd214);
+            this.Controls.Add(this._cmd229);
+            this.Controls.Add(this._cmd249);
+            this.Controls.Add(this._cmdClearSome);
+            this.Controls.Add(this._cmdClear);
+            this.Controls.Add(this._cmdFix);
+            this.Controls.Add(this._cmdSave);
+            this.Controls.Add(this.frameNASRUsing);
+            this.Controls.Add(this._cmdPrint);
+            this.Controls.Add(this._cmdNASR);
+            this.Controls.Add(this._cmdLawOfCosines);
+            this.Controls.Add(this._cboDec);
+            this.Controls.Add(this._txtHoMin);
+            this.Controls.Add(this._txtDecMin);
+            this.Controls.Add(this._txtGHAMin);
+            this.Controls.Add(this._txtHoDeg);
+            this.Controls.Add(this._txtDecDeg);
+            this.Controls.Add(this._txtGHADeg);
+            this.Controls.Add(this._txtLMin);
+            this.Controls.Add(this.cboL);
+            this.Controls.Add(this._txtLoDeg);
+            this.Controls.Add(this._txtLoMin);
+            this.Controls.Add(this.cboLo);
+            this.Controls.Add(this._txtLDeg);
+            this.Controls.Add(this.Label6);
+            this.Controls.Add(this.Label5);
+            this.Controls.Add(this.Label4);
+            this.Controls.Add(this.lblHoMin);
+            this.Controls.Add(this.lblDecMin);
+            this.Controls.Add(this.lblGHAMin);
+            this.Controls.Add(this.lblHoDeg);
+            this.Controls.Add(this.lblDecDeg);
+            this.Controls.Add(this.lblGHADeg);
+            this.Controls.Add(this.Label3);
+            this.Controls.Add(this.Label2);
+            this.Controls.Add(this.Label1);
+            this.Controls.Add(this.lblDRL);
+            this.Controls.Add(this.lblLDeg);
+            this.Controls.Add(this.lblLMin);
+            this.Controls.Add(this.lblDRLo);
+            this.Controls.Add(this.lblLoDeg);
+            this.Controls.Add(this.lblLoMin);
+            this.Controls.Add(this.SRLgTxtBx);
+            this.Controls.Add(this.SRLeftTxtBx);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Location = new System.Drawing.Point(61, 187);
+            this.MaximizeBox = false;
+            this.Name = "FormAltSR";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Sight Reduction Methods";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormAltSR_FormClosed);
+            this.Load += new System.EventHandler(this.FormAltSR_Load);
+            this.frameS.ResumeLayout(false);
+            this.frame214.ResumeLayout(false);
+            this.frame211.ResumeLayout(false);
+            this.frameNASRUsing.ResumeLayout(false);
+            this.GroupBoxPrecision.ResumeLayout(false);
+            this.GroupBoxPrecision.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
+            this.grpSLInfo.ResumeLayout(false);
+            this.grpSLInfo.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         internal RichTextBox SRLgTxtBx;

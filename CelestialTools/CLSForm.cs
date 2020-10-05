@@ -2,7 +2,7 @@
 using System.Device.Location;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
+//using Microsoft.VisualBasic;
 
 namespace CelestialTools
 {
@@ -113,7 +113,7 @@ namespace CelestialTools
         private string PlotLatNS;
         private double PlotLong;
         private string PlotLongEW;
-        private string PlotDRTime = Constants.vbNullString;
+        private string PlotDRTime = "";
         private double PlotEPLat;
         private string PlotEPLatNS;
         private double PlotEPLong;
@@ -146,9 +146,9 @@ namespace CelestialTools
             int idx = 0;
             int LastSun = -1;
             int EarlySun = -1;
-            if (Information.UBound(PlotArray) >= 1) // is there at least two entries in plot array
+            if (PlotArray.GetUpperBound(0) >= 1) // is there at least two entries in plot array
             {
-                for (int i = 0, loopTo = Information.UBound(PlotArray) - 1; i <= loopTo; i++)
+                for (int i = 0, loopTo = PlotArray.GetUpperBound(0) - 1; i <= loopTo; i++)
                 {
                     if (PlotArray[i].PlotBody.Contains("Sun") & PlotArray[i].PlotType == "FixSight")
                     {
@@ -209,7 +209,7 @@ namespace CelestialTools
 
         public void AddPlotEntry(PlotEntry PlotIn)
         {
-            int Idx = Information.UBound(PlotArray);
+            int Idx = PlotArray.GetUpperBound(0);
             myIdx = Idx;
             PlotArray[Idx] = PlotIn;
             Idx += 1;
@@ -295,9 +295,9 @@ namespace CelestialTools
             int NSFactor = 1;
             int EWFactor = 1;
             bool firsttime = true;
-            if (Information.UBound(PlotArray) > 1)
+            if (PlotArray.GetUpperBound(0) > 1)
             {
-                for (int i = 0, loopTo = Information.UBound(PlotArray); i <= loopTo; i++)
+                for (int i = 0, loopTo = PlotArray.GetUpperBound(0); i <= loopTo; i++)
                 {
                     if (PlotArray[i].PlotType != null)
                     {
@@ -311,14 +311,12 @@ namespace CelestialTools
                                 {
                                     SendMsgBx("Error: Plots must be in the same Latitude N or S - Exit and Try Again", MessageBoxIcon.Error);
                                     return false;
-                                    return default;
                                 }
 
                                 if ((PlotArray[i].PlotLongEW ?? "") != (PlotArray[i - 1].PlotLongEW ?? ""))
                                 {
                                     SendMsgBx("Error: Plots must be in the same Longitude E or W - Exit and Try Again", MessageBoxIcon.Error);
                                     return false;
-                                    return default;
                                 }
                             }
                         }
@@ -368,12 +366,11 @@ namespace CelestialTools
                         LatDiff = LowLat - HighLat;
                     }
 
-                    LatDiffMin = (LatDiff - Conversion.Int(LatDiff)) * 60d;
-                    if (LatDiffMin > 59.9d | Conversion.Int(LatDiff) > 1d)
+                    LatDiffMin = (LatDiff - System.Math.Truncate(LatDiff)) * 60d;
+                    if (LatDiffMin > 59.9d | System.Math.Truncate(LatDiff) > 1d)
                     {
                         SendMsgBx("Error: Distances between all latitudes must be less than 60 miles to plot", MessageBoxIcon.Error);
                         return false;
-                        return default;
                     }
                 }
 
@@ -389,20 +386,19 @@ namespace CelestialTools
                     }
 
                     LongDiff = HighLong - LowLong;
-                    LongDiffMin = (LongDiff - Conversion.Int(LongDiff)) * 60d;
-                    if (LongDiffMin > 59.9d | Conversion.Int(LongDiff) > 1d)
+                    LongDiffMin = (LongDiff - System.Math.Truncate(LongDiff)) * 60d;
+                    if (LongDiffMin > 59.9d | System.Math.Truncate(LongDiff) > 1d)
                     {
                         SendMsgBx("Error: Distances between all longitudes must be less than 60 miles to plot", MessageBoxIcon.Error);
                         return false;
-                        return default;
                     }
                 }
             }
 
-            if (Information.UBound(PlotArray) == 1)
+            if (PlotArray.GetUpperBound(0) == 1)
             {
                 CentralLatDeg = Convert.ToInt32(PlotArray[myIdx].PlotLatDeg);
-                CentralLatMin = Convert.ToInt32(Conversion.Int(Convert.ToDouble(PlotArray[myIdx].PlotLatMin)) / 10d) * 10;
+                CentralLatMin = Convert.ToInt32(System.Math.Truncate(Convert.ToDouble(PlotArray[myIdx].PlotLatMin)) / 10d) * 10;
                 if (CentralLatMin == 60)
                 {
                     CentralLatMin = 0;
@@ -411,7 +407,7 @@ namespace CelestialTools
 
                 CentralLat = CentralLatDeg + CentralLatMin / 60d;
                 CentralLongDeg = Convert.ToInt32(PlotArray[myIdx].PlotLongDeg);
-                CentralLongMin = Convert.ToInt32(Conversion.Int(Convert.ToDouble(PlotArray[myIdx].PlotLongMin)) / 10d) * 10;
+                CentralLongMin = Convert.ToInt32(System.Math.Truncate(Convert.ToDouble(PlotArray[myIdx].PlotLongMin)) / 10d) * 10;
                 if (CentralLongMin == 60)
                 {
                     CentralLongMin = 0;
@@ -425,7 +421,7 @@ namespace CelestialTools
                 double AvgLat = 0d;
                 double AvgLong = 0d;
                 int PlotCt = 0;
-                for (int i = 0, loopTo1 = Information.UBound(PlotArray); i <= loopTo1; i++)
+                for (int i = 0, loopTo1 = PlotArray.GetUpperBound(0); i <= loopTo1; i++)
                 {
                     if (PlotArray[i].PlotType != null)
                     {
@@ -437,7 +433,7 @@ namespace CelestialTools
 
                 AvgLat = AvgLat / PlotCt;
                 AvgLong = AvgLong / PlotCt;
-                CentralLatDeg = (int)Conversion.Int(AvgLat);
+                CentralLatDeg = (int)System.Math.Truncate(AvgLat);
                 CentralLatMin = Convert.ToInt32((AvgLat - CentralLatDeg) * 60d / 10d) * 10;
                 if (CentralLatMin == 60)
                 {
@@ -446,7 +442,7 @@ namespace CelestialTools
                 }
 
                 CentralLat = CentralLatDeg + CentralLatMin / 60d;
-                CentralLongDeg = (int)Conversion.Int(AvgLong);
+                CentralLongDeg = (int)System.Math.Truncate(AvgLong);
                 CentralLongMin = Convert.ToInt32((AvgLong - CentralLongDeg) * 60d / 10d) * 10;
                 if (CentralLongMin == 60)
                 {
@@ -462,7 +458,6 @@ namespace CelestialTools
             txtLatActive.Text = CentralLatDeg.ToString("##0") + '°' + " " + CentralLatMin.ToString("00.0") + "' " + CentralLatNS;
             txtLongActive.Text = CentralLongDeg.ToString("##0") + '°' + " " + CentralLongMin.ToString("00.0") + "' " + CentralLongEW;
             return true;
-            return default;
         }
 
         private void DrawBasicPlotForm()
@@ -679,7 +674,7 @@ namespace CelestialTools
             PlotAPTimeCount = 0;
             EPLineCount = 0;
             EPLineLocY = 650;
-            for (int i = 0, loopTo = Information.UBound(PlotArray); i <= loopTo; i++)
+            for (int i = 0, loopTo = PlotArray.GetUpperBound(0); i <= loopTo; i++)
             {
                 if (PlotArray[i].PlotType != null)
                 {
@@ -1105,7 +1100,6 @@ namespace CelestialTools
             Grph.DrawString(PlotArray[idx].PlotSLEP.ToString().Replace("EP", ""), ArialFont, Brushes.Black, EPLineLocX, EPLineLocY);
             EPLineCount += 1;
             return;
-            return;
         }
 
         private void PlotDRType(int idx)
@@ -1203,7 +1197,7 @@ namespace CelestialTools
         {
             // this subroutine is required because issuing a raw SendMsgBx call also trigger a Paint event for graphic box on form which cannot be handled properly in error conditions
             IssuingSendMsgBx = true;
-            string HdrStr = Constants.vbNullString;
+            string HdrStr = "";
             // HdrStr = IconType.ToString
             if (IconType == MessageBoxIcon.Error)
             {
@@ -1236,7 +1230,7 @@ namespace CelestialTools
             Print_Renamed.PrintScreen(PicBoxCLS.Bounds);
             return;
         }
-
+        private string CaptionStr = "CLS Plot Sight Data";
         private void btnPrtSights_Click(object sender, EventArgs e)
         {
             int Idx = 0;
@@ -1247,7 +1241,7 @@ namespace CelestialTools
             // Dim file As System.IO.StreamWriter
             // file = My.Computer.FileSystem.OpenTextFileWriter(ReportName, False)
             string TxtMsg = "Plotted Sight Data: ";
-            var loopTo = Information.UBound(PlotArray);
+            var loopTo = PlotArray.GetUpperBound(0);
             for (Idx = 0; Idx <= loopTo; Idx++)
             {
                 if (PlotArray[Idx].PlotType != null)
@@ -1258,7 +1252,6 @@ namespace CelestialTools
                 }
             }
             // file.Close()
-            string CaptionStr = "CLS Plot Sight Data";
             var unused = MessageBox.Show(TxtMsg, CaptionStr, MessageBoxButtons.OK, MessageBoxIcon.Information);
             // SendMsgBx(TxtMsg.ToString & vbNewLine & "Report of Plotted Sights saved in text file: " & ReportName, MessageBoxIcon.Information)
             return;
@@ -1312,7 +1305,7 @@ namespace CelestialTools
                 TmpLong = CentralLong - Convert.ToDouble((MidX - CLoc1.X) / OneNMLongPixels / 60d);
             }
 
-            double TmpLatD = Conversion.Int(Math.Abs(TmpLat));
+            double TmpLatD = System.Math.Truncate(Math.Abs(TmpLat));
             double TmpLatM = Math.Round((Math.Abs(TmpLat) - TmpLatD) * 60d, 1);
             string TmpLatNS = "N";
             if (CentralLat < 0d)
@@ -1320,7 +1313,7 @@ namespace CelestialTools
                 TmpLatNS = "S";
             }
 
-            double TmpLongD = Conversion.Int(Math.Abs(TmpLong));
+            double TmpLongD = System.Math.Truncate(Math.Abs(TmpLong));
             double TmpLongM = Math.Round((Math.Abs(TmpLong) - TmpLongD) * 60d, 1);
             string TmpLongEW = "W";
             if (CentralLong < 0d)
