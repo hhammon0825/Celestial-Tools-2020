@@ -267,7 +267,7 @@ namespace CelestialTools
             FZS[II] = DTSight.Value.Second;
             FDTSight[II] = DTSight.Value;
             // FZU(II) = DTSight.Value.ToUniversalTime.Subtract(New DateTime(1970, 1, 1, 0, 0, 0))
-            FMI[II] = System.Math.Sign(KPLOPDist) * Conversion.Int((System.Math.Abs(KPLOPDist) * 10 + 0.5) / 10); // 'changed in V4.0.0
+            FMI[II] = Math.Sign(KPLOPDist) * Conversion.Int((System.Math.Abs(KPLOPDist) * 10 + 0.5) / 10); // 'changed in V4.0.0
             //FMI[II] = Math.Sign(A) * Conversion.Int((Math.Abs(A) * 10d + 0.5d) / 10d); // changed in V4.0.0
             if (KPLOPDist > 0d)
             {
@@ -280,7 +280,6 @@ namespace CelestialTools
 
             FZN[II] = Conversion.Int(Math.Round(ZN, 0)); // changed in V4.0.0
             FL[II] = L;
-            // FLD(II) = Int(L).ToString("00")
             FLD[II] = txtLDeg.Text.ToString();
             FLM[II] = txtLMin.Text.ToString();
             FLA[II] = cboL.Items[cboL.SelectedIndex].ToString();
