@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Windows.Forms.Design;
 using System.Windows.Media;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
@@ -232,54 +233,91 @@ namespace CelestialTools
                                  // FEP(II) = PlotOut.PlotSLEP
             FEP[II] = "AP/EP L " + APEstLDeg.ToString("#0") + '°' + APEstLMin.ToString("00.0") + "' " + cboL.Items[cboL.SelectedIndex].ToString() + "AP/EP Lo " + APEstLoDeg.ToString("##0") + '°' + APEstLoMin.ToString("00.0") + "' " + cboLo.Items[cboLo.SelectedIndex].ToString();
 
-            // now add DR position to fix data
-            // II = II + 1
-            // IU = IU + 1
-            // If IU > 12 Then
-            // ErrorMsgBox("Too many sights saved - the limit is 12 saved sights")
-            // Exit Sub
-            // End If
-            // If IU > 1 Then
-            // cmdFix.Visible = True
-            // cmdFix.Enabled = True
-            // cmdFix.Text = "Establish Fix for " & IU.ToString("#0") & " sights"
-            // End If
-            // If InvokedbySightLog = True Then
-            // FBody(II) = cboBody.Text.ToString.Trim
-            // If cboBody.Text.ToString.Trim = "Sun" Or cboBody.Text.ToString.Trim = "Moon" Then
-            // FBody(II) &= " " & cbLimb.Text.ToString.Trim
-            // End If
-            // Else
-            // FBody(II) = " AltSRBody" & txtSightNum.ToString("##0")
-            // End If
+            //'now add DR position to fix data
+            II = (short)(II + 1);
+            IU = (short)(IU + 1);
+            if (IU > 12)
+            {
+                ErrorMsgBox("Too many sights saved - the limit is 12 saved sights");
+                return;
+            }
 
+            if (IU > 1)
+            {
+                cmdFix.Visible = true;
+                cmdFix.Enabled = true;
+                cmdFix.Text = "Establish Fix for " + IU.ToString("#0") + " sights";
+            }
 
-            // FZH(II) = DTSight.Value.Hour    '  VB.Left(txtTime.Text, 2)
-            // FZM(II) = DTSight.Value.Minute      'Mid(txtTime.Text, 3, 2) ': FZS(II) = Right(txtTime.Text, 2)
-            // FZS(II) = DTSight.Value.Second
-            // FDTSight(II) = DTSight.Value
-            // FMI(II) = System.Math.Sign(KPLOPDist) * Int((System.Math.Abs(KPLOPDist) * 10 + 0.5) / 10) 'changed in V4.0.0
-            // If KPLOPDist > 0 Then
-            // FD(II) = "A" 'PlotOut.PlotIntercept &= " Away"
-            // Else
-            // FD(II) = "T" 'PlotOut.PlotIntercept &= " Toward"
-            // End If
-            // FZN(II) = Int(ZN + 0.5) 'changed in V4.0.0
-            // FL(II) = L
-            // FLD(II) = txtLDeg.Text
-            // FLM(II) = txtLMin.Text
-            // FLA(II) = cboL.Items(cboL.SelectedIndex).ToString
-            // FLo(II) = Lo
-            // FMD(II) = txtLoDeg.Text
-            // FMM(II) = txtLoMin.Text
-            // FM(II) = cboLo.Items(cboLo.SelectedIndex).ToString
+            if (InvokedbySightLog == true)
+            {
+                FBody[II] = cboBody.Text.ToString().Trim();
+                if (cboBody.Text.ToString().Trim() == "Sun" | cboBody.Text.ToString().Trim() == "Moon")
+                {
+                    FBody[II] += " " + cbLimb.Text.ToString().Trim();
+                }
+            }
+            else
+            {
+                FBody[II] = " AltSRBody" + txtSightNum.ToString("##0");
+            }
 
-            // FGHA(II) = GHA      'added in V5.6.1
-            // FDec(II) = Dec      'added in V5.6.1
-            // FHo(II) = Ho        'added in V5.6.1
-            // 'FEP(II) = PlotOut.PlotSLEP
-            // FEP(II) = "EP L " & EstLDeg.ToString("#0") & Chr(176) & EstLMin.ToString("00.0") & "' " & cboL.Items(cboL.SelectedIndex).ToString &
-            // "EP Lo " & EstLoDeg.ToString("##0") & Chr(176) & EstLoMin.ToString("00.0") & "' " & cboLo.Items(cboLo.SelectedIndex).ToString
+            FZH[II] = DTSight.Value.Hour;    // VB.Left(txtTime.Text, 2)
+            FZM[II] = DTSight.Value.Minute;      // Mid(txtTime.Text, 3, 2) ': FZS(II) = Right(txtTime.Text, 2)
+            FZS[II] = DTSight.Value.Second;
+            FDTSight[II] = DTSight.Value;
+            // FZU(II) = DTSight.Value.ToUniversalTime.Subtract(New DateTime(1970, 1, 1, 0, 0, 0))
+            FMI[II] = System.Math.Sign(KPLOPDist) * Conversion.Int((System.Math.Abs(KPLOPDist) * 10 + 0.5) / 10); // 'changed in V4.0.0
+            //FMI[II] = Math.Sign(A) * Conversion.Int((Math.Abs(A) * 10d + 0.5d) / 10d); // changed in V4.0.0
+            if (KPLOPDist > 0d)
+            {
+                FD[II] = "A"; // PlotOut.PlotIntercept &= " Away"
+            }
+            else
+            {
+                FD[II] = "T";
+            } // PlotOut.PlotIntercept &= " Toward"
+
+            FZN[II] = Conversion.Int(Math.Round(ZN, 0)); // changed in V4.0.0
+            FL[II] = L;
+            // FLD(II) = Int(L).ToString("00")
+            FLD[II] = txtLDeg.Text.ToString();
+            FLM[II] = txtLMin.Text.ToString();
+            FLA[II] = cboL.Items[cboL.SelectedIndex].ToString();
+            FLo[II] = Lo.ToString();
+            FMD[II] = Convert.ToDouble(txtLoDeg.Text.ToString()); // Int(Lo)
+            FMM[II] = Convert.ToDouble(txtLoMin.Text.ToString()); // Lo - Int(Lo)
+            FM[II] = cboLo.Items[cboLo.SelectedIndex].ToString();
+            FGHA[II] = GHA;      // added in V5.6.1
+            FDec[II] = Dec;      // added in V5.6.1
+            FHo[II] = Ho;        // added in V5.6.1
+                                 // FEP(II) = PlotOut.PlotSLEP
+            FEP[II] = "AP/EP L " + EstLDeg.ToString("#0") + '°' + EstLMin.ToString("00.0") + "' " +
+                cboL.Items[cboL.SelectedIndex].ToString() + "AP/EP Lo " + EstLoDeg.ToString("##0") +
+                '°' + EstLoMin.ToString("00.0") + "' " + cboLo.Items[cboLo.SelectedIndex].ToString();
+
+            
+             //FMI(II) = System.Math.Sign(KPLOPDist) * Int((System.Math.Abs(KPLOPDist) * 10 + 0.5) / 10) 'changed in V4.0.0
+             //If KPLOPDist > 0 Then
+             //FD(II) = "A" 'PlotOut.PlotIntercept &= " Away"
+             //Else
+             //FD(II) = "T" 'PlotOut.PlotIntercept &= " Toward"
+             //End If
+             //FZN(II) = Int(ZN + 0.5) 'changed in V4.0.0
+             //FL(II) = L
+             //FLD(II) = txtLDeg.Text
+             //FLM(II) = txtLMin.Text
+             //FLA(II) = cboL.Items(cboL.SelectedIndex).ToString
+             //FLo(II) = Lo
+             //FMD(II) = txtLoDeg.Text
+             //FMM(II) = txtLoMin.Text
+             //FM(II) = cboLo.Items(cboLo.SelectedIndex).ToString
+             //FGHA(II) = GHA      'added in V5.6.1
+             //FDec(II) = Dec      'added in V5.6.1
+             //FHo(II) = Ho        'added in V5.6.1
+             //'FEP(II) = PlotOut.PlotSLEP
+             //FEP(II) = "EP L " & EstLDeg.ToString("#0") & Chr(176) & EstLMin.ToString("00.0") & "' " & cboL.Items(cboL.SelectedIndex).ToString &
+             //"EP Lo " & EstLoDeg.ToString("##0") & Chr(176) & EstLoMin.ToString("00.0") & "' " & cboLo.Items(cboLo.SelectedIndex).ToString
 
             SendMsgBx("Sight reduction data saved - Enter new sight data", MessageBoxIcon.Information);
             cmdSave.Visible = false;
